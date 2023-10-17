@@ -1,0 +1,47 @@
+.spclogo {
+  max-width: 200px;
+  margin-left: 50px
+}
+
+.menu-navbar {
+  position: absolute;
+  right: 100px;
+}
+
+.nav-fontcolor {
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .spclogo {
+    max-width: 150px;
+    margin-left: 10px
+  }
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.link{
+  text-decoration: none;
+  text-align: center;
+}
+.blog-con{
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+}
+.blog-item img {
+  width: 100%;
+  text-align: center;
+}
+.centerer {
+  display: flex;
+  justify-content: center;
+}
+ul.unlist{
+    list-style-type: circle;
+}
