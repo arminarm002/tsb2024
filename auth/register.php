@@ -23,7 +23,7 @@
       </div>
       <div class="card-body" style="margin: 0px 10%;">
         <div class="row">
-          <form action="registerphp.php" method="POST">
+          <form action="authen.php" method="POST">
             <!-- Username input -->
             <div class="form-outline mb-2">
               <label class="form-label" for="username">username :</label>
@@ -101,19 +101,19 @@
             <div class="form-outline mb-2">
               <label class="form-label">Extra Meal :</label>
               <div class="form-check" style="margin-left: 30px;">
-                <input class="form-check-input" type="radio" name="meal" id="meal1">
+                <input class="form-check-input" type="radio" name="meal" value="general food">
                 <label class="form-check-label" for="meal1">
                   general food
                 </label>
               </div>
               <div class="form-check" style="margin-left: 30px;">
-                <input class="form-check-input" type="radio" name="meal" id="meal2">
+                <input class="form-check-input" type="radio" name="meal" value="Muslim food">
                 <label class="form-check-label" for="meal2">
                   Muslim food
                 </label>
               </div>
               <div class="form-check" style="margin-left: 30px;">
-                <input class="form-check-input" type="radio" name="meal" id="meal3">
+                <input class="form-check-input" type="radio" name="meal" value="Vegetarian Food">
                 <label class="form-check-label" for="meal3">
                   Vegetarian Food
                 </label>
@@ -124,37 +124,37 @@
             <div class="form-outline mb-2">
               <label class="form-label">Type :</label>
               <div class="form-check" style="margin-left: 30px;">
-                <input class="form-check-input" type="radio" name="type" id="type1">
+                <input class="form-check-input" type="radio" name="type" value="Thai Physics Society Committee">
                 <label class="form-check-label" for="type1">
                   Thai Physics Society Committee
                 </label>
               </div>
               <div class="form-check" style="margin-left: 30px;">
-                <input class="form-check-input" type="radio" name="type" id="type2">
+                <input class="form-check-input" type="radio" name="type" value="Invited Speaker">
                 <label class="form-check-label" for="type2">
                   Invited Speaker
                 </label>
               </div>
               <div class="form-check" style="margin-left: 30px;">
-                <input class="form-check-input" type="radio" name="type" id="type3">
+                <input class="form-check-input" type="radio" name="type" value="Oral Presenter">
                 <label class="form-check-label" for="type3">
                   Oral Presenter
                 </label>
               </div>
               <div class="form-check" style="margin-left: 30px;">
-                <input class="form-check-input" type="radio" name="type" id="type4">
+                <input class="form-check-input" type="radio" name="type" value="Poster Presenter">
                 <label class="form-check-label" for="type4">
                   Poster Presenter
                 </label>
               </div>
               <div class="form-check" style="margin-left: 30px;">
-                <input class="form-check-input" type="radio" name="type" id="type5">
+                <input class="form-check-input" type="radio" name="type" value="Participant">
                 <label class="form-check-label" for="type5">
                   Participant
                 </label>
               </div>
               <div class="form-check" style="margin-left: 30px;">
-                <input class="form-check-input" type="radio" name="type" id="type6">
+                <input class="form-check-input" type="radio" name="type" value="Accompany Person">
                 <label class="form-check-label" for="type6">
                   Accompany Person
                 </label>
@@ -185,60 +185,57 @@
                   <tr>
                     <td>General audience</td>
                     <td>
-                      <input class="form-check-input" type="radio" name="fee" id="fee1">
+                      <input class="form-check-input" type="radio" name="fee" value="General audience 5,000 THB">
                       <label class="form-check-label" for="fee1">5,000 THB</label>
                     </td>
                     <td>
-                      <input class="form-check-input" type="radio" name="fee" id="fee2">
+                      <input class="form-check-input" type="radio" name="fee" value="General audience 6,000 THB">
                       <label class="form-check-label" for="fee2">6,000 THB</label>
                     </td>
                   </tr>
                   <tr>
                     <td>Permanent Member of Thai Physics Society</td>
                     <td>
-                      <input class="form-check-input" type="radio" name="fee" id="fee3">
+                      <input class="form-check-input" type="radio" name="fee" value="Permanent Member of Thai Physics Society 4,000 THB">
                       <label class="form-check-label" for="fee3">4,000 THB</label>
                     </td>
                     <td>
-                      <input class="form-check-input" type="radio" name="fee" id="fee4">
+                      <input class="form-check-input" type="radio" name="fee" value="Permanent Member of Thai Physics Society 5,000 THB">
                       <label class="form-check-label" for="fee4">5,000 THB</label>
                     </td>
                   </tr>
                   <tr>
                     <td>Non Member of Thai Physics Society *</td>
                     <td>
-                      <input class="form-check-input" type="radio" name="fee" id="fee5">
+                      <input class="form-check-input" type="radio" name="fee" value="Non Member of Thai Physics Society 4,000 THB">
                       <label class="form-check-label" for="fee5">4,000 THB</label>
                     </td>
                     <td>
-                      <input class="form-check-input" type="radio" name="fee" id="fee6">
+                      <input class="form-check-input" type="radio" name="fee" value="Non Member of Thai Physics Society 5,000 THB">
                       <label class="form-check-label" for="fee6">5,000 THB</label>
                     </td>
                   </tr>
                   <tr>
                     <td>Student *</td>
                     <td>
-                      <input class="form-check-input" type="radio" name="fee" id="fee7">
+                      <input class="form-check-input" type="radio" name="fee" value="Student 3,000 THB">
                       <label class="form-check-label" for="fee7">3,000 THB</label>
                     </td>
                     <td>
-                      <input class="form-check-input" type="radio" name="fee" id="fee8">
+                      <input class="form-check-input" type="radio" name="fee" value="Student 4,000 THB">
                       <label class="form-check-label" for="fee8">4,000 THB</label>
                     </td>
                   </tr>
                   <tr>
                     <td>Accompany person</td>
                     <td>
-                      <input class="form-check-input" type="radio" name="fee" id="fee9">
+                      <input class="form-check-input" type="radio" name="fee" value="Accompany person 3,000 THB">
                       <label class="form-check-label" for="fee9">3,000 THB</label>
                     </td>
                     <td>
-                      <input class="form-check-input" type="radio" name="fee" id="fee10">
+                      <input class="form-check-input" type="radio" name="fee" value="Accompany person 4,000 THB">
                       <label class="form-check-label" for="fee10">4,000 THB</label>
                     </td>
-                  </tr>
-                  <tr>
-                    <td colspan="3" style="text-align: center;">Total: 6000 THB</td>
                   </tr>
                 </tbody>
               </table>

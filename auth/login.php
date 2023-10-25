@@ -26,17 +26,17 @@
           <div class="mt-2">
             <img src="/spc2024/img/logo-b.png" alt="" style="display:table; margin: 0 auto; max-width:200px;">
           </div>
-          <form action="#" class="mb-3" method="POST">
+          <form action="authen.php" class="mb-3" method="POST">
             <div class="form-group mt-5">
               <label for="email">Email :</label>
-              <input type="email" name="email" id="email" class="form-control" required>
+              <input type="email" name="email" class="form-control" required>
             </div>
             <div class="form-group">
               <label for="password">Password :</label>
-              <input type="password" name="password" id="password" class="form-control" required>
+              <input type="password" name="password" class="form-control" required>
             </div>
             <div class="text-end">
-              <button type="submit" class="btn btn-l mt-2 text-white" name="check">Login</button>
+              <button type="submit" class="btn btn-l mt-2 text-white" name="login">Login</button>
             </div>
           </form>
           <a href="register.php"><button type="submit" class="btn btn-l text-white" style="float: right;">Register</button></a>

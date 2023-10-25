@@ -1,7 +1,7 @@
 <section class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-dark text-white bg-l" style="background-color:#ff7a01;"> 
       <div class="container-fluid">
-        <a class="navbar-brand " href="https://www.science.kmitl.ac.th/new">
+        <a class="navbar-brand " href="/spc2024/index.php">
           <img src="/spc2024/img/spclogo.png" class="spclogo w-50">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

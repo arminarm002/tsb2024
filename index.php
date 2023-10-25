@@ -21,14 +21,13 @@
         <div class="row" style="margin: 15px auto;">
           <div class="col-12 centerer">
             <div class="card border border-warning rounded" style="width: 28rem;"><!-- 18rem -->
-            
               <img class="border-bottom border-warning" src="img/meeting.jpg" style="width:100%; ">
               <div class="card-body">
                 <h5 class="card-title">✨New✨ 1 December 2024</h5>
                 <p class="card-text">First announcement</p>
                 <a href="https://drive.google.com/file/d/18b9dCOQ4V-V-sLacubZBRxMy_SuAggXi/view?usp=sharing" class="btn btn-warning"
                   target="_blank">
-                  <h6 class="card-title">-- Dowload --</h6>
+                  <h6 class="card-title">-- More --</h6>
                 </a>
               </div>
             </div>
