@@ -15,8 +15,9 @@
   ?>
 
   <div class="container">
+  <h1 class="card-title centerer mt-3">Abstract  Submission</h1>
     <div class="row" style="margin: 15px auto;">
-      <h1 class="card-title centerer">Abstract  Submission</h1>
+      
       <div class="col-12">
         <div class="card border-0" style="color: #494949;">
           <h5>Abstract submission open : 1 February - 31 March 2024<br>Template for SPC 2024 abstract.

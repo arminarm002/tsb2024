@@ -24,22 +24,16 @@
       <div class="card-body" style="margin: 0px 10%;">
         <div class="row">
           <form action="authen.php" method="POST">
-            <!-- Username input -->
+            <!-- Email input -->
             <div class="form-outline mb-2">
-              <label class="form-label" for="username">username :</label>
-              <input type="text" id="username" class="form-control" name="username" required />
+              <label class="form-label" for="email">Email Address :</label>
+              <input type="email" id="email" class="form-control" name="email" required />
             </div>
 
             <!-- Password input -->
             <div class="form-outline mb-2">
               <label class="form-label" for="password">Password :</label>
               <input type="password" id="password" class="form-control" name="password" required />
-            </div>
-
-            <!-- Email input -->
-            <div class="form-outline mb-2">
-              <label class="form-label" for="email">Email Address :</label>
-              <input type="email" id="email" class="form-control" name="email" required />
             </div>
 
             <!-- Title input -->
@@ -196,22 +190,26 @@
                   <tr>
                     <td>Permanent Member of Thai Physics Society</td>
                     <td>
-                      <input class="form-check-input" type="radio" name="fee" value="Permanent Member of Thai Physics Society 4,000 THB">
+                      <input class="form-check-input" type="radio" name="fee"
+                        value="Permanent Member of Thai Physics Society 4,000 THB">
                       <label class="form-check-label" for="fee3">4,000 THB</label>
                     </td>
                     <td>
-                      <input class="form-check-input" type="radio" name="fee" value="Permanent Member of Thai Physics Society 5,000 THB">
+                      <input class="form-check-input" type="radio" name="fee"
+                        value="Permanent Member of Thai Physics Society 5,000 THB">
                       <label class="form-check-label" for="fee4">5,000 THB</label>
                     </td>
                   </tr>
                   <tr>
                     <td>Non Member of Thai Physics Society *</td>
                     <td>
-                      <input class="form-check-input" type="radio" name="fee" value="Non Member of Thai Physics Society 4,000 THB">
+                      <input class="form-check-input" type="radio" name="fee"
+                        value="Non Member of Thai Physics Society 4,000 THB">
                       <label class="form-check-label" for="fee5">4,000 THB</label>
                     </td>
                     <td>
-                      <input class="form-check-input" type="radio" name="fee" value="Non Member of Thai Physics Society 5,000 THB">
+                      <input class="form-check-input" type="radio" name="fee"
+                        value="Non Member of Thai Physics Society 5,000 THB">
                       <label class="form-check-label" for="fee6">5,000 THB</label>
                     </td>
                   </tr>

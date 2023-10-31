@@ -15,7 +15,7 @@
   ?>
   <div class="container">
     <div class="row" style="margin: 15px auto;">
-      <h1 class="card-title centerer">ประกวดโครงงานครั้งที่ 15 “ค้นคว้าอิสระปริญญาตรี สาขาวิชาฟิสิกส์”</h1>
+      <h1 class="card-title centerer">ประกวดโครงงานครั้งที่ 16 “ค้นคว้าอิสระปริญญาตรี สาขาวิชาฟิสิกส์”</h1>
       <div class="col-12">
         <div class="card border-0">
           <table class="table table-success table-striped table-hover mt-5">
@@ -31,24 +31,24 @@
             </thead>
             <tbody class="fs-22">
               <tr>
-                <td>วันที่เปิดรับสมัครลงทะเบียน (ส่งเฉพาะบทคัดย่อ)</td>
-                <td>ตั้งแต่วันที่ 15 มีนาคม - 29 เมษายน 2566</td>
+                <td>เปิดรับสมัครลงทะเบียน (ส่งเฉพาะ abstract)</td>
+                <td>ตั้งแต่วันที่ 15 มีนาคม - 15 เมษายน 2567</td>
               </tr>
               <tr>
-                <td>ประกาศรายชื่อผู้ผ่านการคัดเลือก (ทางเว็บไซต์ SPC2023 และอีเมล)</td>
-                <td>วันที่ 8 พฤษภาคม 2566</td>
+                <td>ประกาศผลโครงงานที่ผ่านคัดเลือก</td>
+                <td>ภายใน วันที่ 15 เมษายน 2567</td>
               </tr>
               <tr>
-                <td>ผู้ผ่านเข้ารอบสอง ส่งรายงานโครงงานฉบับสมบูรณ์ออนไลน์ ทาง Google forms</td>
-                <td>ภายในวันที่ 25 พฤษภาคม 2566</td>
+                <td>ผู้ผ่านเข้ารอบสองส่งรายงานโครงงานฉบับสมบูรณ์ออนไลน์ผ่านเว็บไซท์ SPC 2024</td>
+                <td>ภายใน วันที่ 15 พฤษภาคม 2567</td>
               </tr>
               <tr>
-                <td>ประกาศรายชื่อผู้ผ่านเข้ารอบสุดท้าย</td>
-                <td>วันที่ 30 พฤษภาคม 2566</td>
+                <td>ประกาศผลโครงงานที่ผ่านเข้ารอบสุดท้าย</td>
+                <td>ภายใน วันที่ 20 พฤษภาคม 2567</td>
               </tr>
               <tr>
-                <td>นักศึกษานำเสนอผลงาน ในงานประชุม Siam Physics Congress 2023 (SPC 2023)</td>
-                <td>วันที่ 15 มิถุนายน 2566</td>
+                <td>นักศึกษานำเสนอผลงานในงานประชุม  Siam Physics Congress 2024 (SPC 2024)</td>
+                <td>วันที่ 6 มิถุนายน 2567</td>
               </tr>
             </tbody>
           </table>
@@ -61,15 +61,15 @@
       <div class="col-12">
         <div class="card border-0" style="color: #494949;">
           <p>โครงงานค้นคว้าอิสระที่ส่งเข้าประกวด ต้องเป็นโครงงานอิสระระดับปริญญาตรี สาขาฟิสิกส์ ของบัณฑิต วท.บ. ฟิสิกส์
-            ปีการศึกษา 2564 หรือ นักศึกษาที่จะกำลังสำเร็จการศึกษา วท.บ. ฟิสิกส์ ปีการศึกษา 2565
+            ปีการศึกษา 2565 หรือ นักศึกษาที่จะกำลังสำเร็จการศึกษา วท.บ. ฟิสิกส์ ปีการศึกษา 2566
             โดยมีเอกสารประกอบการสมัครดังนี้</p>
           <h5>รอบแรก</h5>
           <ul class="unlist">
-            <li>Abstract Template for Physics Project 2023
-              <a href="../file/spc2023-abstract-template_physics project.docx">Download File</a>
+            <li>Abstract Template for Physics Project 2024
+              <a href="/spc2024/file/spc2023-abstract-template_physics project.docx">Download File</a>
             </li>
             <li>แบบยินยอมให้ส่งผลงานเข้าประกวดจากอาจารย์ที่ปรึกษาโครง งานค้นคว้าอิสระ
-              <a href="../file/spc2023.docx">Download File</a>
+              <a href="/spc2024/file/spc2023.docx">Download File</a>
             </li>
           </ul>
           <h5>รอบสอง </h5>

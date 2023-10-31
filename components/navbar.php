@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark text-white bg-l" style="background-color:#ff7a01;"> 
       <div class="container-fluid">
         <a class="navbar-brand " href="/spc2024/index.php">
-          <img src="/spc2024/img/spclogo.png" class="spclogo w-50">
+          <img src="/spc2024/img/logospc.png" class="spclogo w-50">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,6 +45,7 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/spc2024/pages/accommodation.php">Accommodation</a></li>
                 <li><a class="dropdown-item" href="/spc2024/pages/venue.php">Venue & Travel</a></li>
+                <li><a class="dropdown-item" href="/spc2024/pages/sponsors.php">Sponsors</a></li>
                 <li><a class="dropdown-item" href="/spc2024/pages/contact.php">Contact</a></li>
               </ul>
             </li>

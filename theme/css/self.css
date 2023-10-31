@@ -1,5 +1,5 @@
 .spclogo {
-  max-width: 200px;
+  max-width: 250px;
   margin-left: 50px
 }
 
@@ -26,22 +26,35 @@
   text-align: center;
   margin: 0;
 }
-.link{
+
+.link {
   text-decoration: none;
   text-align: center;
 }
-.blog-con{
+
+.blog-con {
   display: grid;
   /* grid-template-columns: 1fr 1fr; */
 }
+
 .blog-item img {
   width: 100%;
   text-align: center;
 }
+
 .centerer {
   display: flex;
   justify-content: center;
 }
-ul.unlist{
-    list-style-type: circle;
+
+ul.unlist {
+  list-style-type: circle;
+}
+
+.center2 {
+  margin: auto;
+}
+
+.strip {
+  --bs-table-striped-bg: #ff7a0145;
 }

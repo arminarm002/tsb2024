@@ -3,9 +3,8 @@
 include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 
 if (isset($_POST['add'])) {
-  $username = $_POST['username'];
-  $password = $_POST['password'];
   $email = $_POST['email'];
+  $password = $_POST['password'];
   $title = $_POST['title'];
   $fname = $_POST['name'];
   $lname = $_POST['lastname'];
@@ -30,24 +29,24 @@ if (isset($_POST['add'])) {
     ';
     header("refresh: 1; url=register.php");
   } else {
-      $sql = ("INSERT Into tb_user (
-        username, password, email, title, firstname, lastname, company, career, address, country, 
+    $sql = ("INSERT Into tb_user (
+        email, password, title, firstname, lastname, company, career, address, country, 
         telephone, fax, extrameal, type, fee) values (
-          '$username','$password', '$email', '$title', '$fname', '$lname', '$company', '$career', '$address', '$country', 
+          '$email', '$password', '$title', '$fname', '$lname', '$company', '$career', '$address', '$country', 
           '$tel', '$fax', '$extrameal', '$type', '$fee')");
-       $query = $conn->query($sql);
-      if ($query) {
-        echo '<script language="javascript">';
-        echo 'alert("Successfully registrater, Please wait for confirm by email")';
-        echo '</script>';
-        header("refresh: 1; url=../index.php");
+    $query = $conn->query($sql);
+    if ($query) {
+      echo '<script language="javascript">';
+      echo 'alert("Successfully registrater, Please wait for confirm by email")';
+      echo '</script>';
+      header("refresh: 1; url=../index.php");
 
-      } else {
-        echo '<script language="javascript">';
-        echo 'alert("Somthing Wrong!!!")';
-        echo '</script>';
-        header("refresh: 1; url=registerpage.php");
-      }
+    } else {
+      echo '<script language="javascript">';
+      echo 'alert("Somthing Wrong!!!")';
+      echo '</script>';
+      header("refresh: 1; url=registerpage.php");
+    }
   }
 }
 
@@ -56,18 +55,17 @@ if (isset($_POST['login'])) {
   session_start();
   $username = $_POST['username'];
   $pass = $_POST['password'];
-  
+
   $result = $conn->query("SELECT * FROM tb_user WHERE username='" . $username . "'");
 
   if ($result->num_rows > 0) {
     foreach ($result as $row) {
-      $newpass=$row['password'];
-      $password = password_verify($pass , $newpass);
-      if($password){
+      $newpass = $row['password'];
+      $password = password_verify($pass, $newpass);
+      if ($password) {
         $_SESSION['id'] = $row['id'];
-        $_SESSION['username'] = $row['username'];
-        $_SESSION['password'] = $row['password'];
         $_SESSION['email'] = $row['email'];
+        $_SESSION['password'] = $row['password'];
         $_SESSION['title'] = $row['title'];
         $_SESSION['firstname'] = $row['firstname'];
         $_SESSION['lastname'] = $row['lastname'];
@@ -81,7 +79,7 @@ if (isset($_POST['login'])) {
         $_SESSION['type'] = $row['type'];
 
         header("refresh: 1; url=showscan.php");
-      } else {      
+      } else {
         echo '<script language="javascript">';
         echo 'alert("Password Invalid")';
         echo '</script>';

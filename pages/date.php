@@ -15,14 +15,9 @@
   ?>
 
   <div class="container">
+  <h1 class="card-title centerer mt-3">Important Dates</h1>
     <table class="table table-success table-striped table-hover mt-5">
-      <thead style="text-align: center;">
-        <tr>
-          <td colspan="2">
-            <h4 class="fs-42">Important Dates</h4>
-          </td>
-        </tr>
-      </thead>
+      
       <tbody class="fs-35">
         <tr>
           <td>Abstract submission</td>
@@ -42,9 +37,63 @@
         </tr>
       </tbody>
     </table>
+    <table class="table table-success table-striped table-hover mt-5">
+      <thead style="text-align: center;">
+        <tr>
+          <td colspan="2">
+            <h4 class="fs-22">Overall Program of SPC2024</h4>
+          </td>
+        </tr>
+      </thead>
+      <tbody class="fs-18">
+      <tr>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <h4 class="fs-35 centerer">Coming soon</h4>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-
-  <img src="/spc2024/img/programs1.jpg" class="img-fluid" style="width: 100%;">
 
 
   <?php
