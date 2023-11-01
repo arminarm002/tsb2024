@@ -38,9 +38,27 @@
 
             <!-- Title input -->
             <div class="form-outline mb-2">
-              <label class="form-label" for="title">Title ( Mr., Mrs, Ms, Dr., Assist.Prof., Assoc.Prof., Prof. )
-                :</label>
-              <input type="title" id="title" class="form-control" name="title" required />
+              <div class="row">
+                <div class="col-4">
+                  <label class="form-label" for="title">Title ( Mr., Mrs, Ms, Dr., Assist.Prof., Assoc.Prof., Prof. )
+                    :</label>
+                </div>
+                <div class="col-8">
+                  <div class="dropdown">
+                    <select class="btn btn-secondary dropdown-toggle border" type="button" id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown" name="title">
+                      <option value="" selected disabled>Title</option>
+                      <option value="Mr.">Mr.</option>
+                      <option value="Ms.">Ms.</option>
+                      <option value="Emeritus Professor">Emeritus Professor</option>
+                      <option value="Prof.">Prof.</option>
+                      <option value="Assoc.Prof.">Assoc.Prof.</option>
+                      <option value="Assist.Prof.">Assist.Prof.</option>
+                      <option value="Dr.">Dr.</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Firstname input -->
@@ -93,11 +111,11 @@
 
             <!-- Food input -->
             <div class="form-outline mb-2">
-              <label class="form-label">Extra Meal :</label>
+              <label class="form-label">Dietary requirements :</label>
               <div class="form-check" style="margin-left: 30px;">
                 <input class="form-check-input" type="radio" name="meal" value="general food">
                 <label class="form-check-label" for="meal1">
-                  general food
+                  General food
                 </label>
               </div>
               <div class="form-check" style="margin-left: 30px;">
@@ -112,6 +130,16 @@
                   Vegetarian Food
                 </label>
               </div>
+              <div class="row" style="margin-left:2.7rem;">
+                <div class="col-2">
+
+                  <label>Food allergy and intolerance : </label>
+                </div>
+                <div class="col-10">
+                  <input type="text" id="food" name="food" class="form-control" />
+                </div>
+              </div>
+
             </div>
 
             <!-- Type input -->
@@ -173,8 +201,8 @@
                 <tbody>
                   <tr>
                     <td>Registration types</td>
-                    <td>EARLY-BIRD Before 5 May 2023</td>
-                    <td>After 5 May 2023</td>
+                    <td>EARLY-BIRD Before 5 May 2024</td>
+                    <td>After 5 May 2024</td>
                   </tr>
                   <tr>
                     <td>General audience</td>

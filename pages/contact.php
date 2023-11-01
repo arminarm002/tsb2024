@@ -20,7 +20,7 @@
         <h5>Telephone : +6623298000 ext. 6214<br>Email : spc2024@kmitl.ac.th<br>Website :
           <a href="https://www.science.kmitl.ac.th/new" target="_blank">Science KMITL</a><br>Facebook :
           <a href="https://www.facebook.com/SPC2024" target="_blank">SPC2024</a>
-          <br>Department of Physics, Faculty of Science, King Mongkut’s Institute of
+          <br>Department of Physics, School of Science, King Mongkut’s Institute of
           Technology Ladkrabang Chalongkrung Rd. Ladkrabang District Bangkok 10520
         </h5>
       </div>

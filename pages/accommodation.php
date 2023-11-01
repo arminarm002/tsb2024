@@ -133,6 +133,34 @@
       sanctuary of style and comfort.<br>
     </p>
     
+    <h1 class="card-title centerer mt-3">Krungsri River Hotel</h1>
+    <div class="ratio ratio-21x9 mt-3">
+      <iframe class="rounded border border-warning border-2"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3865.2820596160363!2d100.58009137581796!3d14.35308168308725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e275b64fa00651%3A0xf9e12f549248baa1!2z4LmC4Lij4LiH4LmB4Lij4LihIOC4geC4o-C4uOC4h-C4qOC4o-C4tSDguKPguLTguYDguKfguK3guKPguYwg4Lit4Lii4Li44LiY4Lii4Liy!5e0!3m2!1sth!2sth!4v1695097663619!5m2!1sth!2sth"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="row mt-5" style="padding: 0px 1.5rem;">
+      <div class="col-4">
+        <h6>Airports</h6>
+        <p><i class="bi bi-airplane"></i> Don Mueang International Airport (DMK) 49.0 km</p>
+        <p><i class="bi bi-airplane"></i> Suvarnabhumi Airport (BKK) 75.9 km</p>
+      </div>
+      <div class="col-4">
+        <h6>Public transportation</h6>
+        <p><i class="bi bi-train-front"></i> Ayutthaya Train Station 460 m</p>
+        <p><i class="bi bi-train-front"></i> Banma 3.8 km</p>
+      </div>
+      <div class="col-4">
+        <h6>Hospital or clinic</h6>
+        <p><i class="bi bi-hospital"></i> Sirin Pharmacy 680 m</p>
+        <h6>Shopping</h6>
+        <p><i class="bi bi-shop"></i> Ayothaya Floating Market & Elephant Village 1.4 km</p>
+        <h6>Convenience store</h6>
+        <p><i class="bi bi-7-square"></i> 7 Eleven 260 m</p>
+      </div>
+    </div>
+  
   </div>
 
   <?php

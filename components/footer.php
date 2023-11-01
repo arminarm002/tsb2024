@@ -37,7 +37,7 @@
   </div>
   <div class="col-sm-4 bg-l">
     <h4 class="mt-3">About Science KMITL</h4>
-    <p style="text-align: left;">Faculty of Science King Mongkut's Institute of Technology Ladkrabang It is an
+    <p style="text-align: left;">School of Science King Mongkut's Institute of Technology Ladkrabang It is an
       educational establishment
       that focuses on applying science to the practical application, and we believe that imagination can come
       true. There is no such thing as impossible in the world of science.</p>

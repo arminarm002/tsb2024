@@ -15,7 +15,7 @@
   ?>
 
   <div class="container">
-  <h1 class="card-title centerer mt-3">Abstract  Submission</h1>
+  <h1 class="card-title centerer mt-3">Abstract Submission</h1>
     <div class="row" style="margin: 15px auto;">
       
       <div class="col-12">

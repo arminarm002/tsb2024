@@ -15,6 +15,7 @@ if (isset($_POST['add'])) {
   $tel = $_POST['tel'];
   $fax = $_POST['fax'];
   $extrameal = $_POST['meal'];
+  $food = $_POST['food'];
   $type = $_POST['type'];
   $receipt = $_POST['receipt'];
   $fee = $_POST['fee'];
@@ -31,9 +32,9 @@ if (isset($_POST['add'])) {
   } else {
     $sql = ("INSERT Into tb_user (
         email, password, title, firstname, lastname, company, career, address, country, 
-        telephone, fax, extrameal, type, fee) values (
+        telephone, fax, extrameal, food, type, fee) values (
           '$email', '$password', '$title', '$fname', '$lname', '$company', '$career', '$address', '$country', 
-          '$tel', '$fax', '$extrameal', '$type', '$fee')");
+          '$tel', '$fax', '$extrameal', '$food', '$type', '$fee')");
     $query = $conn->query($sql);
     if ($query) {
       echo '<script language="javascript">';

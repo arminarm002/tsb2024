@@ -43,8 +43,7 @@
                 About Us
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/spc2024/pages/accommodation.php">Accommodation</a></li>
-                <li><a class="dropdown-item" href="/spc2024/pages/venue.php">Venue & Travel</a></li>
+                <li><a class="dropdown-item" href="/spc2024/pages/accommodation.php">Accommodation & Venue</a></li>
                 <li><a class="dropdown-item" href="/spc2024/pages/sponsors.php">Sponsors</a></li>
                 <li><a class="dropdown-item" href="/spc2024/pages/contact.php">Contact</a></li>
               </ul>
