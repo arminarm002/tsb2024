@@ -1,3 +1,6 @@
+<?php
+include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -195,73 +198,40 @@
               <table class="table table-active table-bordered border-danger">
                 <thead style="text-align: center;">
                   <tr>
-                    <td colspan="3">REGISTRATION FEE FOR SPC2024</td>
+                    <td class="fs-24" colspan="3">REGISTRATION FEE FOR SPC2024</td>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Registration types</td>
-                    <td>EARLY-BIRD Before 5 May 2024</td>
-                    <td>After 5 May 2024</td>
+                    <td class="fs-22">Registration types</td>
+                    <td class="fs-22">EARLY-BIRD Before 5 May 2024</td>
+                    <td class="fs-22">After 5 May 2024</td>
                   </tr>
+
+                  <?php
+                  $sql = $conn->query("SELECT * FROM tb_pay");
+                  foreach ($sql as $row) {
+                    // $name = $row['type'];
+                    ?>
+                    <tr>
+                      <td>
+                        <?php echo $row['type']; ?>
+                      </td>
+                      <td>
+                        <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['type'].$row['b_amount']; ?>">
+                        <label class="form-check-label" for="fee1"><?php echo $row['b_amount']; ?></label>
+                      </td>
+                      <td>
+                        <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['type'].$row['a_amount']; ?>">
+                        <label class="form-check-label" for="fee2"><?php echo $row['a_amount']; ?></label>
+                      </td>
+                      </td>
+                    </tr>
+                    <?php
+                  }
+                  ?>
                   <tr>
-                    <td>General audience</td>
-                    <td>
-                      <input class="form-check-input" type="radio" name="fee" value="General audience 5,000 THB">
-                      <label class="form-check-label" for="fee1">5,000 THB</label>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" name="fee" value="General audience 6,000 THB">
-                      <label class="form-check-label" for="fee2">6,000 THB</label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Permanent Member of Thai Physics Society</td>
-                    <td>
-                      <input class="form-check-input" type="radio" name="fee"
-                        value="Permanent Member of Thai Physics Society 4,000 THB">
-                      <label class="form-check-label" for="fee3">4,000 THB</label>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" name="fee"
-                        value="Permanent Member of Thai Physics Society 5,000 THB">
-                      <label class="form-check-label" for="fee4">5,000 THB</label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Non Member of Thai Physics Society *</td>
-                    <td>
-                      <input class="form-check-input" type="radio" name="fee"
-                        value="Non Member of Thai Physics Society 4,000 THB">
-                      <label class="form-check-label" for="fee5">4,000 THB</label>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" name="fee"
-                        value="Non Member of Thai Physics Society 5,000 THB">
-                      <label class="form-check-label" for="fee6">5,000 THB</label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Student *</td>
-                    <td>
-                      <input class="form-check-input" type="radio" name="fee" value="Student 3,000 THB">
-                      <label class="form-check-label" for="fee7">3,000 THB</label>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" name="fee" value="Student 4,000 THB">
-                      <label class="form-check-label" for="fee8">4,000 THB</label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Accompany person</td>
-                    <td>
-                      <input class="form-check-input" type="radio" name="fee" value="Accompany person 3,000 THB">
-                      <label class="form-check-label" for="fee9">3,000 THB</label>
-                    </td>
-                    <td>
-                      <input class="form-check-input" type="radio" name="fee" value="Accompany person 4,000 THB">
-                      <label class="form-check-label" for="fee10">4,000 THB</label>
-                    </td>
+                    <td colspan="3">Total</td>
                   </tr>
                 </tbody>
               </table>

@@ -1,79 +1,55 @@
 <div class="footer mt-5 text-white row mt-3 w-100 ">
-  <div class="col-sm-4 bg-l">
-    <h4 class="mt-3">Sponsors</h4>
+
+
+  <div class=" bg-l">
     <div class="row mt-3 mb-2">
 
-      <div class="col-sm-2">
-        <a target="_blank" href="https://www.narit.or.th/index.php">
-          <img src="/spc2024/img/sponsors/01.png" class="img-fluid">
-        </a>
+      <div class="col-sm-3">
+        <h4 class="mt-3">Contact Us</h4>
+        <h6>Department of Physics, School of Science, King Mongkut’s Institute of
+          Technology Ladkrabang Chalongkrung Rd. Ladkrabang District Bangkok 10520<br>
+          Telephone : +6623298000 ext. 6214<br>Email : spc2024@kmitl.ac.th<br>Website :
+          <a href="https://www.science.kmitl.ac.th/department-physics#/about" target="_blank">Physics Science
+            KMITL</a><br>Facebook :
+          <a href="https://www.facebook.com/SPC2024" target="_blank">SPC2024</a>
+          <br>
+        </h6>
       </div>
-      <div class="col-sm-2">
-        <a target="_blank" href="https://www.thep-center.org/en/">
-          <img src="/spc2024/img/sponsors/02.png" class="img-fluid">
-        </a>
+      <div class="col-sm-6">
+        <h4 class="mt-3">Exhibitions</h4>
+        <div class="row">
+          <div class="col-sm-3">
+            <a target="_blank" href="http://www.thaiphysoc.org/">
+              <img src="/spc2024/img/co-host/physic.png" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-sm-3">
+            <a target="_blank" href="https://www.science.kmitl.ac.th/new">
+              <img src="/spc2024/img/co-host/logo-b.png" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-sm-3">
+            <a target="_blank" href="http://www.cmit.kmitl.ac.th/">
+              <img src="/spc2024/img/co-host/cmit.png" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-sm-3" style="margin:auto;">
+            <a target="_blank" href="https://www.aru.ac.th/">
+              <img src="/spc2024/img/co-host/pru.png" style="width:75%;">
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-2">
-        <a target="_blank" href="https://www.home.cern/">
-          <img src="/spc2024/img/sponsors/03.png" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-sm-2">
-        <a target="_blank" href="https://www.ipst.ac.th/ipsten">
-          <img src="/spc2024/img/sponsors/04.png" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-sm-2">
-        <a target="_blank" href="https://www.slri.or.th/en/">
-          <img src="/spc2024/img/sponsors/05.png" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-sm-2">
-        <a target="_blank" href="https://www.tint.or.th/en">
-          <img src="/spc2024/img/sponsors/06.png" class="img-fluid">
-        </a>
+      <div class="col-sm-3">
+        <h4 class="mt-3">Social</h4>
+        <p><i class="bi bi-facebook"></i> <a target="_blank" href="https://www.facebook.com/SciKmitl">Science KMITL</a></p>
+        <p><i class="bi bi-youtube"></i> <a target="_blank" href="https://www.youtube.com/@schoolofsciencekmitloffici8071">Youtube</a></p>
+        <p><i class="bi bi-browser-chrome"></i> <a target="_blank" href="https://www.science.kmitl.ac.th/new">Website</a></p>
+        <p><i class="bi bi-instagram"></i> <a target="_blank" href="https://www.instagram.com/scikmitl/">Instagram</a></p>
+        <p><i class="bi bi-tiktok"></i> <a target="_blank" href="https://www.tiktok.com/@scikmitl">Tiktok</a></p>
       </div>
     </div>
-  </div>
-  <div class="col-sm-4 bg-l">
-    <h4 class="mt-3">About Science KMITL</h4>
-    <p style="text-align: left;">School of Science King Mongkut's Institute of Technology Ladkrabang It is an
-      educational establishment
-      that focuses on applying science to the practical application, and we believe that imagination can come
-      true. There is no such thing as impossible in the world of science.</p>
-    <div class="social-links mt-3">
-      <a target="_blank" href="https://www.facebook.com/SciKmitl">Facebook</a>&nbsp;&nbsp;,&nbsp;
-      <a target="_blank" href="https://www.youtube.com/@schoolofsciencekmitloffici8071">Youtube</a>&nbsp;&nbsp;,&nbsp;
-      <a target="_blank" href="https://www.science.kmitl.ac.th/new">Website</a>
-    </div>
-  </div>
-  <div class="col-sm-4 bg-l">
-    <h4 class="mt-3">Exhibition</h4>
-    <div class="row mt-3 mb-2">
 
-      <div class="col-sm-2"></div>
-      <div class="col-sm-2">
-        <a target="_blank" href="http://www.thaiphysoc.org/">
-          <img src="/spc2024/img/co-host/physic.png" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-sm-2">
-        <a target="_blank" href="https://www.science.kmitl.ac.th/new">
-          <img src="/spc2024/img/co-host/logo-b.png" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-sm-2">
-        <a target="_blank" href="http://www.cmit.kmitl.ac.th/">
-          <img src="/spc2024/img/co-host/cmit.png" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-sm-2">
-        <a target="_blank" href="https://www.aru.ac.th/">
-          <img src="/spc2024/img/co-host/pru.png" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-sm-2"></div>
-    </div>
 
   </div>
 

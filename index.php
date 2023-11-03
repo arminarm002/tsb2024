@@ -19,13 +19,26 @@
       <h1 class="card-title centerer mt-4" style="color: #7b7b7b;">Announcement</h1>
       <div class="image">
         <div class="row" style="margin: 15px auto;">
-          <div class="col-12 centerer">
+          <div class="col-6 centerer">
             <div class="card border border-warning rounded" style="width: 28rem;"><!-- 18rem -->
-              <img class="border-bottom border-warning" src="img/meeting.jpg" style="width:100%; ">
+              <img class="border-bottom border-warning" src="/spc2024/img/news/nobel.jpg" style="width:100%; ">
               <div class="card-body">
-                <h5 class="card-title">✨New✨ 1 December 2024</h5>
-                <p class="card-text">First announcement</p>
-                <a href="https://drive.google.com/file/d/18b9dCOQ4V-V-sLacubZBRxMy_SuAggXi/view?usp=sharing"
+                <h5 class="card-title">✨New✨ 3 October 2024</h5>
+                <p class="card-text">3 scientists awarded 2023 Nobel Prize in Physics for use of light to study electrons</p>
+                <a href="https://news.cgtn.com/news/2023-10-03/3-scientists-awarded-2023-Nobel-Prize-in-Physics-1nBg0xV00aA/index.html"
+                  class="btn btn-warning" target="_blank">
+                  <h6 class="card-title">-- More --</h6>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 centerer">
+            <div class="card border border-warning rounded" style="width: 28rem;"><!-- 18rem -->
+              <img class="border-bottom border-warning" src="/spc2024/img/news/flag.jpg" style="width:100%; ">
+              <div class="card-body">
+                <h5 class="card-title">✨New✨ 17 June 2023</h5>
+                <p class="card-text">The Department of Physics, Faculty of Science and the College of Technology and Innovation in Materials, received the flag to co-host the 19th Siam Physics Congress.</p>
+                <a href="https://www.facebook.com/profile/100063613568041/search/?q=%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A1%E0%B8%AD%E0%B8%9A%E0%B8%98%E0%B8%87"
                   class="btn btn-warning" target="_blank">
                   <h6 class="card-title">-- More --</h6>
                 </a>

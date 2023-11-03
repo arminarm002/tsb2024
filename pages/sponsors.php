@@ -16,7 +16,7 @@
 
   <section class="mt-3">
     <div class="container">
-      <h1 class="card-title centerer mt-3">Exhibition</h1>
+      <h1 class="card-title centerer mt-3">Exhibitions</h1>
       <div class="blog-con">
 
         <div class="row">

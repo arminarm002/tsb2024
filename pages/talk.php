@@ -17,13 +17,13 @@
   <div class="container">
     <h1 class="card-title centerer mt-3">Plenary Talks & Speakers</h1>
     <h4 style="text-align: center;">Plenary Talks</h4>
-    <img src="/spc2024/img/soon.jpg" style="display:block; margin:auto; width:50%;">
+    <img src="/spc2024/img/soon.png" style="display:block; margin:auto; width:50%;">
     <hr>
     <h4 style="text-align: center;">Keynote Lectures</h4>
-    <img src="/spc2024/img/soon.jpg" style="display:block; margin:auto; width:50%;">
+    <img src="/spc2024/img/soon.png" style="display:block; margin:auto; width:50%;">
     <hr>
     <h4 style="text-align: center;">Invited Speakers</h4>
-    <img src="/spc2024/img/soon.jpg" style="display:block; margin:auto; width:50%;">
+    <img src="/spc2024/img/soon.png" style="display:block; margin:auto; width:50%;">
   </div>
 
   <?php

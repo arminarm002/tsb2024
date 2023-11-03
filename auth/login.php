@@ -39,7 +39,7 @@
               <button type="submit" class="btn btn-l mt-2 text-white" name="login">Login</button>
             </div>
           </form>
-          <a href="register.php"><button type="submit" class="btn btn-l text-white" style="float: right;">Register</button></a>
+          <a href="path.php"><button type="submit" class="btn btn-l text-white" style="float: right;">Register</button></a>
         </div>
       </div>
     </div>

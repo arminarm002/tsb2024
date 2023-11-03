@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPC2023 KMITL</title>
+  <title>SPC2024 KMITL</title>
   <link rel="stylesheet" href="/spc2024/theme/css/bootstrap-theme.css">
   <link rel="stylesheet" href="/spc2024/theme/css/self.css">
 </head>
@@ -66,17 +66,16 @@
           <h5>รอบแรก</h5>
           <ul class="unlist">
             <li>Abstract Template for Physics Project 2024
-              <a href="/spc2024/file/spc2023-abstract-template_physics project.docx">Download File</a>
+              <a href="/spc2024/file/spc2024-abstract-template_physics project.docx">Download File</a>
             </li>
             <li>แบบยินยอมให้ส่งผลงานเข้าประกวดจากอาจารย์ที่ปรึกษาโครง งานค้นคว้าอิสระ
-              <a href="/spc2024/file/spc2023.docx">Download File</a>
+              <a href="/spc2024/file/spc2024.docx">Download File</a>
             </li>
           </ul>
           <h5>รอบสอง </h5>
           <ul class="unlist">
             <li>ไฟล์รายงานโครงงานอิสระฉบับสมบูรณ์ ส่งได้ที่ >>
-              <a href="https://docs.google.com/forms/d/1JqmesOMjPD0PJBoQ5fDR-cSwHcw34BqfJIHhSUQKT3g/viewform?edit_requested=true&pli=1"
-                target="_blank">Link</a>
+              <a href="">Link</a>
             </li>
             <li>การนำเสนอผลงาน ภาษาที่จะใช้ในการนำเสนอรอบสุดท้าย ท่านสามารถนำเสนอได้ทั้งภาษาไทยและภาษาอังกฤษ </li>
           </ul>

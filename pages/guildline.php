@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPC2023 KMITL</title>
+  <title>SPC2024 KMITL</title>
   <link rel="stylesheet" href="/spc2024/theme/css/bootstrap-theme.css">
   <link rel="stylesheet" href="/spc2024/theme/css/self.css">
 </head>
@@ -17,8 +17,8 @@
     <h1 class="card-title centerer mt-3">Presentation Guidelines & Award </h1>
     <div class="card border-0" style="color: #494949;">
       <h5>Instruction for oral presentation</h5>
-      <p>You are requested to upload your presentation file in your presenting room at least 1 hourbefore your
-        presentation time.Your files will be completely removed after finishing the session. Both PDF and Microsoft
+      <p>You are requested to upload your presentation file in your presenting room at least 1 hour before your
+        presentation time. Your files will be completely removed after finishing the session. Both PDF and Microsoft
         power point files are recommended in case there are font-compatible problems.</p>
       <ul class="unlist">
         <li>Plenary lectures will have 40 minutes for lecture and 5 minutes for Q&A (i.e. 45 min total)</li>
@@ -40,18 +40,19 @@
       <hr>
       <h5>Poster Presentation and Display Schedule</h5>
       <ul class="unlist">
-        <li>Authors are responsible for setting up their poster on June 15, 2023 (before 12:00 pm), and removing
-          it at the end of session (June 16, 2023 before 11:00 am)</li>
+        <li>Authors are responsible for setting up their poster on June 15, 2024 (before 12:00 pm), and removing
+          it at the end of session (June 16, 2024 before 11:00 am)</li>
         <li>Posters will be grouped by topic, and Each poster board will be identified by a poster number. Please
           refer to the Final Program book to confirm the number assigned to your poster presentation.</li>
         <li>Authors are asked to present their posters during the poster presentation sessions from 16:30 to 18:30
-          on June 15, 2023, to discuss their findings with participants and answer any questions.</li>
+          on June 15, 2024, to discuss their findings with participants and answer any questions.</li>
       </ul>
       <hr>
-      <h5>Poster Presentation Awards</h5>
+      <h5>Presentation Awards</h5>
       <ul class="unlist">
-        <li>Best Poster Awards 3</li>
-        <li>Honorable Mention Awards 2</li>
+        <li>Best Oral</li>
+        <li>Best Poster Awards</li>
+        <li>Honorable Mention Awards</li>
       </ul>
     </div>
   </div>
