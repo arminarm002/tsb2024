@@ -142,21 +142,21 @@
     </div>
     <div class="row mt-5" style="padding: 0px 1.5rem;">
       <div class="col-4">
-        <h6>Airports</h6>
+        <p><b>Airports</b></p>
         <p><i class="bi bi-airplane"></i> Don Mueang International Airport (DMK) 49.0 km</p>
         <p><i class="bi bi-airplane"></i> Suvarnabhumi Airport (BKK) 75.9 km</p>
       </div>
       <div class="col-4">
-        <h6>Public transportation</h6>
+        <p><b>Public transportation</b></p>
         <p><i class="bi bi-train-front"></i> Ayutthaya Train Station 460 m</p>
         <p><i class="bi bi-train-front"></i> Banma 3.8 km</p>
       </div>
       <div class="col-4">
-        <h6>Hospital or clinic</h6>
+        <p><b>Hospital or clinic</b></p>
         <p><i class="bi bi-hospital"></i> Sirin Pharmacy 680 m</p>
-        <h6>Shopping</h6>
+        <p><b>Shopping</b></p>
         <p><i class="bi bi-shop"></i> Ayothaya Floating Market & Elephant Village 1.4 km</p>
-        <h6>Convenience store</h6>
+        <p><b>Convenience store</b></p>
         <p><i class="bi bi-7-square"></i> 7 Eleven 260 m</p>
       </div>
     </div>

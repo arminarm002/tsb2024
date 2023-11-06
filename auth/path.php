@@ -13,21 +13,27 @@
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/navbar.php');
   ?>
-  <div class="container mt-5">
-    <div class="row" style="margin: 15% 0%;">
+  <div class="container mt-3">
+    <div class="row" style="margin: 10% 0%;">
       <div class="col-6 centerer">
-        <a href="register.php">
-          <button type="button" class="btn btn-outline-primary">
-            <p style="font-size:5vw;">Participant</p>
-          </button>
-        </a>
+        <div class="card border rounded" style="width: 28rem;"><!-- 18rem -->
+          <img class="" src="/spc2024/img/participant.png" style="width:100%; ">
+          <a href="register.php">
+            <button type="button" class="btn btn-outline-primary" style="width: 100%;">
+              <p style="font-size:3.5vw;">Participant</p>
+            </button>
+          </a>
+        </div>
       </div>
       <div class="col-6 centerer">
-        <a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2F">
-          <button type="button" class="btn btn-outline-info">
-            <p style="font-size:5vw;">Presentater</p>
-          </button>
-        </a>
+        <div class="card border rounded" style="width: 28rem;"><!-- 18rem -->
+          <img class="" src="/spc2024/img/presenter.png" style="width:100%; ">
+          <a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2F">
+            <button type="button" class="btn btn-outline-info" style="width: 100%;">
+              <p style="font-size:3.5vw;">Presentater</p>
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   </div>

@@ -207,10 +207,11 @@ include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
                     <td class="fs-22">EARLY-BIRD Before 5 May 2024</td>
                     <td class="fs-22">After 5 May 2024</td>
                   </tr>
-
                   <?php
                   $sql = $conn->query("SELECT * FROM tb_pay");
                   foreach ($sql as $row) {
+                    $i=0;
+                    $cal=[];
                     // $name = $row['type'];
                     ?>
                     <tr>
@@ -218,20 +219,32 @@ include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
                         <?php echo $row['type']; ?>
                       </td>
                       <td>
-                        <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['type'].$row['b_amount']; ?>">
-                        <label class="form-check-label" for="fee1"><?php echo $row['b_amount']; ?></label>
+                        <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['type'].$row['b_amount']; ?>" onchange="openamount(this.value)">
+                        <label class="form-check-label" for="fee1"><?php 
+                        echo $row['b_amount'];
+                        $cal[$i]=$row['b_amount']; 
+                        ?></label>
                       </td>
                       <td>
-                        <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['type'].$row['a_amount']; ?>">
+                        <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['type'].$row['a_amount']; ?>" disabled>
                         <label class="form-check-label" for="fee2"><?php echo $row['a_amount']; ?></label>
                       </td>
                       </td>
                     </tr>
                     <?php
-                  }
+                  $i++;}
                   ?>
+                  <tr id="myDiv" style="display:none;">
+                    <td colspan="3">
+                      <span class="centerer">
+                          จำนวน Abstract ที่ต้องการส่ง <input type="number" id="amount" name="amonut" value=""> เรื่อง
+                      </span>
+                    </td>
+                  </tr>
                   <tr>
-                    <td colspan="3">Total</td>
+                    <td colspan="3">
+                      <span class="centerer">จำนวนเงิน รวมทั้งสิ้น <div id="result"></div> บาท</span>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -249,7 +262,6 @@ include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
                 <br>** Payment can be made after registration.
               </p>
             </div>
-
 
             <!-- Check input -->
             <div class="form-check mb-3">
@@ -272,11 +284,42 @@ include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
     </div>
 
   </div>
-
+  
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
   include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script.php');
   ?>
+  <script>
+    function openamount(val) {
+      if (val == 'General audience5,000') {
+        document.getElementById('myDiv').style.display = 'contents';
+      } else if(val == 'Permanent Member of Thai Physics Society4,000'){
+        document.getElementById('myDiv').style.display = 'contents';
+      } else if(val == 'Non Member of Thai Physics Society *4,000'){
+        document.getElementById('myDiv').style.display = 'contents';
+      } else {
+        document.getElementById('myDiv').style.display = 'none';
+      }
+    }
+  </script>
+    
+
+    <script>
+        const amount = document.getElementById('amount');
+        const resultDiv = document.getElementById('result');
+
+        amount.addEventListener('input', function() {
+            const number = parseFloat(amount.value);
+            if (!isNaN(number)) {
+                // ทำการคำนวณหรือแสดงผลตามต้องการ
+                resultDiv.textContent = ` : ${number * 2} `;
+            } else {
+                resultDiv.textContent = 'โปรดป้อนตัวเลขที่ถูกต้อง';
+            }
+        });
+        var myDataFromPHP = "<?php echo $cal[$i]; ?>";
+        console.log(myDataFromPHP);
+    </script>
 </body>
 
 </html>

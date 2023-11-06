@@ -15,14 +15,14 @@
   ?>
   <div class="container mt-3">
     <div class="row">
-      <div class="col-6">
+      <div class="col-12">
         <h1>CONTACT US</h1>
-        <h5>Telephone : +6623298000 ext. 6214<br>Email : spc2024@kmitl.ac.th<br>Website :
+        <p class="resfont">Telephone : +6623298000 ext. 6214<br>Email : spc2024@kmitl.ac.th<br>Website :
           <a href="https://www.science.kmitl.ac.th/new" target="_blank">Science KMITL</a><br>Facebook :
           <a href="https://www.facebook.com/SPC2024" target="_blank">SPC2024</a>
           <br>Department of Physics, School of Science, King Mongkut’s Institute of
           Technology Ladkrabang Chalongkrung Rd. Ladkrabang District Bangkok 10520
-        </h5>
+        </p>
       </div>
       <div class="ratio ratio-21x9 mt-5">
         <iframe class="rounded border border-warning border-2"
