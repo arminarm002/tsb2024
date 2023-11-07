@@ -19,8 +19,31 @@ if (isset($_POST['add'])) {
   $type = $_POST['type'];
   $receipt = $_POST['receipt'];
   $fee = $_POST['fee'];
+  $fileupload = (isset($_POST['fileupload']) ? $_POST['fileupload'] : '');
   $password = password_hash($pass, PASSWORD_DEFAULT);
 
+
+  //ฟังก์ชั่นวันที่
+  date_default_timezone_set('Asia/Bangkok');
+  $date = date("Ymd");
+  //ฟังก์ชั่นสุ่มตัวเลข
+  $numrand = (mt_rand());
+  //เพิ่มไฟล์
+  $upload = $_FILES['fileupload'];
+  if ($upload != '') { //not select file
+//โฟลเดอร์ที่จะ upload file เข้าไป 
+    $path = "../file/upload/";
+
+    //เอาชื่อไฟล์เก่าออกให้เหลือแต่นามสกุล
+    $type = strrchr($_FILES['fileupload']['name'], ".");
+
+    //ตั้งชื่อไฟล์ใหม่โดยเอาเวลาไว้หน้าชื่อไฟล์เดิม
+    $newname = $date . $numrand . $type;
+    $path_link = $path . $newname;
+
+    //คัดลอกไฟล์ไปเก็บที่เว็บเซริ์ฟเวอร์
+    move_uploaded_file($_FILES['fileupload']['tmp_name'], $path . $newname);
+  }
   $sql = $conn->query("SELECT * FROM tb_user WHERE email='" . $email . "' ");
 
   if ($sql->num_rows > 0) {
@@ -33,10 +56,11 @@ if (isset($_POST['add'])) {
   } else {
     $sql = ("INSERT Into tb_user (
         email, password, title, firstname, lastname, company, career, address, country, 
-        telephone, fax, extrameal, food, type, receipt, fee) values (
+        telephone, fax, extrameal, food, type, receipt, fee, slip) values (
           '$email', '$password', '$title', '$fname', '$lname', '$company', '$career', '$address', '$country', 
-          '$tel', '$fax', '$extrameal', '$food', '$type', '$receipt', '$fee')");
+          '$tel', '$fax', '$extrameal', '$food', '$type', '$receipt', '$fee', '$newname')");
     $query = $conn->query($sql);
+    mysqli_close($conn);
     if ($query) {
       echo '<script language="javascript">';
       echo 'alert("Successfully registrater, Please wait for confirm by email")';

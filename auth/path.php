@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SPC2024 KMITL</title>
-  <link rel="stylesheet" href="/SPC2024/theme/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="/SPC2024/theme/css/self.css">
+  <link rel="stylesheet" href="/spc2024/theme/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="/spc2024/theme/css/self.css">
 </head>
 
 <body class="font-mitr">
@@ -39,7 +39,8 @@
   </div>
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
   ?>
 
 </body>

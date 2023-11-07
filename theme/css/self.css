@@ -5,11 +5,6 @@
   margin-left: 50px
 }
 
-.menu-navbar {
-  position: absolute;
-  right: 100px;
-}
-
 .nav-fontcolor {
   color: #fff;
 }
@@ -60,23 +55,98 @@ ul.unlist {
 .strip {
   --bs-table-striped-bg: #ff7a0145;
 }
-.imageback{
-  background-image: url(/SPC2024/img/sci1.png); background-color: #cccccc; /* Used if the image is unavailable */
-  height: 500px; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+
+.imageback {
+  background-image: url(/SPC2024/img/sci1.png);
+  background-color: #cccccc;
+  /* Used if the image is unavailable */
+  height: 500px;
+  /* You must set a specified height */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
   background-size: cover;
 }
-/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+
 @media screen and (min-width: 601px) {
-  resfont {
-    font-size:1vw;
+  .resfont {
+    font-size: 1vw;
   }
 }
 
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
-  resfont {
-    font-size:1.5vw;
+  .resfont {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .menunav {
+    position: absolute;
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .menunav {
+    display: inline-block;
+    float: right;
+  }
+}
+
+.countdown-container {
+  display: flex;
+  width: 100%;
+  max-width: 70%;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.days-container,
+.hours-container,
+.minutes-container,
+.seconds-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255 122 1 / 20%);
+  border: 5px solid rgb(255 122 1 / 70%);
+  width: 140px;
+  height: 140px;
+  border-radius: 99px;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  font-size: 2.5em;
+  margin: 10px 0;
+}
+
+
+.days-label,
+.hours-label,
+.minutes-label,
+.seconds-label {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 800px) {
+
+  .countdown-container {
+    max-width: 90%;
+  }
+
+  .days-container,
+  .hours-container,
+  .minutes-container,
+  .seconds-container {
+    font-size: 0.8em;
+    width: 100px;
+    height: 100px;
   }
 }

@@ -15,6 +15,29 @@
   ?>
   <img src="/spc2024/img/home01.jpg" class="img-fluid" style="width:100%">
   <div class="container">
+    <section class="countdown-container centerer mt-3">
+
+      <div class="days-container">
+        <div class="days"></div>
+        <div class="days-label">days</div>
+      </div>
+
+      <div class="hours-container">
+        <div class="hours"></div>
+        <div class="hours-label">hours</div>
+      </div>
+
+      <div class="minutes-container">
+        <div class="minutes"></div>
+        <div class="minutes-label">minutes</div>
+      </div>
+
+      <div class="seconds-container">
+        <div class="seconds"></div>
+        <div class="seconds-label">seconds</div>
+      </div>
+
+    </section>
     <div class="cards mb-3">
       <h1 class="card-title centerer mt-4" style="color: #7b7b7b;">Announcement</h1>
       <div class="image">
@@ -24,7 +47,8 @@
               <img class="border-bottom border-warning" src="/spc2024/img/news/nobel.jpg" style="width:100%; ">
               <div class="card-body">
                 <h5 class="card-title">✨New✨ 3 October 2024</h5>
-                <p class="card-text">3 scientists awarded 2023 Nobel Prize in Physics for use of light to study electrons</p>
+                <p class="card-text">3 scientists awarded 2023 Nobel Prize in Physics for use of light to study
+                  electrons</p>
                 <a href="https://news.cgtn.com/news/2023-10-03/3-scientists-awarded-2023-Nobel-Prize-in-Physics-1nBg0xV00aA/index.html"
                   class="btn btn-warning" target="_blank">
                   <h6 class="card-title">-- More --</h6>
@@ -37,7 +61,8 @@
               <img class="border-bottom border-warning" src="/spc2024/img/news/flag.jpg" style="width:100%; ">
               <div class="card-body">
                 <h5 class="card-title">✨New✨ 17 June 2023</h5>
-                <p class="card-text">The Department of Physics, Faculty of Science and the College of Technology and Innovation in Materials, received the flag to co-host the 19th Siam Physics Congress.</p>
+                <p class="card-text">The Department of Physics, Faculty of Science and the College of Technology and
+                  Innovation in Materials, received the flag to co-host the 19th Siam Physics Congress.</p>
                 <a href="https://www.facebook.com/profile/100063613568041/search/?q=%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A1%E0%B8%AD%E0%B8%9A%E0%B8%98%E0%B8%87"
                   class="btn btn-warning" target="_blank">
                   <h6 class="card-title">-- More --</h6>
@@ -49,40 +74,17 @@
       </div>
     </div>
   </div>
-  <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script.php');
-  ?>
   <!-- Messenger ปลั๊กอินแชท Code -->
   <div id="fb-root"></div>
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
 
-  <!-- Your ปลั๊กอินแชท code -->
-  <div id="fb-customer-chat" class="fb-customerchat">
-  </div>
+  <?php
+  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/countdown.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
+  ?>
 
-  <script>
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "120168344509959");
-    chatbox.setAttribute("attribution", "biz_inbox");
-  </script>
-
-  <!-- Your SDK code -->
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        xfbml: true,
-        version: 'v18.0'
-      });
-    };
-
-    (function (d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
 </body>
 
 </html>

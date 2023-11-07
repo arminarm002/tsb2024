@@ -21,7 +21,7 @@
       <div class="col-12">
         <div class="card border-0" style="color: #494949;">
           <h5>Abstract submission open : 1 February - 31 March 2024<br>Template for SPC 2024 abstract.
-            <a href="../file/spc2024-abstract-template.docx">Download File</a><br>Please do not modify the format
+            <a href="/spc2024/file/download/spc2024-abstract-template.docx">Download File</a><br>Please do not modify the format
             and please convert to pdf. for submission.<br><br>Topic :
           </h5>
           <p>
@@ -61,7 +61,8 @@
 
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
   ?>
 </body>
 

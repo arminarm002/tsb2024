@@ -1,5 +1,5 @@
-<section class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-dark text-white bg-l" style="background-color:#ff7a01;"> 
+<section>
+    <nav class="navbar navbar-expand-lg navbar-dark text-white" style="background-color:#ff7a01;"> 
       <div class="container-fluid">
         <a class="navbar-brand " href="/spc2024/index.php">
           <img src="/spc2024/img/logospc.png" class="spclogo w-50">
@@ -8,8 +8,8 @@
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse menu-navbar fs-20" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse fs-20" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 menunav">
             <li class="nav-item">
               <a class="nav-link nav-fontcolor " aria-current="page" href="/spc2024/index.php">Home</a>
             </li>

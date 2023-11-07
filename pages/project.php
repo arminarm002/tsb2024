@@ -66,10 +66,10 @@
           <h5>รอบแรก</h5>
           <ul class="unlist">
             <li>Abstract Template for Physics Project 2024
-              <a href="/spc2024/file/spc2024-abstract-template_physics project.docx">Download File</a>
+              <a href="/spc2024/file/download/spc2024-abstract-template_physics project.docx">Download File</a>
             </li>
             <li>แบบยินยอมให้ส่งผลงานเข้าประกวดจากอาจารย์ที่ปรึกษาโครง งานค้นคว้าอิสระ
-              <a href="/spc2024/file/spc2024.docx">Download File</a>
+              <a href="/spc2024/file/download/spc2024.docx">Download File</a>
             </li>
           </ul>
           <h5>รอบสอง </h5>
@@ -95,7 +95,8 @@
   </div>
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
   ?>
 </body>
 
