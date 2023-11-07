@@ -103,10 +103,7 @@ ul.unlist {
   margin: auto;
 }
 
-.days-container,
-.hours-container,
-.minutes-container,
-.seconds-container {
+.countdown {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,10 +138,7 @@ ul.unlist {
     max-width: 90%;
   }
 
-  .days-container,
-  .hours-container,
-  .minutes-container,
-  .seconds-container {
+  .countdown {
     font-size: 0.8em;
     width: 100px;
     height: 100px;

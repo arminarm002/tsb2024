@@ -17,23 +17,23 @@
   <div class="container">
     <section class="countdown-container centerer mt-3">
 
-      <div class="days-container">
-        <div class="days"></div>
+      <div class="countdown">
+        <span class="days" id="days"></span>
         <div class="days-label">days</div>
       </div>
 
-      <div class="hours-container">
-        <div class="hours"></div>
+      <div class="countdown">
+        <span class="hours" id="hours"></span>
         <div class="hours-label">hours</div>
       </div>
 
-      <div class="minutes-container">
-        <div class="minutes"></div>
+      <div class="countdown">
+        <span class="minutes" id="minutes"></span>
         <div class="minutes-label">minutes</div>
       </div>
 
-      <div class="seconds-container">
-        <div class="seconds"></div>
+      <div class="countdown">
+        <span class="seconds" id="seconds"></span>
         <div class="seconds-label">seconds</div>
       </div>
 
@@ -74,9 +74,7 @@
       </div>
     </div>
   </div>
-  <!-- Messenger ปลั๊กอินแชท Code -->
-  <div id="fb-root"></div>
-  <div id="fb-customer-chat" class="fb-customerchat"></div>
+  
 
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');

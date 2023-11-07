@@ -104,7 +104,7 @@ if (isset($_POST['login'])) {
         $_SESSION['extrameal'] = $row['extrameal'];
         $_SESSION['type'] = $row['type'];
 
-        header("refresh: 1; url=/spc2024/index.php");
+        header("refresh: 1; url=/spc2024/profile.php");
       } else {
         echo '<script language="javascript">';
         echo 'alert("Password Invalid")';

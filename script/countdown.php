@@ -1,58 +1,30 @@
 <script>
-    const countDownClock = (number = 100, format = 'seconds') => {
+  const second = 1000;
+  const minute = second * 60;
+  const hour = minute * 60;
+  const day = hour * 24;
 
-      const d = document;
-      const daysElement = d.querySelector('.days');
-      const hoursElement = d.querySelector('.hours');
-      const minutesElement = d.querySelector('.minutes');
-      const secondsElement = d.querySelector('.seconds');
-      let countdown;
-      convertFormat(format);
+  function countDown() {
+    const now = new Date().getTime();
+    const newtime = new Date('June 5, 2024 08:00:00').getTime();
+    const unixTime = newtime - now;
 
+    const dayElem = document.getElementById('days');
+    dayElem.innerText = Math.floor(unixTime / day);
 
-      function convertFormat(format) {
-        switch (format) {
-          case 'seconds':
-            return timer(number);
-          case 'minutes':
-            return timer(number * 60);
-          case 'hours':
-            return timer(number * 60 * 60);
-          case 'days':
-            return timer(number * 60 * 60 * 24);
-        }
-      }
+    const hourElem = document.getElementById('hours');
+    hourElem.innerText = Math.floor(unixTime % day / hour);
 
-      function timer(seconds) {
-        const now = Date.now();
-        const then = now + seconds * 1000;
+    const minutesElem = document.getElementById('minutes');
+    minutesElem.innerText = Math.floor(unixTime % day % hour / minute);
 
-        countdown = setInterval(() => {
-          const secondsLeft = Math.round((then - Date.now()) / 1000);
-
-          if (secondsLeft <= 0) {
-            clearInterval(countdown);
-            return;
-          };
-
-          displayTimeLeft(secondsLeft);
-
-        }, 1000);
-      }
-
-      function displayTimeLeft(seconds) {
-        daysElement.textContent = Math.floor(seconds / 86400);
-        hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
-        minutesElement.textContent = Math.floor((seconds % 86400) % 3600 / 60);
-        secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
-      }
-    }
-
-
-    /*
-      start countdown
-      enter number and format
-      days, hours, minutes or seconds
-    */
-    countDownClock(121, 'days');
-  </script>
+    const secondElem = document.getElementById('seconds');
+    secondElem.innerText = Math.floor(unixTime % day % hour % minute / second);
+    
+  }
+  function run(){
+    countDown();
+    setInterval(countDown, second);
+  }
+  run();
+</script>
