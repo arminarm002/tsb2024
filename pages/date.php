@@ -1,3 +1,7 @@
+<?php
+session_start();
+include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,9 +20,9 @@
 
   <div class="container">
   <h1 class="card-title centerer mt-3">Important Dates</h1>
-    <table class="table table-success table-striped table-hover mt-5">
-      
-      <tbody class="fs-35">
+  <!-- <img src="/spc2024/img/date.jpg" style="width: 100%; height: auto;"> -->
+    <table class="table tb-stip table-striped table-hover mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+      <tbody style="font-size: 2vw;">
         <tr>
           <td>Abstract submission</td>
           <td>1 February - 31 March 2024</td>
@@ -37,15 +41,15 @@
         </tr>
       </tbody>
     </table>
-    <table class="table table-success table-striped table-hover mt-5">
-      <thead style="text-align: center;">
+    <table class="table tb-stip table-striped table-hover mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+      <thead style="text-align: center;font-size: 2.5vw;">
         <tr>
           <td colspan="2">
-            <h4 class="fs-22">Overall Program of SPC2024</h4>
+            <p>Overall Program of SPC2024</p>
           </td>
         </tr>
       </thead>
-      <tbody class="fs-18">
+      <tbody style="font-size: 2vw;">
       <tr>
           <td></td>
           <td></td>
@@ -94,7 +98,6 @@
       </tbody>
     </table>
   </div>
-
 
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');

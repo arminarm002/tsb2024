@@ -51,33 +51,48 @@ ul.unlist {
 .center2 {
   margin: auto;
 }
-
+.tb-stip{
+  --bs-table-color: #000;
+    --bs-table-bg: #ff7a0136;;
+    --bs-table-border-color: #ff7a01;
+    --bs-table-striped-bg: #dec775;;
+    --bs-table-striped-color: #000;
+    --bs-table-active-bg: #bcd0c7;
+    --bs-table-active-color: #000;
+    --bs-table-hover-bg: #1008006b;
+    --bs-table-hover-color: #fff;
+    color: var(--bs-table-color);
+    border-color: var(--bs-table-border-color);
+}
 .strip {
   --bs-table-striped-bg: #ff7a0145;
 }
 
 .imageback {
-  background-image: url(/SPC2024/img/sci1.png);
+  background-image: url(/SPC2024/img/sci2.jpg);
   background-color: #cccccc;
-  /* Used if the image is unavailable */
-  height: 500px;
-  /* You must set a specified height */
+  height: 320px;
   background-position: center;
-  /* Center the image */
   background-repeat: no-repeat;
-  /* Do not repeat the image */
   background-size: cover;
 }
-
+@media screen and (max-width:1500px) {
+  .imageback {
+    height: 220px;
+  }
+}
 @media screen and (min-width: 601px) {
   .resfont {
-    font-size: 1vw;
+    font-size: 1.5vw;
   }
 }
 
 @media screen and (max-width: 600px) {
   .resfont {
-    font-size: 1.5vw;
+    font-size: 2.5vw;
+  }
+  .imageback {
+    height: 150px;
   }
 }
 

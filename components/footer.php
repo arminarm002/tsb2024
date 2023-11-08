@@ -41,7 +41,7 @@
         </div>
       </div>
       <div class="col-sm-3">
-        <h4 class="mt-3">Social</h4>
+        <h4 class="mt-3">About Science KMITL</h4>
         <p><i class="bi bi-facebook"></i> <a target="_blank" href="https://www.facebook.com/SciKmitl">Science KMITL</a></p>
         <p><i class="bi bi-youtube"></i> <a target="_blank" href="https://www.youtube.com/@schoolofsciencekmitloffici8071">Youtube</a></p>
         <p><i class="bi bi-browser-chrome"></i> <a target="_blank" href="https://www.science.kmitl.ac.th/new">Website</a></p>

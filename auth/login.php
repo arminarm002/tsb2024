@@ -1,3 +1,7 @@
+<?php
+session_start();
+include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,10 +19,8 @@
   include($_SERVER['DOCUMENT_ROOT'].'/spc2024/components/navbar.php');
   ?>
   <div class="container">
-   
-
     <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
-      <div class="card mb-3" style="width: 500px;">
+      <div class="card mb-3" style="width: 500px;background-color: rgb(255 122 1 / 20%);">
         <div class="card-header bg-l text-white text-center">
           <h4>Login เข้าสู่ระบบ</h4>
         </div>

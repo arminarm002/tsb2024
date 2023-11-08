@@ -20,6 +20,7 @@ if (isset($_POST['add'])) {
   $receipt = $_POST['receipt'];
   $fee = $_POST['fee'];
   $fileupload = (isset($_POST['fileupload']) ? $_POST['fileupload'] : '');
+  $role = "user";
   $password = password_hash($pass, PASSWORD_DEFAULT);
 
 
@@ -56,9 +57,9 @@ if (isset($_POST['add'])) {
   } else {
     $sql = ("INSERT Into tb_user (
         email, password, title, firstname, lastname, company, career, address, country, 
-        telephone, fax, extrameal, food, type, receipt, fee, slip) values (
+        telephone, fax, extrameal, food, type, receipt, fee, slip, role) values (
           '$email', '$password', '$title', '$fname', '$lname', '$company', '$career', '$address', '$country', 
-          '$tel', '$fax', '$extrameal', '$food', '$type', '$receipt', '$fee', '$newname')");
+          '$tel', '$fax', '$extrameal', '$food', '$type', '$receipt', '$fee', '$newname', '$role')");
     $query = $conn->query($sql);
     mysqli_close($conn);
     if ($query) {
@@ -103,6 +104,8 @@ if (isset($_POST['login'])) {
         $_SESSION['fax'] = $row['fax'];
         $_SESSION['extrameal'] = $row['extrameal'];
         $_SESSION['type'] = $row['type'];
+        $_SESSION['slip'] = $row['slip'];
+        $_SESSION['role'] = $row['role'];
 
         header("refresh: 1; url=/spc2024/auth/profile.php");
       } else {

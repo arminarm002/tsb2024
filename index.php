@@ -1,3 +1,7 @@
+<?php
+session_start();
+include 'connectdb.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,8 +42,8 @@
       </div>
 
     </section>
-    <div class="cards mb-3">
-      <h1 class="card-title centerer mt-4" style="color: #7b7b7b;">Announcement</h1>
+    <div class="cards mb-3 mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;padding-bottom: 15px;">
+      <h1 class="card-title centerer" style="color: #7b7b7b;padding-top: 15px;">Announcement</h1>
       <div class="image">
         <div class="row" style="margin: 15px auto;">
           <div class="col-6 centerer">
@@ -74,7 +78,7 @@
       </div>
     </div>
   </div>
-  
+
 
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
