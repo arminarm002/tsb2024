@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'connectdb.php';
+include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,9 +64,8 @@ include 'connectdb.php';
             <div class="card border border-warning rounded" style="width: 28rem;"><!-- 18rem -->
               <img class="border-bottom border-warning" src="/spc2024/img/news/flag.jpg" style="width:100%; ">
               <div class="card-body">
-                <h5 class="card-title">✨New✨ 17 June 2023</h5>
-                <p class="card-text">The Department of Physics, Faculty of Science and the College of Technology and
-                  Innovation in Materials, received the flag to co-host the 19th Siam Physics Congress.</p>
+                <h5 class="card-title">17 June 2023</h5>
+                <p class="card-text">ภาควิชาฟิสิกส์ คณะวิทยาศาสตร์และวิทยาลัยเทคโนโลยีและนวัตกรรมวัสดุ รับมอบธงร่วมเป็นเจ้าภาพจัดงานประชุมวิชาการ Siam Physics Congress ครั้งที่ 19 ซึ่งจะจัดขึ้นระหว่างวันที่ 5-7 มิถุนายน ปี 2567</p>
                 <a href="https://www.facebook.com/profile/100063613568041/search/?q=%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A1%E0%B8%AD%E0%B8%9A%E0%B8%98%E0%B8%87"
                   class="btn btn-warning" target="_blank">
                   <h6 class="card-title">-- More --</h6>

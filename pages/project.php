@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,8 +78,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
           </ul>
           <h5>รอบสอง </h5>
           <ul class="unlist">
-            <li>ไฟล์รายงานโครงงานอิสระฉบับสมบูรณ์ ส่งได้ที่ >>
-              <a href="">Link</a>
+            <li>ไฟล์รายงานโครงงานอิสระฉบับสมบูรณ์ ส่งได้ที่ >> Link
+              <!-- <a href="https://docs.google.com/forms/d/1IsirhQ02JlNmnFgziYkFuLBH6NOZeQFXd6KtBPQ8RFA/edit?pli=1">Link</a> -->
             </li>
             <li>การนำเสนอผลงาน ภาษาที่จะใช้ในการนำเสนอรอบสุดท้าย ท่านสามารถนำเสนอได้ทั้งภาษาไทยและภาษาอังกฤษ </li>
           </ul>

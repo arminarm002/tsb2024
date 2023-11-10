@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,6 +49,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
               generate qualified new knowledge in Physics and Physics content to be greater than 50%). Plagiarism and
               self-plagiarism are not allowed.</li>
           </ul>
+          <h5>Abstract Submission >>> <a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2F" target="_blank">Click</a></h5>
         </div>
       </div>
     </div>

@@ -67,18 +67,20 @@ ul.unlist {
 .strip {
   --bs-table-striped-bg: #ff7a0145;
 }
-
+.backdate{
+  background-image: url('/spc2024/img/earthbulb.jpg');
+}
 .imageback {
-  background-image: url(/SPC2024/img/sci2.jpg);
+  background-image: url(/spc2024/img/sci2.JPG);
   background-color: #cccccc;
-  height: 320px;
+  height: 250px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media screen and (max-width:1500px) {
   .imageback {
-    height: 220px;
+    height: 190px;
   }
 }
 @media screen and (min-width: 601px) {

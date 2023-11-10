@@ -32,7 +32,7 @@
               Submission
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/spc2024/pages/submissions.php">Submissions</a></li>
+              <li><a class="dropdown-item" href="/spc2024/pages/submissions.php">Abstract Submissions</a></li>
               <li><a class="dropdown-item" href="/spc2024/pages/guildline.php">Presentation Guidelines & Award</a></li>
               <li><a class="dropdown-item" href="/spc2024/pages/project.php">ประกวดโครงงานอิสระ</a></li>
             </ul>

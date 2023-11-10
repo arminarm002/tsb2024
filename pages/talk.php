@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +8,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPC2023 KMITL</title>
+  <title>SPC2024 KMITL</title>
   <link rel="stylesheet" href="/spc2024/theme/css/bootstrap-theme.css">
   <link rel="stylesheet" href="/spc2024/theme/css/self.css">
 </head>

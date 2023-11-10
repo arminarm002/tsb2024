@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +20,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
   ?>
   <div class="container">
     <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
-      <div class="card mb-3" style="width: 500px;background-color: rgb(255 122 1 / 20%);">
+      <div class="card mb-3" style="width: 500px;background-color: rgb(255 122 1 / 20%);box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
         <div class="card-header bg-l text-white text-center">
           <h4>Login เข้าสู่ระบบ</h4>
         </div>

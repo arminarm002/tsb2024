@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +54,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
       <hr>
       <h5>Presentation Awards</h5>
       <ul class="unlist">
-        <li>Best Oral</li>
+        <li>Best Oral Presentation Awards</li>
         <li>Best Poster Awards</li>
         <li>Honorable Mention Awards</li>
       </ul>

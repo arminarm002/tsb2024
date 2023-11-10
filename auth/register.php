@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/SPC2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 if (isset($_SESSION['role'])) {
   header("refresh: 1; url= /spc2024/auth/profile.php");
 } else {
@@ -23,7 +23,7 @@ if (isset($_SESSION['role'])) {
     ?>
     <div class="container mt-5">
 
-      <div class="card" style="background-color: rgb(255 122 1 / 20%);">
+      <div class="card" style="background-color: rgb(255 122 1 / 20%);box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
         <div class="card-header bg-l text-white text-center">
           <h5>
             Register
@@ -123,8 +123,8 @@ if (isset($_SESSION['role'])) {
                 <div class="form-check" style="margin-left: 30px;">
                   <?php
                   $sql = $conn->query("SELECT * FROM tb_meal");
-                  foreach ($sql as $row) {
-                    echo '<input class="form-check-input" type="radio" name="meal" value="' . htmlspecialchars($row['meal_name']) . '" required> ' . $row['meal_name'] . '<br>';
+                   foreach ($sql as $row) {
+                     echo '<input class="form-check-input" type="radio" name="meal" value="' . htmlspecialchars($row['meal_name']) . '" required> ' . $row['meal_name'] . '<br>';
                     ?>
                   <?php } ?>
                 </div>
@@ -154,14 +154,14 @@ if (isset($_SESSION['role'])) {
               </div>
 
               <!-- Address Receipt input -->
-              <div class="form-outline mb-2">
+              <div class="form-outline">
                 <label class="form-label" for="receipt">Name and address for payment
                   receipt<br>(ชื่อและที่อยู่ในใบเสร็จสำหรับเบิก) :</label>
                 <input type="text" id="receipt" name="receipt" class="form-control" required />
               </div>
 
               <!-- Fee input -->
-              <div class="form-outline mb-2">
+              <div class="form-outline mb-2 mt-5">
                 <table class="table table-active table-bordered border-danger">
                   <thead style="text-align: center;">
                     <tr>
@@ -236,10 +236,11 @@ if (isset($_SESSION['role'])) {
                   <br>บัญชี ธนาคารกรุงไทย สาขาถนนห้วยแก้ว
                   <br>ชื่อบัญชี สมาคมฟิสิกส์ไทย 2560
                   <br>เลขที่บัญชี 549-0-25626-5
-                  <br>
-                  <br>** Payment can be made after registration.
                 </p>
               </div>
+
+              <p>* สิทธิพิเศษ ได้เป็นสมาชิก 1 ปี</p>
+              <p>** นักเรียน/นักศึกษา ต้องแนบสำเนาบัตรประจำตัวนักเรียน/นักศึกษา</p>
 
               <!-- Check input -->
               <div class="form-check mb-3">
@@ -250,7 +251,7 @@ if (isset($_SESSION['role'])) {
               </div>
 
               <!-- Submit button -->
-              <button type="submit" class="btn btn-l btn-block mb-2" name="add">สมัครสมาชิก</button>
+              <button type="submit" class="btn btn-l btn-block mb-2" name="add" disabled>สมัครสมาชิก</button>
 
               <!-- Register buttons -->
               <div class="text-center">
