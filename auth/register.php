@@ -209,10 +209,20 @@ if (isset($_SESSION['role'])) {
                       $i++;
                     }
                     ?>
+                    <tr id="studencard" style="display:none;">
+                      <td colspan="3">
+                        <span class="centerer">
+                          กรุณาแนบสำเนาบัตรนักศึกษา (Attach your student ID card.) 
+                          <input type="file" name="studencard">
+                        </span>
+                      </td>
+                    </tr>
+                    <tr></tr>
                     <tr id="myDiv" style="display:none;">
                       <td colspan="3">
                         <span class="centerer">
-                          จำนวน Abstract ที่ต้องการส่ง <input type="number" id="amount" name="amonut"> เรื่อง
+                          จำนวน Abstract ที่ต้องการส่ง 
+                          <input type="number" id="amount" name="amonut"> เรื่อง 
                         </span>
                       </td>
                     </tr>
@@ -251,7 +261,7 @@ if (isset($_SESSION['role'])) {
               </div>
 
               <!-- Submit button -->
-              <button type="submit" class="btn btn-l btn-block mb-2" name="add" disabled>สมัครสมาชิก</button>
+              <button type="submit" class="btn btn-l btn-block mb-2" name="add">สมัครสมาชิก</button>
 
               <!-- Register buttons -->
               <div class="text-center">

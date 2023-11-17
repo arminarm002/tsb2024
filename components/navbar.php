@@ -9,7 +9,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse fs-20" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 menunav">
+        <ul class="hoverul navbar-nav me-auto mb-2 mb-lg-0 menunav">
           <li class="nav-item">
             <a class="nav-link nav-fontcolor " aria-current="page" href="/spc2024/index.php">Home</a>
           </li>

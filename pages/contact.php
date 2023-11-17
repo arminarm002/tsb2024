@@ -40,12 +40,28 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
         <img src=/spc2024/img/gsci1.jpg class="border border-warning border-2 img-fluid">
       </div>
       <div class="col-6">
+        <img src=/spc2024/img/gsci8.jpg class="border border-warning border-2 img-fluid">
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-6">
+        <img src=/spc2024/img/gsci2.jpg class="border border-warning border-2 img-fluid">
+      </div>
+      <div class="col-6">
+        <img src=/spc2024/img/gsci3.jpg class="border border-warning border-2 img-fluid">
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-6">
+        <img src=/spc2024/img/gsci9.jpg class="border border-warning border-2 img-fluid">
+      </div>
+      <div class="col-6">
         <img src=/spc2024/img/gsci5.jpg class="border border-warning border-2 img-fluid">
       </div>
     </div>
     <div class="row mb-4">
       <div class="col-6">
-        <img src=/spc2024/img/gsci3.jpg class="border border-warning border-2 img-fluid">
+        <img src=/spc2024/img/gsci7.jpg class="border border-warning border-2 img-fluid">
       </div>
       <div class="col-6">
         <img src=/spc2024/img/gsci4.jpg class="border border-warning border-2 img-fluid">
