@@ -51,7 +51,7 @@
           <?php if (isset($_SESSION['role'])) {
             if ($_SESSION['role'] == "user") { ?>
               <li class="nav-item">
-                <a class="nav-link nav-fontcolor" aria-current="page" href="/spc2024/auth/profile.php"><?php echo $_SESSION['title'].$_SESSION['firstname']; ?></a>
+                <a class="nav-link nav-fontcolor" aria-current="page" href="/spc2024/auth/profile.php">Profile</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link nav-fontcolor" aria-current="page" href="/spc2024/auth/logout.php">Log out</a>

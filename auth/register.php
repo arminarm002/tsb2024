@@ -183,13 +183,13 @@ if (isset($_SESSION['role'])) {
                       ?>
                       <tr>
                         <td>
-                          <?php echo $row['type']; ?>
+                          <?php echo $row['pay_name']; ?>
                         </td>
                         <td>
                           <input class="form-check-input" type="radio" name="fee"
-                            value="<?php echo $row['type'] . $row['b_amount']; ?>" onchange="openamount(this.value)"
+                            value="<?php echo $row['id']; ?>" onchange="openamount(this.value)"
                             required>
-                          <label class="form-check-label" for="fee1">
+                          <label class="form-check-label" for="fee">
                             <?php
                             echo $row['b_amount'];
                             $cal[$i] = $row['b_amount'];
@@ -197,8 +197,8 @@ if (isset($_SESSION['role'])) {
                           </label>
                         </td>
                         <td>
-                          <input class="form-check-input" type="radio" name="fee"
-                            value="<?php echo $row['type'] . $row['a_amount']; ?>" disabled>
+                          <input class="form-check-input" type="radio" name="fee2"
+                            value="<?php echo $row['id']; ?>" disabled>
                           <label class="form-check-label" for="fee2">
                             <?php echo $row['a_amount']; ?>
                           </label>
@@ -222,7 +222,7 @@ if (isset($_SESSION['role'])) {
                       <td colspan="3">
                         <span class="centerer">
                           จำนวน Abstract ที่ต้องการส่ง 
-                          <input type="number" id="amount" name="amonut"> เรื่อง 
+                          <input type="number" id="amount" name="amount" value="1"> เรื่อง 
                         </span>
                       </td>
                     </tr>

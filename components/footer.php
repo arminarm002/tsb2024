@@ -16,43 +16,44 @@
       <div class="col-sm-6">
         <h4>Exhibitions</h4>
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-lg-3 col-sm-6">
             <a target="_blank" href="http://www.thaiphysoc.org/">
               <img src="/spc2024/img/co-host/physic.png" class="img-fluid w-75">
             </a>
           </div>
-          <div class="col-sm-4">
+          <div class="col-lg-3 col-sm-6">
             <a target="_blank" href="https://www.science.kmitl.ac.th/new">
               <img src="/spc2024/img/co-host/logo-b.png" class="img-fluid w-75">
             </a>
           </div>
-          <div class="col-sm-4">
+          <div class="col-lg-3 col-sm-6">
             <a target="_blank" href="http://www.cmit.kmitl.ac.th/">
               <img src="/spc2024/img/co-host/cmit.png" class="img-fluid w-75">
             </a>
           </div>
+          <div class="col-lg-3 col-sm-6">
+            <a target="_blank" href="https://www.aru.ac.th/">
+              <img src="/spc2024/img/co-host/pru.png" class="img-fluid w-50"></a>
+          </div>
 
         </div>
-        <div class="row mb-3">
-          <div class="col-sm-3" style="margin:auto;">
+        <!-- <div class="row mb-3">
+          <div class="col-sm-4" style="margin:auto;">
             <a target="_blank" href="https://www.aru.ac.th/">
-              <img src="/spc2024/img/co-host/pru.png" style="width:75%;">
+              <img src="/spc2024/img/co-host/pru.png" style="width:50%;">
             </a>
           </div>
-          <div class="col-sm-3" style="margin:auto;">
+          <div class="col-sm-4" style="margin:auto;">
             <a target="_blank" href="https://www.aru.ac.th/">
-              <img src="/spc2024/img/co-host/pru.png" style="width:75%;">
-            </a>
-          </div><div class="col-sm-3" style="margin:auto;">
-            <a target="_blank" href="https://www.aru.ac.th/">
-              <img src="/spc2024/img/co-host/pru.png" style="width:75%;">
-            </a>
-          </div><div class="col-sm-3" style="margin:auto;">
-            <a target="_blank" href="https://www.aru.ac.th/">
-              <img src="/spc2024/img/co-host/pru.png" style="width:75%;">
+              <img src="/spc2024/img/co-host/pru.png" style="width:50%;">
             </a>
           </div>
-        </div>
+          <div class="col-sm-4" style="margin:auto;">
+            <a target="_blank" href="https://www.aru.ac.th/">
+              <img src="/spc2024/img/co-host/pru.png" style="width:50%;">
+            </a>
+          </div>
+        </div> -->
       </div>
       <div class="col-sm-3">
         <h4>About Science KMITL</h4>

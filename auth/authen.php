@@ -16,13 +16,34 @@ if (isset($_POST['add'])) {
   $fax = $_POST['fax'];
   $extrameal = $_POST['meal'];
   $food = $_POST['food'];
-  $type = $_POST['type'];
+  $typeu = $_POST['type'];
   $receipt = $_POST['receipt'];
   $fee = $_POST['fee'];
+  $amount = $_POST['amount'];
   $fileupload = (isset($_POST['fileupload']) ? $_POST['fileupload'] : '');
   $role = "user";
   $password = password_hash($pass, PASSWORD_DEFAULT);
 
+  if ($fee == "1") {
+    $amount = 1;
+  } else if ($fee == "5") {
+    $amount = 1;
+  }
+  if ($fee == "1") {
+    $total = $amount * 5000;
+
+  } else if ($fee == "2") {
+    $total = $amount * 4000;
+
+  } else if ($fee == "3") {
+    $total = $amount * 4000;
+
+  } else if ($fee == "4") {
+    $total = $amount * 3000;
+
+  } else if ($fee == "5") {
+    $total = $amount * 3000;
+  }
 
   //ฟังก์ชั่นวันที่
   date_default_timezone_set('Asia/Bangkok');
@@ -57,9 +78,9 @@ if (isset($_POST['add'])) {
   } else {
     $sql = ("INSERT Into tb_user (
         email, password, title, firstname, lastname, company, career, address, country, 
-        telephone, fax, extrameal, food, type, receipt, fee, slip, role) values (
+        telephone, fax, extrameal, food, type, receipt, pay_id, amount, total_price, slip, role) values (
           '$email', '$password', '$title', '$fname', '$lname', '$company', '$career', '$address', '$country', 
-          '$tel', '$fax', '$extrameal', '$food', '$type', '$receipt', '$fee', '$newname', '$role')");
+          '$tel', '$fax', '$extrameal', '$food', '$typeu', '$receipt', '$fee', '$amount', '$total', '$newname', '$role')");
     $query = $conn->query($sql);
     mysqli_close($conn);
     if ($query) {
@@ -107,7 +128,13 @@ if (isset($_POST['login'])) {
         $_SESSION['slip'] = $row['slip'];
         $_SESSION['role'] = $row['role'];
 
+        if($_SESSION['role']=="user"){
         header("refresh: 1; url=/spc2024/auth/profile.php");
+        } else if ($_SESSION['role']=="admin") {
+          header("refresh: 1; url=/spc2024/auth/backend/admin.php");
+        } else if ($_SESSION['role']=="thaiphysic") {
+          header("refresh: 1; url=/spc2024/auth/backend/thaiphysic.php");
+        } 
       } else {
         echo '<script language="javascript">';
         echo 'alert("Password Invalid")';

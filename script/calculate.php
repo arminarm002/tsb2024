@@ -4,12 +4,12 @@
     const amount = document.getElementById('amount');
     const resultDiv = document.getElementById('result');
 
-    if (val == 'General audience5,000 Bath') {
+    if (val == '1') {
       var cal = 5000;
       document.getElementById('myDiv').style.display = 'none';
       document.getElementById('studencard').style.display = 'none';
       resultDiv.textContent = ` : ${1 * cal} `;
-    } else if (val == 'Permanent Member of Thai Physics Society4,000 Bath per Abstract') {
+    } else if (val == '2') {
       var cal = 4000;
       document.getElementById('myDiv').style.display = 'contents';
       document.getElementById('studencard').style.display = 'none';
@@ -21,7 +21,7 @@
           resultDiv.textContent = ` : ${number * cal} `;
         }
       });
-    } else if (val == 'Non Member of Thai Physics Society *4,000 Bath per Abstract') {
+    } else if (val == '3') {
       var cal = 4000;
       document.getElementById('myDiv').style.display = 'contents';
       document.getElementById('studencard').style.display = 'none';
@@ -31,7 +31,7 @@
         // ทำการคำนวณหรือแสดงผลตามต้องการ
         resultDiv.textContent = ` : ${number * cal} `;
       });
-    } else if (val == 'Student **3,000 Bath per Abstract') {
+    } else if (val == '4') {
       var cal = 3000;
       document.getElementById('myDiv').style.display = 'contents';
       document.getElementById('studencard').style.display = 'contents';
