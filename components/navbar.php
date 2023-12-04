@@ -49,7 +49,7 @@
             </ul>
           </li>
           <?php if (isset($_SESSION['role'])) {
-            if ($_SESSION['role'] == "user") { ?>
+            if ($_SESSION['role']) { ?>
               <li class="nav-item">
                 <a class="nav-link nav-fontcolor" aria-current="page" href="/spc2024/auth/profile.php">Profile</a>
               </li>

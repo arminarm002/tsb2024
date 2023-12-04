@@ -34,7 +34,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
           <img class="" src="/spc2024/img/presenter.png" style="width:100%; ">
           <a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FSPC2024" target="_blank>
             <button type="button" class="btn btn-outline-info" style="width: 100%;">
-              <p style="font-size:3.5vw;">Presentater</p>
+              <p style="font-size:3.5vw;">Presenter</p>
             </button>
           </a>
         </div>

@@ -249,7 +249,7 @@ if (isset($_SESSION['role'])) {
                 </p>
               </div>
 
-              <p>* สิทธิพิเศษ ได้เป็นสมาชิก 1 ปี</p>
+              <p>* เลือกชำระแบบ Non Member of Thai Physics Society รับสิทธิพิเศษ ได้เป็นสมาชิก 1 ปี</p>
               <p>** นักเรียน/นักศึกษา ต้องแนบสำเนาบัตรประจำตัวนักเรียน/นักศึกษา</p>
 
               <!-- Check input -->
@@ -261,7 +261,7 @@ if (isset($_SESSION['role'])) {
               </div>
 
               <!-- Submit button -->
-              <button type="submit" class="btn btn-l btn-block mb-2" name="add">สมัครสมาชิก</button>
+              <button type="submit" class="btn btn-l btn-block text-white mb-2" name="add">สมัครสมาชิก</button>
 
               <!-- Register buttons -->
               <div class="text-center">
