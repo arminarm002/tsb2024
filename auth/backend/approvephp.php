@@ -32,6 +32,7 @@ if ($_SESSION['role'] == "thaiphysic") {
 
 
   if (isset($_POST['disapprove'])) {
+    $message = $_POST['message'];
     $sql = $conn->query("SELECT * FROM tb_user WHERE email='" . $_SESSION['email'] . "'");
     foreach ($sql as $row) {
       $thupass = $row['password'];
@@ -41,7 +42,8 @@ if ($_SESSION['role'] == "thaiphysic") {
         date_default_timezone_set('Asia/Bangkok');
         $date = date("Ymd");
         $nameby = $_SESSION['title'] . $_SESSION['firstname'] . " " . $_SESSION['lastname'];
-        $insert = $conn->query("DELETE FROM tb_approve WHERE user_id = '" . $id . "'");
+        $delete = $conn->query("DELETE FROM tb_approve WHERE user_id = '" . $id . "'");
+        $insert2 = $conn->query("UPDATE tb_user SET message='".$message."' WHERE user_id = '" . $id . "'");
         echo '<script language="javascript">';
         echo 'alert("Successfull.")';
         echo '</script>';

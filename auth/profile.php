@@ -29,7 +29,7 @@ if ($_SESSION['role']) {
               <?php include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/sidebar.php'); ?>
             </div>
             <div class="col">
-              <?php if ($row['approve'] == "") { ?>
+              <?php if ($row['approve'] == "wait") { ?>
                 <div class="alert alert-secondary" role="alert">
                   กรุณารอการยืนยันจากเจ้าหน้าที่
                 </div>
@@ -39,7 +39,8 @@ if ($_SESSION['role']) {
                   </div>
               <?php } else if ($row['approve'] == "disapprove") { ?>
                     <div class="alert alert-danger" role="alert">
-                      การลงทะเบียนของคุณ ไม่ผ่านการอนุมัติ หากยืนยันว่าการลงทะเบียนของท่านถูกต้องครบถ้วน กรุณาติดต่อเจ้าหน้าที่
+                      การลงทะเบียนของคุณ ไม่ผ่านการอนุมัติ เนื่องจาก "
+                  <?php echo $row['message']; ?>" หากยืนยันว่าการลงทะเบียนของท่านถูกต้องครบถ้วน กรุณาติดต่อเจ้าหน้าที่
                     </div>
               <?php } ?>
               <div class="row">
@@ -130,7 +131,7 @@ if ($_SESSION['role']) {
                     <div class="card mt-3" style="background-color: rgb(255 122 1 / 20%);padding: 2%;">
                       <div class="card-body">
                         <form action="request.php?userid=<?php echo $row['user_id']; ?>" method="POST">
-                          <div class="form-outline mb-2">
+                          <div class="form-outline mb-2 mt-3">
                             <label class="form-label">
                               <h5>ยืนยันการส่งข้อมูล ให้เจ้าหน้าที่พิจารณาอีกครั้ง
                                 <br>Please Input Password to Confirm :

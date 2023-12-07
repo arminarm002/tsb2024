@@ -1,52 +1,62 @@
 <script>
+
   function openamount(val) {
+
+    var date = new Date();
+    var p;
+    var t = '<?= json_encode($datepro) ?>';
+    const datepro = new Date(t);
+    console.log(t);
+    console.log(datepro);
+    var sss = [];
+    sss = <?= json_encode($data) ?>;
+    for (var i = 0; i < sss.length; i++) {
+      if (sss[i][0] == val) {
+        if (date < datepro) {
+          p = sss[i][4];
+        } else {
+          p = sss[i][5];
+        }
+      }
+
+    }
+    console.log(p);
 
     const amount = document.getElementById('amount');
     const resultDiv = document.getElementById('result');
+    var price = document.getElementById('b_pay').value;
+    console.log(val);
+    console.log(price);
+    amount.value = 1;
 
-    if (val == '1') {
-      var cal = 5000;
+    if (val == '1' || val == '5') {
       document.getElementById('myDiv').style.display = 'none';
       document.getElementById('studencard').style.display = 'none';
-      resultDiv.textContent = ` : ${1 * cal} `;
-    } else if (val == '2') {
-      var cal = 4000;
+      resultDiv.textContent = ` : ${1 * p} `;
+    }
+
+    if (val == '2' || val == '3') {
       document.getElementById('myDiv').style.display = 'contents';
       document.getElementById('studencard').style.display = 'none';
-      resultDiv.textContent = ` : ${1 * cal} `;
+      resultDiv.textContent = ` : ${1 * p} `;
       amount.addEventListener('input', function () {
         const number = parseFloat(amount.value);
         if (!isNaN(number)) {
           // ทำการคำนวณหรือแสดงผลตามต้องการ
-          resultDiv.textContent = ` : ${number * cal} `;
+          resultDiv.textContent = ` : ${number * p} `;
         }
       });
-    } else if (val == '3') {
-      var cal = 4000;
-      document.getElementById('myDiv').style.display = 'contents';
-      document.getElementById('studencard').style.display = 'none';
-      resultDiv.textContent = ` : ${1 * cal} `;
-      amount.addEventListener('input', function () {
-        const number = parseFloat(amount.value);
-        // ทำการคำนวณหรือแสดงผลตามต้องการ
-        resultDiv.textContent = ` : ${number * cal} `;
-      });
-    } else if (val == '4') {
-      var cal = 3000;
+    }
+
+    if (val == '4') {
       document.getElementById('myDiv').style.display = 'contents';
       document.getElementById('studencard').style.display = 'contents';
-      resultDiv.textContent = ` : ${1 * cal} `;
+      resultDiv.textContent = ` : ${1 * p} `;
       amount.addEventListener('input', function () {
         const number = parseFloat(amount.value);
         // ทำการคำนวณหรือแสดงผลตามต้องการ
-        resultDiv.textContent = ` : ${number * cal} `;
+        resultDiv.textContent = ` : ${number * p} `;
       });
-    } else {
-      var cal = 3000;
-      document.getElementById('myDiv').style.display = 'none';
-      document.getElementById('studencard').style.display = 'none';
-      resultDiv.textContent = ` : ${1 * cal} `;
     }
-    console.log(cal);
   }
 </script>

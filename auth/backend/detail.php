@@ -76,20 +76,29 @@ $id = $_GET['userid'];
 
           <div class="mt-5" style="background-color: rgb(255 122 1 / 20%);padding: 2%;">
             <form action="approvephp.php?userid=<?php echo $row['user_id']; ?>" method="POST">
-              <div class="form-outline mb-2">
+              <div id="add" class="form-outline mb-2" style="display:none;">
+                <label class="form-label">
+                  <h5>ในกรณี disapprove โปรดระบุสาเหตุเพื่อส่งข้อความถึงผู้สมัคร : </h5>
+                </label>
+                <input id="addinput" type="text" class="form-control" name="message" />
+              </div>
+              <div class="form-outline mb-2 mt-3">
                 <label class="form-label">
                   <h5>Please Input Password to Confirm : </h5>
                 </label>
                 <input type="password" class="form-control" name="password" required />
               </div>
               <div class="text-end">
-                <?php if ($row['approve'] == "") { ?>
-                  <button type="submit" class="btn btn-l mt-2 text-white" name="disapprove">Disapprove</button>
-                  <button type="submit" class="btn btn-l mt-2 text-white" name="approve">Approve</button>
+                <?php if ($row['approve'] == "wait") { ?>
+                  <button id="dis1" type="button" class="btn btn-l mt-2 text-white"
+                    onclick="addmessage()">Disapprove</button>
+                  <button id="dis2" type="submit" class="btn btn-l mt-2 text-white" name="disapprove"
+                    style="display:none;">Disapprove</button>
+                  <button type="submit" class="btn btn-l mt-2 text-white" name="approve" id="ap">Approve</button>
                 <?php } else if ($row['approve'] == "approve") { ?>
                     <button type="submit" class="btn btn-l mt-2 text-white" name="disapprove">Disapprove</button>
-                    <?php } else if ($row['approve'] == "disapprove") { ?>
-                    <button type="submit" class="btn btn-l mt-2 text-white" name="disapprove">Approve</button>
+                <?php } else if ($row['approve'] == "disapprove") { ?>
+                      <button type="submit" class="btn btn-l mt-2 text-white" name="disapprove">Approve</button>
                 <?php } ?>
               </div>
             </form>
@@ -104,7 +113,15 @@ $id = $_GET['userid'];
   include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
   include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
   ?>
-
+  <script type="text/javascript">
+    function addmessage() {
+      document.getElementById('add').style.display = 'contents';
+      document.getElementById('dis1').style.display = 'none';
+      document.getElementById('dis2').style.display = 'inline';
+      document.getElementById('ap').style.display = 'none';
+      document.getElementById('addinput').setAttribute('required', '');
+    };
+  </script>
 </body>
 
 </html>

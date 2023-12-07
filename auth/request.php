@@ -10,7 +10,7 @@ if (isset($_POST['request'])) {
     $thupass = $row['password'];
     $password = password_verify($pass, $thupass);
     if ($password) {
-      $qry = $conn->query("UPDATE tb_user SET approve='' WHERE user_id = '" . $id . "'");
+      $qry = $conn->query("UPDATE tb_user SET approve='wait' WHERE user_id = '" . $id . "'");
       echo '<script language="javascript">';
       echo 'alert("Successfull.")';
       echo '</script>';

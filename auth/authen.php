@@ -77,7 +77,7 @@ if (isset($_POST['add'])) {
     echo '</script>';
     header("refresh: 1; url=register.php");
   } else {
-    $sql = $conn->query("INSERT INTO tb_user (email, password, title, firstname, lastname, company, career, address, country, telephone, fax, extrameal, food, type, receipt, pay_id, amount, total_price, role, profile) VALUES ('$email', '$password', '$title', '$fname', '$lname', '$company', '$career', '$address', '$country', '$tel', '$fax', '$extrameal', '$food', '$typeu', '$receipt', '$fee', '$amount', '$total', '$role', '$profile')");
+    $sql = $conn->query("INSERT INTO tb_user (email, password, title, firstname, lastname, company, career, address, country, telephone, fax, extrameal, food, type, receipt, pay_id, amount, total_price, role, profile, approve) VALUES ('$email', '$password', '$title', '$fname', '$lname', '$company', '$career', '$address', '$country', '$tel', '$fax', '$extrameal', '$food', '$typeu', '$receipt', '$fee', '$amount', '$total', '$role', '$profile', 'wait')");
 
     if ($sql) {
       $slip = $conn->query("INSERT INTO tb_slip (slip_date, slip_name, email) VALUES ('$date', '$newname', '$email')");
