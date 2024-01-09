@@ -27,7 +27,7 @@ if ($_SESSION['role']) {
 
       <div class="container-fluid">
         <div class="row mt-3">
-          <div class="col-sm-3 col-md-2">
+          <div class="col-sm-12 col-md-2 col-lg-3">
             <?php include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/sidebar.php'); ?>
           </div>
           <div class="col">

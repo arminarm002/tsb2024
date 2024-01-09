@@ -49,7 +49,7 @@ if ($_SESSION['role']) {
                   <div class="card">
                     <div class="cardbody" style="padding:2% 5%;">
                       <div class="row">
-                        <div class="col-sm-3" style="text-align: center;">
+                        <div class="col-md-5" style="text-align: center;">
                           <?php $sql4 = $conn->query("SELECT * FROM tb_user WHERE email='" . $_SESSION['email'] . "'");
                           foreach ($sql4 as $row4) {
                             echo "<img src='/spc2024/file/upload/profile/" . $row4['profile'] . "' class='rounded-circle' style='box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px; width: 150px; height: 150px;'>";
@@ -62,7 +62,7 @@ if ($_SESSION['role']) {
                             <button type="submit" name="update" class="btn2">Submit</button>
                           </form>
                         </div>
-                        <div class="col-sm">
+                        <div class="col-md">
                           <h2>
                             <?php
                             echo $row['title'] . $row['firstname'] . " " . $row['lastname'] . "<br>";

@@ -1,7 +1,7 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'].'/spc2024/connectdb.php');
-if(isset($_SESSION['role'])) {
+include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
+if (isset($_SESSION['role'])) {
   header("refresh: 1; url= /spc2024/auth/profile.php");
 } else {
   ?>
@@ -19,10 +19,9 @@ if(isset($_SESSION['role'])) {
 
   <body class="font-mitr">
     <?php
-    include($_SERVER['DOCUMENT_ROOT'].'/spc2024/components/navbar.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/navbar.php');
     ?>
     <div class="container mt-5">
-
       <div class="card" style="background-color: rgb(255 122 1 / 20%);box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
         <div class="card-header bg-l text-white text-center">
           <h5>
@@ -47,13 +46,13 @@ if(isset($_SESSION['role'])) {
               <!-- Title input -->
               <div class="form-outline mb-2">
                 <div class="row">
-                  <div class="col-6">
-                    <label class="form-label" for="title">Title ( Mr., Mrs, Ms, Dr., Assist.Prof., Assoc.Prof., Prof. )
-                      :</label>
+                  <div class="col-4">
+                    <label class="form-label" for="title">Title ( Mr., Mrs, Ms, Dr., Assist.Prof., Assoc.Prof., Prof. ) :
+                    </label>
                   </div>
-                  <div class="col-6">
+                  <div class="col-8">
                     <div class="dropdown">
-                      <select class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                      <select class="btn btn-secondary dropdown-toggle titlebut" type="button" id="dropdownMenuButton1"
                         data-bs-toggle="dropdown" name="title" style="border-color:black;" required>
                         <option value="" selected disabled>Title</option>
                         <option value="Mr.">Mr.</option>
@@ -123,8 +122,8 @@ if(isset($_SESSION['role'])) {
                 <div class="form-check" style="margin-left: 30px;">
                   <?php
                   $sql = $conn->query("SELECT * FROM tb_meal");
-                  foreach($sql as $row) {
-                    echo '<input class="form-check-input" type="radio" name="meal" value="'.htmlspecialchars($row['meal_name']).'" required> '.$row['meal_name'].'<br>';
+                  foreach ($sql as $row) {
+                    echo '<input class="form-check-input" type="radio" name="meal" value="' . htmlspecialchars($row['meal_name']) . '" required> ' . $row['meal_name'] . '<br>';
                     ?>
                   <?php } ?>
                 </div>
@@ -146,8 +145,8 @@ if(isset($_SESSION['role'])) {
                 <div class="form-check" style="margin-left: 30px;">
                   <?php
                   $sql = $conn->query("SELECT * FROM tb_type");
-                  foreach($sql as $row) {
-                    echo '<input class="form-check-input" type="radio" name="type" value="'.htmlspecialchars($row['type_name']).'" required> '.$row['type_name'].'<br>';
+                  foreach ($sql as $row) {
+                    echo '<input class="form-check-input" type="radio" name="type" value="' . htmlspecialchars($row['type_name']) . '" required> ' . $row['type_name'] . '<br>';
                     ?>
                   <?php } ?>
                 </div>
@@ -165,22 +164,30 @@ if(isset($_SESSION['role'])) {
                 <table class="table table-active table-bordered border-danger">
                   <thead style="text-align: center;">
                     <tr>
-                      <td class="fs-24" colspan="3">REGISTRATION FEE FOR SPC2024</td>
+                      <td colspan="3">
+                        <h4>REGISTRATION FEE FOR SPC2024</h4>
+                      </td>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="fs-22">Registration types</td>
-                      <td class="fs-22">EARLY-BIRD Before 5 May 2024</td>
-                      <td class="fs-22">After 5 May 2024</td>
+                      <td>
+                        <h6>Registration types</h6>
+                      </td>
+                      <td>
+                        <h6>EARLY-BIRD Before 5 May 2024</h6>
+                      </td>
+                      <td>
+                        <h6>After 5 May 2024</h6>
+                      </td>
                     </tr>
                     <?php
                     $date_end = $conn->query("SELECT * FROM tb_setdate");
-                    foreach($date_end as $rowdate) {
+                    foreach ($date_end as $rowdate) {
                       $datepro = $rowdate['date_end'];
                     }
                     $datenows = date("Y-m-d");
-                    if($datenows > $datepro) {
+                    if ($datenows > $datepro) {
                       $data1 = "disabled";
                       $data2 = "";
                     } else {
@@ -190,7 +197,7 @@ if(isset($_SESSION['role'])) {
 
                     $sqlpay = $conn->query("SELECT * FROM tb_pay");
                     $data = $sqlpay->fetch_all();
-                    foreach($sqlpay as $row) {
+                    foreach ($sqlpay as $row) {
                       ?>
                       <tr>
                         <td>
@@ -199,14 +206,14 @@ if(isset($_SESSION['role'])) {
                         <td>
                           <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['id']; ?>"
                             onchange="openamount(this.value)" required <?php echo $data1; ?>>
-                          <input type="text" id="b_pay" value="<?php echo $row['b_price']; ?>">
+                          <!-- <input type="text" id="b_pay" value="<?php echo $row['b_price']; ?>"> -->
                           <label class="form-check-label" for="fee">
                             <?php echo $row['b_amount']; ?>
                           </label>
                         </td>
                         <td>
                           <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['id']; ?>" <?php echo $data2; ?> onchange="openamount(this.value)">
-                          <input type="text" id="a_pay" value="<?php echo $row['a_price']; ?>">
+                          <!-- <input type="text" id="a_pay" value="<?php echo $row['a_price']; ?>"> -->
                           <label class="form-check-label" for="fee">
                             <?php echo $row['a_amount']; ?>
                           </label>
@@ -278,16 +285,15 @@ if(isset($_SESSION['role'])) {
           </div>
         </div>
       </div>
-
     </div>
     <script>
-      
+
     </script>
     <?php
-    include($_SERVER['DOCUMENT_ROOT'].'/spc2024/components/footer.php');
-    include($_SERVER['DOCUMENT_ROOT'].'/spc2024/script/script.php');
-    include($_SERVER['DOCUMENT_ROOT'].'/spc2024/script/messenger.php');
-    include($_SERVER['DOCUMENT_ROOT'].'/spc2024/script/calculate.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/calculate.php');
     ?>
   </body>
 

@@ -63,7 +63,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
         <img src="/spc2024/img/hotel/01.jpg" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
           <h1>Krungsri River Hotel</h1>
-          <p>Krungsri Hotel is the first in the city of Ayutthaya to install the Sak Pa Sak River for convenience,
+          <p>Krungsri Hotel is the first in the city of Ayutthaya to install the Pa Sak River for convenience,
             convenient installation, close to various tourist attractions and historical sites, ready to welcome
             everyone with elegant rooms, amenities and facilities. Pay attention to cleanliness and meet SHA standards
             from the Ministry of Public Health.</p>

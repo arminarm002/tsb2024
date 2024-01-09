@@ -4,8 +4,8 @@
 
     var date = new Date();
     var p;
-    var t = '<?= json_encode($datepro) ?>';
-    const datepro = new Date(t);
+    var t = <?= json_encode($datepro) ?>;
+    var datepro = new Date(t);
     console.log(t);
     console.log(datepro);
     var sss = [];
@@ -20,13 +20,11 @@
       }
 
     }
+    console.log(val);
     console.log(p);
 
     const amount = document.getElementById('amount');
     const resultDiv = document.getElementById('result');
-    var price = document.getElementById('b_pay').value;
-    console.log(val);
-    console.log(price);
     amount.value = 1;
 
     if (val == '1' || val == '5') {

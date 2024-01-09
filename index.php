@@ -9,6 +9,11 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SPC2024 KMITL</title>
+  <meta name="author" content="Suradech Kuruphan">
+  <meta name="description"
+    content="19 th of Siam Physics Congress 2024 (SPC2024), Krungsri River Hotel, Phra Nakorn Sri Ayutthaya, Thailand, JUNE 5-7, 2024.">
+  <meta name="keywords"
+    content="spc2024, SPC2024,19 th of Siam Physics Congress, ครั้งที่ 19, ประกวดโครงงานอิสระ, สมาคมฟิสิกส์">
   <link rel="stylesheet" href="/spc2024/theme/css/bootstrap-theme.css">
   <link rel="stylesheet" href="/spc2024/theme/css/self.css">
 </head>
@@ -42,6 +47,34 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
       </div>
 
     </section>
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade mt-3" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="/spc2024/file/download/posterspc.jpg" target="_blank">
+            <img src="/spc2024/img/news/posterspc.jpg" class="d-block w-100 border border-warning">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="/spc2024/file/download/project1.jpg" target="_blank">
+            <img src="/spc2024/img/news/project1.jpg" class="d-block w-100  border border-warning">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="/spc2024/file/download/project2.jpg" target="_blank">
+            <img src="/spc2024/img/news/project2.jpg" class="d-block w-100  border border-warning">
+          </a>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
     <div class="cards mb-3 mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;padding-bottom: 15px;">
       <h1 class="card-title centerer" style="color: #7b7b7b;padding-top: 15px;">Announcement</h1>
       <div class="image">
@@ -65,7 +98,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
               <img class="border-bottom border-warning" src="/spc2024/img/news/flag.jpg" style="width:100%; ">
               <div class="card-body">
                 <h5 class="card-title">17 June 2023</h5>
-                <p class="card-text">ภาควิชาฟิสิกส์ คณะวิทยาศาสตร์และวิทยาลัยเทคโนโลยีและนวัตกรรมวัสดุ รับมอบธงร่วมเป็นเจ้าภาพจัดงานประชุมวิชาการ Siam Physics Congress ครั้งที่ 19 ซึ่งจะจัดขึ้นระหว่างวันที่ 5-7 มิถุนายน ปี 2567</p>
+                <p class="card-text">ภาควิชาฟิสิกส์ คณะวิทยาศาสตร์และวิทยาลัยเทคโนโลยีและนวัตกรรมวัสดุ
+                  รับมอบธงร่วมเป็นเจ้าภาพจัดงานประชุมวิชาการ Siam Physics Congress ครั้งที่ 19
+                  ซึ่งจะจัดขึ้นระหว่างวันที่ 5-7 มิถุนายน ปี 2567</p>
                 <a href="https://www.facebook.com/profile/100063613568041/search/?q=%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A1%E0%B8%AD%E0%B8%9A%E0%B8%98%E0%B8%87"
                   class="btn btn-warning" target="_blank">
                   <h6 class="card-title">-- More --</h6>

@@ -31,7 +31,7 @@ if ($_SESSION['role'] == "user") {
             <div class="d-flex justify-content-center align-items-center">
               <div class="card mb-3"
                 style="width:100%;background-color: rgb(255 122 1 / 20%);box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;align-items: center;">
-                <div class="card-body" style="width: 500px;">
+                <div class="card-body">
                 <h1 style="text-align:center;">Change Password</h1>
                   <form action="changepassword.php" class="mb-3" method="POST">
                     <div class="form-group mt-3">

@@ -4,7 +4,7 @@
   <div class=" bg-l">
     <div class="row mt-3">
 
-      <div class="col-sm-3">
+      <div class="col-md-3">
         <h4>Contact Us</h4>
         <h6>Department of Physics, School of Science, King Mongkut’s Institute of
           Technology Ladkrabang Chalongkrung Rd. Ladkrabang District Bangkok 10520<br>
@@ -13,7 +13,7 @@
           <br>
         </h6>
       </div>
-      <div class="col-sm-6">
+      <div class="col-md-6">
         <h4>Exhibitions</h4>
         <div class="row">
           <div class="col-lg-3 col-sm-6">
@@ -55,7 +55,7 @@
           </div>
         </div> -->
       </div>
-      <div class="col-sm-3">
+      <div class="col-md-3">
         <h4>About Science KMITL</h4>
         <div class="row">
           <div class="col-sm-6">

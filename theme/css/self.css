@@ -213,7 +213,16 @@ ul.unlist {
   --bs-alert-link-color: #54cfe1;
 }
 
+@media (min-width: 577px) {
+  .titlebut {
+    width: 250px;
+  }
+}
+
 @media (max-width: 576px) {
+  .titlebut {
+    width: 150px;
+  }
 
   .mtop-3 {
     margin-top: 3%;
