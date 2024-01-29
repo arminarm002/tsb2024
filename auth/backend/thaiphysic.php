@@ -19,7 +19,7 @@ if ($_SESSION['role']) {
       <?php
       include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/navbar.php');
 
-      $sql = $conn->query("SELECT * FROM tb_user WHERE approve = 'wait'");
+      $sql = $conn->query("SELECT * FROM tb_user WHERE approve = 'wait' AND role = 'user' ");
       $i = 0;
       foreach ($sql as $row) {
         $i++;

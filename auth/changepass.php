@@ -1,7 +1,7 @@
 <?php
 session_start();
 include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
-if ($_SESSION['role'] == "user") {
+if (isset($_SESSION['role'])) {
   ?>
   <!DOCTYPE html>
   <html lang="en">
