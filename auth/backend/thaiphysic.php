@@ -48,12 +48,9 @@ if ($_SESSION['role']) {
                   echo $_SESSION['title'] . $_SESSION['firstname'] . " " . $_SESSION['lastname'] . "<br>";
                   ?>
                 </h2>
+                <h4>รายชื่อผู้สมัคร รอการอนุมัติ</h4>
                 <table class="table table-striped strip">
                   <thead>
-                    <tr>
-                      <th class="fs-28">รายชื่อผู้สมัคร รอการอนุมัติ</th>
-                      <th> </th>
-                    </tr>
                     <tr style="text-align: center;">
                       <th>Name</th>
                       <th>Type</th>
@@ -66,7 +63,7 @@ if ($_SESSION['role']) {
                     </tr>
                   </thead>
                   <tbody>
-                    <?php $sql2 = $conn->query("SELECT * FROM tb_user WHERE approve = 'wait'");
+                    <?php $sql2 = $conn->query("SELECT * FROM tb_user WHERE approve = 'wait' AND role = 'user' ");
                     foreach ($sql2 as $tr) {
                       ?>
                       <tr>

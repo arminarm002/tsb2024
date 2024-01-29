@@ -43,21 +43,29 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
         </div>
 
         <div class="row">
-          <div class="col-3" style="text-align: center;">
+          <div class="col-2" style="text-align: center;">
             <a href="http://www.cmit.kmitl.ac.th/" target="_blank">
               <img src="/spc2024/img/co-host/cmit.png" class="img-fluid">
             </a>
           </div>
-          <div class="col-3 center2">
+          <div class="col-2 center2">
             <h6>College of materials innovation and technology</h6>
           </div>
-          <div class="col-3" style="text-align: center; margin:auto;">
+          <div class="col-2" style="text-align: center; margin:auto;">
             <a href="https://www.aru.ac.th/" target="_blank">
               <img src="/spc2024/img/co-host/pru.png" class="img-fluid w-50">
             </a>
           </div>
-          <div class="col-3 center2">
+          <div class="col-2 center2">
             <h6>Phranakhon Si Ayutthaya Rajabhat University</h6>
+          </div>
+          <div class="col-2" style="text-align: center; margin:auto;">
+            <a href="https://www.nst.or.th/" target="_blank">
+              <img src="/spc2024/img/co-host/nst.png" class="img-fluid w-50">
+            </a>
+          </div>
+          <div class="col-2 center2">
+            <h6>Nuclear Society of Thailand</h6>
           </div>
         </div>
 

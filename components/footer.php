@@ -4,58 +4,50 @@
   <div class=" bg-l">
     <div class="row mt-3">
 
-      <div class="col-md-3">
+      <div class="col-md-4">
         <h4>Contact Us</h4>
         <h6>Department of Physics, School of Science, King Mongkut’s Institute of
-          Technology Ladkrabang Chalongkrung Rd. Ladkrabang District Bangkok 10520<br>
+          Technology Ladkrabang Chalongkrung Rd. <br>Ladkrabang District Bangkok 10520<br>
           Telephone : +6623298000 ext. 6214<br>Email : spc2024@kmitl.ac.th<br>Facebook :
           <a class="footera" href="https://www.facebook.com/SPC2024" target="_blank">SPC2024</a>
           <br>
         </h6>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <h4>Exhibitions</h4>
         <div class="row">
-          <div class="col-lg-3 col-sm-6">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-4 col-sm-6">
             <a target="_blank" href="http://www.thaiphysoc.org/">
               <img src="/spc2024/img/co-host/physic.png" class="img-fluid w-75">
             </a>
           </div>
-          <div class="col-lg-3 col-sm-6">
+          <div class="col-lg-4 col-sm-6">
             <a target="_blank" href="https://www.science.kmitl.ac.th/new">
               <img src="/spc2024/img/co-host/logo-b.png" class="img-fluid w-75">
             </a>
           </div>
-          <div class="col-lg-3 col-sm-6">
+          <div class="col-lg-2"></div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-lg-4 col-sm-6">
             <a target="_blank" href="http://www.cmit.kmitl.ac.th/">
               <img src="/spc2024/img/co-host/cmit.png" class="img-fluid w-75">
             </a>
           </div>
-          <div class="col-lg-3 col-sm-6">
+          <div class="col-lg-4 col-sm-6" style="margin:auto;">
             <a target="_blank" href="https://www.aru.ac.th/">
-              <img src="/spc2024/img/co-host/pru.png" class="img-fluid w-50"></a>
+              <img src="/spc2024/img/co-host/pru.png" style="width:50%;">
+            </a>
           </div>
-
+          <div class="col-lg-4 col-sm-6" style="margin:auto;">
+            <a target="_blank" href="https://www.nst.or.th/">
+              <img src="/spc2024/img/co-host/nst.png" style="width:50%;">
+            </a>
+          </div>
         </div>
-        <!-- <div class="row mb-3">
-          <div class="col-sm-4" style="margin:auto;">
-            <a target="_blank" href="https://www.aru.ac.th/">
-              <img src="/spc2024/img/co-host/pru.png" style="width:50%;">
-            </a>
-          </div>
-          <div class="col-sm-4" style="margin:auto;">
-            <a target="_blank" href="https://www.aru.ac.th/">
-              <img src="/spc2024/img/co-host/pru.png" style="width:50%;">
-            </a>
-          </div>
-          <div class="col-sm-4" style="margin:auto;">
-            <a target="_blank" href="https://www.aru.ac.th/">
-              <img src="/spc2024/img/co-host/pru.png" style="width:50%;">
-            </a>
-          </div>
-        </div> -->
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <h4>About Science KMITL</h4>
         <div class="row">
           <div class="col-sm-6">
