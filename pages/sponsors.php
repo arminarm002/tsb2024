@@ -30,7 +30,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
             </a>
           </div>
           <div class="col-3 center2">
-            <h6>Thai physics society</h6>
+            <a href="http://www.thaiphysoc.org/" target="_blank">
+              <h6 class="abw h6">Thai physics society</h6>
+            </a>
           </div>
           <div class="col-3" style="text-align: center;">
             <a href="https://www.science.kmitl.ac.th/new" target="_blank">
@@ -38,7 +40,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
             </a>
           </div>
           <div class="col-3 center2">
-            <h6>King Mongkut's Institute of Technology Ladkrabang</h6>
+            <a href="https://www.science.kmitl.ac.th/new" target="_blank">
+              <h6 class="abw h6">King Mongkut's Institute of Technology Ladkrabang</h6>
+            </a>
           </div>
         </div>
 
@@ -49,7 +53,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
             </a>
           </div>
           <div class="col-2 center2">
-            <h6>College of materials innovation and technology</h6>
+            <a href="http://www.cmit.kmitl.ac.th/" target="_blank">
+              <h6 class="abw">College of materials innovation and technology</h6>
+            </a>
           </div>
           <div class="col-2" style="text-align: center; margin:auto;">
             <a href="https://www.aru.ac.th/" target="_blank">
@@ -57,7 +63,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
             </a>
           </div>
           <div class="col-2 center2">
-            <h6>Phranakhon Si Ayutthaya Rajabhat University</h6>
+            <a href="https://www.aru.ac.th/" target="_blank">
+              <h6 class="abw">Phranakhon Si Ayutthaya Rajabhat University</h6>
+            </a>
           </div>
           <div class="col-2" style="text-align: center; margin:auto;">
             <a href="https://www.nst.or.th/" target="_blank">
@@ -65,44 +73,50 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
             </a>
           </div>
           <div class="col-2 center2">
-            <h6>Nuclear Society of Thailand</h6>
+            <a href="https://www.nst.or.th/" target="_blank">
+              <h6 class="abw">Nuclear Society of Thailand</h6>
+            </a>
           </div>
         </div>
-
+        <hr>
       </div>
       <h1 class="card-title centerer mt-3">Sponsors</h1>
       <div class="blog-con">
         <div class="blog-item">
-        <img src="/spc2024/img/soon.png" style="display:block; margin:auto; width:50%;">
-          <!-- <h2 style="text-align: center;">Supreme</h2> -->
-
+          <h2 class="mt-3" style="text-align: center;">Supreme</h2>
           <!-- Supremea แถวที่ 1 -->
-          <!-- <div class="row">
+          <div class="row">
+          <div class="col-2"></div>
             <div class="col-2 center2" style="text-align: center;">
-              <a href="https://www.thep-center.org/en/" target="_blank">
-                <img src="/spc2024/img/sponsors/02.png" class="img-fluid">
+              <a href="https://www.tsri.or.th/" target="_blank">
+                <img src="/spc2024/img/sponsors/08.png" class="img-fluid">
               </a>
             </div>
             <div class="col-2 center2">
-              <h6>Thailand Center of Excellence in Physics </h6>
+              <a href="https://www.tsri.or.th/" target="_blank">
+                <h6 class="abw h6">สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)</h6>
+              </a>
             </div>
             <div class="col-2 center2" style="text-align: center;">
-              <a href="https://www.slri.or.th/en/" target="_blank">
-                <img src="/spc2024/img/sponsors/03.png" class="img-fluid">
+              <a href="https://www.pttep.com/th/home.aspx" target="_blank">
+                <img src="/spc2024/img/sponsors/26.png" class="img-fluid">
               </a>
             </div>
             <div class="col-2 center2">
-              <h6>Synchrotron Light Research Institute </h6>
+              <a href="https://www.pttep.com/th/home.aspx" target="_blank">
+                <h6 class="abw h6">บริษัท ปตท.สำรวจและผลิตปิโตรเลียม จำกัด (มหาชน)</h6>
+              </a>
             </div>
-            <div class="col-2 center2" style="text-align: center;">
+            <div class="col-2"></div>
+            <!-- <div class="col-2 center2" style="text-align: center;">
               <a href="https://www.narit.or.th/index.php/en-home" target="_blank">
                 <img src="/spc2024/img/sponsors/05.png" class="img-fluid">
               </a>
             </div>
             <div class="col-2 center2">
               <h6>The National Astronomical Research Institute of Thailand (Public Organization)</h6>
-            </div>
-          </div> -->
+            </div> -->
+          </div>
 
           <!-- Supremea แถวที่ 2 -->
           <!-- <div class="row">
@@ -186,20 +200,22 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
             <div class="col-2"></div>
           </div> -->
 
-          <!-- <hr>
-          <h2 style="text-align: center;">Gold</h2> -->
+          <hr>
+          <h2 style="text-align: center;">Gold</h2>
 
           <!-- Gold แถวที่ 1 -->
-          <!-- <div class="row">
+          <div class="row">
+          <div class="col-4"></div>
             <div class="col-2 center2" style="text-align: center;">
               <a href="https://www.fortistrading.co.th/" target="_blank">
                 <img src="/spc2024/img/sponsors/15.png" class="img-fluid">
               </a>
             </div>
             <div class="col-2 center2">
-              <h6>FORTIS Trading Company Limited</h6>
+              <h6 class="abw h6">บริษัท FORTIS TRADING CO.,LTD</h6>
             </div>
-            <div class="col-2 center2" style="text-align: center;">
+            <div class="col-4"></div>
+            <!-- <div class="col-2 center2" style="text-align: center;">
               <a href="http://www.pvpvacuum.com/" target="_blank">
                 <img src="/spc2024/img/sponsors/16.png" class="img-fluid">
               </a>
@@ -214,8 +230,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
             </div>
             <div class="col-2 center2">
               <h6>PUDITEC Company Limited</h6>
-            </div>
-          </div> -->
+            </div> -->
+          </div>
 
           <!-- Gold แถวที่ 2 -->
           <!-- <div class="row">
