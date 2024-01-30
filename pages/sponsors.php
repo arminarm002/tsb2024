@@ -54,7 +54,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
           </div>
           <div class="col-2 center2">
             <a href="http://www.cmit.kmitl.ac.th/" target="_blank">
-              <h6 class="abw">College of materials innovation and technology</h6>
+              <h6 class="abw h6">College of materials innovation and technology</h6>
             </a>
           </div>
           <div class="col-2" style="text-align: center; margin:auto;">
@@ -64,7 +64,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
           </div>
           <div class="col-2 center2">
             <a href="https://www.aru.ac.th/" target="_blank">
-              <h6 class="abw">Phranakhon Si Ayutthaya Rajabhat University</h6>
+              <h6 class="abw h6">Phranakhon Si Ayutthaya Rajabhat University</h6>
             </a>
           </div>
           <div class="col-2" style="text-align: center; margin:auto;">
@@ -74,7 +74,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
           </div>
           <div class="col-2 center2">
             <a href="https://www.nst.or.th/" target="_blank">
-              <h6 class="abw">Nuclear Society of Thailand</h6>
+              <h6 class="abw h6">Nuclear Society of Thailand</h6>
             </a>
           </div>
         </div>
