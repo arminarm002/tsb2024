@@ -22,9 +22,27 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/navbar.php');
   ?>
-  <img src="/spc2024/img/home01.jpg" class="img-fluid" style="width:100%">
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <img src="/spc2024/img/home01.jpg" class="img-fluid" style="width:100%">
+    </div>
+    <div class="carousel-item">
+    <img src="/spc2024/img/queen.jpg" class="img-fluid" style="width:100%">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  
   <div class="container">
-    <section class="countdown-container centerer mt-3">
+    <section class="countdown-container centerer mt-3 mb-3">
 
       <div class="countdown">
         <span class="days" id="days"></span>
@@ -47,39 +65,32 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
       </div>
 
     </section>
-
-    <div id="carouselExampleFade" class="carousel slide carousel-fade mt-3" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <a href="/spc2024/file/download/posterspc.jpg" target="_blank">
-            <img src="/spc2024/img/news/posterspc.jpg" class="d-block w-100 border border-warning">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="/spc2024/file/download/project1.jpg" target="_blank">
-            <img src="/spc2024/img/news/project1.jpg" class="d-block w-100  border border-warning">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="/spc2024/file/download/project2.jpg" target="_blank">
-            <img src="/spc2024/img/news/project2.jpg" class="d-block w-100  border border-warning">
-          </a>
-        </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-12">
+        <a href="/spc2024/file/download/posterspc.jpg" target="_blank">
+          <img src="/spc2024/img/news/posterspc.jpg" class="d-block w-100"
+            style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+        </a>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div class="col-lg-4 col-md-4 col-12">
+        <a href="/spc2024/file/download/project1.jpg" target="_blank">
+          <img src="/spc2024/img/news/project1.jpg" class="d-block w-100"
+            style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <a href="/spc2024/file/download/project2.jpg" target="_blank">
+          <img src="/spc2024/img/news/project2.jpg" class="d-block w-100"
+            style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+        </a>
+      </div>
     </div>
+
     <div class="cards mb-3 mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;padding-bottom: 15px;">
       <h1 class="card-title centerer" style="color: #7b7b7b;padding-top: 15px;">Announcement</h1>
       <div class="image">
         <div class="row" style="margin: 15px auto;">
-                    <div class="col-6 centerer">
+          <div class="col-6 centerer">
             <div class="card border border-warning rounded" style="width: 28rem;"><!-- 18rem -->
               <img class="border-bottom border-warning" src="/spc2024/img/news/nobel.jpg" style="width:100%; ">
               <div class="card-body">

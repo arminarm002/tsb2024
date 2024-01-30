@@ -13,40 +13,43 @@
           <br>
         </h6>
       </div>
+    
       <div class="col-md-4">
         <h4>Exhibitions</h4>
         <div class="row">
-          <div class="col-lg-2"></div>
-          <div class="col-lg-4 col-sm-6">
+          <!-- <div class="col-lg-2 col-3"></div> -->
+          <div class="col-lg-4 col-sm-6 col-2" style="margin:auto;">
             <a target="_blank" href="http://www.thaiphysoc.org/">
-              <img src="/spc2024/img/co-host/physic.png" class="img-fluid w-75">
+              <img src="/spc2024/img/co-host/physic.png" style="width:100%;">
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-4 col-sm-6 col-2" style="margin:auto;">
             <a target="_blank" href="https://www.science.kmitl.ac.th/new">
-              <img src="/spc2024/img/co-host/logo-b.png" class="img-fluid w-75">
+              <img src="/spc2024/img/co-host/logo-b.png" style="width:100%;">
             </a>
           </div>
-          <div class="col-lg-2"></div>
-        </div>
-        <div class="row mb-3">
-          <div class="col-lg-4 col-sm-6">
+          <!-- <div class="col-lg-2 col-3"></div> -->
+        
+          <div class="col-lg-4 col-sm-6 col-2" style="margin:auto;">
             <a target="_blank" href="http://www.cmit.kmitl.ac.th/">
-              <img src="/spc2024/img/co-host/cmit.png" class="img-fluid w-75">
+              <img src="/spc2024/img/co-host/cmit.png" style="width:100%;">
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6" style="margin:auto;">
+          
+          <div class="col-lg-4 col-sm-6 col-2" style="margin:auto;">
             <a target="_blank" href="https://www.aru.ac.th/">
               <img src="/spc2024/img/co-host/pru.png" style="width:50%;">
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6" style="margin:auto;">
+          <div class="col-lg-4 col-sm-6 col-2" style="margin:auto;">
             <a target="_blank" href="https://www.nst.or.th/">
               <img src="/spc2024/img/co-host/nst.png" style="width:50%;">
             </a>
           </div>
+          
         </div>
       </div>
+      
       <div class="col-md-4">
         <h4>About Science KMITL</h4>
         <div class="row">
