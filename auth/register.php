@@ -275,7 +275,7 @@ if (isset($_SESSION['role'])) {
               </div>
 
               <!-- Submit button -->
-              <button type="submit" class="btn btn-l btn-block text-white mb-2" name="add" disabled>สมัครสมาชิก</button>
+              <button type="submit" class="btn btn-l btn-block text-white mb-2" name="add">สมัครสมาชิก</button>
 
               <!-- Register buttons -->
               <div class="text-center">
