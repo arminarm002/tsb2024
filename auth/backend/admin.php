@@ -1,7 +1,7 @@
 <?php
 session_start();
 include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
-if ($_SESSION['role']=="user") {
+if ($_SESSION['role'] == "admin") {
   ?>
   <!DOCTYPE html>
   <html lang="en">
@@ -25,7 +25,8 @@ if ($_SESSION['role']=="user") {
       <div class="container-fluid">
         <div class="row mt-3">
           <div class="col-sm-3 col-md-2">
-            <div class="list-group" style="--bs-list-group-bg: rgb(255 122 1 / 20%);--bs-list-group-action-hover-bg: rgb(127 94 65 / 44%);">
+            <div class="list-group"
+              style="--bs-list-group-bg: rgb(255 122 1 / 20%);--bs-list-group-action-hover-bg: rgb(127 94 65 / 44%);">
               <a class="list-group-item list-group-item-action active" aria-current="true"
                 style="background-color: #ff7a01;border-color: #813d00;">Profile</a>
               <a href="/spc2024/index.php" class="list-group-item list-group-item-action">Home</a>
@@ -33,58 +34,59 @@ if ($_SESSION['role']=="user") {
             </div>
           </div>
           <div class="col">
-            <div class="alert alert-secondary" role="alert">
-              กรุณารอการยืนยันจากเจ้าหน้าที่
-            </div>
-            <!-- <div class="alert alert-success" role="alert">
-              การลงทะเบียนของคุณ ได้รับการอนุมัติเรียบร้อย
-            </div>
-            <div class="alert alert-danger" role="alert">
-              การลงทะเบียนของคุณ ไม่ผ่านการพิจารณา กรุณาติดต่อเจ้าหน้าที่
-            </div> -->
+
             <div class="row">
-              <div class="col-sm-8">
-                <div class="card">
-                  <div class="cardbody" style="padding:2% 5%;">
-                    <h2>
-                      <?php
-                      echo $row['title'] . $row['firstname'] . " " . $row['lastname'] . "<br>";
-                      ?>
-                    </h2>
-                    <h4>
-                      <?php
-                      echo "(" . $row['type'] . ")" . " " . "<br>"
-                        . $row['pay_name'] . " ";
-                      if ($row['pay_id'] == 2 || $row['pay_id'] == 3 || $row['pay_id'] == 4) {
-                        echo "ส่ง Abstract จำนวน " . $row['amount'] . " เรื่อง<br>รวมเป็นเงิน " . $row['total_price'] . " บาท<br>";
-                      } else {
-                        echo "<br>ราคา " . $row['total_price'] . " บาท<br>";
-                      }
-                      ?>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="card mtop-3">
-                  <div class="cardbody" style="padding:2% 5%;">
-                    <h5>
-                      <?php
-                      echo $row['title'] . $row['firstname'] . " " . $row['lastname'] . "<br>";
-                      echo $row['career'] . " from " . $row['company'] . $row['country'] . "<br>fax : " . $row['fax'] . "<br>Tel. : " . $row['telephone'] . "<br>Name and address for payment receipt
-                      (ชื่อและที่อยู่ในใบเสร็จสำหรับเบิก) : " . $row['receipt'];
-                      ?>
-                    </h5>
-                  </div>
-                </div>
-                <div class="card mt-3">
-                  <div class="cardbody" style="padding:2% 5%;">
-                    <h5>
-                      <?php
-                      echo $row['extrameal'] . "<br>Food allergy and intolerance : " . $row['food'] . "<br>";
-                      ?>
-                    </h5>
-                  </div>
+
+              <div class="card">
+                <div class="cardbody" style="padding:2% 5%;">
+                  <h2>
+                    <?php
+                    echo $_SESSION['title'] . $_SESSION['firstname'] . " " . $_SESSION['lastname'] . "<br>";
+                    ?>
+                  </h2>
+                  <h4>รายชื่อผู้สมัคร ทั้งหมด</h4>
+                  <table class="table table-striped strip">
+                    <thead>
+                      <tr style="text-align: center;">
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>E-mail</th>
+                        <th>Telephone</th>
+                        <th>extrameal</th>
+                        <th>Food allergy and intolerance</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php $sql2 = $conn->query("SELECT * FROM tb_user WHERE role = 'user' ORDER BY approve");
+                      foreach ($sql2 as $tr) {
+                        ?>
+                        <tr>
+                          <td>
+                            <?php echo $tr['title'] . $tr['firstname'] . " " . $tr['lastname'] ?>
+                          </td>
+                          <td>
+                            <?php echo $tr['type'] ?>
+                          </td>
+                          <td>
+                            <?php echo $tr['email'] ?>
+                          </td>
+                          <td>
+                            <?php echo $tr['telephone'] ?>
+                          </td>
+                          <td>
+                            <?php echo $tr['extrameal'] ?>
+                          </td>
+                          <td>
+                            <?php echo $tr['food'] ?>
+                          </td>
+                          <td>
+                            <?php echo $tr['approve'] ?>
+                          </td>
+                        </tr>
+                      <?php } ?>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
