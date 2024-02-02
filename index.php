@@ -25,7 +25,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-    <img src="/spc2024/img/home01.jpg" class="img-fluid" style="width:100%">
+    <img src="/spc2024/img/home02.jpg" class="img-fluid" style="width:100%">
     </div>
     <div class="carousel-item">
     <img src="/spc2024/img/queen.jpg" class="img-fluid" style="width:100%">
