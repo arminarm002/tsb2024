@@ -66,19 +66,19 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 
     </section>
     <div class="row">
-      <div class="col-lg-4 col-md-4 col-12">
+      <div class="col-lg-4 col-md-4 col-12 mt-3">
         <a href="/spc2024/file/download/posterspc.jpg" target="_blank">
           <img src="/spc2024/img/news/posterspc.jpg" class="d-block w-100"
             style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
         </a>
       </div>
-      <div class="col-lg-4 col-md-4 col-12">
+      <div class="col-lg-4 col-md-4 col-12 mt-3">
         <a href="/spc2024/file/download/project1.jpg" target="_blank">
           <img src="/spc2024/img/news/project1.jpg" class="d-block w-100"
             style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
         </a>
       </div>
-      <div class="col-lg-4 col-md-4 col-12">
+      <div class="col-lg-4 col-md-4 col-12 mt-3">
         <a href="/spc2024/file/download/project2.jpg" target="_blank">
           <img src="/spc2024/img/news/project2.jpg" class="d-block w-100"
             style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
@@ -90,7 +90,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
       <h1 class="card-title centerer" style="color: #7b7b7b;padding-top: 15px;">Announcement</h1>
       <div class="image">
         <div class="row" style="margin: 15px auto;">
-          <div class="col-6 centerer">
+          <div class="col-sm-6 centerer mt-3">
             <div class="card border border-warning rounded" style="width: 28rem;"><!-- 18rem -->
               <img class="border-bottom border-warning" src="/spc2024/img/news/nobel.jpg" style="width:100%; ">
               <div class="card-body">
@@ -105,7 +105,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
               </div>
             </div>
           </div>
-          <div class="col-6 centerer">
+          <div class="col-sm-6 centerer mt-3">
             <div class="card border border-warning rounded" style="width: 28rem;"><!-- 18rem -->
               <img class="border-bottom border-warning" src="/spc2024/img/news/flag.jpg" style="width:100%; ">
               <div class="card-body">
