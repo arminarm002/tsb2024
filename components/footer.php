@@ -17,7 +17,6 @@
       <div class="col-md-4">
         <h4>Exhibitions</h4>
         <div class="row">
-          <!-- <div class="col-lg-2 col-3"></div> -->
           <div class="col-lg-4 col-sm-6 col-2" style="margin:auto;">
             <a target="_blank" href="http://www.thaiphysoc.org/">
               <img src="/spc2024/img/co-host/physic.png" style="width:100%;">
@@ -28,17 +27,20 @@
               <img src="/spc2024/img/co-host/logo-b.png" style="width:100%;">
             </a>
           </div>
-          <!-- <div class="col-lg-2 col-3"></div> -->
-        
           <div class="col-lg-4 col-sm-6 col-2" style="margin:auto;">
             <a target="_blank" href="http://www.cmit.kmitl.ac.th/">
               <img src="/spc2024/img/co-host/cmit.png" style="width:100%;">
             </a>
           </div>
-          
+
           <div class="col-lg-4 col-sm-6 col-2" style="margin:auto;">
             <a target="_blank" href="https://www.aru.ac.th/">
               <img src="/spc2024/img/co-host/pru.png" style="width:50%;">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-2" style="margin:auto;">
+            <a target="_blank" href="https://www.princess-it.org/">
+              <img src="/spc2024/img/co-host/hrh.png" style="width:50%;">
             </a>
           </div>
           <div class="col-lg-4 col-sm-6 col-2" style="margin:auto;">

@@ -24,29 +24,26 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
       <div class="blog-con">
 
         <div class="row">
-          <div class="col-3" style="text-align: center;">
+          <div class="col-2" style="text-align: center;">
             <a href="http://www.thaiphysoc.org/" target="_blank">
               <img src="/spc2024/img/co-host/physic.png" class="img-fluid">
             </a>
           </div>
-          <div class="col-3 center2">
+          <div class="col-2 center2">
             <a href="http://www.thaiphysoc.org/" target="_blank">
               <h6 class="abw h6">Thai physics society</h6>
             </a>
           </div>
-          <div class="col-3" style="text-align: center;">
+          <div class="col-2" style="text-align: center;">
             <a href="https://www.science.kmitl.ac.th/new" target="_blank">
               <img src="/spc2024/img/co-host/logo-b.png" class="img-fluid">
             </a>
           </div>
-          <div class="col-3 center2">
+          <div class="col-2 center2">
             <a href="https://www.science.kmitl.ac.th/new" target="_blank">
               <h6 class="abw h6">King Mongkut's Institute of Technology Ladkrabang</h6>
             </a>
           </div>
-        </div>
-
-        <div class="row">
           <div class="col-2" style="text-align: center;">
             <a href="http://www.cmit.kmitl.ac.th/" target="_blank">
               <img src="/spc2024/img/co-host/cmit.png" class="img-fluid">
@@ -57,9 +54,22 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
               <h6 class="abw h6">College of materials innovation and technology</h6>
             </a>
           </div>
+        </div>
+
+        <div class="row">
+          <div class="col-2" style="text-align: center;">
+            <a href="https://www.princess-it.org/" target="_blank">
+              <img src="/spc2024/img/co-host/hrh.png" class="img-fluid w-75">
+            </a>
+          </div>
+          <div class="col-2 center2">
+            <a href="https://www.princess-it.org/" target="_blank">
+              <h6 class="abw h6">The information technology foundation under the Initiative of Her Royal Highness Priness Maha Chakri Sirindhorn</h6>
+            </a>
+          </div>
           <div class="col-2" style="text-align: center; margin:auto;">
             <a href="https://www.aru.ac.th/" target="_blank">
-              <img src="/spc2024/img/co-host/pru.png" class="img-fluid w-50">
+              <img src="/spc2024/img/co-host/pru.png" class="img-fluid w-75">
             </a>
           </div>
           <div class="col-2 center2">
@@ -69,7 +79,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
           </div>
           <div class="col-2" style="text-align: center; margin:auto;">
             <a href="https://www.nst.or.th/" target="_blank">
-              <img src="/spc2024/img/co-host/nst.png" class="img-fluid w-50">
+              <img src="/spc2024/img/co-host/nst.png" class="img-fluid w-75">
             </a>
           </div>
           <div class="col-2 center2">
