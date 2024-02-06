@@ -49,8 +49,15 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
               generate qualified new knowledge in Physics and Physics content to be greater than 50%). Plagiarism and
               self-plagiarism are not allowed.</li>
           </ul>
-          <h5>Abstract Submission >>> <a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FSPC2024"
-              target="_blank">Click</a></h5>
+          <h5><b>** Guidelines on submitting an abstract **</b></h5>
+          <h5>Abstracts must be submitting using the MS CMT platform >>> <a
+              href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FSPC2024" target="_blank">Click</a></h5>
+          <br>
+          <h5>The outcome of the review will be emailed to the main author by 30 April 2024.</h5><br>
+          <h5>Note, however, that any accepted abstracts will be cancelled if the presenting author has not registered
+            and paid >>> <a href="/spc2024/auth/register.php" target="_blank">Click</a> the registration fee for the
+            congress by 15 May 2024.
+          </h5>
         </div>
       </div>
     </div>
@@ -71,15 +78,17 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
             1. Journal of Physics: Conference Series (JPCS) – <b style="color:red">Scopus and SJR Indexed</b> (On
             process)<br>
             2. Current Applied Science and Technology - <b style="color:red">Scopus (Q3) SJR (Q4) Indexed </b><br>
-            Journal Website : <a href="https://li01.tci-thaijo.org/index.php/cast" target="_blank">>>> Click <<<</a><br>
-            <br>
-            <img class="border-bottom border-warning" src="/spc2024/img/journals2.jpg" style="width:100%; ">
-            <br><br>
-            3. Thai Journal of Nanoscience and Nanotechnology - <b style="color:red">TCI2 Indexed</b><br>
-            Journal Website : <a href="https://ph05.tci-thaijo.org/index.php/TJNN/index" target="_blank">>>> Click <<<</a><br>
-            <br>
-            <img class="border-bottom border-warning" src="/spc2024/img/journals3.jpg" style="width:100%; ">
-            <br><br>
+            Journal Website : <a href="https://li01.tci-thaijo.org/index.php/cast" target="_blank">>>> Click <<< </a>
+                <br>
+                <br>
+                <img class="border-bottom border-warning" src="/spc2024/img/journals2.jpg" style="width:100%; ">
+                <br><br>
+                3. Thai Journal of Nanoscience and Nanotechnology - <b style="color:red">TCI2 Indexed</b><br>
+                Journal Website : <a href="https://ph05.tci-thaijo.org/index.php/TJNN/index" target="_blank">>>> Click
+                  <<<</a><br>
+                    <br>
+                    <img class="border-bottom border-warning" src="/spc2024/img/journals3.jpg" style="width:100%; ">
+                    <br><br>
           </p>
         </div>
       </div>
