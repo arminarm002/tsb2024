@@ -15,7 +15,7 @@
       </div>
     
       <div class="col-md-4">
-        <h4>Exhibitions</h4>
+        <h4>Organizer</h4>
         <div class="row">
           <div class="col-lg-4 col-sm-6 col-2" style="margin:auto;">
             <a target="_blank" href="http://www.thaiphysoc.org/">

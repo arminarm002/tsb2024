@@ -20,7 +20,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 
   <section class="mt-3">
     <div class="container">
-      <h1 class="card-title centerer mt-3">Exhibitions</h1>
+      <h1 class="card-title centerer mt-3">Organizer</h1>
       <div class="blog-con">
 
         <div class="row">
