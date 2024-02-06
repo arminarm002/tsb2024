@@ -50,7 +50,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
               self-plagiarism are not allowed.</li>
           </ul>
           <h5><b>** Guidelines on submitting an abstract **</b></h5>
-          <h5>Abstracts must be submitting using the MS CMT platform >>> <a
+          <h5>Abstracts must be submitted using the MS CMT platform >>> <a
               href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FSPC2024" target="_blank">Click</a></h5>
           <br>
           <h5>The outcome of the review will be emailed to the main author by 30 April 2024.</h5><br>

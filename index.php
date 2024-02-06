@@ -42,7 +42,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 </div>
   
   <div class="container">
-    <h5 class="card-text mt-3" style="text-align:justify;">The organizers and hosts of the 19th Siam Physics Congress 2024  (SPC2024) are duly honored to receive gracious support from Her Royal Highness (H.R.H.) Princess Maha Chakri Sirindhorn, who will preside over the opening ceremony on June 6, 2024.</h6>
+    <h4 class="card-text fss-14 mt-3" style="text-align:justify;">The organizers and hosts of the 19th Siam Physics Congress 2024  (SPC2024) are duly honored to receive gracious support from Her Royal Highness (H.R.H.) Princess Maha Chakri Sirindhorn, who will preside over the opening ceremony on June 6, 2024.</h6>
     <section class="countdown-container centerer mt-3 mb-3">
 
       <div class="countdown">
