@@ -41,7 +41,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
     <div style="text-align: center;">
       <img src="/spc2024/img/speaker/pss02.png" class="w-25">
       <h2 style="color:blue">Prof. Albrecht Karle</h2>
-      <h5 style="color:blue">full professor and former Chair of the Department of Physics at the University of
+      <h5 style="color:blue">Full professor and former Chair of the Department of Physics at the University of
         Wisconsin-Madison.</h5>
         <h5 style="color:blue"><b>Title : </b> The Telescope in the Ice: Neutrino astronomy at the South Pole - recent results from IceCube</h5>
       <p class="color-black" style="text-align:justify;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; His primary research is
