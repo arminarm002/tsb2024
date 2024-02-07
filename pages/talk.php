@@ -25,6 +25,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
       <img src="/spc2024/img/speaker/pss01.png" class="w-25">
       <h2 style="color:blue">Prof. Yifang WANG</h2>
       <h5 style="color:blue">Director of Institute of High Energy Physics of Chinese Academy of Sciences</h5>
+      <h5 style="color:blue"><b>Title : </b> Jiangmen Underground Neutrino Observatory (JUNO)</h5>
       <p class="color-black" style="text-align:justify;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; He is an author on more
         than 500 scientific papers on neutrino physics, e+ e- collision physics, cosmic rays and astrophysics,
         detector design and construction, and methods for data analysis, covering his work on the L3, AMS, Palo Verde,
@@ -40,12 +41,18 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
     <div style="text-align: center;">
       <img src="/spc2024/img/speaker/pss02.png" class="w-25">
       <h2 style="color:blue">Prof. Albrecht Karle</h2>
-      <h5 style="color:blue">full professor and former Chair of the Department of Physics at the University of Wisconsin-Madison.</h5>
-      <p class="color-black" style="text-align:justify;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; His primary research is about our understanding of the origin of energetic cosmic rays and neutrinos using the IceCube Neutrino Observatory, where he is Associate Director for Science and Instrumentation.
-He is a Co-Principal Investigator of IceCube Neutrino Observatory and Principal Investigator of the IceCube Upgrade construction project, an extension of IceCube for precision neutrino physics and astrophysics.
-Karle analyzes data focusing on the search for sources of neutrinos in the Southern Sky using veto techniques to reject backgrounds.  Karle is also involved in advancing the radio detection method of cosmic neutrinos using the glacial ice at the South Pole and in Greenland. 
-He is also working on developing the conceptual design of the next-generation large extension IceCube-Gen2.
-
+      <h5 style="color:blue">full professor and former Chair of the Department of Physics at the University of
+        Wisconsin-Madison.</h5>
+        <h5 style="color:blue"><b>Title : </b> The Telescope in the Ice: Neutrino astronomy at the South Pole - recent results from IceCube</h5>
+      <p class="color-black" style="text-align:justify;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; His primary research is
+        about our understanding of the origin of energetic cosmic rays and neutrinos using the IceCube Neutrino
+        Observatory, where he is Associate Director for Science and Instrumentation.
+        He is a Co-Principal Investigator of IceCube Neutrino Observatory and Principal Investigator of the IceCube
+        Upgrade construction project, an extension of IceCube for precision neutrino physics and astrophysics.
+        Karle analyzes data focusing on the search for sources of neutrinos in the Southern Sky using veto techniques to
+        reject backgrounds. Karle is also involved in advancing the radio detection method of cosmic neutrinos using the
+        glacial ice at the South Pole and in Greenland.
+        He is also working on developing the conceptual design of the next-generation large extension IceCube-Gen2.
       </p>
     </div>
   </div>
