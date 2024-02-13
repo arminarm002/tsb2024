@@ -30,7 +30,7 @@ if ($_SESSION['role'] == "admin") {
               <a class="list-group-item list-group-item-action active" aria-current="true"
                 style="background-color: #ff7a01;border-color: #813d00;">Profile</a>
               <a href="/spc2024/index.php" class="list-group-item list-group-item-action">Home</a>
-              <a href="#" class="list-group-item list-group-item-action">Change Password</a>
+              <a href="/spc2024/auth/changepass.php" class="list-group-item list-group-item-action">Change Password</a>
             </div>
           </div>
           <div class="col">
