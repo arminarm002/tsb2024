@@ -165,7 +165,7 @@ ul.unlist {
   /* .countdown-container {
     max-width: 90%;
   } */
-  .fss-14{
+  .fss-14 {
     font-size: 14px;
   }
 
@@ -309,4 +309,8 @@ ul.unlist {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: block;
   margin: auto;
+}
+
+.gray {
+  color: #656565;
 }

@@ -39,8 +39,9 @@ $id = $_GET['userid'];
             <?php
             echo $row['career'] . " from " . $row['company'] . "<br>";
             echo $row['address'] . " , " . $row['country'] . "<br>";
-            echo "Extrameal : " . $row['extrameal'] . " , Food allergy and intolerance : " . $row['food'] . "<br>";
-            echo "Name and address for payment receipt (ชื่อและที่อยู่ในใบเสร็จสำหรับเบิก) : " . $row['receipt'];
+            echo "Extrameal : <font class='gray'>" . $row['extrameal'] . "</font><br>";;
+            echo "Food allergy and intolerance : <font class='gray'>" . $row['food'] . "</font><br>";
+            echo "Name and address for payment receipt (ชื่อและที่อยู่ในใบเสร็จสำหรับเบิก) : <font class='gray'>" . $row['receipt']."</font>";
             echo "<br><br>" . $row['pay_name'];
             if ($row['pay_id'] == 2 || $row['pay_id'] == 3 || $row['pay_id'] == 4) {
               echo " ส่ง Abstract จำนวน " . $row['amount'] . " เรื่อง<br>รวมเป็นเงิน " . $row['total_price'] . " บาท<br>";
