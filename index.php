@@ -69,19 +69,19 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 
       </section>
       <div class="row">
-        <div class="col-lg-4 col-md-4 col-12 mt-3">
+        <div class="col-lg-4 col-md-4 col-6 mt-3">
           <a href="/spc2024/file/download/posterspc.jpg" target="_blank">
             <img src="/spc2024/img/news/posterspc.jpg" class="d-block w-100"
               style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           </a>
         </div>
-        <div class="col-lg-4 col-md-4 col-12 mt-3">
+        <div class="col-lg-4 col-md-4 col-6 mt-3">
           <a href="/spc2024/file/download/project1.jpg" target="_blank">
             <img src="/spc2024/img/news/project1.jpg" class="d-block w-100"
               style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           </a>
         </div>
-        <div class="col-lg-4 col-md-4 col-12 mt-3">
+        <div class="col-lg-4 col-md-4 col-6 mt-3">
           <a href="/spc2024/file/download/project2.jpg" target="_blank">
             <img src="/spc2024/img/news/project2.jpg" class="d-block w-100"
               style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
@@ -91,7 +91,19 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
         <div class="cards mb-3 mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;padding-bottom: 15px;">
           <h1 class="card-title centerer" style="color: #7b7b7b;padding-top: 15px;">Announcement</h1>
           <div class="row" style="margin: 15px auto;">
-            <div class="col-sm-12 col-md-6 col-lg-4 centerer mt-3">
+            <div class="col-sm-6 col-md-6 col-lg-4 col-6 centerer mt-3">
+              <div class="card border border-warning rounded" style="width: 28rem;"><!-- 18rem -->
+                <img class="border-bottom border-warning" src="/spc2024/img/news/834019.jpg" style="width:100%; ">
+                <div class="card-body">
+                  <h5 class="card-title"> 15 February 2024</h5>
+                  <p class="card-text" style="text-align:justify;">ขอเชิญเข้าร่วมประชุมวิชาการฟิสิกส์ระดับชาติ ครั้งที่ 19 ประจำปี 2567 จัดขึ้นระหว่างวันที่ 5-7 มิถุนายน 2567 ณ โรงแรมกรุงศรีริเวอร์ จังหวัดพระนครศรีอยุธยา</p>
+                  <a href="/spc2024/img/news/834019.jpg" class="btn btn-warning" target="_blank">
+                    <h6 class="card-title">-- More --</h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4 col-6 centerer mt-3">
               <div class="card border border-warning rounded" style="width: 28rem;"><!-- 18rem -->
                 <img class="border-bottom border-warning" src="/spc2024/img/news/speaker1.jpg" style="width:100%; ">
                 <div class="card-body">
@@ -104,7 +116,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
                 </div>
               </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 centerer mt-3">
+            <div class="col-sm-6 col-md-6 col-lg-4 col-6 centerer mt-3">
               <div class="card border border-warning rounded" style="width: 28rem;"><!-- 18rem -->
                 <img class="border-bottom border-warning" src="/spc2024/img/news/nobel.jpg" style="width:100%; ">
                 <div class="card-body">
@@ -120,7 +132,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
                 </div>
               </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 centerer mt-3">
+            <div class="col-sm-6 col-md-6 col-lg-4 col-6 centerer mt-3">
               <div class="card border border-warning rounded" style="width: 28rem;"><!-- 18rem -->
                 <img class="border-bottom border-warning" src="/spc2024/img/news/flag.jpg" style="width:100%; ">
                 <div class="card-body">
