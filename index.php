@@ -97,7 +97,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
                 <div class="card-body">
                   <h5 class="card-title"> 15 February 2024</h5>
                   <p class="card-text" style="text-align:justify;">ขอเชิญเข้าร่วมประชุมวิชาการฟิสิกส์ระดับชาติ ครั้งที่ 19 ประจำปี 2567 จัดขึ้นระหว่างวันที่ 5-7 มิถุนายน 2567 ณ โรงแรมกรุงศรีริเวอร์ จังหวัดพระนครศรีอยุธยา</p>
-                  <a href="/spc2024/img/news/834019.jpg" class="btn btn-warning" target="_blank">
+                  <a href="/spc2024/img/news/8340192.jpg" class="btn btn-warning" target="_blank">
                     <h6 class="card-title">-- More --</h6>
                   </a>
                 </div>
