@@ -6,7 +6,13 @@
 }
 
 .nav-fontcolor {
-  color: #fff;
+  color: #006a71;
+  font-size: 1.8rem;
+  text-shadow: 2px 1px #a96fb3;
+}
+.foot-fontcolor {
+  color: #006a71;
+  text-shadow: 1px 0.5px #a96fb3;
 }
 
 @media screen and (max-width: 500px) {
@@ -320,4 +326,9 @@ ul.unlist {
   .resw-100{
     width: 100% !important;
   }
+}
+.font-concert {
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }

@@ -1,7 +1,5 @@
-<div class="footer mt-5 text-white row mt-3 w-100 ">
-
-
-  <div class=" bg-l">
+<div class="footer mt-5 row mt-3 w-100 foot-fontcolor">
+  <div style="background-color:#6da729;">
     <div class="row mt-3">
 
       <div class="col-md-4">
@@ -80,11 +78,9 @@
             href="https://www.tiktok.com/@scikmitl">Tiktok</a></p>
       </div>
     </div>
-
-
   </div>
 
-  <div class="col-xl-12" style="background-color: #9d4700;padding: 12px;">
-    &copy; Copyright 2023 by <strong><span>Science KMITL</span></strong>.
+  <div class="col-xl-12" style="background-color: #36590d;padding: 12px;text-shadow: 0.5px 0.2px #a96fb3;">
+    &copy; Copyright 2024 by <strong><span>Science KMITL</span></strong>.
   </div>
 </div>

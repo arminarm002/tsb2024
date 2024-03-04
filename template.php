@@ -13,7 +13,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
   <link rel="stylesheet" href="/spc2024/theme/css/self.css">
 </head>
 
-<body class="font-mitr">
+<body class="font-concert">
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/navbar.php');
   ?>

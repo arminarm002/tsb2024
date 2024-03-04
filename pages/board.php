@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,14 +8,14 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPC2024 KMITL</title>
+  <title>TSB2024 KMITL</title>
   <link rel="stylesheet" href="/spc2024/theme/css/bootstrap-theme.css">
   <link rel="stylesheet" href="/spc2024/theme/css/self.css">
 </head>
 
-<body class="font-mitr">
+<body class="font-concert">
   <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/navbar.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
   ?>
 
   <div class="container">

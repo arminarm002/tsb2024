@@ -1,5 +1,5 @@
 <section>
-  <nav class="navbar navbar-expand-lg navbar-dark text-white" style="background-color:#ff7a01;">
+  <nav class="navbar navbar-expand-lg navbar-dark text-white" style="background-color:#6da729;">
     <div class="container-fluid">
       <a class="navbar-brand " href="/spc2024/index.php">
         <img src="/spc2024/img/logospc.png" class="spclogo w-50">

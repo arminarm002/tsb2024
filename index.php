@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,39 +8,24 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPC2024 KMITL</title>
+  <title>TSB2024 KMITL</title>
   <meta name="author" content="Suradech Kuruphan">
   <meta name="description"
-    content="19 th of Siam Physics Congress 2024 (SPC2024), Krungsri River Hotel, Phra Nakorn Sri Ayutthaya, Thailand, JUNE 5-7, 2024.">
+    content="19 th of Siam Physics Congress 2024 (tsb2024), Krungsri River Hotel, Phra Nakorn Sri Ayutthaya, Thailand, JUNE 5-7, 2024.">
   <meta name="keywords"
-    content="spc2024, SPC2024,19 th of Siam Physics Congress, ครั้งที่ 19, ประกวดโครงงานอิสระ, สมาคมฟิสิกส์">
-  <link rel="stylesheet" href="/spc2024/theme/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="/spc2024/theme/css/self.css">
+    content="tsb2024, tsb2024,19 th of Siam Physics Congress, ครั้งที่ 19, ประกวดโครงงานอิสระ, สมาคมฟิสิกส์">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
 </head>
 
-<body class="font-mitr">
+<body class="font-concert">
   <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/navbar.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
   ?>
-  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="/spc2024/img/home02.jpg" class="img-fluid" style="width:100%">
-      </div>
-      <div class="carousel-item">
-        <img src="/spc2024/img/queen.jpg" class="img-fluid" style="width:100%">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
+  <img src="/spc2024/img/home02.jpg" class="img-fluid" style="width:100%">
   <div class="container">
     <h4 class="card-text fss-14 mt-3" style="text-align:justify;">The organizers and hosts of the 19th Siam Physics
       Congress 2024 (SPC2024) are duly honored to receive gracious support from Her Royal Highness (H.R.H.) Princess
@@ -90,13 +75,15 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 
         <div class="cards mb-3 mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;padding-bottom: 15px;">
           <h1 class="card-title centerer" style="color: #7b7b7b;padding-top: 15px;">Announcement</h1>
-          <div class="row" style="margin: 15px auto;">
+          <iv class="row" style="margin: 15px auto;">
             <div class="col-sm-6 col-md-6 col-lg-4 col-12 centerer mt-3">
               <div class="card border border-warning rounded" style="width: 28rem;"><!-- 18rem -->
                 <img class="border-bottom border-warning" src="/spc2024/img/news/834019.jpg" style="width:100%; ">
                 <div class="card-body">
                   <h5 class="card-title"> 15 February 2024</h5>
-                  <p class="card-text" style="text-align:justify;">ขอเชิญเข้าร่วมประชุมวิชาการฟิสิกส์ระดับชาติ ครั้งที่ 19 ประจำปี 2567 จัดขึ้นระหว่างวันที่ 5-7 มิถุนายน 2567 ณ โรงแรมกรุงศรีริเวอร์ จังหวัดพระนครศรีอยุธยา</p>
+                  <p class="card-text" style="text-align:justify;">ขอเชิญเข้าร่วมประชุมวิชาการฟิสิกส์ระดับชาติ ครั้งที่
+                    19 ประจำปี 2567 จัดขึ้นระหว่างวันที่ 5-7 มิถุนายน 2567 ณ โรงแรมกรุงศรีริเวอร์ จังหวัดพระนครศรีอยุธยา
+                  </p>
                   <a href="/spc2024/img/news/8340192.jpg" class="btn btn-warning" target="_blank">
                     <h6 class="card-title">-- More --</h6>
                   </a>
@@ -132,34 +119,17 @@ include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6 col-lg-4 col-12 centerer mt-3">
-              <div class="card border border-warning rounded" style="width: 28rem;"><!-- 18rem -->
-                <img class="border-bottom border-warning" src="/spc2024/img/news/flag.jpg" style="width:100%; ">
-                <div class="card-body">
-                  <h5 class="card-title">17 June 2023</h5>
-                  <p class="card-text" style="text-align:justify;">ภาควิชาฟิสิกส์
-                    คณะวิทยาศาสตร์และวิทยาลัยเทคโนโลยีและนวัตกรรมวัสดุ
-                    รับมอบธงร่วมเป็นเจ้าภาพจัดงานประชุมวิชาการ Siam Physics Congress ครั้งที่ 19
-                    ซึ่งจะจัดขึ้นระหว่างวันที่ 5-7 มิถุนายน ปี 2567</p>
-                  <a href="https://www.facebook.com/profile/100063613568041/search/?q=%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A1%E0%B8%AD%E0%B8%9A%E0%B8%98%E0%B8%87"
-                    class="btn btn-warning" target="_blank">
-                    <h6 class="card-title">-- More --</h6>
-                  </a>
-                </div>
-              </div>
-            </div>
-            </iv>
-          </div>
         </div>
       </div>
+  </div>
   </div>
 
 
   <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/countdown.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/countdown.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/messenger.php');
   ?>
 
 </body>
