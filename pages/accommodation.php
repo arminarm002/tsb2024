@@ -9,6 +9,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TSB2024 KMITL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
   <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
 </head>
@@ -69,7 +70,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
             from the Ministry of Public Health.</p>
         </div>
       </div>
-      <div class="carousel-item">
+      <!-- <div class="carousel-item">
         <img src="/spc2024/img/hotel/02.jpg" class="d-block w-100">
       </div>
       <div class="carousel-item">
@@ -101,7 +102,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
       </div>
       <div class="carousel-item">
         <img src="/spc2024/img/hotel/12.jpg" class="d-block w-100">
-      </div>
+      </div> -->
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -112,7 +113,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <div class="container mt-3">
+  <!-- <div class="container mt-3">
     <a class="link" href="https://www.krungsririver.com/" target="_black">
       <h1>Krungsri River Hotel</h1>
     </a>
@@ -165,12 +166,12 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
       </div>
     </div>
   
-  </div>
+  </div> -->
 
   <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/messenger.php');
   ?>
 
 </body>

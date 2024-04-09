@@ -9,6 +9,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TSB2024 KMITL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
   <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
 </head>
@@ -19,9 +20,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   ?>
 
   <div class="container">
-  <h1 class="card-title centerer mt-3">Important Dates</h1>
-  <!-- <img src="/spc2024/img/date.jpg" style="width: 100%; height: auto;"> -->
-    <table class="table tb-stip table-striped table-hover mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+  <h1 class="card-title centerer mt-3">Important Dates & Overall Program</h1>
+  <img src="/tsb2024/img/soon.png" style="width: 100%; height: auto;">
+    <!-- <table class="table tb-stip table-striped table-hover mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
       <tbody style="font-size: 2vw;">
         <tr>
           <td>Abstract submission</td>
@@ -96,13 +97,13 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
           <td></td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
   </div>
 
   <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/messenger.php');
   ?>
 </body>
 

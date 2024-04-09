@@ -9,8 +9,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TSB2024 KMITL</title>
-  <link rel="stylesheet" href="/spc2024/theme/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="/spc2024/theme/css/self.css">
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
 </head>
 
 <body class="font-concert">
@@ -25,7 +26,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
     <div class="row">
       <div class="col-2"></div>
       <div class="col-8">
-        <table class="table table-striped strip">
+        <table class="table table-striped strip" style="border: thick double #ff7a01;">
           <thead>
             <tr>
               <th class="fs-28">Advisory Committee</th>
@@ -1121,9 +1122,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   </div>
 
   <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/messenger.php');
   ?>
 </body>
 

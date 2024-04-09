@@ -11,14 +11,14 @@ if (isset($_SESSION['role'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
-    <link rel="stylesheet" href="/spc2024/theme/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="/spc2024/theme/css/self.css">
+    <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
 
   </head>
 
   <body class="font-mitr">
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/navbar.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
     ?>
     <div class="container">
       <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
@@ -29,7 +29,7 @@ if (isset($_SESSION['role'])) {
           </div>
           <div class="card-body">
             <div class="mt-2">
-              <img src="/spc2024/img/logo-b.png" alt="" style="display:table; margin: 0 auto; max-width:200px;">
+              <img src="/tsb2024/img/logo-b.png" alt="" style="display:table; margin: 0 auto; max-width:200px;">
             </div>
             <form action="authen.php" class="mb-3" method="POST">
               <div class="form-group mt-5">
@@ -54,9 +54,9 @@ if (isset($_SESSION['role'])) {
       </div>
     </div>
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
-    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
-    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/messenger.php');
     ?>
   </body>
 

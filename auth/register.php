@@ -1,8 +1,8 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 if (isset($_SESSION['role'])) {
-  header("refresh: 1; url= /spc2024/auth/profile.php");
+  header("refresh: 1; url= /tsb2024/auth/profile.php");
 } else {
   ?>
   <!DOCTYPE html>
@@ -12,14 +12,14 @@ if (isset($_SESSION['role'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Registration</title>
-    <link rel="stylesheet" href="/spc2024/theme/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="/spc2024/theme/css/self.css">
+    <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
 
   </head>
 
   <body class="font-mitr">
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/navbar.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
     ?>
     <div class="container mt-5">
       <div class="card" style="background-color: rgb(255 122 1 / 20%);box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
@@ -165,7 +165,7 @@ if (isset($_SESSION['role'])) {
                   <thead style="text-align: center;">
                     <tr>
                       <td colspan="3">
-                        <h4>REGISTRATION FEE FOR SPC2024</h4>
+                        <h4>REGISTRATION FEE FOR tsb2024</h4>
                       </td>
                     </tr>
                   </thead>
@@ -290,10 +290,10 @@ if (isset($_SESSION['role'])) {
 
     </script>
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
-    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
-    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
-    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/calculate.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/messenger.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/calculate.php');
     ?>
   </body>
 

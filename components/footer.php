@@ -4,18 +4,18 @@
 
       <div class="col-md-4">
         <h4>Contact Us</h4>
-        <h6>Department of Physics, School of Science, King Mongkut’s Institute of
+        <h6>Department of Biology, School of Science, King Mongkut’s Institute of
           Technology Ladkrabang Chalongkrung Rd. <br>Ladkrabang District Bangkok 10520<br>
-          Telephone : +6623298000 ext. 6214<br>Email : spc2024@kmitl.ac.th<br>Facebook :
-          <a class="footera" href="https://www.facebook.com/SPC2024" target="_blank">SPC2024</a>
+          Telephone : 02-329-8400 ext. 8411<br>Email : tsb2024@kmitl.ac.th<br>Facebook :
+          <a href="" target="_blank">TSB2024</a>
           <br>
         </h6>
       </div>
-    
+
       <div class="col-md-4">
         <h4>Organizer</h4>
         <div class="row">
-          <div class="col-lg-4 col-sm-6 col-4" style="margin:auto;">
+          <!-- <div class="col-lg-4 col-sm-6 col-4" style="margin:auto;">
             <a target="_blank" href="http://www.thaiphysoc.org/">
               <img src="/spc2024/img/co-host/physic.png" style="width:100%;">
             </a>
@@ -45,37 +45,34 @@
             <a target="_blank" href="https://www.nst.or.th/">
               <img src="/spc2024/img/co-host/nst.png" style="width:50%;">
             </a>
-          </div>
-          
+          </div> -->
+
         </div>
       </div>
-      
+
       <div class="col-md-4">
         <h4>About Science KMITL</h4>
         <div class="row">
           <div class="col-sm-6">
-            <p class="footera"><i class="bi bi-facebook"></i> <a target="_blank"
-                href="https://www.facebook.com/SciKmitl">Science KMITL</a></p>
+            <p><i class="bi bi-facebook"></i> <a target="_blank" href="https://www.facebook.com/SciKmitl">Science
+                KMITL</a></p>
           </div>
           <div class="col-sm-6">
-            <p class="footera"><i class="bi bi-youtube"></i> <a target="_blank"
+            <p><i class="bi bi-youtube"></i> <a target="_blank"
                 href="https://www.youtube.com/@schoolofsciencekmitloffici8071">Youtube</a></p>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-6">
-            <p class="footera"><i class="bi bi-browser-chrome"></i> <a target="_blank"
+            <p><i class="bi bi-browser-chrome"></i> <a target="_blank"
                 href="https://www.science.kmitl.ac.th/new">Website</a></p>
           </div>
           <div class="col-sm-6">
-            <p class="footera"><i class="bi bi-instagram"></i> <a target="_blank"
+            <p><i class="bi bi-instagram"></i> <a target="_blank"
                 href="https://www.instagram.com/scikmitl/">Instagram</a></p>
           </div>
         </div>
-
-
-        <p class="footera"><i class="bi bi-tiktok"></i> <a target="_blank"
-            href="https://www.tiktok.com/@scikmitl">Tiktok</a></p>
+        <p><i class="bi bi-tiktok"></i> <a target="_blank" href="https://www.tiktok.com/@scikmitl">Tiktok</a></p>
       </div>
     </div>
   </div>
