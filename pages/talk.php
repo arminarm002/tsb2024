@@ -23,13 +23,13 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
     <h1 class="card-title centerer mt-3">Plenary Talks & Speakers</h1>
     <h4 class="card-title centerer mt-3" style="padding-bottom: 25px;">****************</h4>
     <h2 style="text-align: center;">Plenary Talks</h2>
-    <img src="/spc2024/img/soon.png" style="display:block; margin:auto; width:50%;">
+    <img src="/tsb2024/img/soon.png" style="display:block; margin:auto; width:50%;">
     <hr>
     <h2 style="text-align: center;">Keynote Lectures</h2>
-    <img src="/spc2024/img/soon.png" style="display:block; margin:auto; width:50%;">
+    <img src="/tsb2024/img/soon.png" style="display:block; margin:auto; width:50%;">
     <hr>
     <h2 style="text-align: center;">Invited Speakers</h2>
-    <img src="/spc2024/img/soon.png" style="display:block; margin:auto; width:50%;">
+    <img src="/tsb2024/img/soon.png" style="display:block; margin:auto; width:50%;">
   </div>
 
   <?php

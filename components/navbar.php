@@ -1,8 +1,8 @@
 <section>
   <nav class="navbar navbar-expand-lg navbar-dark text-white" style="background-color:#6da729;">
     <div class="container-fluid">
-      <a class="navbar-brand " href="/spc2024/index.php">
-        <img src="/tsb2024/img/logospc.png" class="spclogo w-50">
+      <a class="navbar-brand " href="/tsb2024/index.php">
+        <img src="/tsb2024/img/logotsb.png" class="tsblogo w-50">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

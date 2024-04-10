@@ -33,7 +33,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
           </div>
           <div class="col-lg-2 col-md-3 col-3" style="text-align: center;">
             <a href="https://www.science.kmitl.ac.th/new" target="_blank">
-              <img src="/spc2024/img/co-host/logo-b.png" class="img-fluid">
+              <img src="/tsb2024/img/co-host/logo-b.png" class="img-fluid">
             </a>
           </div>
           <div class="col-lg-2 col-md-3 col-3 center2">

@@ -46,7 +46,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
       <thead style="text-align: center;font-size: 2.5vw;">
         <tr>
           <td colspan="2">
-            <p>Overall Program of SPC2024</p>
+            <p>Overall Program of TSB2024</p>
           </td>
         </tr>
       </thead>
