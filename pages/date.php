@@ -21,24 +21,39 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 
   <div class="container">
   <h1 class="card-title centerer mt-3">Important Dates & Overall Program</h1>
-  <img src="/tsb2024/img/soon.png" style="width: 100%; height: auto;">
-    <!-- <table class="table tb-stip table-striped table-hover mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+    <table class="table tb-stip table-striped table-hover mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
       <tbody style="font-size: 2vw;">
         <tr>
-          <td>Abstract submission</td>
-          <td>1 February - 31 March 2024</td>
+          <td>Registration & Submissions opens</td>
+          <td>May 15, 2024</td>
         </tr>
         <tr>
-          <td>Notification of abstract acceptance</td>
-          <td>30 April 2024</td>
+          <td>Abstract submission deadline</td>
+          <td>July 15, 2024</td>
         </tr>
         <tr>
-          <td>Deadline of payment acceptance</td>
-          <td>15 May 2024</td>
+          <td>Notification of Abstract acceptance</td>
+          <td>August 1-15, 2024</td>
         </tr>
         <tr>
-          <td>Full text submission</td>
-          <td>10 July 2024</td>
+          <td>Full paper submission deadline</td>
+          <td>August 16, 2024</td>
+        </tr>
+        <tr>
+          <td>Notification of Full paper acceptance</td>
+          <td>October 1-16, 2024</td>
+        </tr>
+        <tr>
+          <td><u>Early bird</u> registration deadline</td>
+          <td>August 16, 2024</td>
+        </tr>
+        <tr>
+          <td>Late registration deadline</td>
+          <td>October 16, 2024</td>
+        </tr>
+        <tr>
+          <td>TSB2024 Conference</td>
+          <td>November 14-16, 2024</td>
         </tr>
       </tbody>
     </table>
@@ -97,7 +112,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
           <td></td>
         </tr>
       </tbody>
-    </table> -->
+    </table>
   </div>
 
   <?php

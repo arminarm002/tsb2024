@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2024 at 10:33 AM
+-- Generation Time: Apr 18, 2024 at 06:42 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -18,8 +18,22 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_spc2024`
+-- Database: `db_tsb2024`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_announcement`
+--
+
+CREATE TABLE `tb_announcement` (
+  `id` int(11) NOT NULL,
+  `an_image` varchar(255) NOT NULL,
+  `an_date` varchar(255) NOT NULL,
+  `an_detail` varchar(500) NOT NULL,
+  `an_link` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -97,7 +111,7 @@ CREATE TABLE `tb_setdate` (
 --
 
 INSERT INTO `tb_setdate` (`id`, `date_end`) VALUES
-(1, '2024-05-05');
+(1, '2024-11-14');
 
 -- --------------------------------------------------------
 
@@ -117,7 +131,8 @@ CREATE TABLE `tb_slip` (
 --
 
 INSERT INTO `tb_slip` (`slip_id`, `slip_date`, `slip_name`, `email`) VALUES
-(1, '2024-01-29', '20240129541849356.jpg', 'a1@gmail.com');
+(1, '2024-01-29', '20240129541849356.jpg', 'a1@gmail.com'),
+(2, '2024-04-17', '20240417946093436.jpg', 'suradech.ku@kmitl.ac.th');
 
 -- --------------------------------------------------------
 
@@ -191,11 +206,17 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`user_id`, `password`, `email`, `title`, `firstname`, `lastname`, `company`, `career`, `address`, `country`, `telephone`, `fax`, `extrameal`, `food`, `type`, `pay_id`, `receipt`, `amount`, `total_price`, `role`, `profile`, `approve`, `message`) VALUES
-(1, '$2y$10$K/hFakb9Jyhsu8rgOsiC.OZkCS7ajDX5mSWSX9T1yeHOoXxtNkwsO', 'a1@gmail.com', 'Mr.', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'General Food', '', 'Thai Physics Society Committee', 1, 'a', 1, 5000, 'user', '202401291710439022.jpg', 'wait', NULL);
+(1, '$2y$10$okwCGnvBbs0s5F8AdW5r5.7VF/Vn./DjUXom3nTjCc5YAEMl/Yw6y', 'suradech.ku@kmitl.ac.th', 'Mr.', 'Suradech', 'Kuruphan', 'KMITL', 'Computer', '-', '-', '0988280992', '-', 'General Food', '', 'Accompany Person', 5, '-', 1, 3000, 'superadmin', 'user3528.jpg', '', NULL);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `tb_announcement`
+--
+ALTER TABLE `tb_announcement`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tb_approve`
@@ -250,6 +271,12 @@ ALTER TABLE `tb_user`
 --
 
 --
+-- AUTO_INCREMENT for table `tb_announcement`
+--
+ALTER TABLE `tb_announcement`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tb_approve`
 --
 ALTER TABLE `tb_approve`
@@ -277,7 +304,7 @@ ALTER TABLE `tb_setdate`
 -- AUTO_INCREMENT for table `tb_slip`
 --
 ALTER TABLE `tb_slip`
-  MODIFY `slip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `slip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tb_student`

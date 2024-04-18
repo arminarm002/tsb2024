@@ -50,7 +50,16 @@
           <?php if (isset($_SESSION['role'])) {
             if ($_SESSION['role']) { ?>
               <li class="nav-item">
-                <a class="nav-link nav-fontcolor" aria-current="page" href="/tsb2024/auth/profile.php">Profile</a>
+                <?php if ($_SESSION['role'] == "user") { ?>
+                  <a class="nav-link nav-fontcolor" aria-current="page" href="/tsb2024/auth/profile.php">Profile</a>
+                <?php } else if ($_SESSION['role'] == "thaiphysic") { ?>
+                    <a class="nav-link nav-fontcolor" aria-current="page" href="/tsb2024/auth/backend/tsb.php">Profile</a>
+                <?php } else if ($_SESSION['role'] == "admin") { ?>
+                      <a class="nav-link nav-fontcolor" aria-current="page" href="/tsb2024/auth/backend/admin.php">Profile</a>
+                <?php } else if ($_SESSION['role'] == "superadmin") { ?>
+                        <a class="nav-link nav-fontcolor" aria-current="page"
+                          href="/tsb2024/auth/backend/superadmin.php">Profile</a>
+                <?php } ?>
               </li>
               <li class="nav-item">
                 <a class="nav-link nav-fontcolor" aria-current="page" href="/tsb2024/auth/logout.php">Log out</a>

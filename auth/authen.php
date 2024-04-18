@@ -1,5 +1,5 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 
 //Register
 if (isset($_POST['add'])) {
@@ -126,11 +126,13 @@ if (isset($_POST['login'])) {
         $_SESSION['role'] = $row['role'];
 
         if ($_SESSION['role'] == "user") {
-          header("refresh: 1; url=/spc2024/auth/profile.php");
+          header("refresh: 1; url=/tsb2024/auth/profile.php");
         } else if ($_SESSION['role'] == "admin") {
-          header("refresh: 1; url=/spc2024/auth/backend/admin.php");
+          header("refresh: 1; url=/tsb2024/auth/backend/admin.php");
         } else if ($_SESSION['role'] == "thaiphysic") {
-          header("refresh: 1; url=/spc2024/auth/backend/thaiphysic.php");
+          header("refresh: 1; url=/tsb2024/auth/backend/thaiphysic.php");
+        } else if ($_SESSION['role'] == "superadmin") {
+          header("refresh: 1; url=/tsb2024/auth/backend/superadmin.php");
         }
       } else {
         echo '<script language="javascript">';

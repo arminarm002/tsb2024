@@ -6,7 +6,7 @@
 
   function countDown() {
     const now = new Date().getTime();
-    const newtime = new Date('June 5, 2024 08:00:00').getTime();
+    const newtime = new Date('November 14, 2024 08:00:00').getTime();
     const unixTime = newtime - now;
 
     const dayElem = document.getElementById('days');
