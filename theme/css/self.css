@@ -327,8 +327,11 @@ ul.unlist {
     width: 100% !important;
   }
 }
-.font-concert {
-  font-family: "Concert One", sans-serif;
-  font-weight: 400;
+.noto-sans-thai{
+  font-family: "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
   font-style: normal;
+  font-variation-settings:
+    "wdth" 80;
 }
