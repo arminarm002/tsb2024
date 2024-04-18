@@ -104,7 +104,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
       <div class="row" style="margin: 15px auto;">
 
         <?php $i = 1;
-        $query = $conn->query("SELECT * FROM tb_announcement");
+        $query = $conn->query("SELECT * FROM tb_announcement ORDER BY id DESC");
         foreach ($query as $row) {
           if ($i <= 6) {
             ?>
@@ -129,7 +129,6 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
               </div>
             </div>
             <?php
-            // echo "";
           }
           $i++;
         }

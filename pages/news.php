@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,14 +8,14 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPC2024 KMITL</title>
+  <title>TSB2024 KMITL</title>
   <meta name="author" content="Suradech Kuruphan">
   <meta name="description"
-    content="19 th of Siam Physics Congress 2024 (SPC2024), Krungsri River Hotel, Phra Nakorn Sri Ayutthaya, Thailand, JUNE 5-7, 2024.">
+    content="19 th of Siam Physics Congress 2024 (tsb2024), Krungsri River Hotel, Phra Nakorn Sri Ayutthaya, Thailand, JUNE 5-7, 2024.">
   <meta name="keywords"
-    content="spc2024, SPC2024,19 th of Siam Physics Congress, ครั้งที่ 19, ประกวดโครงงานอิสระ, สมาคมฟิสิกส์">
-  <link rel="stylesheet" href="/spc2024/theme/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="/spc2024/theme/css/self.css">
+    content="tsb2024, tsb2024,19 th of Siam Physics Congress, ครั้งที่ 19, ประกวดโครงงานอิสระ, สมาคมฟิสิกส์">
+  <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
   <style>
     /* สีข้อความที่กระพริบ */
     .blinking {
@@ -41,7 +41,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 
 <body class="font-mitr">
   <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/navbar2.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
   ?>
 
   <div class="container">
@@ -54,22 +54,46 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
         </tr>
       </thead>
       <tbody>
-      <tr>
-          <td><b id="blinkingText2" class="blinkin" style="color:red;">New</b> 17 April 2024</td>
-          <td>
-            <a class="anews" href="/spc2024/pages/project.php" target="_blank">The notice for qualified applicants of the 16th project contest has been postponed to 30 April 2024. We are sorry for any inconvenience it may cause <u>Please stay tuned.</u>
-            </a>
-          </td>
-        </tr>
+
+        <?php $i = 1;
+        $query = $conn->query("SELECT * FROM tb_announcement ORDER BY id DESC");
+        foreach ($query as $row) {
+          if ($i <= 3) {
+            ?>
+            <tr>
+              <td><b id="blinkingText<?php echo $i; ?>" class="blinkin"
+                  style="color:red;">New</b><?php echo " " . $row['an_date']; ?></td>
+              <td>
+                <a class="anews" href="<?php echo $row['an_link']; ?>" target="_blank"><?php echo $row['an_detail']; ?>
+                </a>
+              </td>
+            </tr>
+            <?php
+          } else { ?>
+            <tr>
+              <td><?php echo " " . $row['an_date']; ?></td>
+              <td>
+                <a class="anews" href="<?php echo $row['an_link']; ?>" target="_blank"><?php echo $row['an_detail']; ?>
+                </a>
+              </td>
+            </tr>
+            <?php
+          }
+          $i++;
+        }
+        ?>
+
+
+
       </tbody>
     </table>
   </div>
-  
+
   <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
-  include ($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/blink.php');
-  include ($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
-  include ($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/blink.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/messenger.php');
   ?>
 
 </body>
