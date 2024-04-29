@@ -60,6 +60,18 @@ if ($_SESSION['role'] == "superadmin") {
                       <input type="text" id="link" name="link" class="form-control" required />
                     </div>
 
+                    <!-- More input -->
+                    <div class="form-outline mb-2">
+                      <label class="form-label" for="more">รายละเอียดเพิ่มเติม</label>
+                      <textarea  type="text" name="more" class="form-control"></textarea>
+                    </div>
+
+                    <!-- More2 input -->
+                    <div class="form-outline mb-2">
+                      <label class="form-label" for="more2">รายละเอียดเพิ่มเติม 2</label>
+                      <textarea type="text" name="more2" class="form-control"></textarea>
+                    </div>
+
                     <button type="submit" class="btn btn-l btn-block text-white mb-2" name="add">เพิ่ม</button>
                   </form>
                 </div>

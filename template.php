@@ -13,7 +13,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
 </head>
 
-<body class="font-concert">
+<body class="noto-sans-thai">
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
   ?>
