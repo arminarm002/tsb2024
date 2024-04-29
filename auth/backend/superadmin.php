@@ -56,7 +56,7 @@ if ($_SESSION['role'] == "superadmin") {
 
                     <!-- Link input -->
                     <div class="form-outline mb-2">
-                      <label class="form-label" for="link">ลิ้งก์</label>
+                      <label class="form-label" for="link">ลิ้งก์ (pages/news/....php)</label>
                       <input type="text" id="link" name="link" class="form-control" required />
                     </div>
 
