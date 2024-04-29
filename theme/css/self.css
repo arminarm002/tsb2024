@@ -331,6 +331,34 @@ ul.unlist {
     width: 100% !important;
   }
 }
+.btn-update{
+    --bs-btn-bg: #76effb;
+    --bs-btn-border-color: #05748d;
+    --bs-btn-hover-bg: #57b9ff;
+    --bs-btn-hover-border-color: #117ac5;
+    --bs-btn-focus-shadow-rgb: 216, 164, 6;
+    --bs-btn-active-bg: #0d445f;
+    --bs-btn-active-border-color: #00273b;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+    position: absolute;
+    width: 50px;
+    top: 10px;
+    right: 70px;
+}
+.btn-delete{
+    --bs-btn-bg: #f33e3e;
+    --bs-btn-border-color: #830303;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #ed6300;
+    --bs-btn-hover-border-color: #830303;
+    --bs-btn-active-bg: #ff002b;
+    --bs-btn-active-border-color: #830303;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+    position: absolute;
+    width: 50px;
+    top: 10px;
+    right: 10px;
+}
 .noto-sans-thai{
   font-family: "Noto Sans Thai", sans-serif;
   font-optical-sizing: auto;

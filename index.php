@@ -14,9 +14,11 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
     content="19 th of Siam Physics Congress 2024 (tsb2024), Krungsri River Hotel, Phra Nakorn Sri Ayutthaya, Thailand, JUNE 5-7, 2024.">
   <meta name="keywords"
     content="tsb2024, tsb2024,19 th of Siam Physics Congress, ครั้งที่ 19, ประกวดโครงงานอิสระ, สมาคมฟิสิกส์">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wdth,wght@80,100..900&family=Open+Sans:ital,wdth,wght@0,75,300..800;1,75,300..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wdth,wght@80,100..900&family=Open+Sans:ital,wdth,wght@0,75,300..800;1,75,300..800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
   <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
   <style>
@@ -112,6 +114,26 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
               <div class="card border border-warning rounded" style="width: 28rem;">
                 <img class="border-bottom border-warning" src="/tsb2024/file/upload/news/<?php echo $row['an_image']; ?>"
                   style="width:100%; ">
+                <?php if ($_SESSION['role'] == "superadmin") { ?>
+
+                  <form action="auth/backend/newsupdate.php" method="POST">
+                    <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
+
+                    <button class="btn btn-update" type="submit" name="update">
+                      <box-icon type='solid' name='pencil'></box-icon>
+                    </button>
+                  </form>
+
+                  <form action="auth/backend/data/alldelete.php" method="POST">
+                    <input type="text" name="filename" class="form-control" style="display:none;" value="<?php echo $row['an_image']; ?>">
+                    <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
+
+                    <button class="btn btn-delete" type="submit" name="delete" onclick="return confirm('ยืนยันที่จะลบ ?')">
+                      <box-icon type='solid' name='trash'></box-icon>
+                    </button>
+                  </form>
+
+                <?php } ?>
                 <div class="card-body">
                   <h5 class="card-title">
                     <?php if ($i <= 3) { ?>
@@ -143,7 +165,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
     </div>
   </div>
 
-
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <?php
   include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
   include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
@@ -151,7 +173,6 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/countdown.php');
   include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/messenger.php');
   ?>
-
 </body>
 
 </html>
