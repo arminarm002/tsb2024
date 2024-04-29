@@ -315,7 +315,11 @@ ul.unlist {
   display: block;
   margin: auto;
 }
-
+.payment-image{
+  box-shadow: rgba(0, 0, 0, 0.50) 2px 5px 15px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
 .gray {
   color: #656565;
 }

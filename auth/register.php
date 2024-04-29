@@ -140,17 +140,7 @@ if (isset($_SESSION['role'])) {
               </div>
 
               <!-- Type input -->
-              <div class="form-outline mb-2">
-                <label class="form-label">Type :</label>
-                <div class="form-check" style="margin-left: 30px;">
-                  <?php
-                  $sql = $conn->query("SELECT * FROM tb_type");
-                  foreach ($sql as $row) {
-                    echo '<input class="form-check-input" type="radio" name="type" value="' . htmlspecialchars($row['type_name']) . '" required> ' . $row['type_name'] . '<br>';
-                    ?>
-                  <?php } ?>
-                </div>
-              </div>
+              
 
               <!-- Address Receipt input -->
               <div class="form-outline">
@@ -160,111 +150,7 @@ if (isset($_SESSION['role'])) {
               </div>
 
               <!-- Fee input -->
-              <div class="form-outline mb-2 mt-5">
-                <table class="table table-active table-bordered border-danger">
-                  <thead style="text-align: center;">
-                    <tr>
-                      <td colspan="3">
-                        <h4>REGISTRATION FEE FOR tsb2024</h4>
-                      </td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <h6>Registration types</h6>
-                      </td>
-                      <td>
-                        <h6>EARLY-BIRD Before 5 May 2024</h6>
-                      </td>
-                      <td>
-                        <h6>After 5 May 2024</h6>
-                      </td>
-                    </tr>
-                    <?php
-                    $date_end = $conn->query("SELECT * FROM tb_setdate");
-                    foreach ($date_end as $rowdate) {
-                      $datepro = $rowdate['date_end'];
-                    }
-                    $datenows = date("Y-m-d");
-                    if ($datenows > $datepro) {
-                      $data1 = "disabled";
-                      $data2 = "";
-                    } else {
-                      $data1 = "";
-                      $data2 = "disabled";
-                    }
-
-                    $sqlpay = $conn->query("SELECT * FROM tb_pay");
-                    $data = $sqlpay->fetch_all();
-                    foreach ($sqlpay as $row) {
-                      ?>
-                      <tr>
-                        <td>
-                          <?php echo $row['pay_name']; ?>
-                        </td>
-                        <td>
-                          <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['id']; ?>"
-                            onchange="openamount(this.value)" required <?php echo $data1; ?>>
-                          <!-- <input type="text" id="b_pay" value="<?php echo $row['b_price']; ?>"> -->
-                          <label class="form-check-label" for="fee">
-                            <?php echo $row['b_amount']; ?>
-                          </label>
-                        </td>
-                        <td>
-                          <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['id']; ?>" <?php echo $data2; ?> onchange="openamount(this.value)">
-                          <!-- <input type="text" id="a_pay" value="<?php echo $row['a_price']; ?>"> -->
-                          <label class="form-check-label" for="fee">
-                            <?php echo $row['a_amount']; ?>
-                          </label>
-                        </td>
-                        </td>
-                      </tr>
-                      <?php
-                    }
-                    ?>
-                    <tr id="studencard" style="display:none;">
-                      <td colspan="3">
-                        <span class="centerer">
-                          กรุณาแนบสำเนาบัตรนักศึกษา (Attach your student ID card.)
-                          <input type="file" name="studencard">
-                        </span>
-                      </td>
-                    </tr>
-                    <tr></tr>
-                    <tr id="myDiv" style="display:none;">
-                      <td colspan="3">
-                        <span class="centerer">
-                          จำนวน Abstract ที่ต้องการส่ง
-                          <input type="number" id="amount" name="amount" value="1"> เรื่อง
-                        </span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="3">
-                        <span class="centerer">จำนวนเงิน รวมทั้งสิ้น <div id="result"></div> บาท</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <label class="mb-3">Choose an money transfer slip to upload:</label>
-                <input type="file" name="fileupload" required>
-
-                <p class="bg-info" style="padding: 25px">
-                  Payment
-                  <br>Bank's full name : Krungthai Bank
-                  <br>Bank's Swift Code : KRTHTHBK
-                  <br>Bank account no : 549-0-25626-5
-                  <br>Beneficiary name : THAI PHYSICS SOCIETY 2560
-                  <br>
-                  <br>บัญชี ธนาคารกรุงไทย สาขาถนนห้วยแก้ว
-                  <br>ชื่อบัญชี สมาคมฟิสิกส์ไทย 2560
-                  <br>เลขที่บัญชี 549-0-25626-5
-                </p>
-              </div>
-
-              <p>* เลือกชำระแบบ Non Member of Thai Physics Society รับสิทธิพิเศษ ได้เป็นสมาชิก 1 ปี</p>
-              <p>** นักเรียน/นักศึกษา ต้องแนบสำเนาบัตรประจำตัวนักเรียน/นักศึกษา</p>
+              <img src="/tsb2024/img/soon.png" style="display:block; margin:auto; width:50%;">
 
               <!-- Check input -->
               <div class="form-check mb-3">
@@ -275,7 +161,7 @@ if (isset($_SESSION['role'])) {
               </div>
 
               <!-- Submit button -->
-              <button type="submit" class="btn btn-l btn-block text-white mb-2" name="add">สมัครสมาชิก</button>
+              <!-- <button type="submit" class="btn btn-l btn-block text-white mb-2" name="add">สมัครสมาชิก</button> -->
 
               <!-- Register buttons -->
               <div class="text-center">

@@ -14,15 +14,29 @@
   include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
   ?>
   <div class="container">
-    <h1 class="centerer mt-3">Registration Fee (THB)</h1>
-    <h4 class="centerer mt-3"><b>Register Form </b>&nbsp;>>>&nbsp; 
+    <h1 class="centerer mt-3">Registration Fee</h1>
+    <h4 class="centerer mt-3"><b>Register Form </b>&nbsp;>>>&nbsp;
       <a href="/tsb2024/auth/register.php" class="btn btn-warning">Click</a>
     </h4>
-    <div class="centerer mt-3">
-      <a href="/tsb2024/img/payment2.jpg" target="_blank" style="text-align: center;">
-        <img src="/tsb2024/img/payment2.jpg"
-          style="box-shadow: rgba(0, 0, 0, 0.50) 2px 5px 15px;">
-      </a>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-6 mt-3">
+        <p>
+          <a href="/tsb2024/img/payment3.jpg" target="_blank" style="text-align: center;">
+            <img src="/tsb2024/img/payment3.jpg" class="payment-image">
+          </a>
+           - TSB Member Application : <a href="https://www.biotec.or.th/tsb/index.php" target="_blank">
+            <button class="btn btn-l text-white">Click Here</button></a>
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6 mt-3">
+      <p>
+          <a href="/tsb2024/img/payment4.jpg" target="_blank" style="text-align: center;">
+            <img src="/tsb2024/img/payment4.jpg" class="payment-image">
+          </a>
+           - AFOB Application : <a href="https://www.afob.org/join/signup_indivisual.html" target="_blank">
+            <button class="btn btn-l text-white">Click Here</button></a>
+        </p>
+      </div>
     </div>
 
     <!-- <h1 class="centerer mt-3">Payment</h1>
