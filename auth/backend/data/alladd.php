@@ -5,10 +5,10 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 if (isset($_POST['add'])) {
   $coverupload = (isset($_POST['coverupload']) ? $_POST['coverupload'] : '');
   $showtime = $_POST['date'];
-  $detail = $_POST['detail'];
   $link = $_POST['link'];
-  $more = $_POST['more'];
-  $more2 = $_POST['more2'];
+  $detail = htmlspecialchars($_POST['detail'], ENT_QUOTES);
+  $more = htmlspecialchars($_POST['more'], ENT_QUOTES);
+  $more2 = htmlspecialchars($_POST['more2'], ENT_QUOTES);
   //ฟังก์ชั่นวันที่
   date_default_timezone_set('Asia/Bangkok');
   $date = date("Ymd");
@@ -26,7 +26,7 @@ if (isset($_POST['add'])) {
   //คัดลอกไฟล์ไปเก็บที่เว็บเซริ์ฟเวอร์
   move_uploaded_file($_FILES['coverupload']['tmp_name'], $path . $newname);
 
-  $addannouncement = $conn->query("INSERT INTO tb_announcement (an_image, an_date, an_detail, an_link, an_moredetail, an_moredetail2) VALUES ('$newname', '$showtime', '$detail', '$link', '$more1', '$more2')");
+  $addannouncement = $conn->query("INSERT INTO tb_announcement (an_image, an_date, an_detail, an_link, an_moredetail, an_moredetail2) VALUES ('$newname', '$showtime', '$detail', '$link', '$more', '$more2')");
 
     if ($addannouncement) {
       echo '<script language="javascript">';
