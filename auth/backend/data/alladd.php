@@ -1,6 +1,41 @@
 <?php
 include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 
+//Add Poster
+if (isset($_POST['addposter'])) {
+  $addposter = (isset($_POST['poster']) ? $_POST['poster'] : '');
+
+  //ฟังก์ชั่นวันที่
+  date_default_timezone_set('Asia/Bangkok');
+  $date = date("Ymd");
+  //ฟังก์ชั่นสุ่มตัวเลข
+  $numrand = (mt_rand());
+  //เพิ่มไฟล์
+  $upload = $_FILES['poster'];
+  //โฟลเดอร์ที่จะ upload file เข้าไป 
+  $path = "../../../file/upload/poster/";
+  //เอาชื่อไฟล์เก่าออกให้เหลือแต่นามสกุล
+  $type = strrchr($_FILES['poster']['name'], ".");
+  //ตั้งชื่อไฟล์ใหม่โดยเอาเวลาไว้หน้าชื่อไฟล์เดิม
+  $newname = $date . $numrand . $type;
+  //คัดลอกไฟล์ไปเก็บที่เว็บเซริ์ฟเวอร์
+  move_uploaded_file($_FILES['poster']['tmp_name'], $path . $newname);
+  $addposter = $conn->query("INSERT INTO tb_poster (pt_image) VALUES ('$newname')");
+
+    if ($addposter) {
+      echo '<script language="javascript">';
+      echo 'alert("Successfully")';
+      echo '</script>';
+      header("refresh: 1; url=/tsb2024/index.php");
+
+    } else {
+      echo '<script language="javascript">';
+      echo 'alert("Somthing Wrong!")';
+      echo '</script>';
+      header("refresh: 1; url=/tsb2024/auth/backend/superadmin.php");
+    }
+}
+
 //Add Announcement
 if (isset($_POST['add'])) {
   $coverupload = (isset($_POST['coverupload']) ? $_POST['coverupload'] : '');

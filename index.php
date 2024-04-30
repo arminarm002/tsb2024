@@ -87,19 +87,42 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
       </div>
 
     </section>
-    <div class="row">
-      <div class="col-lg-4 col-md-4 col-6 mt-3">
+    <div class="row centerer">
+      <?php
+      $query = $conn->query("SELECT * FROM tb_poster");
+      foreach ($query as $row) { ?>
+        <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
+          <div class="card" style="border: none;">
+            <a href="/tsb2024/file/upload/poster/<?php echo $row['pt_image']; ?>" target="_blank">
+              <img src="/tsb2024/file/upload/poster/<?php echo $row['pt_image']; ?>" class="d-block w-100"
+                style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+            </a>
+            <?php if ($_SESSION['role'] == "superadmin") { ?>
 
-      </div>
-      <div class="col-lg-4 col-md-4 col-6 mt-3">
-        <a href="" target="_blank">
-          <img src="/tsb2024/img/news/first.jpg" class="d-block w-100"
-            style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-4 col-6 mt-3">
+              <form action="auth/backend/posterupdate.php" method="POST">
+                <input type="text" name="id" class="form-control" style="display:none;" 
+                value="<?php echo $row['id']; ?>">
 
-      </div>
+                <button class="btn btn-update" type="submit" name="update">
+                  <box-icon type='solid' name='pencil'></box-icon>
+                </button>
+              </form>
+
+              <form action="auth/backend/data/alldelete.php" method="POST">
+                <input type="text" name="filename" class="form-control" style="display:none;"
+                  value="<?php echo $row['pt_image']; ?>">
+                <input type="text" name="id" class="form-control" style="display:none;" 
+                value="<?php echo $row['id']; ?>">
+
+                <button class="btn btn-delete" type="submit" name="deleteposter" onclick="return confirm('ยืนยันที่จะลบ ?')">
+                  <box-icon type='solid' name='trash'></box-icon>
+                </button>
+              </form>
+
+            <?php } ?>
+          </div>
+        </div>
+      <?php } ?>
     </div>
     <div class="cards mb-3 mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;padding-bottom: 15px;">
       <h1 class="card-title centerer" style="color: #7b7b7b;padding-top: 15px;">Announcement</h1>
@@ -111,7 +134,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
           if ($i <= 6) {
             ?>
             <div class="col-sm-6 col-md-6 col-lg-4 col-12 centerer mt-3">
-              <div class="card border border-warning rounded" style="width: 28rem;">
+              <div class="card border border-warning rounded">
                 <img class="border-bottom border-warning" src="/tsb2024/file/upload/news/<?php echo $row['an_image']; ?>"
                   style="width:100%; ">
                 <?php if ($_SESSION['role'] == "superadmin") { ?>
@@ -125,7 +148,8 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
                   </form>
 
                   <form action="auth/backend/data/alldelete.php" method="POST">
-                    <input type="text" name="filename" class="form-control" style="display:none;" value="<?php echo $row['an_image']; ?>">
+                    <input type="text" name="filename" class="form-control" style="display:none;"
+                      value="<?php echo $row['an_image']; ?>">
                     <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
 
                     <button class="btn btn-delete" type="submit" name="delete" onclick="return confirm('ยืนยันที่จะลบ ?')">
