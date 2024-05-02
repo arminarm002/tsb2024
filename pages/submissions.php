@@ -10,11 +10,14 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TSB2024 KMITL</title>
   <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wdth,wght@80,100..900&family=Open+Sans:ital,wdth,wght@0,75,300..800;1,75,300..800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
   <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
 </head>
 
-<body class="font-concert">
+<body class="noto-sans-thai">
   <?php
   include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
   ?>
@@ -25,11 +28,11 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
       <div class="col-12">
         <div class="card border-0" style="color: #494949;">
           <h5>Abstract submission open : 15 May - 15 July 2024
-            <br>Template for tsb 2024 abstract.
-            <a href="/tsb2024/file/download/full paper template.docx" class="btn btn-download">Download
-              File</a><br>Please do not modify
-            the format
-            and please convert to pdf. for submission.<br><br>Topic :
+            <br>Abstract submission guideline and abstract template for TSB 2024
+            <a href="https://drive.google.com/drive/folders/1zEyLq_Od_VRhBVpH18UmYWcYERRjaBpk?usp=sharing"
+              class="btn btn-download" target="_blank">Download
+              File</a><br>Please do not modify the format. Please convert the file to pdf format before
+            submission.<br><br>Topics :
           </h5>
           <p>
             A) Molecular and Medical Biotechnology<br>
@@ -41,38 +44,36 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
           </p>
           <h5>Note :</h5>
           <ul class="unlist">
-            <li>The recommended length of the abstract is 250-300 words.</li>
-            <li>One registration is allowed to submit only one abstract and one full paper.</li>
-            <li>Each accepted abstract should make full registration payment by the deadline to have the abstract
-              included in the abstract book.</li>
-            <li>To comply with IOP's standard, all research works must have enough Biology (in terms of both quality to
-              generate qualified new knowledge in Biology and Biology content to be greater than 50%).</li>
+            <li>The length of the abstract must not exceed 200 words.</li>
+            <li>One registration is allowed to submit only one abstract and one full paper of the same title.</li>
+            <li>Each accepted abstract must be accompanied by full registration payment by the August 16, 2024 for early
+              bird registration or October 16, 2024 for late registration to ensure inclusion in the abstract book.</li>
           </ul>
           <p>Plagiarism and self-plagiarism are not allowed.</p>
 
-          <h4><b>** Guidelines on submitting an abstract **</b> >>> <a
-              style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;"
-              href="/tsb2024/file/download/submission guidelines.docx" class="btn btn-download" target="_blank">Click</a>
-          </h4>
         </div>
       </div>
       <hr>
 
-      <h1 class="card-title centerer">Journals & Publications</h1>
+      <h1 class="card-title centerer">Full paper submission</h1>
       <div class="row" style="margin: 15px auto;">
         <div class="col-12">
           <div class="card border-0" style="color: #494949;">
+            <h5>Full paper submission open: May 15 – August 16 2024</h5>
+            <h5>Full paper submission guideline and full paper template for TSB 2024 >>> <a
+                href="https://drive.google.com/drive/folders/1zEyLq_Od_VRhBVpH18UmYWcYERRjaBpk?usp=sharing"
+                class="btn btn-download" style="margin: 5px 0px 2px 0px;" target="_blank">Download File</a></h5>
+            <h5>Please do not modify the format. Please convert the file to pdf format before submission.</h5>
             <h5>Journal Publication’s Important details</h5>
-            <p>Each registrant can submit only ONE manuscript for publication consideration.
-              Please select only ONE journal for your full-paper submission.
-              The conference participants who choose to submit a full paper for publication in the
-              <b style="color:red">Conference E-Proceedings</b> will not be able to submit a full paper for publication
-              in
-              the journals.
-            </p>
+            <ul class="unlist">
+              <li>Each registered participant is not allowed to submit more than one manuscript for publication consideration.</li>
+              <li>Please choose only one type of publication for your manuscript. A manuscript submitted for publication in the electronic conference proceeding book is not allowed to be submitted to the journal of Current Applied Science and Technology or the Suan Sunandha Science and Technology Journal or the Thai Journal of Nanoscience and Nanotechnology and vice versa.</li>
+              <li>Manuscripts rejected from publications in the journals will not be re-considered for publication in the electronic conference proceeding book.
+              </li>
+            </ul>
             <h5>TSB2024 Publications</h5>
             <p>
-              1. Thai Society for Biotechnology and International Conference (TSB) Proceeding 
+              1. Thai Society for Biotechnology and International Conference (TSB) Proceeding
             </p>
             <hr>
             <p>

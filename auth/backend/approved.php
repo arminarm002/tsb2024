@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
 if ($_SESSION['role']) {
   if ($_SESSION['role'] == "thaiphysic") {
     ?>
@@ -11,13 +11,16 @@ if ($_SESSION['role']) {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>SPC2024 KMITL</title>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wdth,wght@80,100..900&family=Open+Sans:ital,wdth,wght@0,75,300..800;1,75,300..800&display=swap"
+        rel="stylesheet">
       <link rel="stylesheet" href="/spc2024/theme/css/bootstrap-theme.css">
       <link rel="stylesheet" href="/spc2024/theme/css/self.css">
     </head>
 
-    <body class="font-mitr">
+    <body class="noto-sans-thai">
       <?php
-      include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/navbar.php');
+      include ($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/navbar.php');
 
       $sql = $conn->query("SELECT * FROM tb_user WHERE approve = 'approve'");
       $i = 0;
@@ -28,7 +31,7 @@ if ($_SESSION['role']) {
       <div class="container-fluid">
         <div class="row mt-3">
           <div class="col-sm-12 col-md-4 col-lg-3">
-            <?php include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/sidebar.php'); ?>
+            <?php include ($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/sidebar.php'); ?>
           </div>
           <div class="col-sm-12 col-md-8 col-lg-9">
             <div class="alert alert-success" role="alert">
@@ -97,9 +100,9 @@ if ($_SESSION['role']) {
       </div><!-- container -->
 
       <?php
-      include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
-      include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
-      include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
+      include ($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
+      include ($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
+      include ($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
       ?>
 
     </body>
