@@ -24,71 +24,99 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
     <div class="row" style="margin: 15px auto;">
       <div class="col-12">
         <div class="card border-0" style="color: #494949;">
-          <h5>Participants in the TSB 2024 conference are encouraged to submit their work for publication. The topics of
-            TSB 2024 are listed below.</h5>
+          <h5>Abstract submission open : 15 May - 15 July 2024
+            <br>Template for tsb 2024 abstract.
+            <a href="/tsb2024/file/download/full paper template.docx" class="btn btn-download">Download
+              File</a><br>Please do not modify
+            the format
+            and please convert to pdf. for submission.<br><br>Topic :
+          </h5>
           <p>
-            1) Molecular and Medical Biotechnology<br>
-            2) Industrial and Environmental Biotechnology<br>
-            3) Food Technology and Food Engineering<br>
-            4) Agricultural Biotechnology<br>
-            5) Bioinformatics and Systems Biology<br>
-            6) Biodiversity, Bioactive Compounds, and Applications
+            A) Molecular and Medical Biotechnology<br>
+            B) Industrial and Environmental Biotechnology<br>
+            C) Food Technology and Food Engineering<br>
+            D) Agricultural Biotechnology<br>
+            E) Bioinformatics and Systems Biology<br>
+            F) Biodiversity, Bioactive Compounds, and Applications
           </p>
           <h5>Note :</h5>
-          <p>Please note that all oral and poster presenters must at least submit their abstract for consideration of
-            publication in the program and abstract book of TSB 2024. Presenter’s name must be underlined on the first
-            page of the abstract or the full paper.</p>
-          <!-- <ul class="unlist">
+          <ul class="unlist">
             <li>The recommended length of the abstract is 250-300 words.</li>
             <li>One registration is allowed to submit only one abstract and one full paper.</li>
             <li>Each accepted abstract should make full registration payment by the deadline to have the abstract
               included in the abstract book.</li>
-            <li>To comply with IOP's standard, all research works must have enough Physics (in terms of both quality to
-              generate qualified new knowledge in Physics and Physics content to be greater than 50%). Plagiarism and
-              self-plagiarism are not allowed.</li>
-          </ul> -->
+            <li>To comply with IOP's standard, all research works must have enough Biology (in terms of both quality to
+              generate qualified new knowledge in Biology and Biology content to be greater than 50%).</li>
+          </ul>
+          <p>Plagiarism and self-plagiarism are not allowed.</p>
 
-          <h5>Abstract submission</h5>
-          <p>All abstracts must be submitted through <span class="red">online submission.</span> The deadline for
-            abstract submission is July 15th, 2024. The abstract template can be downloaded from
-            <a href="/tsb2024/file/download/TSB2024 full paper template.docx" class="btn btn-download"
-              target="_blank">Here</a>
-            <br>The content of the abstract must not exceed 200 words. Notification of abstract acceptance will be
-            issued via E-mail during August 1st – 15th, 2024. All accepted abstracts will be published in the electronic
-            program and abstract book.<br><u>Please note that all papers accepted for publication in the conference
-              proceeding book must not be submitted to the journal of Current Applied Science and Technology for
-              publication.</u>
-          </p>
-          <h5>Full paper submission for publication in the journal of Current Applied Science and Technology (CAST)</h5>
-          <p>Participants who wish to submit their manuscript for consideration of publication in CAST must submit their
-            abstract to TSB 2024 as indicated above. Upon abstract acceptance, the committee will issue a recommendation
-            letter which must be submitted to CAST along with the participant’s manuscript. Participants must follow
-            <span class="red">the
-              journal’ s template and guidelines</span> for manuscript preparation as shown on the journal’s website.
-            The
-            submission is performed through <span class="red">the journal’s online submission
-              system.</span><br><u>Please note that the
-              publication of the participant’s paper depends upon the journal’s standard and consideration.
-              Participation in TSB 2024 does not guarantee publication in CAST. Please also note that papers that are
-              not accepted for publication in CAST will not be published in the proceeding book.</u></p>
+          <h4><b>** Guidelines on submitting an abstract **</b> >>> <a
+              style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;"
+              href="/tsb2024/file/download/submission guidelines.docx" class="btn btn-download" target="_blank">Click</a>
+          </h4>
+        </div>
+      </div>
+      <hr>
+
+      <h1 class="card-title centerer">Journals & Publications</h1>
+      <div class="row" style="margin: 15px auto;">
+        <div class="col-12">
+          <div class="card border-0" style="color: #494949;">
+            <h5>Journal Publication’s Important details</h5>
+            <p>Each registrant can submit only ONE manuscript for publication consideration.
+              Please select only ONE journal for your full-paper submission.
+              The conference participants who choose to submit a full paper for publication in the
+              <b style="color:red">Conference E-Proceedings</b> will not be able to submit a full paper for publication
+              in
+              the journals.
+            </p>
+            <h5>TSB2024 Publications</h5>
+            <p>
+              1. Thai Society for Biotechnology and International Conference (TSB) Proceeding 
+            </p>
+            <hr>
+            <p>
+              2. Current Applied Science and Technology - <b style="color:red">Scopus (Q3) SJR (Q4) Indexed </b><br>
+              Journal Website : >>>
+              <a style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" href="https://li01.tci-thaijo.org/index.php/cast"
+                class="btn btn-warning" target="_blank"> Click </a>
+              <br>
+              <br>
+              <img class="border-bottom border-warning w-25" src="/tsb2024/img/journals2.jpg"
+                style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+            </p>
+            <hr>
+            <p>
+              3. The Suan Sunandha Science and Technology Journal (SSSTJ) - <b style="color:red">TCI1 indexed</b><br>
+              Journal Website : >>>
+              <a style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;"
+                href="https://li02.tci-thaijo.org/index.php/ssstj" class="btn btn-warning" target="_blank"> Click
+              </a><br>
+              <br>
+              <img class="border-bottom border-warning w-25" src="/tsb2024/img/journals3.jpg"
+                style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+            </p>
+            <hr>
+            <p>
+              4. The Thai Journal of Nanoscience and Nanotechnology (TJNN)- <b style="color:red">TCI2 indexed</b><br>
+              Download Template : >>>
+              <a style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;"
+                href="https://ph05.tci-thaijo.org/index.php/TJNN/index" class="btn btn-warning" target="_blank"> Click
+              </a><br>
+              <br>
+              <img class="border-bottom border-warning w-25" src="/tsb2024/img/journals4.jpg"
+                style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <hr>
 
-    <h1 class="card-title centerer">Journals & Publications</h1>
-    <div class="row" style="margin: 15px auto;">
-      <div class="col-12">
-        <img src="/tsb2024/img/soon.png" style="width: 100%; height: auto;">
-      </div>
-    </div>
-  </div>
-
-  <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
-  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/messenger.php');
-  ?>
+    <?php
+    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/messenger.php');
+    ?>
 </body>
 
 </html>
