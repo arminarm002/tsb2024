@@ -18,11 +18,9 @@ if ($_SESSION['role'] == "superadmin") {
   </head>
 
   <body class="noto-sans-thai">
-    <?php
-    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
-    ?>
+    <?php include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');?>
 
-    <div class="noto-sans-thai">
+      <div class="container-fluid">
       <div class="row mt-3">
         <div class="col-sm-12 col-md-4 col-lg-3">
           <?php include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/sidebar.php'); ?>

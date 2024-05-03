@@ -46,4 +46,26 @@ if (isset($_POST['delete'])) {
     }
   
 }
+//Delete Logo
+if (isset($_POST['deletelogo'])) {
+  $id = $_POST['id'];
+  $oldname = $_POST['oldname'];
+
+  $deleteannouncement = $conn->query("DELETE FROM tb_logo WHERE id=$id;");
+
+    if ($deleteannouncement) {
+      unlink('../../../file/upload/logo/'.$oldname);
+      echo '<script language="javascript">';
+      echo 'alert("ลบ สำเร็จ")';
+      echo '</script>';
+      header("refresh: 1; url=/tsb2024/pages/sponsors.php");
+
+    } else {
+      echo '<script language="javascript">';
+      echo 'alert("Somthing Wrong!")';
+      echo '</script>';
+      header("refresh: 1; url=/tsb2024/auth/backend/superadmin.php");
+    }
+  
+}
 ?>

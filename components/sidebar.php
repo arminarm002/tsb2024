@@ -17,6 +17,7 @@
   <?php if ($_SESSION['role'] == "superadmin") { ?>
     <a href="/tsb2024/auth/backend/superadmin.php" class="list-group-item list-group-item-action">Announcement</a>
     <a href="/tsb2024/auth/backend/poster.php" class="list-group-item list-group-item-action">Poster</a>
-    <a href="/tsb2024/auth/backend/data/addplenary.php" class="list-group-item list-group-item-action">Plenary Talks</a>
+    <a href="/tsb2024/auth/backend/addpersonneltalk.php" class="list-group-item list-group-item-action">Plenary Talks</a>
+    <a href="/tsb2024/auth/backend/logo.php" class="list-group-item list-group-item-action">Logo</a>
   <?php } ?>
 </div>

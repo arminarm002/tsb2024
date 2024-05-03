@@ -70,7 +70,7 @@ if ($_SESSION['role'] == "superadmin") {
                       <textarea rows="5" cols="50000" name="more2" class="form-control"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-l btn-block text-white mb-2" name="addannounce">เพิ่ม</button>
+                    <button type="submit" class="btn btn-l btn-block text-white mb-2" name="add">เพิ่ม</button>
                   </form>
                 </div>
               </div>
