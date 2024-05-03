@@ -11,14 +11,9 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   <title>TSB2024 KMITL</title>
   <meta name="author" content="Suradech Kuruphan">
   <meta name="description"
-    content="19 th of Siam Physics Congress 2024 (tsb2024), Krungsri River Hotel, Phra Nakorn Sri Ayutthaya, Thailand, JUNE 5-7, 2024.">
+    content="36 th of Thai Society for Biotechnology 2024 (tsb2024), Krungsri River Hotel, Phra Nakorn Sri Ayutthaya, Thailand, November 14-16, 2024.">
   <meta name="keywords"
-    content="tsb2024, tsb2024,19 th of Siam Physics Congress, ครั้งที่ 19, ประกวดโครงงานอิสระ, สมาคมฟิสิกส์">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wdth,wght@80,100..900&family=Open+Sans:ital,wdth,wght@0,75,300..800;1,75,300..800&display=swap"
-    rel="stylesheet">
+    content="tsb2024, 36 th of Thai Society for Biotechnology, ครั้งที่ 36, ประกวดโครงงานอิสระ, สมาคมฟิสิกส์,ชีววิทยา">
   <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
   <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
   <link rel="stylesheet" href="/tsb2024/theme/css/timeline.css">
@@ -40,7 +35,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   </style>
 </head>
 
-<body class="noto-sans-thai">
+<body>
   <?php
   include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
   ?>
@@ -100,7 +95,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
             </a>
             <?php if ($_SESSION['role'] == "superadmin") { ?>
 
-              <form action="auth/backend/posterupdate.php" method="POST">
+              <form action="auth/backend/poster-update.php" method="POST">
                 <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
 
                 <button class="btn btn-update" type="submit" name="update">
@@ -139,7 +134,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
                   style="width:100%; ">
                 <?php if ($_SESSION['role'] == "superadmin") { ?>
 
-                  <form action="auth/backend/newsupdate.php" method="POST">
+                  <form action="auth/backend/news-update.php" method="POST">
                     <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
 
                     <button class="btn btn-update" type="submit" name="update">

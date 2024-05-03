@@ -1,12 +1,19 @@
 <div class="list-group"
   style="--bs-list-group-bg: rgb(255 122 1 / 20%);--bs-list-group-action-hover-bg: rgb(127 94 65 / 44%);">
-  <?php if ($_SESSION['role'] == "superadmin") { ?>
-    <a class="list-group-item list-group-item-action active" aria-current="true"
-      style="background-color: #ff7a01;border-color: #813d00;">Setting</a>
-  <? } else { ?>
-    <a class="list-group-item list-group-item-action active" aria-current="true"
-      style="background-color: #ff7a01;border-color: #813d00;">Profile</a>
-  <?php } ?>
+  <?php if ($_SESSION['role'] == "superadmin") {
+    $data1 = "display:none;";
+    $data2 = "";
+  } else {
+    $data1 = "";
+    $data2 = "display:none;";
+  }
+  ?>
+  <a class="list-group-item list-group-item-action active" aria-current="true"
+    style="background-color: #ff7a01;border-color: #813d00;<?php echo $data2; ?>">Setting</a>
+  <? ?>
+  <a class="list-group-item list-group-item-action active" aria-current="true"
+    style="background-color: #ff7a01;border-color: #813d00;<?php echo $data1; ?>">Profile</a>
+  <?php ?>
   <a href="/tsb2024/auth/profile.php" class="list-group-item list-group-item-action">Home</a>
   <a href="/tsb2024/auth/changepass.php" class="list-group-item list-group-item-action">Change Password</a>
   <?php if ($_SESSION['role'] == "thaiphysic") { ?>
@@ -16,8 +23,8 @@
   <?php } ?>
   <?php if ($_SESSION['role'] == "superadmin") { ?>
     <a href="/tsb2024/auth/backend/superadmin.php" class="list-group-item list-group-item-action">Announcement</a>
-    <a href="/tsb2024/auth/backend/poster.php" class="list-group-item list-group-item-action">Poster</a>
-    <a href="/tsb2024/auth/backend/addpersonneltalk.php" class="list-group-item list-group-item-action">Plenary Talks</a>
-    <a href="/tsb2024/auth/backend/logo.php" class="list-group-item list-group-item-action">Logo</a>
+    <a href="/tsb2024/auth/backend/poster-add.php" class="list-group-item list-group-item-action">Poster</a>
+    <a href="/tsb2024/auth/backend/personneltalk-add.php" class="list-group-item list-group-item-action">Plenary Talks</a>
+    <a href="/tsb2024/auth/backend/logo-add.php" class="list-group-item list-group-item-action">Logo</a>
   <?php } ?>
 </div>

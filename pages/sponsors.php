@@ -8,15 +8,12 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TSB2024 KMITL</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wdth,wght@80,100..900&family=Open+Sans:ital,wdth,wght@0,75,300..800;1,75,300..800&display=swap"
-    rel="stylesheet">
+  <title>Organizer & Sponsors</title>
   <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
   <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
 </head>
 
-<body class="noto-sans-thai">
+<body>
   <?php
   include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
   ?>
@@ -34,7 +31,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
               <?php if (isset($_SESSION['role'])) {
                 if ($_SESSION['role'] == "superadmin") { ?>
 
-                  <form action="/tsb2024/auth/backend/logoupdate.php" method="POST" style="float: left; margin-left: 30px;">
+                  <form action="/tsb2024/auth/backend/logo-update.php" method="POST" style="float: left; margin-left: 30px;">
                     <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
 
                     <button class="btn btn-update-logo" type="submit" name="updatelogo">
@@ -82,7 +79,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
               <?php if (isset($_SESSION['role'])) {
                 if ($_SESSION['role'] == "superadmin") { ?>
 
-                  <form action="/tsb2024/auth/backend/logoupdate.php" method="POST" style="float: left; margin-left: 30px;">
+                  <form action="/tsb2024/auth/backend/logo-update.php" method="POST" style="float: left; margin-left: 30px;">
                     <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row2['id']; ?>">
 
                     <button class="btn btn-update-logo" type="submit" name="updatelogo">

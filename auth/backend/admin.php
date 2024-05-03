@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 if ($_SESSION['role'] == "admin") {
   ?>
   <!DOCTYPE html>
@@ -9,17 +9,14 @@ if ($_SESSION['role'] == "admin") {
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPC2024 KMITL</title>
-    <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wdth,wght@80,100..900&family=Open+Sans:ital,wdth,wght@0,75,300..800;1,75,300..800&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="/spc2024/theme/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="/spc2024/theme/css/self.css">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
   </head>
 
-  <body class="noto-sans-thai">
+  <body>
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/navbar.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
 
     $sql = $conn->query("SELECT * FROM tb_user INNER JOIN tb_pay 
     ON tb_user.pay_id = tb_pay.pay_id WHERE email='" . $_SESSION['email'] . "'");
@@ -32,8 +29,8 @@ if ($_SESSION['role'] == "admin") {
               style="--bs-list-group-bg: rgb(255 122 1 / 20%);--bs-list-group-action-hover-bg: rgb(127 94 65 / 44%);">
               <a class="list-group-item list-group-item-action active" aria-current="true"
                 style="background-color: #ff7a01;border-color: #813d00;">Profile</a>
-              <a href="/spc2024/index.php" class="list-group-item list-group-item-action">Home</a>
-              <a href="/spc2024/auth/changepass.php" class="list-group-item list-group-item-action">Change Password</a>
+              <a href="/tsb2024/index.php" class="list-group-item list-group-item-action">Home</a>
+              <a href="/tsb2024/auth/changepass.php" class="list-group-item list-group-item-action">Change Password</a>
             </div>
           </div>
           <div class="col-sm-12 col-md-8 col-lg-9">
@@ -103,14 +100,14 @@ if ($_SESSION['role'] == "admin") {
     <?php } ?>
 
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/components/footer.php');
-    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/script.php');
-    include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/script/messenger.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/messenger.php');
     ?>
 
   </body>
 
   </html>
 <?php } else {
-  header("refresh: 1; url= /spc2024/auth/register.php");
+  header("refresh: 1; url= /tsb2024/auth/register.php");
 } ?>
