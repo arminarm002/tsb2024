@@ -21,6 +21,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
     rel="stylesheet">
   <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
   <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
+  <link rel="stylesheet" href="/tsb2024/theme/css/timeline.css">
   <style>
     /* แอนิเมชันของการกระพริบ */
     @keyframes blink-animation {
@@ -48,9 +49,9 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
       <div class="carousel-item active">
         <img src="/tsb2024/img/tsb-home.jpg" class="img-fluid" style="width:100%">
       </div>
-      <div class="carousel-item">
+      <!-- <div class="carousel-item">
         <img src="/tsb2024/img/tsb-home2.png" class="img-fluid" style="width:100%">
-      </div>
+      </div> -->
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -100,8 +101,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
             <?php if ($_SESSION['role'] == "superadmin") { ?>
 
               <form action="auth/backend/posterupdate.php" method="POST">
-                <input type="text" name="id" class="form-control" style="display:none;" 
-                value="<?php echo $row['id']; ?>">
+                <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
 
                 <button class="btn btn-update" type="submit" name="update">
                   <box-icon type='solid' name='pencil'></box-icon>
@@ -111,10 +111,10 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
               <form action="auth/backend/data/alldelete.php" method="POST">
                 <input type="text" name="filename" class="form-control" style="display:none;"
                   value="<?php echo $row['pt_image']; ?>">
-                <input type="text" name="id" class="form-control" style="display:none;" 
-                value="<?php echo $row['id']; ?>">
+                <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
 
-                <button class="btn btn-delete" type="submit" name="deleteposter" onclick="return confirm('ยืนยันที่จะลบ ?')">
+                <button class="btn btn-delete" type="submit" name="deleteposter"
+                  onclick="return confirm('ยืนยันที่จะลบ ?')">
                   <box-icon type='solid' name='trash'></box-icon>
                 </button>
               </form>
@@ -187,7 +187,38 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
         </a>
       </div>
     </div>
-  </div>
+    </div>
+    <!-- Timeline -->
+    <!-- <h2 style="text-align: center;">Important Date</h2>
+    <div class="flex-parent mt-5">
+      <div class="input-flex-container">
+        <div class="input fs active">
+          <span data-year="May 15, 2024" data-info="Registration & Submissions opens"></span>
+          <span>ABC</span>
+        </div>
+        <div class="input fs">
+          <span data-year="July 15, 2024" data-info="Abstract submission deadline"></span>
+        </div>
+        <div class="input fs">
+          <span data-year="August 1-15, 2024" data-info="Notification of Abstract acceptance"></span>
+        </div>
+        <div class="input fs">
+          <span data-year="August 16, 2024" data-info="Full paper submission deadline"></span>
+        </div>
+        <div class="input fs">
+          <span data-year="October 1-16, 2024" data-info="Notification of Full paper acceptance"></span>
+        </div>
+        <div class="input fs">
+          <span data-year="August 16, 2024" data-info="Early bird registration deadline"></span>
+        </div>
+        <div class="input fs">
+          <span data-year="October 16, 2024" data-info="Late registration deadline"></span>
+        </div>
+        <div class="input fs">
+          <span data-year="November 14-16, 2024" data-info="TSB2024 Conference"></span>
+        </div>
+      </div>
+    </div> -->
 
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <?php
