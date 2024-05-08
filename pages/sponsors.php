@@ -63,6 +63,8 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 
     <hr>
     <h1 class="card-title centerer mt-3">Sponsors</h1>
+    <div style="text-align:center"><img src="/tsb2024/img/soon.png" class="w-50"></div>
+    
     <?php $class = $conn->query("SELECT * FROM tb_class_logo WHERE cl_name!='organizer'");
     foreach ($class as $rowclass) {
 

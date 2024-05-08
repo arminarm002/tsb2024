@@ -27,7 +27,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
       </div>
     </div>
     <?php
-    $query = $conn->query("SELECT * FROM tb_announcement WHERE id='3'");
+    $query = $conn->query("SELECT * FROM tb_announcement WHERE id='7'");
     foreach ($query as $row) {
       ?>
       <div class="mt-3">

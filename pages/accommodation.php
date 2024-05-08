@@ -79,7 +79,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <!-- <div class="container mt-3">
+  <div class="container mt-3">
     <a class="link" href="https://www.krungsririver.com/" target="_black">
       <h1>Krungsri River Hotel</h1>
     </a>
@@ -132,7 +132,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
       </div>
     </div>
   
-  </div> -->
+  </div>
 
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');

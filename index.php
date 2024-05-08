@@ -184,12 +184,11 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
     </div>
     </div>
     <!-- Timeline -->
-    <!-- <h2 style="text-align: center;">Important Date</h2>
+    <h2 style="text-align: center;">Important Date</h2>
     <div class="flex-parent mt-5">
       <div class="input-flex-container">
         <div class="input fs active">
           <span data-year="May 15, 2024" data-info="Registration & Submissions opens"></span>
-          <span>ABC</span>
         </div>
         <div class="input fs">
           <span data-year="July 15, 2024" data-info="Abstract submission deadline"></span>
@@ -213,7 +212,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
           <span data-year="November 14-16, 2024" data-info="TSB2024 Conference"></span>
         </div>
       </div>
-    </div> -->
+    </div>
 
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <?php

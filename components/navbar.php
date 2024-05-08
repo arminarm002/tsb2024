@@ -32,7 +32,7 @@
               Submission
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/tsb2024/pages/submissions.php">Abstract Submissions</a></li>
+              <li><a class="dropdown-item" href="/tsb2024/pages/submissions.php">Abstract & Fullpaper Submissions</a></li>
               <li><a class="dropdown-item" href="/tsb2024/pages/guildline.php">Presentation Guidelines & Award</a></li>
               <li><a class="dropdown-item" href="/tsb2024/pages/registration.php">Registration & Payment</a></li>
             </ul>
