@@ -23,7 +23,7 @@ if (isset($_SESSION['role'])) {
     <div class="container">
       <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
         <div class="card mb-3"
-          style="width: 500px;background-color: rgb(255 122 1 / 20%);box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;background-color: #006a71;">
+          style="width: 500px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;background-color: #006a71;">
           <div class="card-header text-white text-center" style="background-color: #ff5722;">
             <h4>Login เข้าสู่ระบบ</h4>
           </div>

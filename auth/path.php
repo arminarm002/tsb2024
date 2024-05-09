@@ -13,13 +13,13 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
 </head>
 
-<body>
+<body style="background-color: #01ff412e;">
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
   ?>
   <div class="container mt-3">
     <div class="row" style="margin: 10% 0%;">
-      <div class="col-6 centerer">
+      <div class="col-6 centerer" style="display: block;">
         <div class="card border rounded" style="width: 28rem;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;"><!-- 18rem -->
           <img class="" src="/tsb2024/img/participant.png" style="width:100%; ">
           <a href="register.php">

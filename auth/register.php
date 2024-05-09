@@ -17,18 +17,18 @@ if (isset($_SESSION['role'])) {
 
   </head>
 
-  <body>
+  <body style="background-color: #01ff412e;">
     <?php
     include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
     ?>
     <div class="container mt-5">
-      <div class="card" style="background-color: rgb(255 122 1 / 20%);box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-        <div class="card-header bg-l text-white text-center">
+      <div class="card" style="background-color: #006a71;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+        <div class="card-header text-white text-center" style="background-color:#ff5722">
           <h5>
             Register
           </h5>
         </div>
-        <div class="card-body" style="margin: 0px 10%;">
+        <div class="card-body text-white" style="margin: 0px 10%;">
           <div class="row">
             <form action="authen.php" method="POST" enctype="multipart/form-data">
               <!-- Email input -->
@@ -153,20 +153,17 @@ if (isset($_SESSION['role'])) {
               <img src="/tsb2024/img/soon.png" style="display:block; margin:auto; width:50%;">
 
               <!-- Check input -->
-              <div class="form-check mb-3">
+              <!-- <div class="form-check mb-3">
                 <input class="form-check-input" type="checkbox" name="check" id="check" required>
                 <label class="form-check-label" for="check">
                   ACCEPT CONDITIONS AND CANCELLATION OF PAYMENT
                 </label>
-              </div>
+              </div> -->
 
               <!-- Submit button -->
-              <!-- <button type="submit" class="btn btn-l btn-block text-white mb-2" name="add">สมัครสมาชิก</button> -->
-
-              <!-- Register buttons -->
-              <div class="text-center">
-                <p>Already member? <a href="login.php">Log in</a></p>
-              </div>
+              <!-- <div class="text-end">
+                <button type="submit" class="btn btn-download mt-2" name="login">Submit</button>
+              </div> -->
             </form>
           </div>
         </div>
