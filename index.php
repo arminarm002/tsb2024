@@ -42,7 +42,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="/tsb2024/img/tsb-home.jpg" class="img-fluid" style="width:100%">
+        <img src="/tsb2024/img/tsb-cover.jpg" class="img-fluid" style="width:100%">
       </div>
       <!-- <div class="carousel-item">
         <img src="/tsb2024/img/tsb-home2.png" class="img-fluid" style="width:100%">

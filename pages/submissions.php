@@ -27,8 +27,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
             <br>Abstract submission guideline and abstract template for TSB 2024
             <a href="https://drive.google.com/drive/folders/1zEyLq_Od_VRhBVpH18UmYWcYERRjaBpk?usp=sharing"
               class="btn btn-download" target="_blank">Download
-              File</a><br>Please do not modify the format. Please convert the file to pdf format before
-            submission.<br><br>Topics :
+              File</a><br><br>Topics :
           </h5>
           <p>
             A) Molecular and Medical Biotechnology<br>
@@ -59,8 +58,8 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
             <h5>Full paper submission guideline and full paper template for TSB 2024 >>> <a
                 href="https://drive.google.com/drive/folders/1zEyLq_Od_VRhBVpH18UmYWcYERRjaBpk?usp=sharing"
                 class="btn btn-download" style="margin: 5px 0px 2px 0px;" target="_blank">Download File</a></h5>
-            <h5>Please do not modify the format. Please convert the file to pdf format before submission.</h5>
-            <h5>Journal Publication’s Important details</h5>
+            <h5>Please do not modify the format.</h5>
+            <h5>Full Paper's Important Details</h5>
             <ul class="unlist">
               <li>Each registered participant is not allowed to submit more than one manuscript for publication consideration.</li>
               <li>Please choose only one type of publication for your manuscript. A manuscript submitted for publication in the electronic conference proceeding book is not allowed to be submitted to the journal of Current Applied Science and Technology or the Suan Sunandha Science and Technology Journal or the Thai Journal of Nanoscience and Nanotechnology and vice versa.</li>
