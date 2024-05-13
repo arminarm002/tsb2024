@@ -27,8 +27,9 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
             <br>Abstract submission guideline and abstract template for TSB 2024
             <a href="https://drive.google.com/drive/folders/1zEyLq_Od_VRhBVpH18UmYWcYERRjaBpk?usp=sharing"
               class="btn btn-download" target="_blank">Download
-              File</a><br><br>Topics :
-          </h5>
+              File</a><br>Please do not modify the format.<br></h5>
+              <h5>Topics : </h5>
+          
           <p>
             A) Molecular and Medical Biotechnology<br>
             B) Industrial and Environmental Biotechnology<br>
