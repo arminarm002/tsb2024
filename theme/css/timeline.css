@@ -51,11 +51,11 @@
 }
 
 .input.active {
-  background-color: #aeb6bf; /* วันที่ 14 เปลี่ยนกลับเป็นสี #36590d*/
+  background-color: #36590d;
 }
 
 .input.active::before {
-  background-color: #aeb6bf; /* วันที่ 14 เปลี่ยนกลับเป็นสี #36590d*/
+  background-color: #36590d;
 }
 
 .input.active::after {
