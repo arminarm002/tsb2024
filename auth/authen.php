@@ -6,7 +6,7 @@ if (isset($_POST['register'])) {
   if (isset($_POST['ab-number'])) {
     $abnumber = $_POST['ab-number'];
   } else {
-    $abnumber = "0";
+    $abnumber = "";
   }
   $email = $_POST['email'];
   $pass = $_POST['password'];
@@ -187,8 +187,8 @@ if (isset($_POST['login'])) {
           }
         } else if ($_SESSION['role'] == "admin") {
           header("refresh: 1; url=/tsb2024/auth/backend/admin.php");
-        } else if ($_SESSION['role'] == "thaiphysic") {
-          header("refresh: 1; url=/tsb2024/auth/backend/thaiphysic.php");
+        } else if ($_SESSION['role'] == "superadmin") {
+          header("refresh: 1; url=/tsb2024/auth/backend/superadmin.php");
         }
       } else {
         echo '<script language="javascript">';

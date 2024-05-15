@@ -276,7 +276,7 @@ if (isset($_SESSION['role'])) {
                 <label class="mb-3">Choose an money transfer slip to upload (Only png ,jpg Not pdf)</label>
                 <input type="file" name="fileupload" accept="image/png, image/jpeg, image/jpg" required>
 
-                <p style="padding: 25px;background-color:rgb(0 74 85)">
+                <!-- <p style="padding: 25px;background-color:rgb(0 74 85)">
                   Payment
                   <br>
                   <br>Bank's full name : Krungthai Bank
@@ -287,7 +287,7 @@ if (isset($_SESSION['role'])) {
                   <br>บัญชี ธนาคารกรุงไทย สาขาถนนห้วยแก้ว
                   <br>ชื่อบัญชี สมาคมฟิสิกส์ไทย 2560
                   <br>เลขที่บัญชี 549-0-25626-5
-                </p>
+                </p> -->
               </div>
 
               <p>* เลือกชำระแบบ Non Member of Thai Physics Society รับสิทธิพิเศษ ได้เป็นสมาชิก 1 ปี</p>
@@ -306,8 +306,8 @@ if (isset($_SESSION['role'])) {
                 echo "หมดเวลาลงทะเบียน";
               } else { ?>
                 <div class="text-end">
-                  <button type="submit" class="btn btn-download mt-2" name="register" style="width: 20rem;
-    font-size: 25px;">Submit</button>
+                  <!-- <button type="submit" class="btn btn-download mt-2" name="register" style="width: 20rem;
+    font-size: 25px;">Submit</button> -->
                 </div>
               <?php } ?>
             </form>

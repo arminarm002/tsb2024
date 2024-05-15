@@ -1,6 +1,27 @@
 <?php
 include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 
+//Update User
+if (isset($_POST['userupdate'])) {
+  $id = $_POST['id'];
+  $role = $_POST['role'];
+   
+   $updateuser = $conn->query("UPDATE tb_user SET role='$role' WHERE user_id=$id;");
+
+    if ($updateuser) {
+      echo '<script language="javascript">';
+      echo 'alert("แก้ไข สำเร็จ")';
+      echo '</script>';
+      header("refresh: 1; url=/tsb2024/auth/backend/manageuser.php");
+
+    } else {
+      echo '<script language="javascript">';
+      echo 'alert("Somthing Wrong!")';
+      echo '</script>';
+      header("refresh: 1; url=/tsb2024/auth/backend/manageuser.php");
+    }
+}
+
 //Update Poster
 if (isset($_POST['updateposter'])) {
   $id = $_POST['id'];

@@ -1,7 +1,7 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
-if ($_SESSION['role'] == "admin") {
+include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+if ($_SESSION['role'] == "superadmin") {
   ?>
   <!DOCTYPE html>
   <html lang="en">
@@ -16,7 +16,7 @@ if ($_SESSION['role'] == "admin") {
 
   <body>
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
 
     $sql = $conn->query("SELECT * FROM tb_user INNER JOIN tb_pay 
     ON tb_user.pay_id = tb_pay.pay_id WHERE email='" . $_SESSION['email'] . "'");
@@ -25,13 +25,7 @@ if ($_SESSION['role'] == "admin") {
       <div class="container-fluid">
         <div class="row mt-3">
           <div class="col-sm-12 col-md-4 col-lg-3">
-            <div class="list-group"
-              style="--bs-list-group-bg: rgb(255 122 1 / 20%);--bs-list-group-action-hover-bg: rgb(127 94 65 / 44%);">
-              <a class="list-group-item list-group-item-action active" aria-current="true"
-                style="background-color: #ff7a01;border-color: #813d00;">Profile</a>
-              <a href="/tsb2024/index.php" class="list-group-item list-group-item-action">Home</a>
-              <a href="/tsb2024/auth/changepass.php" class="list-group-item list-group-item-action">Change Password</a>
-            </div>
+            <?php include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/sidebar.php'); ?>
           </div>
           <div class="col-sm-12 col-md-8 col-lg-9">
             <div class="row">
@@ -44,25 +38,22 @@ if ($_SESSION['role'] == "admin") {
                   </h2>
                   <h4>รายชื่อผู้สมัคร ทั้งหมด</h4>
                   <div class="table-responsive">
-                    <table class="table table-striped strip">
+                    <table class="table table-striped strip" style="--bs-table-bg: #ff7a0145;">
                       <thead>
-                        <tr style="text-align: center;">
+                        <tr style="text-align: center;--bs-table-bg: #ff7a01;">
                           <th>Name</th>
                           <th>Type</th>
                           <th>E-mail</th>
-                          <th>Telephone</th>
-                          <th>extrameal</th>
-                          <th>Food allergy and intolerance</th>
-                          <th>Status</th>
+                          <th>Role</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php $no = 0;
-                        $sql2 = $conn->query("SELECT * FROM tb_user WHERE role = 'user' ORDER BY approve");
+                        $sql2 = $conn->query("SELECT * FROM tb_user");
                         foreach ($sql2 as $tr) {
                           $no++;
                           ?>
-                          <tr>
+                          <tr style="text-align: center;">
                             <td>
                               <?php echo $tr['title'] . $tr['firstname'] . " " . $tr['lastname'] ?>
                             </td>
@@ -73,16 +64,22 @@ if ($_SESSION['role'] == "admin") {
                               <?php echo $tr['email'] ?>
                             </td>
                             <td>
-                              <?php echo $tr['telephone'] ?>
-                            </td>
-                            <td>
-                              <?php echo $tr['extrameal'] ?>
-                            </td>
-                            <td>
-                              <?php echo $tr['food'] ?>
-                            </td>
-                            <td>
-                              <?php echo $tr['approve'] ?>
+                              <?php echo $tr['role'] ?>
+                              <form action="data/allupdate.php" method="POST">
+                                <input type="text" name="id" style="display:none;" value="<?php echo $tr['user_id']; ?>">
+                                <div class="dropdown">
+                                  <select class="btn btn-secondary dropdown-toggle titlebut" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" name="role"
+                                    style="border-color:white;color:black" required>
+                                    <option value="<?php echo $tr['role']; ?>" selected disabled><?php echo $tr['role']; ?></option>
+                                    <option value="user">User</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="superadmin">Super Admin</option>
+                                    <option value="thaibio">สมาคม TSB</option>
+                                  </select>
+                                </div>
+                                <button type="submit" class="btn btn-download mt-2" name="userupdate">Update</button>
+                              </form>
                             </td>
                           </tr>
                         <?php } ?>
@@ -100,9 +97,9 @@ if ($_SESSION['role'] == "admin") {
     <?php } ?>
 
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
-    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/messenger.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/messenger.php');
     ?>
 
   </body>
