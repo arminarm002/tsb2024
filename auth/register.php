@@ -290,7 +290,7 @@ if (isset($_SESSION['role'])) {
                 </p> -->
               </div>
 
-              <p>* เลือกชำระแบบ Non Member of Thai Physics Society รับสิทธิพิเศษ ได้เป็นสมาชิก 1 ปี</p>
+              <!-- <p>* เลือกชำระแบบ Non Member of Thai Physics Society รับสิทธิพิเศษ ได้เป็นสมาชิก 1 ปี</p> -->
               <p>** นักเรียน/นักศึกษา ต้องแนบสำเนาบัตรประจำตัวนักเรียน/นักศึกษา</p>
 
               <!-- Check input -->
