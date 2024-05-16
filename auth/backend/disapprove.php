@@ -1,8 +1,8 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/tab2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 if ($_SESSION['role']) {
-  if ($_SESSION['role'] == "thaiphysic") {
+  if ($_SESSION['role'] == "admin") {
     ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -43,7 +43,7 @@ if ($_SESSION['role']) {
                   ?>
                 </h2>
                 <h2>รายชื่อผู้สมัคร ที่ไม่ผ่านการอนุมัติ</h2>
-                <div class="table-responsive">
+                <div class="stable-responsive">
                   <table class="table table-striped strip">
                     <thead>
                       <tr style="text-align: center;">
@@ -62,7 +62,7 @@ if ($_SESSION['role']) {
                       foreach ($sql2 as $tr) {
                         $no++;
                         ?>
-                        <tr>
+                        <tr style="text-align: center;">
                           <td>
                             <?php echo $tr['title'] . $tr['firstname'] . " " . $tr['lastname'] ?>
                           </td>

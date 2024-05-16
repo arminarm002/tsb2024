@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 
 $pass = $_POST['password'];
 $id = $_GET['userid'];
@@ -11,10 +11,17 @@ if (isset($_POST['request'])) {
     $password = password_verify($pass, $thupass);
     if ($password) {
       $qry = $conn->query("UPDATE tb_user SET approve='wait' WHERE user_id = '" . $id . "'");
-      echo '<script language="javascript">';
-      echo 'alert("Successfull.")';
-      echo '</script>';
-      header("refresh: 1; url=profile.php");
+      if ($qry) {
+        echo '<script language="javascript">';
+        echo 'alert("Sent to Admin")';
+        echo '</script>';
+        header("refresh: 1; url=profile.php");
+      } else {
+        echo '<script language="javascript">';
+        echo 'alert("Something Wrong!!!")';
+        echo '</script>';
+        header("refresh: 1; url=profile.php");
+      }
     } else {
       echo '<script language="javascript">';
       echo 'alert("Password Invalid")';

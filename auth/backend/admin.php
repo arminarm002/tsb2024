@@ -2,7 +2,7 @@
 session_start();
 include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 if ($_SESSION['role']) {
-  if ($_SESSION['role'] == "thaiphysic") {
+  if ($_SESSION['role'] == "admin" || $_SESSION['role'] == "superadmin") {
     ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -68,7 +68,7 @@ if ($_SESSION['role']) {
                       foreach ($sql2 as $tr) {
                         $no++;
                         ?>
-                        <tr>
+                        <tr style="text-align: center;">
                           <td>
                             <?php echo $tr['title'] . $tr['firstname'] . " " . $tr['lastname'] ?>
                           </td>
@@ -112,9 +112,7 @@ if ($_SESSION['role']) {
     </html>
   <?php } else if ($_SESSION['role'] == "user") {
     header("refresh: 1; url= /tsb2024/auth/profile.php");
-  } else if ($_SESSION['role'] == "admin") {
-    header("refresh: 1; url= /tsb2024/auth/backend/admin.php");
-  }
+  } 
 } else {
   header("refresh: 1; url= /tsb2024/auth/register.php");
 } ?>

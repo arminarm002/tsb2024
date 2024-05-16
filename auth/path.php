@@ -32,7 +32,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
       <div class="col-6 centerer">
         <div class="card border rounded" style="width: 28rem;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;"><!-- 18rem -->
           <img class="" src="/tsb2024/img/presenter.png" style="width:100%; ">
-          <a href="" target="_blank">
+          <a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FTSB2024" target="_blank">
             <button type="button" class="btn btn-outline-info" style="width: 100%;">
               <p style="font-size:3.5vw;">For Oral and Poster presentation</p>
             </button>

@@ -97,9 +97,11 @@ $id = $_GET['userid'];
                     style="display:none;">Disapprove</button>
                   <button type="submit" class="btn btn-l mt-2 text-white" name="approve" id="ap">Approve</button>
                 <?php } else if ($row['approve'] == "approve") { ?>
-                    <button type="submit" class="btn btn-l mt-2 text-white" name="disapprove">Disapprove</button>
+                    <button id="dis3" type="button" class="btn btn-l mt-2 text-white" onclick="addmessage2()">Disapprove</button>
+                    <button id="dis4" type="submit" class="btn btn-l mt-2 text-white" name="disapprove"
+                    style="display:none;">Disapprove</button>
                 <?php } else if ($row['approve'] == "disapprove") { ?>
-                      <button type="submit" class="btn btn-l mt-2 text-white" name="disapprove">Approve</button>
+                      <button type="submit" class="btn btn-l mt-2 text-white" name="approve">Approve</button>
                 <?php } ?>
               </div>
             </form>
@@ -120,6 +122,12 @@ $id = $_GET['userid'];
       document.getElementById('dis1').style.display = 'none';
       document.getElementById('dis2').style.display = 'inline';
       document.getElementById('ap').style.display = 'none';
+      document.getElementById('addinput').setAttribute('required', '');
+    };
+    function addmessage2() {
+      document.getElementById('add').style.display = 'contents';
+      document.getElementById('dis3').style.display = 'none';
+      document.getElementById('dis4').style.display = 'inline';
       document.getElementById('addinput').setAttribute('required', '');
     };
   </script>

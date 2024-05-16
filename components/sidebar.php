@@ -16,8 +16,8 @@
   <?php ?>
   <a href="/tsb2024/auth/profile.php" class="text-white list-group-item list-group-item-action">Home</a>
   <a href="/tsb2024/auth/changepass.php" class="text-white list-group-item list-group-item-action">Change Password</a>
-  <?php if ($_SESSION['role'] == "thaiphysic") { ?>
-    <a href="/tsb2024/auth/backend/thaiphysic.php" class="text-white list-group-item list-group-item-action">รอการอนุมัติ</a>
+  <?php if ($_SESSION['role'] == "admin") { ?>
+    <a href="/tsb2024/auth/backend/admin.php" class="text-white list-group-item list-group-item-action">รอการอนุมัติ</a>
     <a href="/tsb2024/auth/backend/approved.php" class="text-white list-group-item list-group-item-action">อนุมัติแล้ว</a>
     <a href="/tsb2024/auth/backend/disapprove.php" class="text-white list-group-item list-group-item-action">ไม่ผ่านการอนุมัติ</a>
   <?php } ?>

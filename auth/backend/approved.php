@@ -2,7 +2,7 @@
 session_start();
 include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 if ($_SESSION['role']) {
-  if ($_SESSION['role'] == "thaiphysic") {
+  if ($_SESSION['role'] == "admin") {
     ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -63,7 +63,7 @@ if ($_SESSION['role']) {
                       foreach ($sql2 as $tr) {
                         $no++;
                         ?>
-                        <tr>
+                        <tr style="text-align: center;">
                           <td>
                             <?php echo "$no"; ?>
                           </td>

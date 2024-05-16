@@ -1,12 +1,12 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 
 $pass = $_POST['password'];
 $id = $_GET['userid'];
 
-if ($_SESSION['role'] == "thaiphysic") {
-  if (isset($_POST['approve'])) {
+if ($_SESSION['role'] == "admin") {
+    if (isset($_POST['approve'])) {
     $sql = $conn->query("SELECT * FROM tb_user WHERE email='" . $_SESSION['email'] . "'");
     foreach ($sql as $row) {
       $thupass = $row['password'];
@@ -20,7 +20,7 @@ if ($_SESSION['role'] == "thaiphysic") {
         echo '<script language="javascript">';
         echo 'alert("Successfull.")';
         echo '</script>';
-        header("refresh: 1; url=thaiphysic.php");
+        header("refresh: 1; url=admin.php");
       } else {
         echo '<script language="javascript">';
         echo 'alert("Password Invalid")';
@@ -47,7 +47,7 @@ if ($_SESSION['role'] == "thaiphysic") {
         echo '<script language="javascript">';
         echo 'alert("Successfull.")';
         echo '</script>';
-        header("refresh: 1; url=thaiphysic.php");
+        header("refresh: 1; url=admin.php");
       } else {
         echo '<script language="javascript">';
         echo 'alert("Password Invalid")';
