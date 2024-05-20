@@ -13,7 +13,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   <meta name="description"
     content="36 th of Thai Society for Biotechnology 2024 (tsb2024), Krungsri River Hotel, Phra Nakorn Sri Ayutthaya, Thailand, November 14-16, 2024.">
   <meta name="keywords"
-    content="tsb2024, 36 th of Thai Society for Biotechnology, ครั้งที่ 36, ประกวดโครงงานอิสระ, สมาคมฟิสิกส์,ชีววิทยา">
+    content="tsb2024, 36 th of Thai Society for Biotechnology, ครั้งที่ 36, ประกวดโครงงานอิสระ, สมาคมชีววิทยา">
   <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
   <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
   <link rel="stylesheet" href="/tsb2024/theme/css/timeline.css">
