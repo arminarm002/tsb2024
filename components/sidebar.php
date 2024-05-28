@@ -25,7 +25,7 @@
     <a href="/tsb2024/auth/backend/manageuser.php" class="text-white list-group-item list-group-item-action">User</a>
     <a href="/tsb2024/auth/backend/superadmin.php" class="text-white list-group-item list-group-item-action">Announcement</a>
     <a href="/tsb2024/auth/backend/poster-add.php" class="text-white list-group-item list-group-item-action">Poster</a>
-    <a href="/tsb2024/auth/backend/personneltalk-add.php" class="text-white list-group-item list-group-item-action">Plenary Talks</a>
+    <a href="/tsb2024/auth/backend/personneltalk-add.php" class="text-white list-group-item list-group-item-action">Speaker</a>
     <a href="/tsb2024/auth/backend/logo-add.php" class="text-white list-group-item list-group-item-action">Logo</a>
   <?php } ?>
 </div>

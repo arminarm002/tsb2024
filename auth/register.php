@@ -318,7 +318,6 @@ if (isset($_SESSION['role'])) {
     <?php
     include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
     include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
-    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/messenger.php');
     include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/calculate.php');
     ?>
   </body>
