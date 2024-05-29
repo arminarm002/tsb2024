@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 if ($_SESSION['role'] == "superadmin") {
   ?>
   <!DOCTYPE html>
@@ -10,23 +10,24 @@ if ($_SESSION['role'] == "superadmin") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TSB2024 KMITL</title>
-    <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
+    <link rel="stylesheet" href="/theme/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/theme/css/self.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
 
   <body>
-    <?php include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php'); ?>
+    <?php include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php'); ?>
 
     <div class="container-fluid">
       <div class="row mt-3">
         <div class="col-sm-12 col-md-4 col-lg-3">
-          <?php include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/sidebar.php'); ?>
+          <?php include ($_SERVER['DOCUMENT_ROOT'] . '/components/sidebar.php'); ?>
         </div>
         <div class="col-sm-12 col-md-8 col-lg-9">
           <div class="card" style="background-color: rgb(255 122 1 / 20%);box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
             <div class="card-header bg-l text-white text-center">
               <h5>
-                Add Poster
+                Add Speakers
               </h5>
             </div>
             <form action="data/alladd.php" method="POST" enctype="multipart/form-data">
@@ -38,18 +39,20 @@ if ($_SESSION['role'] == "superadmin") {
                       </label>
                     </div>
                     <div class="col-9">
+                      
                       <div class="dropdown">
                         <select class="btn btn-secondary dropdown-toggle titlebut" type="button" id="symposium"
-                          data-bs-toggle="dropdown" name="symposium" style="border-color:black;" required>
+                          data-bs-toggle="dropdown" name="symposium" style="border-color:black;">
                           <option value="" selected disabled>เลือก Symposium</option>
-                          <option value="AAA">AAA</option>
-                          <option value="BBB">BBB</option>
-                          <option value="CCC">CCC</option>
-                          <option value="DDD">DDD</option>
-                          <option value="EEE">EEE</option>
-                          <option value="FFF">FFF</option>
-                        </select>
-                      </div>
+                          <?php $symposium = $conn->query("SELECT * FROM tb_symposium"); 
+                          foreach ($symposium as $rowsym) { ?>
+                            <option value="<?php echo $rowsym['symposium_id']; ?>">
+                              <?php echo $rowsym['symposium_name']; ?>
+                            </option>
+                            <?php } ?>
+                          </select>
+                        </div>
+                      
                     </div>
                   </div>
                 </div>
@@ -57,13 +60,13 @@ if ($_SESSION['role'] == "superadmin") {
                 <div class="form-outline mb-2">
                   <div class="row">
                     <div class="col-3">
-                      <label class="form-label" for="title">ประเภทของผู้บรรยาย :
+                      <label class="form-label" for="type">ประเภทของผู้บรรยาย :
                       </label>
                     </div>
                     <div class="col-9">
                       <div class="dropdown">
                         <select class="btn btn-secondary dropdown-toggle titlebut" type="button" id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown" name="title" style="border-color:black;" required>
+                          data-bs-toggle="dropdown" name="type" style="border-color:black;" required>
                           <option value="" selected disabled>เลือกประเภทของผู้บรรยาย</option>
                           <option value="Plenary Talks">Plenary Talks</option>
                           <option value="Keynote Lectures">Keynote Lectures</option>
@@ -90,7 +93,7 @@ if ($_SESSION['role'] == "superadmin") {
                 <div class="row">
                   <div class="col-3">
                     <div class="form-outline mb-2" style="display: -webkit-box;">
-                      <label class="form-label" for="" style="margin-right: 0.5rem;">
+                      <label class="form-label" for="affiliation" style="margin-right: 0.5rem;">
                         ต้นสังกัด :</label>
                     </div>
                   </div>
@@ -119,11 +122,23 @@ if ($_SESSION['role'] == "superadmin") {
                     </div>
                   </div>
                   <div class="col-9">
-                    <textarea row="3" id="option" name="option" class="form-control" required></textarea>
+                    <textarea row="3" id="option" name="option" class="form-control"></textarea>
                   </div>
                 </div>
 
-                <button type="submit" class="btn btn-l btn-block text-white mb-2" name="addposter">เพิ่ม</button>
+                <!-- Image input -->
+                <div class="row mt-1">
+                  <div class="col-3">
+                    <div class="form-outline mb-2" style="display: -webkit-box;">
+                      <label class="form-label" for="file_upload" style="margin-right: 0.5rem;">รูปผู้บรรยาย :</label>
+                    </div>
+                  </div>
+                  <div class="col-9">
+                    <input type="file" name="file_upload" accept="image/jpeg, image/jpg, image/png" required>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-l btn-block text-white mb-2" name="addspeakers">เพิ่ม</button>
             </form>
           </div>
         </div>
@@ -132,13 +147,13 @@ if ($_SESSION['role'] == "superadmin") {
     </div><!-- container -->
 
     <?php
-    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
     ?>
 
   </body>
 
   </html>
 <?php } else {
-  header("refresh: 1; url= /tsb2024/auth/register.php");
+  header("refresh: 1; url= /auth/register.php");
 } ?>

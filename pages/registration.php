@@ -5,24 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration</title>
-  <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
+  <link rel="stylesheet" href="/theme/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="/theme/css/self.css">
 </head>
 
 <body>
   <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
   <div class="container">
     <h1 class="centerer mt-3">Registration Fee</h1>
     <h4 class="centerer mt-3"><b>Register Form </b>&nbsp;>>>&nbsp;
-      <a href="/tsb2024/auth/register.php" class="btn btn-warning">Click</a>
+      <a href="/auth/register.php" class="btn btn-warning">Click</a>
     </h4>
     <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-6 mt-3">
         <p>
-          <a href="/tsb2024/img/payment3.jpg" target="_blank" style="text-align: center;">
-            <img src="/tsb2024/img/payment3.jpg" class="payment-image">
+          <a href="/img/payment3.jpg" target="_blank" style="text-align: center;">
+            <img src="/img/payment3.jpg" class="payment-image">
           </a>
            - TSB Member Application : <a href="https://www.biotec.or.th/tsb/index.php" target="_blank">
             <button class="btn btn-l text-white">Click Here</button></a>
@@ -30,8 +30,8 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-6 mt-3">
       <p>
-          <a href="/tsb2024/img/payment4.jpg" target="_blank" style="text-align: center;">
-            <img src="/tsb2024/img/payment4.jpg" class="payment-image">
+          <a href="/img/payment4.jpg" target="_blank" style="text-align: center;">
+            <img src="/img/payment4.jpg" class="payment-image">
           </a>
            - AFOB Application : <a href="https://www.afob.org/join/signup_indivisual.html" target="_blank">
             <button class="btn btn-l text-white">Click Here</button></a>
@@ -41,14 +41,14 @@
 
     <!-- <h1 class="centerer mt-3">Payment</h1>
     <div class="centerer mt-3">
-      <a href="/tsb2024/img/payment.jpg" target="_blank" style="text-align: center;">
-        <img class="w-75" src="/tsb2024/img/payment.jpg" style="box-shadow: rgba(0, 0, 0, 0.50) 2px 5px 15px;">
+      <a href="/img/payment.jpg" target="_blank" style="text-align: center;">
+        <img class="w-75" src="/img/payment.jpg" style="box-shadow: rgba(0, 0, 0, 0.50) 2px 5px 15px;">
       </a>
     </div> -->
   </div>
   <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
   ?>
 </body>
 

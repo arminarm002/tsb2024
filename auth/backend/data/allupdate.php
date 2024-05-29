@@ -1,5 +1,5 @@
 <?php
-include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 
 //Update User
 if (isset($_POST['userupdate'])) {
@@ -12,13 +12,13 @@ if (isset($_POST['userupdate'])) {
       echo '<script language="javascript">';
       echo 'alert("แก้ไข สำเร็จ")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/auth/backend/manageuser.php");
+      header("refresh: 1; url=/auth/backend/manageuser.php");
 
     } else {
       echo '<script language="javascript">';
       echo 'alert("Somthing Wrong!")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/auth/backend/manageuser.php");
+      header("refresh: 1; url=/auth/backend/manageuser.php");
     }
 }
 
@@ -52,13 +52,13 @@ if (isset($_POST['updateposter'])) {
       echo '<script language="javascript">';
       echo 'alert("แก้ไข สำเร็จ")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/index.php");
+      header("refresh: 1; url=/index.php");
 
     } else {
       echo '<script language="javascript">';
       echo 'alert("Somthing Wrong!")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/auth/backend/superadmin.php");
+      header("refresh: 1; url=/auth/backend/superadmin.php");
     }
 }
 
@@ -96,13 +96,13 @@ if (isset($_POST['update'])) {
       echo '<script language="javascript">';
       echo 'alert("แก้ไข สำเร็จ")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/index.php");
+      header("refresh: 1; url=/index.php");
 
     } else {
       echo '<script language="javascript">';
       echo 'alert("Somthing Wrong!")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/auth/backend/superadmin.php");
+      header("refresh: 1; url=/auth/backend/superadmin.php");
     }
 }
 //Update Logo
@@ -138,13 +138,13 @@ if (isset($_POST['updatelogo'])) {
       echo '<script language="javascript">';
       echo 'alert("แก้ไข สำเร็จ")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/pages/sponsors.php");
+      header("refresh: 1; url=/pages/sponsors.php");
 
     } else {
       echo '<script language="javascript">';
       echo 'alert("Somthing Wrong!")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/auth/backend/superadmin.php");
+      header("refresh: 1; url=/auth/backend/superadmin.php");
     }
 }
 ?>

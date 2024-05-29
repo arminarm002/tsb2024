@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,13 +9,13 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Organizer & Sponsors</title>
-  <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
+  <link rel="stylesheet" href="/theme/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="/theme/css/self.css">
 </head>
 
 <body>
   <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
 
   <div class="container">
@@ -27,11 +27,11 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
         foreach ($query as $row) { ?>
           <div class="col-lg-2 col-md-3 col-3" style="text-align: center;">
             <a href="<?php echo $row['lg_link'] ?>" target="_blank">
-              <img src="/tsb2024/file/upload/logo/<?php echo $row['lg_image'] ?>" class="img-fluid w-75">
+              <img src="/file/upload/logo/<?php echo $row['lg_image'] ?>" class="img-fluid w-75">
               <?php if (isset($_SESSION['role'])) {
                 if ($_SESSION['role'] == "superadmin") { ?>
 
-                  <form action="/tsb2024/auth/backend/logo-update.php" method="POST" style="float: left; margin-left: 30px;">
+                  <form action="/auth/backend/logo-update.php" method="POST" style="float: left; margin-left: 30px;">
                     <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
 
                     <button class="btn btn-update-logo" type="submit" name="updatelogo">
@@ -39,7 +39,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
                     </button>
                   </form>
 
-                  <form action="/tsb2024/auth/backend/data/alldelete.php" method="POST">
+                  <form action="/auth/backend/data/alldelete.php" method="POST">
                     <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
                     <input type="text" name="oldname" class="form-control" style="display:none;" value="<?php echo $row['lg_image']; ?>">
 
@@ -63,7 +63,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 
     <hr>
     <h1 class="card-title centerer mt-3">Sponsors</h1>
-    <div style="text-align:center"><img src="/tsb2024/img/soon.png" class="w-50"></div>
+    <div style="text-align:center"><img src="/img/soon.png" class="w-50"></div>
     
     <?php $class = $conn->query("SELECT * FROM tb_class_logo WHERE cl_name!='organizer'");
     foreach ($class as $rowclass) {
@@ -77,11 +77,11 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
         foreach ($query2 as $row2) { ?>
           <div class="col-lg-2 col-md-3 col-3" style="text-align: center;">
             <a href="<?php echo $row2['lg_link'] ?>" target="_blank">
-              <img src="/tsb2024/file/upload/logo/<?php echo $row2['lg_image'] ?>" class="img-fluid w-75">
+              <img src="/file/upload/logo/<?php echo $row2['lg_image'] ?>" class="img-fluid w-75">
               <?php if (isset($_SESSION['role'])) {
                 if ($_SESSION['role'] == "superadmin") { ?>
 
-                  <form action="/tsb2024/auth/backend/logo-update.php" method="POST" style="float: left; margin-left: 30px;">
+                  <form action="/auth/backend/logo-update.php" method="POST" style="float: left; margin-left: 30px;">
                     <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row2['id']; ?>">
 
                     <button class="btn btn-update-logo" type="submit" name="updatelogo">
@@ -89,7 +89,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
                     </button>
                   </form>
 
-                  <form action="/tsb2024/auth/backend/data/alldelete.php" method="POST">
+                  <form action="/auth/backend/data/alldelete.php" method="POST">
                     <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row2['id']; ?>">
                     <input type="text" name="oldname" class="form-control" style="display:none;" value="<?php echo $row['lg_image']; ?>">
 
@@ -115,8 +115,8 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
   ?>
 </body>
 

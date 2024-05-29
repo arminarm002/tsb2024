@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 if ($_SESSION['role']) {
   if ($_SESSION['role'] == "admin") {
     ?>
@@ -11,13 +11,13 @@ if ($_SESSION['role']) {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Disapprove</title>
-      <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
-      <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
+      <link rel="stylesheet" href="/theme/css/bootstrap-theme.css">
+      <link rel="stylesheet" href="/theme/css/self.css">
     </head>
 
     <body>
       <?php
-      include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
+      include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
 
       $sql = $conn->query("SELECT * FROM tb_user WHERE approve = 'disapprove'");
       $i = 0;
@@ -28,7 +28,7 @@ if ($_SESSION['role']) {
       <div class="container-fluid">
         <div class="row mt-3">
           <div class="col-sm-12 col-md-4 col-lg-3">
-            <?php include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/sidebar.php'); ?>
+            <?php include($_SERVER['DOCUMENT_ROOT'] . '/components/sidebar.php'); ?>
           </div>
           <div class="col-sm-12 col-md-8 col-lg-9">
             <div class="alert alert-danger" role="alert">
@@ -96,8 +96,8 @@ if ($_SESSION['role']) {
       </div><!-- container -->
 
       <?php
-      include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-      include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+      include($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+      include($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
       
       ?>
 
@@ -105,10 +105,10 @@ if ($_SESSION['role']) {
 
     </html>
   <?php } else if ($_SESSION['role'] == "user") {
-    header("refresh: 1; url= /tsb2024/auth/profile.php");
+    header("refresh: 1; url= /auth/profile.php");
   } else if ($_SESSION['role'] == "admin") {
-    header("refresh: 1; url= /tsb2024/auth/backend/admin.php");
+    header("refresh: 1; url= /auth/backend/admin.php");
   }
 } else {
-  header("refresh: 1; url= /tsb2024/auth/register.php");
+  header("refresh: 1; url= /auth/register.php");
 } ?>

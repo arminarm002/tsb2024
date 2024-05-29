@@ -1,5 +1,5 @@
 <?php
-include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 
 //Add Poster
 if (isset($_POST['addposter'])) {
@@ -26,13 +26,13 @@ if (isset($_POST['addposter'])) {
       echo '<script language="javascript">';
       echo 'alert("Successfully")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/index.php");
+      header("refresh: 1; url=/index.php");
 
     } else {
       echo '<script language="javascript">';
       echo 'alert("Somthing Wrong!")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/auth/backend/poster.php");
+      header("refresh: 1; url=/auth/backend/poster.php");
     }
 }
 
@@ -67,13 +67,13 @@ if (isset($_POST['addannounce'])) {
       echo '<script language="javascript">';
       echo 'alert("Successfully")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/index.php");
+      header("refresh: 1; url=/index.php");
 
     } else {
       echo '<script language="javascript">';
       echo 'alert("Somthing Wrong!")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/auth/backend/superadmin.php");
+      header("refresh: 1; url=/auth/backend/superadmin.php");
     }
 }
 
@@ -107,13 +107,55 @@ if (isset($_POST['addlogo'])) {
       echo '<script language="javascript">';
       echo 'alert("Successfully")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/pages/sponsors.php");
+      header("refresh: 1; url=/pages/sponsors.php");
 
     } else {
       echo '<script language="javascript">';
       echo 'alert("Somthing Wrong!")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/auth/backend/logo.php");
+      header("refresh: 1; url=/auth/backend/logo-add.php");
+    }
+}
+
+//Add Speakers
+if (isset($_POST['addspeakers'])) {
+  $image = (isset($_POST['file_upload']) ? $_POST['file_upload'] : '');
+  $name = htmlspecialchars($_POST['name'], ENT_QUOTES);
+  $symposium = $_POST['symposium'];
+  $typesk = $_POST['type'];
+  $from = $_POST['affiliation'];
+  $title = $_POST['title'];
+  $optional = $_POST['option'];
+  
+  //ฟังก์ชั่นวันที่
+  date_default_timezone_set('Asia/Bangkok');
+  $date = date("Ymd");
+
+  //ฟังก์ชั่นสุ่มตัวเลข
+  $numrand = (mt_rand());
+  //เพิ่มไฟล์
+  $upload = $_FILES['file_upload'];
+  //โฟลเดอร์ที่จะ upload file เข้าไป 
+  $path = "../../../file/upload/speaker/";
+  //เอาชื่อไฟล์เก่าออกให้เหลือแต่นามสกุล
+  $type = strrchr($_FILES['file_upload']['name'], ".");
+  //ตั้งชื่อไฟล์ใหม่โดยเอาเวลาไว้หน้าชื่อไฟล์เดิม
+  $newfilename = $date . $numrand . $type;  
+
+  $addspeaker = $conn->query("INSERT INTO tb_speaker (sk_img, sk_type, sk_name, sk_symposium, sk_position, sk_title, sk_description) VALUES ('$newfilename', '$typesk', '$name', '$symposium', '$from', '$title', '$optional')");
+
+    if ($addspeaker) {
+      move_uploaded_file($_FILES['file_upload']['tmp_name'], $path . $newfilename);
+      echo '<script language="javascript">';
+      echo 'alert("Successfully")';
+      echo '</script>';
+      header("refresh: 1; url=/pages/talk.php");
+
+    } else {
+      echo '<script language="javascript">';
+      echo 'alert("Somthing Wrong!")';
+      echo '</script>';
+      header("refresh: 1; url=/auth/backend/logo.php");
     }
 }
 ?>

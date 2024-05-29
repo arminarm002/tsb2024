@@ -1,14 +1,14 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 if ($_SESSION['role'] == "superadmin") { 
-  header("refresh: 1; url= /tsb2024/auth/backend/superadmin.php");
+  header("refresh: 1; url= /auth/backend/superadmin.php");
 } else if ($_SESSION['role'] && $_SESSION['role'] == "user") {
 
 
   if ($_SESSION['type'] == "Oral Presenter" || $_SESSION['type'] == "Poster Presenter") {
     if ($_SESSION['abstract_number'] == "") {
-      header("refresh: 1; url= /tsb2024/auth/fillabnum.php");
+      header("refresh: 1; url= /auth/fillabnum.php");
     } else {
       ?>
       <!DOCTYPE html>
@@ -18,13 +18,13 @@ if ($_SESSION['role'] == "superadmin") {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TSB2024 KMITL</title>
-        <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
-        <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
+        <link rel="stylesheet" href="/theme/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="/theme/css/self.css">
       </head>
 
       <body class="font-mitr">
         <?php
-        include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
+        include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
 
         $sql = $conn->query("SELECT * FROM tb_user INNER JOIN tb_pay 
     ON tb_user.pay_id = tb_pay.pay_id WHERE email='" . $_SESSION['email'] . "'");
@@ -33,7 +33,7 @@ if ($_SESSION['role'] == "superadmin") {
           <div class="container-fluid">
             <div class="row mt-3">
               <div class="col-sm-3 col-md-2">
-                <?php include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/sidebar.php'); ?>
+                <?php include ($_SERVER['DOCUMENT_ROOT'] . '/components/sidebar.php'); ?>
               </div>
               <div class="col">
                 <?php if ($row['approve'] == "wait") { ?>
@@ -59,7 +59,7 @@ if ($_SESSION['role'] == "superadmin") {
                           <div class="col-md-5" style="text-align: center;">
                             <?php $sql4 = $conn->query("SELECT * FROM tb_user WHERE email='" . $_SESSION['email'] . "'");
                             foreach ($sql4 as $row4) {
-                              echo "<img src='/tsb2024/file/upload/profile/" . $row4['profile'] . "' class='rounded-circle' style='box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px; width: 150px; height: 150px;'>";
+                              echo "<img src='/file/upload/profile/" . $row4['profile'] . "' class='rounded-circle' style='box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px; width: 150px; height: 150px;'>";
                             } ?>
                             <form action="phpimage.php" method="POST" enctype="multipart/form-data">
                               <div class="upload-btn-wrapper mt-3">
@@ -97,7 +97,7 @@ if ($_SESSION['role'] == "superadmin") {
                           <h5 class="card-title">สำเนาบัตรนักเรียน</h5>
                           <?php $sql2 = $conn->query("SELECT * FROM tb_student WHERE email='" . $_SESSION['email'] . "'");
                           foreach ($sql2 as $row2) {
-                            echo "<img src='/tsb2024/file/upload/studentcard/" . $row2['student_name'] . "' class='img-thumbnail'
+                            echo "<img src='/file/upload/studentcard/" . $row2['student_name'] . "' class='img-thumbnail'
                     style='box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;width: 15rem;margin: 0% 5%;'>";
                           } ?>
                           <form action="phpimage.php" method="POST" enctype="multipart/form-data" class="mt-3">
@@ -119,7 +119,7 @@ if ($_SESSION['role'] == "superadmin") {
                         <h5 class="card-title">หลักฐานการโอนเงิน</h5>
                         <?php $sql3 = $conn->query("SELECT * FROM tb_slip WHERE email='" . $_SESSION['email'] . "'");
                         foreach ($sql3 as $row3) {
-                          echo "<img src='/tsb2024/file/upload/slip/" . $row3['slip_name'] . "' class='img-thumbnail'
+                          echo "<img src='/file/upload/slip/" . $row3['slip_name'] . "' class='img-thumbnail'
                     style='box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;width: 20rem;margin: 2% 5%;'>";
                         } ?>
                       </div>
@@ -201,8 +201,8 @@ if ($_SESSION['role'] == "superadmin") {
         <?php } ?>
 
         <?php
-        include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-        include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+        include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+        include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
         ?>
 
       </body>
@@ -219,13 +219,13 @@ if ($_SESSION['role'] == "superadmin") {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TSB2024 KMITL</title>
-        <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
-        <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
+        <link rel="stylesheet" href="/theme/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="/theme/css/self.css">
       </head>
 
       <body class="font-mitr">
         <?php
-        include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
+        include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
 
         $sql = $conn->query("SELECT * FROM tb_user INNER JOIN tb_pay 
     ON tb_user.pay_id = tb_pay.pay_id WHERE email='" . $_SESSION['email'] . "'");
@@ -234,7 +234,7 @@ if ($_SESSION['role'] == "superadmin") {
           <div class="container-fluid">
             <div class="row mt-3">
               <div class="col-sm-3 col-md-2">
-                <?php include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/sidebar.php'); ?>
+                <?php include ($_SERVER['DOCUMENT_ROOT'] . '/components/sidebar.php'); ?>
               </div>
               <div class="col">
                 <?php if ($row['approve'] == "wait") { ?>
@@ -260,7 +260,7 @@ if ($_SESSION['role'] == "superadmin") {
                           <div class="col-md-5" style="text-align: center;">
                             <?php $sql4 = $conn->query("SELECT * FROM tb_user WHERE email='" . $_SESSION['email'] . "'");
                             foreach ($sql4 as $row4) {
-                              echo "<img src='/tsb2024/file/upload/profile/" . $row4['profile'] . "' class='rounded-circle' style='box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px; width: 150px; height: 150px;'>";
+                              echo "<img src='/file/upload/profile/" . $row4['profile'] . "' class='rounded-circle' style='box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px; width: 150px; height: 150px;'>";
                             } ?>
                             <form action="phpimage.php" method="POST" enctype="multipart/form-data">
                               <div class="upload-btn-wrapper mt-3">
@@ -298,7 +298,7 @@ if ($_SESSION['role'] == "superadmin") {
                           <h5 class="card-title">สำเนาบัตรนักเรียน</h5>
                           <?php $sql2 = $conn->query("SELECT * FROM tb_student WHERE email='" . $_SESSION['email'] . "'");
                           foreach ($sql2 as $row2) {
-                            echo "<img src='/tsb2024/file/upload/studentcard/" . $row2['student_name'] . "' class='img-thumbnail'
+                            echo "<img src='/file/upload/studentcard/" . $row2['student_name'] . "' class='img-thumbnail'
                     style='box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;width: 15rem;margin: 0% 5%;'>";
                           } ?>
                           <form action="phpimage.php" method="POST" enctype="multipart/form-data" class="mt-3">
@@ -320,7 +320,7 @@ if ($_SESSION['role'] == "superadmin") {
                         <h5 class="card-title">หลักฐานการโอนเงิน</h5>
                         <?php $sql3 = $conn->query("SELECT * FROM tb_slip WHERE email='" . $_SESSION['email'] . "'");
                         foreach ($sql3 as $row3) {
-                          echo "<img src='/tsb2024/file/upload/slip/" . $row3['slip_name'] . "' class='img-thumbnail'
+                          echo "<img src='/file/upload/slip/" . $row3['slip_name'] . "' class='img-thumbnail'
                     style='box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;width: 20rem;margin: 2% 5%;'>";
                         } ?>
                       </div>
@@ -402,8 +402,8 @@ if ($_SESSION['role'] == "superadmin") {
         <?php } ?>
 
         <?php
-        include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-        include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+        include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+        include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
         ?>
 
       </body>
@@ -413,5 +413,5 @@ if ($_SESSION['role'] == "superadmin") {
 
 
 } else {
-  header("refresh: 1; url= /tsb2024/auth/register.php");
+  header("refresh: 1; url= /auth/register.php");
 } ?>

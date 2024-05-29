@@ -102,11 +102,11 @@ ul.unlist {
 }
 
 .backdate {
-  background-image: url('/tsb2024/img/earthbulb.jpg');
+  background-image: url('/img/earthbulb.jpg');
 }
 
 .imageback {
-  background-image: url(/tsb2024/img/sci2.JPG);
+  background-image: url(/img/sci2.JPG);
   background-color: #cccccc;
   height: 250px;
   background-position: center;
@@ -427,3 +427,18 @@ ul.unlist {
 .red{
   color:red;
 }
+.drop-area{
+  width:100px; height:25px;
+  border: 1px solid #999; text-align: center;
+  padding:10px; cursor:pointer;
+}
+#thumbnail,div.removepic{
+    display: flex;
+    flex-wrap: wrap;
+}
+#thumbnail img{width:100px;height:100px;margin:5px;}
+#thumbnail div.removepic:hover{
+    display:inline-block;
+    border:1px dashed red;
+}
+canvas{border:1px solid red;}

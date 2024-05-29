@@ -1,5 +1,5 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . '/spc2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 session_start();
 if (isset($_POST['change'])) {
   $oldpassword = $_POST["password"];

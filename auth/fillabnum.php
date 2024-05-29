@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 if ($_SESSION['type'] == "Oral Presenter" || $_SESSION['type'] == "Poster Presenter") {
   if ($_SESSION['abstract_number'] == "") {
     ?>
@@ -11,13 +11,13 @@ if ($_SESSION['type'] == "Oral Presenter" || $_SESSION['type'] == "Poster Presen
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>TSB2024 KMITL</title>
-      <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
-      <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
+      <link rel="stylesheet" href="/theme/css/bootstrap-theme.css">
+      <link rel="stylesheet" href="/theme/css/self.css">
     </head>
 
     <body class="font-mitr">
       <?php
-      include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
+      include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
       ?>
       <div class="container">
         <div class="card mt-5" style="background-color: rgb(255 122 1 / 20%);box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
@@ -34,8 +34,8 @@ if ($_SESSION['type'] == "Oral Presenter" || $_SESSION['type'] == "Poster Presen
       </div><!-- container -->
 
       <?php
-      include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-      include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+      include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+      include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
       ?>
 
     </body>
@@ -46,8 +46,8 @@ if ($_SESSION['type'] == "Oral Presenter" || $_SESSION['type'] == "Poster Presen
 
 
   } else {
-    header("refresh: 1; url=/tsb2024/auth/profile.php");
+    header("refresh: 1; url=/auth/profile.php");
   }
 } else {
-  header("refresh: 1; url=/tsb2024/auth/profile.php");
+  header("refresh: 1; url=/auth/profile.php");
 } ?>

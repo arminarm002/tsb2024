@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 $id = $_GET['userid'];
 ?>
 <!DOCTYPE html>
@@ -10,13 +10,13 @@ $id = $_GET['userid'];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detail</title>
-  <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
+  <link rel="stylesheet" href="/theme/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="/theme/css/self.css">
 </head>
 
 <body>
   <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
   <div class="container">
     <div class="card mt-3" style="box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;">
@@ -57,7 +57,7 @@ $id = $_GET['userid'];
                 <h5 class="card-title">สำเนาบัตรนักเรียน</h5>
                 <?php $sql2 = $conn->query("SELECT * FROM tb_student WHERE email = '" . $row['email'] . "' ");
                 foreach ($sql2 as $row2) {
-                  echo "<img src='/tsb2024/file/upload/studentcard/" . $row2['student_name'] . "' class='img-thumbnail'
+                  echo "<img src='/file/upload/studentcard/" . $row2['student_name'] . "' class='img-thumbnail'
                     style='box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;width: 15rem;margin: 0% 5%;'>";
                 } ?>
               </div>
@@ -69,7 +69,7 @@ $id = $_GET['userid'];
               <h5 class="card-title">หลักฐานการโอนเงิน</h5>
               <?php $sql3 = $conn->query("SELECT * FROM tb_slip WHERE email = '" . $row['email'] . "' ");
               foreach ($sql3 as $row3) {
-                echo "<img src='/tsb2024/file/upload/slip/" . $row3['slip_name'] . "' class='img-thumbnail'
+                echo "<img src='/file/upload/slip/" . $row3['slip_name'] . "' class='img-thumbnail'
                     style='box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;width: 20rem;margin: 2% 5%;'>";
               } ?>
             </div>
@@ -112,8 +112,8 @@ $id = $_GET['userid'];
   </div>
 
   <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
   
   ?>
   <script type="text/javascript">

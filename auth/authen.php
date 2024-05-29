@@ -1,5 +1,5 @@
 <?php
-include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 
 //Register
 if (isset($_POST['register'])) {
@@ -178,17 +178,17 @@ if (isset($_POST['login'])) {
         if ($_SESSION['role'] == "user") {
           if ($_SESSION['type'] == "Oral Presenter" || $_SESSION['type'] == "Poster Presenter") {
             if ($_SESSION['abstract_number'] == 0) {
-              header("refresh: 1; url=/tsb2024/auth/fillabnum.php");
+              header("refresh: 1; url=/auth/fillabnum.php");
             } else {
-              header("refresh: 1; url=/tsb2024/auth/profile.php");
+              header("refresh: 1; url=/auth/profile.php");
             }
           } else {
-            header("refresh: 1; url=/tsb2024/auth/profile.php");
+            header("refresh: 1; url=/auth/profile.php");
           }
         } else if ($_SESSION['role'] == "admin") {
-          header("refresh: 1; url=/tsb2024/auth/backend/admin.php");
+          header("refresh: 1; url=/auth/backend/admin.php");
         } else if ($_SESSION['role'] == "superadmin") {
-          header("refresh: 1; url=/tsb2024/auth/backend/superadmin.php");
+          header("refresh: 1; url=/auth/backend/superadmin.php");
         }
       } else {
         echo '<script language="javascript">';
@@ -226,13 +226,13 @@ if (isset($_POST['abstractnumber'])) {
       echo '<script language="javascript">';
       echo 'alert("Successfully")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/auth/profile.php");
+      header("refresh: 1; url=/auth/profile.php");
 
     } else {
       echo '<script language="javascript">';
       echo 'alert("Somthing Wrong!")';
       echo '</script>';
-      header("refresh: 1; url=/tsb2024/auth/fillabnum.php");
+      header("refresh: 1; url=/auth/fillabnum.php");
     }
   }
 }

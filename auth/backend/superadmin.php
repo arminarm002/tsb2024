@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 if ($_SESSION['role'] == "superadmin") {
   ?>
   <!DOCTYPE html>
@@ -10,17 +10,17 @@ if ($_SESSION['role'] == "superadmin") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Admin</title>
-    <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
+    <link rel="stylesheet" href="/theme/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/theme/css/self.css">
   </head>
 
   <body>
-    <?php include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');?>
+    <?php include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');?>
 
       <div class="container-fluid">
         <div class="row mt-3">
           <div class="col-sm-12 col-md-4 col-lg-3">
-            <?php include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/sidebar.php'); ?>
+            <?php include ($_SERVER['DOCUMENT_ROOT'] . '/components/sidebar.php'); ?>
           </div>
           <div class="col-sm-12 col-md-8 col-lg-9">
             <div class="card" style="background-color: rgb(255 122 1 / 20%);box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
@@ -77,13 +77,13 @@ if ($_SESSION['role'] == "superadmin") {
       </div><!-- container -->
 
     <?php
-    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
     ?>
 
   </body>
 
   </html>
 <?php } else {
-  header("refresh: 1; url= /tsb2024/auth/register.php");
+  header("refresh: 1; url= /auth/register.php");
 } ?>

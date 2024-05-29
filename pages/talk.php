@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,32 +9,107 @@ include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personnel Talks & Speakers</title>
-  <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
+  <link rel="stylesheet" href="/theme/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="/theme/css/self.css">
 </head>
 
 <body>
   <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
 
   <div class="container">
     <h1 class="card-title centerer mt-3">Plenary Talks & Speakers</h1>
     <h4 class="card-title centerer mt-3" style="padding-bottom: 25px;">****************</h4>
-    <h2 style="text-align: center;">Plenary Talks</h2>
-    <img src="/tsb2024/img/soon.png" style="display:block; margin:auto; width:50%;">
+    <h1 style="text-align: center;">Plenary Talks</h1>
+    <div class="row">
+      <?php $speaker = $conn->query("SELECT * FROM tb_speaker WHERE sk_type='Plenary Talks'");
+      if ($speaker->num_rows > 0) {
+        foreach ($speaker as $sk) { ?>
+
+          <div class="col-lg-12 col-md-6 col-sm-12" style="text-align: center;">
+            <img src="../file/upload/speaker/<?php echo $sk['sk_img']; ?>" class="w-25">
+            <h2 style="color:#df6a00"><?php echo $sk['sk_name']; ?></h2>
+            <h5 style="color:#df6a00"><?php echo $sk['sk_position']; ?></h5>
+            <h5 style="color:#df6a00"><b>Title : </b> <?php echo $sk['sk_title']; ?></h5>
+            <p class="color-black" style="text-align:justify;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <?php echo $sk['sk_description']; ?>
+            </p>
+          </div>
+
+        <?php }
+      } else { ?>
+        <img src="/img/soon.png" style="display:block; margin:auto; width:50%;">
+      <?php } ?>
+    </div>
+
     <hr>
-    <h2 style="text-align: center;">Keynote Lectures</h2>
-    <img src="/tsb2024/img/soon.png" style="display:block; margin:auto; width:50%;">
+    <h1 style="text-align: center;">Keynote Lectures</h1>
+    <div class="row">
+
+      <?php $speaker2 = $conn->query("SELECT * FROM tb_speaker INNER JOIN tb_symposium ON tb_speaker.sk_symposium = tb_symposium.symposium_id WHERE sk_type='Keynote Lectures'");
+      if ($speaker2->num_rows > 0) {
+        foreach ($speaker2 as $sk2) { ?>
+
+          <div class="col-lg-4 col-md-6 col-sm-12" style="text-align: center;">
+            <br>
+            <h5 style="color:#df6a00">Symposium : <?php echo $sk2['symposium_name']; ?></h4>
+              <img src="../file/upload/speaker/<?php echo $sk2['sk_img']; ?>" class="w-50">
+              <h6><?php echo $sk2['sk_name']; ?><br>
+                <span style="font-size: 0.8rem;"><?php echo $sk2['sk_position']; ?>
+                </span><br>Title : <?php echo $sk2['sk_title']; ?>
+              </h6>
+          </div>
+
+        <?php }
+      } else { ?>
+        <img src="/img/soon.png" style="display:block; margin:auto; width:50%;">
+      <?php } ?>
+    </div>
+
     <hr>
-    <h2 style="text-align: center;">Invited Speakers</h2>
-    <img src="/tsb2024/img/soon.png" style="display:block; margin:auto; width:50%;">
+
+    <!-- *** Invited Speakers *** -->
+    <h1 style="text-align: center;">Invited Speakers</h1>
+    <?php $speaker3 = $conn->query("SELECT * FROM tb_speaker WHERE sk_type='Invited Speakers'");
+    if ($speaker3->num_rows > 0) {
+      $symposium = $conn->query("SELECT * FROM tb_symposium");
+      foreach ($symposium as $sym) { ?>
+        <div class="row mt-3" style="background-color: #f6dab8;">
+          <div class="col-lg-5 col-md-6 col-sm-6" style="margin: auto;">
+            <h5 style="color:#df6a00">Symposium : <?php echo $sym['symposium_name']; ?></h4>
+          </div>
+          <div class="col-lg-7 col-md-6 col-sm-6">
+            <div class="row mt-3" style="text-align: center;">
+
+
+              <?php $invitespeaker = $conn->query("SELECT * FROM tb_speaker INNER JOIN tb_symposium ON tb_speaker.sk_symposium = tb_symposium.symposium_id WHERE sk_type='Invited Speakers' 
+              AND symposium_id='".$sym['symposium_id']."' ");
+              foreach ($invitespeaker as $sk2) { ?>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <img src="../file/upload/speaker/<?php echo $sk2['sk_img']; ?>" class="w-50">
+                  <h6>Asst. Prof. Dr. Norraphat Srimanobhas<br>
+                    <span style="font-size: 0.8rem;">Department of Physics, Faculty of Science, Chulalongkorn University
+                    </span><br>Title : Highlights from Flavor Physics and CP Violation conference 2024
+                  </h6>
+                </div>
+              <?php } ?>
+
+
+            </div>
+          </div>
+        </div>
+      <?php }
+    } else {
+      ?> <img src="/img/soon.png" style="display:block; margin:auto; width:50%;"> <?php
+    } ?>
+
   </div>
 
   <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
-  
+  include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
+
   ?>
 </body>
 

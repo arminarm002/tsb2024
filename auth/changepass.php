@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 if (isset($_SESSION['role'])) {
   ?>
   <!DOCTYPE html>
@@ -10,13 +10,13 @@ if (isset($_SESSION['role'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change Password</title>
-    <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
+    <link rel="stylesheet" href="/theme/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/theme/css/self.css">
   </head>
 
   <body>
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
 
     $sql = $conn->query("SELECT * FROM tb_user INNER JOIN tb_pay 
     ON tb_user.pay_id = tb_pay.pay_id WHERE email='" . $_SESSION['email'] . "'");
@@ -25,7 +25,7 @@ if (isset($_SESSION['role'])) {
       <div class="container-fluid">
         <div class="row mt-3">
           <div class="col-sm-3 col-md-2">
-            <?php include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/sidebar.php'); ?>
+            <?php include($_SERVER['DOCUMENT_ROOT'] . '/components/sidebar.php'); ?>
           </div>
           <div class="col">
             <div class="d-flex justify-content-center align-items-center">
@@ -60,8 +60,8 @@ if (isset($_SESSION['role'])) {
     <?php } ?>
 
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-    include($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
     
     ?>
 
@@ -69,5 +69,5 @@ if (isset($_SESSION['role'])) {
 
   </html>
 <?php } else {
-  header("refresh: 1; url= /tsb2024/auth/register.php");
+  header("refresh: 1; url= /auth/register.php");
 } ?>

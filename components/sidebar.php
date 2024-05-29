@@ -14,18 +14,18 @@
   <a class="list-group-item list-group-item-action active" aria-current="true"
     style="background-color: #ff7a01;border-color: #813d00;<?php echo $data1; ?>">Profile</a>
   <?php ?>
-  <a href="/tsb2024/auth/profile.php" class="text-white list-group-item list-group-item-action">Home</a>
-  <a href="/tsb2024/auth/changepass.php" class="text-white list-group-item list-group-item-action">Change Password</a>
+  <a href="/auth/profile.php" class="text-white list-group-item list-group-item-action">Home</a>
+  <a href="/auth/changepass.php" class="text-white list-group-item list-group-item-action">Change Password</a>
   <?php if ($_SESSION['role'] == "admin") { ?>
-    <a href="/tsb2024/auth/backend/admin.php" class="text-white list-group-item list-group-item-action">รอการอนุมัติ</a>
-    <a href="/tsb2024/auth/backend/approved.php" class="text-white list-group-item list-group-item-action">อนุมัติแล้ว</a>
-    <a href="/tsb2024/auth/backend/disapprove.php" class="text-white list-group-item list-group-item-action">ไม่ผ่านการอนุมัติ</a>
+    <a href="/auth/backend/admin.php" class="text-white list-group-item list-group-item-action">รอการอนุมัติ</a>
+    <a href="/auth/backend/approved.php" class="text-white list-group-item list-group-item-action">อนุมัติแล้ว</a>
+    <a href="/auth/backend/disapprove.php" class="text-white list-group-item list-group-item-action">ไม่ผ่านการอนุมัติ</a>
   <?php } ?>
   <?php if ($_SESSION['role'] == "superadmin") { ?>
-    <a href="/tsb2024/auth/backend/manageuser.php" class="text-white list-group-item list-group-item-action">User</a>
-    <a href="/tsb2024/auth/backend/superadmin.php" class="text-white list-group-item list-group-item-action">Announcement</a>
-    <a href="/tsb2024/auth/backend/poster-add.php" class="text-white list-group-item list-group-item-action">Poster</a>
-    <a href="/tsb2024/auth/backend/personneltalk-add.php" class="text-white list-group-item list-group-item-action">Speaker</a>
-    <a href="/tsb2024/auth/backend/logo-add.php" class="text-white list-group-item list-group-item-action">Logo</a>
+    <a href="/auth/backend/manageuser.php" class="text-white list-group-item list-group-item-action">User</a>
+    <a href="/auth/backend/superadmin.php" class="text-white list-group-item list-group-item-action">Announcement</a>
+    <a href="/auth/backend/poster-add.php" class="text-white list-group-item list-group-item-action">Poster</a>
+    <a href="/auth/backend/personneltalk-add.php" class="text-white list-group-item list-group-item-action">Speaker</a>
+    <a href="/auth/backend/logo-add.php" class="text-white list-group-item list-group-item-action">Logo</a>
   <?php } ?>
 </div>

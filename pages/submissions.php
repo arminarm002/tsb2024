@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,13 +9,13 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abstract Submission</title>
-  <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
+  <link rel="stylesheet" href="/theme/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="/theme/css/self.css">
 </head>
 
 <body>
   <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
 
   <div class="container">
@@ -79,7 +79,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
                 class="btn btn-warning" target="_blank"> Click </a>
               <br>
               <br>
-              <img class="border-bottom border-warning w-25" src="/tsb2024/img/journals2.jpg"
+              <img class="border-bottom border-warning w-25" src="/img/journals2.jpg"
                 style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
             </p>
             <hr>
@@ -90,7 +90,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
                 href="https://li02.tci-thaijo.org/index.php/ssstj" class="btn btn-warning" target="_blank"> Click
               </a><br>
               <br>
-              <img class="border-bottom border-warning w-25" src="/tsb2024/img/journals3.jpg"
+              <img class="border-bottom border-warning w-25" src="/img/journals3.jpg"
                 style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
             </p>
             <hr>
@@ -101,7 +101,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
                 href="https://ph05.tci-thaijo.org/index.php/TJNN/index" class="btn btn-warning" target="_blank"> Click
               </a><br>
               <br>
-              <img class="border-bottom border-warning w-25" src="/tsb2024/img/journals4.jpg"
+              <img class="border-bottom border-warning w-25" src="/img/journals4.jpg"
                 style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
             </p>
           </div>
@@ -110,8 +110,8 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
     </div>
 
     <?php
-    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
     ?>
 </body>
 

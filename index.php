@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,9 +14,9 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
     content="36 th of Thai Society for Biotechnology 2024 (tsb2024), Krungsri River Hotel, Phra Nakorn Sri Ayutthaya, Thailand, November 14-16, 2024.">
   <meta name="keywords"
     content="tsb2024, 36 th of Thai Society for Biotechnology, ครั้งที่ 36, ประกวดโครงงานอิสระ, สมาคมชีววิทยา">
-  <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
-  <link rel="stylesheet" href="/tsb2024/theme/css/timeline.css">
+  <link rel="stylesheet" href="/theme/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="/theme/css/self.css">
+  <link rel="stylesheet" href="/theme/css/timeline.css">
   <style>
     /* แอนิเมชันของการกระพริบ */
     @keyframes blink-animation {
@@ -37,15 +37,15 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 
 <body>
   <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="/tsb2024/img/tsb-cover.jpg" class="img-fluid" style="width:100%">
+        <img src="/img/tsb-cover.jpg" class="img-fluid" style="width:100%">
       </div>
       <!-- <div class="carousel-item">
-        <img src="/tsb2024/img/tsb-home2.png" class="img-fluid" style="width:100%">
+        <img src="/img/tsb-home2.png" class="img-fluid" style="width:100%">
       </div> -->
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -89,8 +89,8 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
       foreach ($query as $row) { ?>
         <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
           <div class="card" style="border: none;">
-            <a href="/tsb2024/file/upload/poster/<?php echo $row['pt_image']; ?>" target="_blank">
-              <img src="/tsb2024/file/upload/poster/<?php echo $row['pt_image']; ?>" class="d-block w-100"
+            <a href="/file/upload/poster/<?php echo $row['pt_image']; ?>" target="_blank">
+              <img src="/file/upload/poster/<?php echo $row['pt_image']; ?>" class="d-block w-100"
                 style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
             </a>
             <?php if ($_SESSION['role'] == "superadmin") { ?>
@@ -130,7 +130,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
             ?>
             <div class="col-sm-6 col-md-6 col-lg-4 col-12 centerer mt-3">
               <div class="card border border-warning rounded">
-                <img class="border-bottom border-warning" src="/tsb2024/file/upload/news/<?php echo $row['an_image']; ?>"
+                <img class="border-bottom border-warning" src="/file/upload/news/<?php echo $row['an_image']; ?>"
                   style="width:100%; ">
                 <?php if ($_SESSION['role'] == "superadmin") { ?>
 
@@ -177,7 +177,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 
       </div>
       <div style="text-align: center;">
-        <a href="/tsb2024/pages/news.php" class="btn btn-warning" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+        <a href="/pages/news.php" class="btn btn-warning" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           <h4 class="card-title">-- All Announcement --</h4>
         </a>
       </div>
@@ -216,10 +216,10 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
 
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
-  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/blink.php');
-  include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/countdown.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/script/blink.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/script/countdown.php');
   ?>
 </body>
 

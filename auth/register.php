@@ -1,8 +1,8 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 if (isset($_SESSION['role'])) {
-  header("refresh: 1; url= /tsb2024/auth/profile.php");
+  header("refresh: 1; url= /auth/profile.php");
 } else {
   ?>
   <!DOCTYPE html>
@@ -12,14 +12,14 @@ if (isset($_SESSION['role'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Registrater</title>
-    <link rel="stylesheet" href="/tsb2024/theme/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="/tsb2024/theme/css/self.css">
+    <link rel="stylesheet" href="/theme/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/theme/css/self.css">
 
   </head>
 
   <body style="background-color: #01ff412e;">
     <?php
-    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/navbar.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
     ?>
     <div class="container mt-5">
       <div class="card" style="background-color: #006a71;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
@@ -316,9 +316,9 @@ if (isset($_SESSION['role'])) {
       </div>
     </div>
     <?php
-    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/components/footer.php');
-    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/script.php');
-    include ($_SERVER['DOCUMENT_ROOT'] . '/tsb2024/script/calculate.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/script/calculate.php');
     ?>
   </body>
   </html>
