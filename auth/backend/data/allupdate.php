@@ -105,6 +105,7 @@ if (isset($_POST['update'])) {
       header("refresh: 1; url=/auth/backend/superadmin.php");
     }
 }
+
 //Update Logo
 if (isset($_POST['updatelogo'])) {
   $id = $_POST['id'];
@@ -130,6 +131,50 @@ if (isset($_POST['updatelogo'])) {
   $newname = $date . $numrand . $type;
   //คัดลอกไฟล์ไปเก็บที่เว็บเซริ์ฟเวอร์
    move_uploaded_file($_FILES['logoupdate']['tmp_name'], $path . $newname);
+   
+   $updatelogo = $conn->query("UPDATE tb_logo SET lg_image='$newname', lg_name='$namecompany', lg_class='$class', lg_link='$link' WHERE id=$id;");
+
+    if ($updatelogo) {
+      unlink('../../../file/upload/logo/'.$oldname);
+      echo '<script language="javascript">';
+      echo 'alert("แก้ไข สำเร็จ")';
+      echo '</script>';
+      header("refresh: 1; url=/pages/sponsors.php");
+
+    } else {
+      echo '<script language="javascript">';
+      echo 'alert("Somthing Wrong!")';
+      echo '</script>';
+      header("refresh: 1; url=/auth/backend/superadmin.php");
+    }
+}
+
+//Update Speaker
+if (isset($_POST['updatespeakers'])) {
+  $image = (isset($_POST['file_upload']) ? $_POST['file_upload'] : '');
+  $name = htmlspecialchars($_POST['name'], ENT_QUOTES);
+  $symposium = $_POST['symposium'];
+  $typesk = $_POST['type'];
+  $from = $_POST['affiliation'];
+  $title = $_POST['title'];
+  $optional = $_POST['option'];
+  
+  //ฟังก์ชั่นวันที่
+  date_default_timezone_set('Asia/Bangkok');
+  $date = date("Ymd");
+
+  //ฟังก์ชั่นสุ่มตัวเลข
+  $numrand = (mt_rand());
+  //เพิ่มไฟล์
+  $upload = $_FILES['file_upload'];
+  //โฟลเดอร์ที่จะ upload file เข้าไป 
+  $path = "../../../file/upload/logo/";
+  //เอาชื่อไฟล์เก่าออกให้เหลือแต่นามสกุล
+  $type = strrchr($_FILES['file_upload']['name'], ".");
+  //ตั้งชื่อไฟล์ใหม่โดยเอาเวลาไว้หน้าชื่อไฟล์เดิม
+  $newname = $date . $numrand . $type;
+  //คัดลอกไฟล์ไปเก็บที่เว็บเซริ์ฟเวอร์
+   move_uploaded_file($_FILES['file_upload']['tmp_name'], $path . $newname);
    
    $updatelogo = $conn->query("UPDATE tb_logo SET lg_image='$newname', lg_name='$namecompany', lg_class='$class', lg_link='$link' WHERE id=$id;");
 

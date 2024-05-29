@@ -21,6 +21,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
   <div class="container">
     <h1 class="card-title centerer mt-3">Plenary Talks & Speakers</h1>
     <h4 class="card-title centerer mt-3" style="padding-bottom: 25px;">****************</h4>
+    <!-- *** Plenary Talks *** -->
     <h1 style="text-align: center;">Plenary Talks</h1>
     <div class="row">
       <?php $speaker = $conn->query("SELECT * FROM tb_speaker WHERE sk_type='Plenary Talks'");
@@ -35,6 +36,28 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
             <p class="color-black" style="text-align:justify;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
               <?php echo $sk['sk_description']; ?>
             </p>
+
+            <div style="display: -webkit-inline-box;">
+              <form action="/auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 20px;">
+                <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk['id']; ?>">
+
+                <button class="btn btn-update-logo" type="submit" name="update">
+                  <box-icon type='solid' name='pencil'></box-icon>
+                </button>
+              </form>
+
+              <form action="/auth/backend/data/alldelete.php" method="POST" style="float:left;padding: 0px 20px;">
+                <input type="text" name="filename" class="form-control" style="display:none;"
+                  value="<?php echo $sk['pt_image']; ?>">
+                <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk['id']; ?>">
+
+                <button class="btn btn-delete-logo" type="submit" name="deletespeaker"
+                  onclick="return confirm('ยืนยันที่จะลบ ?')">
+                  <box-icon type='solid' name='trash'></box-icon>
+                </button>
+              </form>
+            </div>
+
           </div>
 
         <?php }
@@ -44,6 +67,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
     </div>
 
     <hr>
+    <!-- *** Keynote Lectures *** -->
     <h1 style="text-align: center;">Keynote Lectures</h1>
     <div class="row">
 
@@ -59,6 +83,26 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
                 <span style="font-size: 0.8rem;"><?php echo $sk2['sk_position']; ?>
                 </span><br>Title : <?php echo $sk2['sk_title']; ?>
               </h6>
+              <div style="display: -webkit-inline-box;">
+                <form action="auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 20px;">
+                  <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk['id']; ?>">
+
+                  <button class="btn btn-update-logo" type="submit" name="update">
+                    <box-icon type='solid' name='pencil'></box-icon>
+                  </button>
+                </form>
+
+                <form action="auth/backend/data/alldelete.php" method="POST" style="float:left;padding: 0px 20px;">
+                  <input type="text" name="filename" class="form-control" style="display:none;"
+                    value="<?php echo $sk['pt_image']; ?>">
+                  <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk['id']; ?>">
+
+                  <button class="btn btn-delete-logo" type="submit" name="deleteposter"
+                    onclick="return confirm('ยืนยันที่จะลบ ?')">
+                    <box-icon type='solid' name='trash'></box-icon>
+                  </button>
+                </form>
+              </div>
           </div>
 
         <?php }
@@ -82,20 +126,39 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
           <div class="col-lg-7 col-md-6 col-sm-6">
             <div class="row mt-3" style="text-align: center;">
 
-
               <?php $invitespeaker = $conn->query("SELECT * FROM tb_speaker INNER JOIN tb_symposium ON tb_speaker.sk_symposium = tb_symposium.symposium_id WHERE sk_type='Invited Speakers' 
-              AND symposium_id='".$sym['symposium_id']."' ");
+              AND symposium_id='" . $sym['symposium_id'] . "' ");
               foreach ($invitespeaker as $sk2) { ?>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                   <img src="../file/upload/speaker/<?php echo $sk2['sk_img']; ?>" class="w-50">
-                  <h6>Asst. Prof. Dr. Norraphat Srimanobhas<br>
-                    <span style="font-size: 0.8rem;">Department of Physics, Faculty of Science, Chulalongkorn University
-                    </span><br>Title : Highlights from Flavor Physics and CP Violation conference 2024
+                  <h6><?php echo $sk2['sk_name']; ?><br>
+                    <span style="font-size: 0.8rem;"><?php echo $sk2['sk_position']; ?>
+                    </span><br>Title : <?php echo $sk2['sk_title']; ?>
                   </h6>
+                  <div style="display: -webkit-inline-box;">
+                    <form action="auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 10px;">
+                      <input type="text" name="id" class="form-control" style="display:none;"
+                        value="<?php echo $sk['id']; ?>">
+
+                      <button class="btn btn-update-logo" type="submit" name="update">
+                        <box-icon type='solid' name='pencil'></box-icon>
+                      </button>
+                    </form>
+
+                    <form action="auth/backend/data/alldelete.php" method="POST" style="float:left;padding: 0px 10px;">
+                      <input type="text" name="filename" class="form-control" style="display:none;"
+                        value="<?php echo $sk['pt_image']; ?>">
+                      <input type="text" name="id" class="form-control" style="display:none;"
+                        value="<?php echo $sk['id']; ?>">
+
+                      <button class="btn btn-delete-logo" type="submit" name="deleteposter"
+                        onclick="return confirm('ยืนยันที่จะลบ ?')">
+                        <box-icon type='solid' name='trash'></box-icon>
+                      </button>
+                    </form>
+                  </div>
                 </div>
               <?php } ?>
-
-
             </div>
           </div>
         </div>
@@ -105,7 +168,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
     } ?>
 
   </div>
-
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <?php
   include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
   include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
