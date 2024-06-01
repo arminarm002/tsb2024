@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 if ($_SESSION['role']) {
   if ($_SESSION['role'] == "admin" || $_SESSION['role'] == "superadmin") {
     ?>

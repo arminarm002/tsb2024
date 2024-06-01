@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 if ($_SESSION['role'] == "superadmin") {
   ?>
   <!DOCTYPE html>
@@ -29,8 +29,8 @@ if ($_SESSION['role'] == "superadmin") {
                 Add Speakers
               </h5>
             </div>
-            <form action="data/alladd.php" method="POST" enctype="multipart/form-data">
-              <?php 
+            <form action="data/allupdate.php" method="POST" enctype="multipart/form-data">
+              <?php
               if (isset($_POST['update'])) {
                 $id = $_POST['id'];
                 $sql = $conn->query("SELECT * FROM tb_speaker WHERE id=$id");
@@ -42,12 +42,16 @@ if ($_SESSION['role'] == "superadmin") {
                           <label class="form-label" for="symposium">เลือกหัวข้อหลัก :
                           </label>
                         </div>
+                        <!-- Symposium input -->
                         <div class="col-9">
-
                           <div class="dropdown">
+
+                          <?php if($row['sk_type']=="Plenary Talks") {?>
                             <select class="btn btn-secondary dropdown-toggle titlebut" type="button" id="symposium"
                               data-bs-toggle="dropdown" name="symposium" style="border-color:black;">
-                              <option value="<?php echo $row['symposium_id'];?>" selected><?php echo $row['sk_symposium'];?></option>
+                              <option value="<?php echo $row['sk_symposium']; ?>" selected>
+                                ไม่มี Symposium
+                              </option>
                               <?php $symposium = $conn->query("SELECT * FROM tb_symposium");
                               foreach ($symposium as $rowsym) { ?>
                                 <option value="<?php echo $rowsym['symposium_id']; ?>">
@@ -55,12 +59,32 @@ if ($_SESSION['role'] == "superadmin") {
                                 </option>
                               <?php } ?>
                             </select>
-                          </div>
+                            <?php } else { 
+                            $showsyposium = $conn->query("SELECT * FROM tb_speaker INNER JOIN tb_symposium ON tb_speaker.sk_symposium = tb_symposium.symposium_id 
+                            WHERE id=$id");
+                            foreach ($showsyposium as $showsyposium2) {
+                            ?>
+                            <select class="btn btn-secondary dropdown-toggle titlebut" type="button" id="symposium"
+                              data-bs-toggle="dropdown" name="symposium" style="border-color:black;">
+                              <option value="<?php echo $row['sk_symposium']; ?>" selected>
+                                <?php echo $showsyposium2['symposium_name']; ?>
+                              </option>
+                              <?php $symposium = $conn->query("SELECT * FROM tb_symposium");
+                              foreach ($symposium as $rowsym) { ?>
+                                <option value="<?php echo $rowsym['symposium_id']; ?>">
+                                  <?php echo $rowsym['symposium_name']; ?>
+                                </option>
+                              <?php } ?>
+                            </select>
 
+                            <?php } } ?>
+
+                          </div>
                         </div>
                       </div>
                     </div>
 
+                    <!-- Type input -->
                     <div class="form-outline mb-2">
                       <div class="row">
                         <div class="col-3">
@@ -70,8 +94,8 @@ if ($_SESSION['role'] == "superadmin") {
                         <div class="col-9">
                           <div class="dropdown">
                             <select class="btn btn-secondary dropdown-toggle titlebut" type="button" id="dropdownMenuButton1"
-                              data-bs-toggle="dropdown" name="type" style="border-color:black;" required>
-                              <option value="<?php echo $row['sk_type'];?>" selected disabled><?php echo $row['sk_type'];?></option>
+                              data-bs-toggle="dropdown" name="type" style="border-color:black;">
+                              <option value="<?php echo $row['sk_type']; ?>" selected><?php echo $row['sk_type']; ?></option>
                               <option value="Plenary Talks">Plenary Talks</option>
                               <option value="Keynote Lectures">Keynote Lectures</option>
                               <option value="Invited Speakers">Invited Speakers</option>
@@ -89,7 +113,8 @@ if ($_SESSION['role'] == "superadmin") {
                         </div>
                       </div>
                       <div class="col-9">
-                        <input type="text" id="name" name="name" class="form-control" value="<?php echo $row['sk_name'];?>" required />
+                        <input type="text" id="name" name="name" class="form-control" value="<?php echo $row['sk_name']; ?>"
+                          required />
                       </div>
                     </div>
 
@@ -102,7 +127,8 @@ if ($_SESSION['role'] == "superadmin") {
                         </div>
                       </div>
                       <div class="col-9">
-                        <input type="text" id="affiliation" name="affiliation" class="form-control" value="<?php echo $row['sk_position'];?>" required />
+                        <input type="text" id="affiliation" name="affiliation" class="form-control"
+                          value="<?php echo $row['sk_position']; ?>" required />
                       </div>
                     </div>
 
@@ -114,7 +140,8 @@ if ($_SESSION['role'] == "superadmin") {
                         </div>
                       </div>
                       <div class="col-9">
-                        <textarea row="3" id="title" name="title" class="form-control" required><?php echo $row['sk_title'];?></textarea>
+                        <textarea row="3" id="title" name="title" class="form-control"
+                          required><?php echo $row['sk_title']; ?></textarea>
                       </div>
                     </div>
 
@@ -126,7 +153,8 @@ if ($_SESSION['role'] == "superadmin") {
                         </div>
                       </div>
                       <div class="col-9">
-                        <textarea row="3" id="option" name="option" class="form-control"><?php echo $row['sk_description'];?></textarea>
+                        <textarea row="3" id="option" name="option"
+                          class="form-control"><?php echo $row['sk_description']; ?></textarea>
                       </div>
                     </div>
 
@@ -139,14 +167,14 @@ if ($_SESSION['role'] == "superadmin") {
                       </div>
                       <div class="col-3">
                         <div class="form-outline mb-2" style="display: -webkit-box;">
-                          <img class="w-100" src="../../file/upload/speaker/<?php echo $row['sk_img'];?>">
+                          <img class="w-100" src="../../file/upload/speaker/<?php echo $row['sk_img']; ?>">
                         </div>
                       </div>
                       <div class="col-6">
-                        <input type="file" name="file_upload" accept="image/jpeg, image/jpg, image/png" required>
+                        <input type="file" name="file_upload" accept="image/jpeg, image/jpg, image/png">
                       </div>
                     </div>
-
+                    <input type="text" name="sk_id" value="<?php echo $row['id']; ?>" style="display:none;">
                     <button type="submit" class="btn btn-l btn-block text-white mb-2" name="updatespeakers">เพิ่ม</button>
                 </form>
               </div>

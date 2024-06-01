@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,8 +47,6 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
               </form>
 
               <form action="/auth/backend/data/alldelete.php" method="POST" style="float:left;padding: 0px 20px;">
-                <input type="text" name="filename" class="form-control" style="display:none;"
-                  value="<?php echo $sk['pt_image']; ?>">
                 <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk['id']; ?>">
 
                 <button class="btn btn-delete-logo" type="submit" name="deletespeaker"
@@ -84,20 +82,18 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
                 </span><br>Title : <?php echo $sk2['sk_title']; ?>
               </h6>
               <div style="display: -webkit-inline-box;">
-                <form action="auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 20px;">
-                  <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk['id']; ?>">
+                <form action="/auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 20px;">
+                  <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk2['id']; ?>">
 
                   <button class="btn btn-update-logo" type="submit" name="update">
                     <box-icon type='solid' name='pencil'></box-icon>
                   </button>
                 </form>
 
-                <form action="auth/backend/data/alldelete.php" method="POST" style="float:left;padding: 0px 20px;">
-                  <input type="text" name="filename" class="form-control" style="display:none;"
-                    value="<?php echo $sk['pt_image']; ?>">
-                  <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk['id']; ?>">
+                <form action="/auth/backend/data/alldelete.php" method="POST" style="float:left;padding: 0px 20px;">
+                  <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk2['id']; ?>">
 
-                  <button class="btn btn-delete-logo" type="submit" name="deleteposter"
+                  <button class="btn btn-delete-logo" type="submit" name="deletespeaker"
                     onclick="return confirm('ยืนยันที่จะลบ ?')">
                     <box-icon type='solid' name='trash'></box-icon>
                   </button>
@@ -128,30 +124,28 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
 
               <?php $invitespeaker = $conn->query("SELECT * FROM tb_speaker INNER JOIN tb_symposium ON tb_speaker.sk_symposium = tb_symposium.symposium_id WHERE sk_type='Invited Speakers' 
               AND symposium_id='" . $sym['symposium_id'] . "' ");
-              foreach ($invitespeaker as $sk2) { ?>
+              foreach ($invitespeaker as $sk3) { ?>
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                  <img src="../file/upload/speaker/<?php echo $sk2['sk_img']; ?>" class="w-50">
-                  <h6><?php echo $sk2['sk_name']; ?><br>
-                    <span style="font-size: 0.8rem;"><?php echo $sk2['sk_position']; ?>
-                    </span><br>Title : <?php echo $sk2['sk_title']; ?>
+                  <img src="../file/upload/speaker/<?php echo $sk3['sk_img']; ?>" class="w-50">
+                  <h6><?php echo $sk3['sk_name']; ?><br>
+                    <span style="font-size: 0.8rem;"><?php echo $sk3['sk_position']; ?>
+                    </span><br>Title : <?php echo $sk3['sk_title']; ?>
                   </h6>
                   <div style="display: -webkit-inline-box;">
-                    <form action="auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 10px;">
+                    <form action="/auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 10px;">
                       <input type="text" name="id" class="form-control" style="display:none;"
-                        value="<?php echo $sk['id']; ?>">
+                        value="<?php echo $sk3['id']; ?>">
 
                       <button class="btn btn-update-logo" type="submit" name="update">
                         <box-icon type='solid' name='pencil'></box-icon>
                       </button>
                     </form>
 
-                    <form action="auth/backend/data/alldelete.php" method="POST" style="float:left;padding: 0px 10px;">
-                      <input type="text" name="filename" class="form-control" style="display:none;"
-                        value="<?php echo $sk['pt_image']; ?>">
+                    <form action="/auth/backend/data/alldelete.php" method="POST" style="float:left;padding: 0px 10px;">
                       <input type="text" name="id" class="form-control" style="display:none;"
-                        value="<?php echo $sk['id']; ?>">
+                        value="<?php echo $sk3['id']; ?>">
 
-                      <button class="btn btn-delete-logo" type="submit" name="deleteposter"
+                      <button class="btn btn-delete-logo" type="submit" name="deletespeaker"
                         onclick="return confirm('ยืนยันที่จะลบ ?')">
                         <box-icon type='solid' name='trash'></box-icon>
                       </button>

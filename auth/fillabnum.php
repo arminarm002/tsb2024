@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 if ($_SESSION['type'] == "Oral Presenter" || $_SESSION['type'] == "Poster Presenter") {
   if ($_SESSION['abstract_number'] == "") {
     ?>

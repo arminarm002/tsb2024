@@ -1,5 +1,5 @@
 <?php
-include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 
 //Register
 if (isset($_POST['register'])) {

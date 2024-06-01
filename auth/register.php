@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 if (isset($_SESSION['role'])) {
   header("refresh: 1; url= /auth/profile.php");
 } else {
@@ -248,15 +248,7 @@ if (isset($_SESSION['role'])) {
                       <?php
                     }
                     ?>
-                    <tr id="studencard" style="display:none;">
-                      <td colspan="4">
-                        <span class="centerer">
-                          กรุณาแนบสำเนาบัตรนักศึกษาเป็นไฟล์รูปภาพ ไม่ใช่ pdf (Attach your student ID card, Only png ,jpg
-                          Not pdf)
-                          <input type="file" name="studencard" accept="image/png, image/jpeg, image/jpg">
-                        </span>
-                      </td>
-                    </tr>
+                    
                     <tr></tr>
                     <tr id="myDiv" style="display:none;">
                       <td colspan="4">
@@ -273,8 +265,6 @@ if (isset($_SESSION['role'])) {
                     </tr>
                   </tbody>
                 </table>
-                <label class="mb-3">Choose an money transfer slip to upload (Only png ,jpg Not pdf)</label>
-                <input type="file" name="fileupload" accept="image/png, image/jpeg, image/jpg" required>
 
                 <!-- <p style="padding: 25px;background-color:rgb(0 74 85)">
                   Payment

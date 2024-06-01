@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 if ($_SESSION['role'] == "superadmin") {
   ?>
   <!DOCTYPE html>
@@ -35,7 +35,7 @@ if ($_SESSION['role'] == "superadmin") {
 
                   <!-- Image input -->
                   <label class="mb-3">รูปโลโก้<br></label>
-                  <input type="file" name="logoupload" required>
+                  <input type="file" name="logoupload"  accept="image/png, image/jpeg, image/jpg" required>
 
                   <!-- Name input -->
                   <div class="form-outline mb-2">
