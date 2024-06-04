@@ -182,37 +182,47 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
         </a>
       </div>
     </div>
-    </div>
-    <!-- Timeline -->
-    <h2 style="text-align: center;">Important Date</h2>
-    <div class="flex-parent mt-5">
-      <div class="input-flex-container">
-        <div class="input fs active">
-          <span data-year="May 15, 2024" data-info="Registration & Submissions opens"></span>
-        </div>
-        <div class="input fs">
-          <span data-year="July 15, 2024" data-info="Abstract submission deadline"></span>
-        </div>
-        <div class="input fs">
-          <span data-year="August 1-15, 2024" data-info="Notification of Abstract acceptance"></span>
-        </div>
-        <div class="input fs">
-          <span data-year="August 16, 2024" data-info="Full paper submission deadline"></span>
-        </div>
-        <div class="input fs">
-          <span data-year="October 1-16, 2024" data-info="Notification of Full paper acceptance"></span>
-        </div>
-        <div class="input fs">
-          <span data-year="August 16, 2024" data-info="Early bird registration deadline"></span>
-        </div>
-        <div class="input fs">
-          <span data-year="October 16, 2024" data-info="Late registration deadline"></span>
-        </div>
-        <div class="input fs">
-          <span data-year="November 14-16, 2024" data-info="TSB2024 Conference"></span>
-        </div>
+  </div>
+  <!-- Timeline -->
+  <h2 style="text-align: center;">Important Date</h2>
+  <div class="flex-parent mt-5">
+    <div class="input-flex-container">
+      <div class="input fs active">
+        <span data-year="May 15, 2024" data-info="Registration & Submissions opens"></span>
+      </div>
+      <div class="input fs">
+        <span data-year="July 15, 2024" data-info="Abstract submission deadline"></span>
+      </div>
+      <div class="input fs">
+        <span data-year="August 1-15, 2024" data-info="Notification of Abstract acceptance"></span>
+      </div>
+      <div class="input fs">
+        <span data-year="August 16, 2024" data-info="Full paper submission deadline"></span>
+      </div>
+      <div class="input fs">
+        <span data-year="October 1-16, 2024" data-info="Notification of Full paper acceptance"></span>
+      </div>
+      <div class="input fs">
+        <span data-year="August 16, 2024" data-info="Early bird registration deadline"></span>
+      </div>
+      <div class="input fs">
+        <span data-year="October 16, 2024" data-info="Late registration deadline"></span>
+      </div>
+      <div class="input fs">
+        <span data-year="November 14-16, 2024" data-info="TSB2024 Conference"></span>
       </div>
     </div>
+  </div>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR16YY4QKZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-CR16YY4QKZ');
+  </script>
 
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <?php
