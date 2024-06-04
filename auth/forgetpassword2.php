@@ -27,14 +27,14 @@ if (isset($_POST['forgot'])) {
         $mail->Port = 587;                                //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom('suradech.ku@kmitl.ac.th', 'Admin SPC2024');
+        $mail->setFrom('suradech.ku@kmitl.ac.th', 'Admin TSB2024');
         $mail->addAddress($inputemail, 'User');     //Add a recipient
         $mail->addReplyTo('noryply@kmitl.ac.th', 'Information');
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'SPC2024 : New Password';
-        $mail->Body = 'New Password for Login SPC2024 Website : ' . $numrand;
+        $mail->Subject = 'TSB2024 : New Password';
+        $mail->Body = 'New Password for Login TSB2024 Website : ' . $numrand;
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         $sql = $conn->query("UPDATE tb_user SET password='$password' WHERE email='" . $inputemail . "' ");
