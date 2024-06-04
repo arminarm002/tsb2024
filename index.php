@@ -93,7 +93,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
               <img src="/file/upload/poster/<?php echo $row['pt_image']; ?>" class="d-block w-100"
                 style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
             </a>
-            <?php if ($_SESSION['role'] == "superadmin") { ?>
+            <?php if (isset($_SESSION['role']) == "superadmin") { ?>
 
               <form action="auth/backend/poster-update.php" method="POST">
                 <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
@@ -132,7 +132,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
               <div class="card border border-warning rounded">
                 <img class="border-bottom border-warning" src="/file/upload/news/<?php echo $row['an_image']; ?>"
                   style="width:100%; ">
-                <?php if ($_SESSION['role'] == "superadmin") { ?>
+                <?php if (isset($_SESSION['role']) == "superadmin") { ?>
 
                   <form action="auth/backend/news-update.php" method="POST">
                     <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">

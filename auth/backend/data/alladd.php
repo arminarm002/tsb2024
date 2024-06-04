@@ -121,12 +121,11 @@ if (isset($_POST['addlogo'])) {
 if (isset($_POST['addspeakers'])) {
   $image = (isset($_POST['file_upload']) ? $_POST['file_upload'] : '');
   $name = htmlspecialchars($_POST['name'], ENT_QUOTES);
-  if (isset($_POST['addspeakers'])) { 
+  if (isset($_POST['symposium'])) { 
     $symposium = $_POST['symposium'];
   } else {
     $symposium = '0';
   }
-  $symposium = $_POST['symposium'];
   $typesk = $_POST['type'];
   $from = $_POST['affiliation'];
   $title = $_POST['title'];
