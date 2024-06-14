@@ -427,6 +427,14 @@ ul.unlist {
 .red{
   color:red;
 }
+.messenger {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  z-index: 1;
+  width:100px
+}
 .drop-area{
   width:100px; height:25px;
   border: 1px solid #999; text-align: center;

@@ -39,14 +39,13 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
   <?php
   include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
+  <img src="/img/messenger.png" class="img-fluid messenger">
   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="/img/tsb-cover.jpg" class="img-fluid" style="width:100%">
       </div>
-      <!-- <div class="carousel-item">
-        <img src="/img/tsb-home2.png" class="img-fluid" style="width:100%">
-      </div> -->
+        
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -215,7 +214,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
   </div>
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR16YY4QKZ"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -223,7 +222,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 
     gtag('config', 'G-CR16YY4QKZ');
   </script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR16YY4QKZ"></script>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <?php
   include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');

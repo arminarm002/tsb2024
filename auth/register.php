@@ -14,6 +14,8 @@ if (isset($_SESSION['role'])) {
     <title>Registrater</title>
     <link rel="stylesheet" href="/theme/css/bootstrap-theme.css">
     <link rel="stylesheet" href="/theme/css/self.css">
+    <link rel="shortcut icon" href="#" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
   </head>
 
@@ -45,26 +47,23 @@ if (isset($_SESSION['role'])) {
 
               <!-- Title input -->
               <div class="form-outline mb-2">
-                <div class="row">
-                  <div class="col-4">
-                    <label class="form-label" for="title">Title ( Mr., Mrs, Ms, Dr., Assist.Prof., Assoc.Prof., Prof. ) :
-                    </label>
-                  </div>
-                  <div class="col-8">
-                    <div class="dropdown">
-                      <select class="btn btn-secondary dropdown-toggle titlebut" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" name="title" style="border-color:white;color:black" required>
-                        <option value="" selected disabled>Title</option>
-                        <option value="Mr.">Mr.</option>
-                        <option value="Ms.">Ms.</option>
-                        <option value="Emeritus Professor">Emeritus Professor</option>
-                        <option value="Prof.">Prof.</option>
-                        <option value="Assoc.Prof.">Assoc.Prof.</option>
-                        <option value="Assist.Prof.">Assist.Prof.</option>
-                        <option value="Dr.">Dr.</option>
-                      </select>
-                    </div>
-                  </div>
+                <label class="form-label" for="title">Prefix</label>
+                <div class="dropdown">
+                  <select class="btn btn-secondary dropdown-toggle titlebut" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" name="title" style="border-color:white;color:black" required>
+                    <option value="" selected disabled>Select Prefix</option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Ms.">Ms.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Dr.">Dr.</option>
+                    <option value="Prof.">Prof.</option>
+                    <option value="Asst. Prof.">Asst. Prof.</option>
+                    <option value="Assoc. Prof.">Assoc. Prof.</option>
+                    <option value="Asst. Prof. Dr.">Asst. Prof. Dr.</option>
+                    <option value="Assoc. Prof. Dr.">Assoc. Prof. Dr.</option>
+                    <option value="Prof. Dr.">Prof. Dr.</option>
+                    <option value="Emeritus Professor">Emeritus Professor</option>
+                  </select>
                 </div>
               </div>
 
@@ -150,7 +149,9 @@ if (isset($_SESSION['role'])) {
                   } ?>
 
                   <div class="form-check" id="inputabnum" style="display:none;">
-                    <label class="form-label red">Please Fill Your Abstract Number :</label>
+                    <label class="form-label" style="color: #0606ab;" for="ab-number">Please Fill Your Abstract Number :
+                      <br>If there is
+                      more than 1 abstract, separate them with " , " (comma)</label>
                     <input type="text" id="ab-number" name="ab-number" class="form-control">
                   </div>
                 </div>
@@ -159,9 +160,12 @@ if (isset($_SESSION['role'])) {
 
               <!-- Address Receipt input -->
               <div class="form-outline">
-                <label class="form-label" for="receipt">Name and address for payment
-                  receipt<br>(ชื่อและที่อยู่ในใบเสร็จสำหรับเบิก) :</label>
-                <input type="text" id="receipt" name="receipt" class="form-control" required />
+                <label class="form-label" for="receipt">Name for payment receipt<br>(ชื่อสำหรับออกใบเสร็จ) :</label>
+                <input type="text" id="receipt-name" name="receipt-name" class="form-control" required />
+                <label class="form-label" for="receipt">Address for payment receipt<br>(ที่อยู่สำหรับออกใบเสร็จ) :</label>
+                <input type="text" id="receipt-address" name="receipt-address" class="form-control" required />
+                <label class="form-label" for="receipt">Taxpayer Identification No.<br>(เลขที่ผู้เสียภาษี) :</label>
+                <input type="number" id="receipt-tax" name="receipt-tax" class="form-control" required />
               </div>
 
               <!-- Fee input -->
@@ -195,7 +199,7 @@ if (isset($_SESSION['role'])) {
                     $date2 = date('Y-m-d', strtotime("2024/08/16"));
                     $date3 = date('Y-m-d', strtotime("2024/10/17"));
                     $date4 = date('Y-m-d', strtotime("2024/11/02"));
-                    
+
                     if (($datenows >= $date1) && ($datenows < $date2)) {
                       $data1 = "";
                       $data2 = "disabled";
@@ -248,7 +252,7 @@ if (isset($_SESSION['role'])) {
                       <?php
                     }
                     ?>
-                    
+
                     <tr></tr>
                     <tr id="myDiv" style="display:none;">
                       <td colspan="4">
@@ -266,18 +270,18 @@ if (isset($_SESSION['role'])) {
                   </tbody>
                 </table>
 
-                <!-- <p style="padding: 25px;background-color:rgb(0 74 85)">
+                <h5 style="padding: 25px;background-color:rgb(0 74 85)">
                   Payment
                   <br>
                   <br>Bank's full name : Krungthai Bank
                   <br>Bank's Swift Code : KRTHTHBK
-                  <br>Bank account no : 549-0-25626-5
-                  <br>Beneficiary name : THAI PHYSICS SOCIETY 2560
+                  <br>Bank account no : 693-0-43369-1
+                  <br>Account name : School of Science KMITL
                   <br>
-                  <br>บัญชี ธนาคารกรุงไทย สาขาถนนห้วยแก้ว
-                  <br>ชื่อบัญชี สมาคมฟิสิกส์ไทย 2560
-                  <br>เลขที่บัญชี 549-0-25626-5
-                </p> -->
+                  <br>บัญชี ธนาคารกรุงไทย สาขาเทคโนโลยีพระจอมเกล้าฯลาดกระบัง
+                  <br>ชื่อบัญชี คณะวิทยาศาสตร์ สจล.
+                  <br>เลขที่บัญชี 693-0-43369-1
+                </h5>
               </div>
 
               <!-- <p>* เลือกชำระแบบ Non Member of Thai Physics Society รับสิทธิพิเศษ ได้เป็นสมาชิก 1 ปี</p> -->
@@ -296,8 +300,8 @@ if (isset($_SESSION['role'])) {
                 echo "หมดเวลาลงทะเบียน";
               } else { ?>
                 <div class="text-end">
-                  <!-- <button type="submit" class="btn btn-download mt-2" name="register" style="width: 20rem;
-    font-size: 25px;">Submit</button> -->
+                  <button type="submit" class="btn btn-download mt-2" name="register" style="width: 20rem;
+    font-size: 25px;">Submit</button>
                 </div>
               <?php } ?>
             </form>
@@ -305,11 +309,21 @@ if (isset($_SESSION['role'])) {
         </div>
       </div>
     </div>
+
+    <script>
+      $('#ab-number').on('change, keyup', function () {
+        var currentInput = $(this).val();
+        var fixedInput = currentInput.replace(/[ก-ฮA-Za-z!@#$%^&*().]/g, '');
+        $(this).val(fixedInput);
+        console.log(fixedInput);
+      });
+    </script>
     <?php
     include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
     include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
     include ($_SERVER['DOCUMENT_ROOT'] . '/script/calculate.php');
     ?>
   </body>
+
   </html>
 <?php } ?>
