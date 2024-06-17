@@ -20,6 +20,7 @@ if (isset($_SESSION['role'])) {
     <?php
     include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
     ?>
+    <img src="/img/messenger.png" class="img-fluid messenger">
     <div class="container">
       <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
         <div class="card mb-3"

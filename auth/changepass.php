@@ -21,7 +21,7 @@ if (isset($_SESSION['role'])) {
     $sql = $conn->query("SELECT * FROM tb_user INNER JOIN tb_pay 
     ON tb_user.pay_id = tb_pay.pay_id WHERE email='" . $_SESSION['email'] . "'");
     foreach ($sql as $row) { ?>
-
+<img src="/img/messenger.png" class="img-fluid messenger">
       <div class="container-fluid">
         <div class="row mt-3">
           <div class="col-sm-3 col-md-2">
