@@ -17,7 +17,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
-  <img src="/img/messenger.png" class="img-fluid messenger">
+  <img src="/../img/messenger.png" class="img-fluid messenger">
   <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel"
     data-bs-interval="3000">
     <div class="carousel-indicators">

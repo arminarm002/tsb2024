@@ -17,7 +17,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
-<img src="/img/messenger.png" class="img-fluid messenger">
+<img src="/../img/messenger.png" class="img-fluid messenger">
   <div class="container">
   <h1 class="card-title centerer mt-3">Important Dates & Overall Program</h1>
     <table class="table tb-stip table-striped table-hover mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">

@@ -23,7 +23,7 @@ if (isset($_SESSION['role'])) {
     <?php
     include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
     ?>
-    <img src="/img/messenger.png" class="img-fluid messenger">
+    <img src="/../img/messenger.png" class="img-fluid messenger">
     <div class="container mt-5">
       <div class="card" style="background-color: #006a71;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
         <div class="card-header text-white text-center" style="background-color:#ff5722">
@@ -301,8 +301,8 @@ if (isset($_SESSION['role'])) {
                 echo "หมดเวลาลงทะเบียน";
               } else { ?>
                 <div class="text-end">
-                  <button type="submit" class="btn btn-download mt-2" name="register" style="width: 20rem;
-    font-size: 25px;">Submit</button>
+                  <!-- <button type="submit" class="btn btn-download mt-2" name="register" style="width: 20rem;
+    font-size: 25px;">Submit</button> -->
                 </div>
               <?php } ?>
             </form>

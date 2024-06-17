@@ -13,6 +13,7 @@
   <?php
   include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
+  <img src="/../img/messenger.png" class="img-fluid messenger">
   <div class="container">
     <h1 class="centerer mt-3">Registration Fee</h1>
     <h4 class="centerer mt-3"><b>Register Form </b>&nbsp;>>>&nbsp;

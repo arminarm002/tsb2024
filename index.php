@@ -39,7 +39,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
   <?php
   include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
-  <img src="/img/messenger.png" class="img-fluid messenger">
+  <img src="/../img/messenger.png" class="img-fluid messenger">
   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">

@@ -17,7 +17,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
-  <img src="/img/messenger.png" class="img-fluid messenger">
+  <img src="/../img/messenger.png" class="img-fluid messenger">
   <div class="container mt-3">
     <div class="row" style="margin: 10% 0%;">
       <div class="col-6 centerer" style="display: block;">

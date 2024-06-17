@@ -19,7 +19,7 @@ if ($_SESSION['type'] == "Oral Presenter" || $_SESSION['type'] == "Poster Presen
       <?php
       include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
       ?>
-      <img src="/img/messenger.png" class="img-fluid messenger">
+      <img src="/../img/messenger.png" class="img-fluid messenger">
       <div class="container">
         <div class="card mt-5" style="background-color: rgb(255 122 1 / 20%);box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           <div class="cardbody" style="padding:2% 5%;">
