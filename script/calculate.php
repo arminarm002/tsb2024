@@ -49,7 +49,6 @@
 
     if (val == '1' || val == '2') {
       document.getElementById('myDiv').style.display = 'contents';
-      document.getElementById('studencard').style.display = 'none';
       resultDiv.textContent = ` : ${1 * p} `;
       amount.addEventListener('input', function () {
         const number = parseFloat(amount.value);
@@ -60,7 +59,6 @@
 
     if (val == '3') {
       document.getElementById('myDiv').style.display = 'contents';
-      document.getElementById('studencard').style.display = 'contents';
       resultDiv.textContent = ` : ${1 * p} `;
       amount.addEventListener('input', function () {
         const number = parseFloat(amount.value);
@@ -70,7 +68,6 @@
 
     if (val == '4' || val == '5') {
       document.getElementById('myDiv').style.display = 'none';
-      document.getElementById('studencard').style.display = 'none';
       resultDiv.textContent = ` : ${1 * p} `;
       
     }

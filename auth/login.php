@@ -20,7 +20,9 @@ if (isset($_SESSION['role'])) {
     <?php
     include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
     ?>
+    <a href="https://www.messenger.com/t/279532238569467/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0" target="_blank">
     <img src="/../img/messenger.png" class="img-fluid messenger">
+  </a>
     <div class="container">
       <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
         <div class="card mb-3"

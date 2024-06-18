@@ -17,7 +17,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
   <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
-  <img src="/../img/messenger.png" class="img-fluid messenger">
+  <a href="https://www.messenger.com/t/279532238569467/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0" target="_blank">
+    <img src="/../img/messenger.png" class="img-fluid messenger">
+  </a>
   <div class="container mt-3">
     <div class="row" style="margin: 10% 0%;">
       <div class="col-6 centerer" style="display: block;">

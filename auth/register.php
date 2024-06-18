@@ -23,7 +23,9 @@ if (isset($_SESSION['role'])) {
     <?php
     include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
     ?>
+    <a href="https://www.messenger.com/t/279532238569467/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0" target="_blank">
     <img src="/../img/messenger.png" class="img-fluid messenger">
+  </a>
     <div class="container mt-5">
       <div class="card" style="background-color: #006a71;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
         <div class="card-header text-white text-center" style="background-color:#ff5722">
@@ -151,8 +153,7 @@ if (isset($_SESSION['role'])) {
 
                   <div class="form-check" id="inputabnum" style="display:none;">
                     <label class="form-label" style="color: #0606ab;" for="ab-number">Please Fill Your Abstract Number :
-                      <br>If there is
-                      more than 1 abstract, separate them with " , " (comma)</label>
+                      <br>If there is more than 1 abstract, separate them with " , " (comma)</label>
                     <input type="text" id="ab-number" name="ab-number" class="form-control">
                   </div>
                 </div>
@@ -171,7 +172,7 @@ if (isset($_SESSION['role'])) {
 
               <!-- Fee input -->
               <div class="form-outline mb-2 mt-5">
-                <table class="table table-active table-bordered border-danger">
+                <table class="table table-active table-bordered border-danger" style="--bs-table-bg: #bfebb3;">
                   <thead style="text-align: center;">
                     <tr>
                       <td colspan="4">
@@ -265,7 +266,7 @@ if (isset($_SESSION['role'])) {
                     </tr>
                     <tr>
                       <td colspan="4">
-                        <span class="centerer">จำนวนเงิน รวมทั้งสิ้น <div id="result"></div> บาท</span>
+                        <span class="centerer">จำนวนเงิน รวมทั้งสิ้น <div id="result"></div> &nbsp;บาท</span>
                       </td>
                     </tr>
                   </tbody>
@@ -301,8 +302,8 @@ if (isset($_SESSION['role'])) {
                 echo "หมดเวลาลงทะเบียน";
               } else { ?>
                 <div class="text-end">
-                  <!-- <button type="submit" class="btn btn-download mt-2" name="register" style="width: 20rem;
-    font-size: 25px;">Submit</button> -->
+                  <button type="submit" class="btn btn-download mt-2" name="register" style="width: 20rem;
+    font-size: 25px;">Submit</button>
                 </div>
               <?php } ?>
             </form>

@@ -116,10 +116,10 @@ INSERT INTO `tb_setdate` (`id`, `date_end`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_slip`
+-- Table structure for table `tb_confirm`
 --
 
-CREATE TABLE `tb_slip` (
+CREATE TABLE `tb_confirm` (
   `slip_id` int(11) NOT NULL,
   `slip_date` date NOT NULL,
   `slip_name` varchar(255) NOT NULL,
@@ -127,10 +127,10 @@ CREATE TABLE `tb_slip` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `tb_slip`
+-- Dumping data for table `tb_confirm`
 --
 
-INSERT INTO `tb_slip` (`slip_id`, `slip_date`, `slip_name`, `email`) VALUES
+INSERT INTO `tb_confirm` (`slip_id`, `slip_date`, `slip_name`, `email`) VALUES
 (1, '2024-01-29', '20240129541849356.jpg', 'a1@gmail.com'),
 (2, '2024-04-17', '20240417946093436.jpg', 'suradech.ku@kmitl.ac.th');
 
@@ -243,9 +243,9 @@ ALTER TABLE `tb_setdate`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_slip`
+-- Indexes for table `tb_confirm`
 --
-ALTER TABLE `tb_slip`
+ALTER TABLE `tb_confirm`
   ADD PRIMARY KEY (`slip_id`);
 
 --
@@ -301,9 +301,9 @@ ALTER TABLE `tb_setdate`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tb_slip`
+-- AUTO_INCREMENT for table `tb_confirm`
 --
-ALTER TABLE `tb_slip`
+ALTER TABLE `tb_confirm`
   MODIFY `slip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --

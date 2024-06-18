@@ -49,25 +49,12 @@ $id = $_GET['userid'];
               echo "<br>ราคา " . $row['total_price'] . " บาท<br>";
             } ?>
           </h5>
-
-          <!-- สำเนาบัตรนักเรียน / นักศึกษา -->
-          <?php if ($row['pay_id'] == 4) { ?>
-            <div class="card mt-3" style="box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-              <div class="cardbody" style="padding:2% 5%;">
-                <h5 class="card-title">สำเนาบัตรนักเรียน</h5>
-                <?php $sql2 = $conn->query("SELECT * FROM tb_student WHERE email = '" . $row['email'] . "' ");
-                foreach ($sql2 as $row2) {
-                  echo "<img src='/file/upload/studentcard/" . $row2['student_name'] . "' class='img-thumbnail'
-                    style='box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;width: 15rem;margin: 0% 5%;'>";
-                } ?>
-              </div>
-            </div>
-          <?php } ?>
+          
           <!-- สลีปโอนเงิน -->
           <div class="card mt-5" style="box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;">
             <div class="cardbody" style="padding:2% 5%;">
               <h5 class="card-title">หลักฐานการโอนเงิน</h5>
-              <?php $sql3 = $conn->query("SELECT * FROM tb_slip WHERE email = '" . $row['email'] . "' ");
+              <?php $sql3 = $conn->query("SELECT * FROM tb_confirm WHERE email = '" . $row['email'] . "' ");
               foreach ($sql3 as $row3) {
                 echo "<img src='/file/upload/slip/" . $row3['slip_name'] . "' class='img-thumbnail'
                     style='box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;width: 20rem;margin: 2% 5%;'>";
