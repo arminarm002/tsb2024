@@ -31,22 +31,24 @@ $id = $_GET['userid'];
           </h1>
           <h3>
             <?php
-            echo $row['type'] . "<br>";
+            echo $row['type'] . " - " . $row['pay_name'] . "<br>";
             echo "E-mail : " . $row['email'] . "<br>Telephone : " . $row['telephone'] . "<br>Fax : " . $row['fax'] . "<br><br>";
             ?>
           </h3>
           <h5>
             <?php
-            echo $row['career'] . " from " . $row['company'] . "<br>";
-            echo $row['address'] . " , " . $row['country'] . "<br>";
-            echo "Extrameal : <font class='gray'>" . $row['extrameal'] . "</font><br>";;
-            echo "Food allergy and intolerance : <font class='gray'>" . $row['food'] . "</font><br>";
-            echo "Name and address for payment receipt (ชื่อและที่อยู่ในใบเสร็จสำหรับเบิก) : <font class='gray'>" . $row['receipt']."</font>";
-            echo "<br><br>" . $row['pay_name'];
-            if ($row['pay_id'] == 2 || $row['pay_id'] == 3 || $row['pay_id'] == 4) {
-              echo " ส่ง Abstract จำนวน " . $row['amount'] . " เรื่อง<br>รวมเป็นเงิน " . $row['total_price'] . " บาท<br>";
+            // echo $row['career'] . " from " . $row['company'] . "<br>";
+            // echo $row['address'] . " , " . $row['country'] . "<br>";
+            // echo "Extrameal : <font class='gray'>" . $row['extrameal'] . "</font><br>";
+            // echo "Food allergy and intolerance : <font class='gray'>" . $row['food'] . "</font><br>";
+            echo "ชื่อและที่อยู่ในใบเสร็จสำหรับเบิก : <font class='gray'>" . $row['receipt_name']. " " .$row['receipt_address']."</font><br>";
+            echo "เลขประจำตัวผู้เสียภาษี : <font class='gray'>" . $row['receipt_tax'] . "</font><br><br><br>";
+            
+            
+            if ($row['pay_id'] == 1 || $row['pay_id'] == 2 || $row['pay_id'] == 3) {
+              echo "ส่ง Abstract จำนวน " . $row['amount'] . " เรื่อง<br>รวมเป็นเงิน " . $row['total_price'] . " บาท<br>";
             } else {
-              echo "<br>ราคา " . $row['total_price'] . " บาท<br>";
+              echo "ราคา " . $row['total_price'] . " บาท<br>";
             } ?>
           </h5>
           
@@ -56,8 +58,7 @@ $id = $_GET['userid'];
               <h5 class="card-title">หลักฐานการโอนเงิน</h5>
               <?php $sql3 = $conn->query("SELECT * FROM tb_confirm WHERE email = '" . $row['email'] . "' ");
               foreach ($sql3 as $row3) {
-                echo "<img src='/file/upload/slip/" . $row3['slip_name'] . "' class='img-thumbnail'
-                    style='box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;width: 20rem;margin: 2% 5%;'>";
+                echo "KEY : ".$row3['slip_name'];
               } ?>
             </div>
           </div>
