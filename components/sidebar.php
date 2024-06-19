@@ -16,6 +16,7 @@
   <?php ?>
   <a href="/auth/profile.php" class="text-white list-group-item list-group-item-action">Home</a>
   <a href="/auth/changepass.php" class="text-white list-group-item list-group-item-action">Change Password</a>
+  <a href="/auth/updatedata.php" class="text-white list-group-item list-group-item-action">Update Personal Data</a>
   <?php if ($_SESSION['role'] == "admin") { ?>
     <a href="/auth/backend/admin.php" class="text-white list-group-item list-group-item-action">รอการอนุมัติ</a>
     <a href="/auth/backend/approved.php" class="text-white list-group-item list-group-item-action">อนุมัติแล้ว</a>

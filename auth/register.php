@@ -167,7 +167,7 @@ if (isset($_SESSION['role'])) {
                 <label class="form-label" for="receipt">Address for payment receipt<br>(ที่อยู่สำหรับออกใบเสร็จ) :</label>
                 <input type="text" id="receipt-address" name="receipt-address" class="form-control" required />
                 <label class="form-label" for="receipt">Taxpayer Identification No.<br>(เลขที่ผู้เสียภาษี) :</label>
-                <input type="number" id="receipt-tax" name="receipt-tax" class="form-control" required />
+                <input type="text" id="tax" name="receipt-tax" class="form-control" required />
               </div>
 
               <!-- Fee input -->
@@ -312,16 +312,9 @@ if (isset($_SESSION['role'])) {
       </div>
     </div>
 
-    <script>
-      $('#ab-number').on('change, keyup', function () {
-        var currentInput = $(this).val();
-        var fixedInput = currentInput.replace(/[ก-ฮA-Za-z!@#$%^&*().]/g, '');
-        $(this).val(fixedInput);
-        console.log(fixedInput);
-      });
-    </script>
     <?php
     include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+    include ($_SERVER['DOCUMENT_ROOT'] . '/script/numberonly.php');
     include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
     include ($_SERVER['DOCUMENT_ROOT'] . '/script/calculate.php');
     ?>

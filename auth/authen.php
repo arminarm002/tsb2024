@@ -1,5 +1,6 @@
 <?php
 include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
+session_start();
 
 //Register
 if (isset($_POST['register'])) {
@@ -126,7 +127,6 @@ transfer file")';
 
 // Log in
 if (isset($_POST['login'])) {
-  session_start();
   $email = $_POST['email'];
   $pass = $_POST['password'];
 
@@ -182,6 +182,41 @@ if (isset($_POST['login'])) {
     echo 'alert("Username Invalid")';
     echo '</script>';
     header("refresh: 1; url=login.php");
+  }
+}
+
+//Update Personal Data
+if (isset($_POST['updatedetail'])) {
+  if (isset($_POST['ab-number'])) {
+    $abnumber = $_POST['ab-number'];
+  } else {
+    $abnumber = "";
+  } 
+  $title = $_POST['title'];
+  $fname = $_POST['name'];
+  $lname = $_POST['lastname'];
+  $address = htmlspecialchars($_POST['address'], ENT_QUOTES);
+  $tel = $_POST['tel'];
+  $fax = $_POST['fax'];
+  $receipt_name = htmlspecialchars($_POST['receipt_name'], ENT_QUOTES);
+  $receipt_address = htmlspecialchars($_POST['receipt_address'], ENT_QUOTES);
+  $receipt_tax = htmlspecialchars($_POST['receipt_tax'], ENT_QUOTES);
+  
+
+  $sqlupdate = "UPDATE tb_user SET title='$title', firstname='$fname', lastname='$lname', address='$address', telephone='$tel', fax='$fax', receipt_name='$receipt_name', receipt_address='$receipt_address', receipt_tax='$receipt_tax', abstract_number='$abnumber' WHERE email='" . $_SESSION['email'] . "' ";
+
+  $updatedata = $conn->query($sqlupdate);
+
+  if ($updatedata) {
+    echo '<script language="javascript">';
+    echo 'alert("Successfully Update")';
+    echo '</script>';
+    header("refresh: 1; url=profile.php");
+  } else {
+    echo '<script language="javascript">';
+    echo 'alert("Somthing Wrong!")';
+    echo '</script>';
+    header("refresh: 1; url=updatedetail.php");
   }
 }
 
