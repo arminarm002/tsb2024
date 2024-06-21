@@ -2,12 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
 
-body{
-    font-family: "Quicksand","Kanit", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
+body {
+  font-family: "Quicksand", "Kanit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
+
 .tsblogo {
   max-width: 200px;
   margin-left: 50px
@@ -18,6 +19,7 @@ body{
   font-size: 1.8rem;
   text-shadow: 2px 1px #a96fb3;
 }
+
 .foot-fontcolor {
   color: #006a71;
   text-shadow: 1px 0.5px #a96fb3;
@@ -29,7 +31,14 @@ body{
     font-size: 1.5rem;
     text-shadow: 2px 1px #a96fb3;
   }
+  .regis-th {
+    font-size: 2.2vw;
+  }
+  .regis-td {
+    font-size: 1.5vw;
+  }
 }
+
 @media (min-width: 992px) and (max-width: 1175px) {
   .nav-fontcolor {
     color: #006a71;
@@ -338,52 +347,28 @@ ul.unlist {
   display: block;
   margin: auto;
 }
-.payment-image{
+
+.payment-image {
   box-shadow: rgba(0, 0, 0, 0.50) 2px 5px 15px;
   max-width: 100%;
   margin-bottom: 20px;
 }
+
 .gray {
   color: #656565;
 }
+
 @media (max-width: 768px) {
   .resfont2 {
     font-size: 0.6rem;
   }
-  .resw-100{
+
+  .resw-100 {
     width: 100% !important;
   }
 }
 
-.btn-update{
-    --bs-btn-bg: #76effb;
-    --bs-btn-border-color: #05748d;
-    --bs-btn-hover-bg: #57b9ff;
-    --bs-btn-hover-border-color: #117ac5;
-    --bs-btn-focus-shadow-rgb: 216, 164, 6;
-    --bs-btn-active-bg: #0d445f;
-    --bs-btn-active-border-color: #00273b;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
-    position: absolute;
-    width: 50px;
-    top: 10px;
-    right: 70px;
-}
-.btn-delete{
-    --bs-btn-bg: #f33e3e;
-    --bs-btn-border-color: #830303;
-    --bs-btn-hover-color: #000;
-    --bs-btn-hover-bg: #ed6300;
-    --bs-btn-hover-border-color: #830303;
-    --bs-btn-active-bg: #ff002b;
-    --bs-btn-active-border-color: #830303;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
-    position: absolute;
-    width: 50px;
-    top: 10px;
-    right: 10px;
-}
-.btn-update-logo{
+.btn-update {
   --bs-btn-bg: #76effb;
   --bs-btn-border-color: #05748d;
   --bs-btn-hover-bg: #57b9ff;
@@ -391,9 +376,14 @@ ul.unlist {
   --bs-btn-focus-shadow-rgb: 216, 164, 6;
   --bs-btn-active-bg: #0d445f;
   --bs-btn-active-border-color: #00273b;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  position: absolute;
+  width: 50px;
+  top: 10px;
+  right: 70px;
 }
-.btn-delete-logo{
+
+.btn-delete {
   --bs-btn-bg: #f33e3e;
   --bs-btn-border-color: #830303;
   --bs-btn-hover-color: #000;
@@ -401,52 +391,108 @@ ul.unlist {
   --bs-btn-hover-border-color: #830303;
   --bs-btn-active-bg: #ff002b;
   --bs-btn-active-border-color: #830303;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  position: absolute;
+  width: 50px;
+  top: 10px;
+  right: 10px;
 }
-.btn-download{
+
+.btn-update-logo {
+  --bs-btn-bg: #76effb;
+  --bs-btn-border-color: #05748d;
+  --bs-btn-hover-bg: #57b9ff;
+  --bs-btn-hover-border-color: #117ac5;
+  --bs-btn-focus-shadow-rgb: 216, 164, 6;
+  --bs-btn-active-bg: #0d445f;
+  --bs-btn-active-border-color: #00273b;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-delete-logo {
+  --bs-btn-bg: #f33e3e;
+  --bs-btn-border-color: #830303;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #ed6300;
+  --bs-btn-hover-border-color: #830303;
+  --bs-btn-active-bg: #ff002b;
+  --bs-btn-active-border-color: #830303;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-download {
   color: white;
-  --bs-btn-bg: #6da729 ;
+  --bs-btn-bg: #6da729;
   --bs-btn-border-color: #004f0a;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #004f0a;
-  --bs-btn-hover-border-color: #6da729 ;
+  --bs-btn-hover-border-color: #6da729;
   --bs-btn-active-bg: #83f892;
   --bs-btn-active-border-color: #004f0a;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 5px 2px 2px 2px;
 }
+
 .redunderline {
   text-decoration: underline;
   text-decoration-color: red;
 }
+
 .redmidline {
   text-decoration: line-through;
   text-decoration-color: red;
 }
-.red{
-  color:red;
+
+.red {
+  color: red;
 }
+
 .messenger {
   position: fixed;
   right: 0;
   bottom: 0;
   padding: 10px;
   z-index: 2;
-  width:100px
+  width: 100px
 }
-.drop-area{
-  width:100px; height:25px;
-  border: 1px solid #999; text-align: center;
-  padding:10px; cursor:pointer;
+
+.drop-area {
+  width: 100px;
+  height: 25px;
+  border: 1px solid #999;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
 }
-#thumbnail,div.removepic{
-    display: flex;
-    flex-wrap: wrap;
+
+#thumbnail,
+div.removepic {
+  display: flex;
+  flex-wrap: wrap;
 }
-#thumbnail img{width:100px;height:100px;margin:5px;}
-#thumbnail div.removepic:hover{
-    display:inline-block;
-    border:1px dashed red;
+
+#thumbnail img {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
 }
-canvas{border:1px solid red;}
+
+#thumbnail div.removepic:hover {
+  display: inline-block;
+  border: 1px dashed red;
+}
+
+canvas {
+  border: 1px solid red;
+}
+
+@media screen and (min-width: 1351px) {
+  .regis-th {
+    font-size: 1.5vw;
+  }
+  
+  .regis-td {
+    font-size: 1vw;
+  }
+}

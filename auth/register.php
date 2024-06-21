@@ -23,9 +23,10 @@ if (isset($_SESSION['role'])) {
     <?php
     include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
     ?>
-    <a href="https://www.messenger.com/t/279532238569467/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0" target="_blank">
-    <img src="/../img/messenger.png" class="img-fluid messenger">
-  </a>
+    <a href="https://www.messenger.com/t/279532238569467/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0"
+      target="_blank">
+      <img src="/../img/messenger.png" class="img-fluid messenger">
+    </a>
     <div class="container mt-5">
       <div class="card" style="background-color: #006a71;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
         <div class="card-header text-white text-center" style="background-color:#ff5722">
@@ -171,28 +172,28 @@ if (isset($_SESSION['role'])) {
               </div>
 
               <!-- Fee input -->
-              <div class="form-outline mb-2 mt-5">
-                <table class="table table-active table-bordered border-danger" style="--bs-table-bg: #bfebb3;">
+              <div class="form-outline mb-2 mt-5 table-responsive">
+                <table class="table table-active table-bordered border-danger" style="--bs-table-bg: #bfebb3;    font-size: 1vw;">
                   <thead style="text-align: center;">
                     <tr>
-                      <td colspan="4">
-                        <h4>REGISTRATION FEE FOR SPC2024</h4>
+                      <td colspan="4" class="regis-th">
+                        <p style="margin:0px;">REGISTRATION FEE FOR TSB2024</p>
                       </td>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>
-                        <h6>Registration types</h6>
+                      <td class="regis-th">
+                        <p>Registration types</p>
                       </td>
-                      <td>
-                        <h6>Early bird Registration 15 May - 15 August 2024</h6>
+                      <td class="regis-th">
+                        <p>Early bird Registration 15 May - 15 August 2024</p>
                       </td>
-                      <td>
-                        <h6>Regular Registration 16 August - 16 October 2024</h6>
+                      <td class="regis-th">
+                        <p>Regular Registration 16 August - 16 October 2024</p>
                       </td>
-                      <td>
-                        <h6>Late Registration 17 October - 1 November 2024</h6>
+                      <td class="regis-th">
+                        <p>Late Registration 17 October - 1 November 2024</p>
                       </td>
                     </tr>
                     <?php
@@ -225,10 +226,10 @@ if (isset($_SESSION['role'])) {
                     foreach ($sqlpay as $row) {
                       ?>
                       <tr>
-                        <td>
+                        <td class="regis-td">
                           <?php echo $row['pay_name']; ?>
                         </td>
-                        <td>
+                        <td  class="regis-td">
                           <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['id']; ?>"
                             onchange="openamount(this.value)" required <?php echo $data1; ?>>
                           <!-- <input type="text" id="b_pay" value="<?php echo $row['a_price']; ?>"> -->
@@ -236,14 +237,14 @@ if (isset($_SESSION['role'])) {
                             <?php echo $row['a_amount']; ?>
                           </label>
                         </td>
-                        <td>
+                        <td  class="regis-td">
                           <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['id']; ?>" <?php echo $data2; ?> onchange="openamount(this.value)">
                           <!-- <input type="text" id="a_pay" value="<?php echo $row['b_price']; ?>"> -->
                           <label class="form-check-label" for="fee">
                             <?php echo $row['b_amount']; ?>
                           </label>
                         </td>
-                        <td>
+                        <td  class="regis-td">
                           <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['id']; ?>" <?php echo $data3; ?> onchange="openamount(this.value)">
                           <!-- <input type="text" id="a_pay" value="<?php echo $row['c_price']; ?>"> -->
                           <label class="form-check-label" for="fee">
@@ -257,7 +258,7 @@ if (isset($_SESSION['role'])) {
 
                     <tr></tr>
                     <tr id="myDiv" style="display:none;">
-                      <td colspan="4">
+                      <td  class="regis-td" colspan="4">
                         <span class="centerer">
                           จำนวน Abstract ที่ต้องการส่ง
                           <input type="number" id="amount" name="amount" value="1"> เรื่อง
@@ -265,26 +266,26 @@ if (isset($_SESSION['role'])) {
                       </td>
                     </tr>
                     <tr>
-                      <td colspan="4">
+                      <td  class="regis-td" colspan="4">
                         <span class="centerer">จำนวนเงิน รวมทั้งสิ้น <div id="result"></div> &nbsp;บาท</span>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-
-                <h5 style="padding: 25px;background-color:rgb(0 74 85)">
-                  Payment
-                  <br>
-                  <br>Bank's full name : Krungthai Bank
-                  <br>Bank's Swift Code : KRTHTHBK
-                  <br>Bank account no : 693-0-43369-1
-                  <br>Account name : School of Science KMITL
-                  <br>
-                  <br>บัญชี ธนาคารกรุงไทย สาขาเทคโนโลยีพระจอมเกล้าฯลาดกระบัง
-                  <br>ชื่อบัญชี คณะวิทยาศาสตร์ สจล.
-                  <br>เลขที่บัญชี 693-0-43369-1
-                </h5>
               </div>
+
+              <h5 style="padding: 25px;background-color:rgb(0 74 85)">
+                Payment
+                <br>
+                <br>Bank's full name : Krungthai Bank
+                <br>Bank's Swift Code : KRTHTHBK
+                <br>Bank account no : 693-0-43369-1
+                <br>Account name : School of Science KMITL
+                <br>
+                <br>บัญชี ธนาคารกรุงไทย สาขาเทคโนโลยีพระจอมเกล้าฯลาดกระบัง
+                <br>ชื่อบัญชี คณะวิทยาศาสตร์ สจล.
+                <br>เลขที่บัญชี 693-0-43369-1
+              </h5>
 
               <!-- <p>* เลือกชำระแบบ Non Member of Thai Physics Society รับสิทธิพิเศษ ได้เป็นสมาชิก 1 ปี</p> -->
               <p>** นักเรียน/นักศึกษา ต้องแนบสำเนาบัตรประจำตัวนักเรียน/นักศึกษา</p>
@@ -302,7 +303,7 @@ if (isset($_SESSION['role'])) {
                 echo "หมดเวลาลงทะเบียน";
               } else { ?>
                 <div class="text-end">
-                  <button type="submit" class="btn btn-download mt-2" name="register" style="width: 20rem;
+                  <button type="submit" class="btn btn-download mt-2" name="register" style="width: 64vw;
     font-size: 25px;">Submit</button>
                 </div>
               <?php } ?>
