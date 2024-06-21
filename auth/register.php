@@ -303,8 +303,7 @@ if (isset($_SESSION['role'])) {
                 echo "หมดเวลาลงทะเบียน";
               } else { ?>
                 <div class="text-end">
-                  <button type="submit" class="btn btn-download mt-2" name="register" style="width: 64vw;
-    font-size: 25px;">Submit</button>
+                  <button type="submit" class="btn btn-download mt-2 but-sub" name="register">Submit</button>
                 </div>
               <?php } ?>
             </form>

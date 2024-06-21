@@ -37,6 +37,10 @@ body {
   .regis-td {
     font-size: 1.5vw;
   }
+  .but-sub{
+    width: 64vw;
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1175px) {
@@ -494,5 +498,9 @@ canvas {
   
   .regis-td {
     font-size: 1vw;
+  }
+  .but-sub{
+    width: 25vw;
+    font-size: 25px;
   }
 }
