@@ -38,66 +38,66 @@ if (isset($_POST['register'])) {
   $numrand = sprintf("%06d", rand(0, 999999));
   if ($fee == "4" || $fee == "5") {
     $amount = 1;
-  } 
+  }
 
   $date_end = $conn->query("SELECT * FROM tb_setdate");
-    $datenows = date("Y-m-d");
+  $datenows = date("Y-m-d");
 
-    if ($datenows <= "2024-08-16") {      
+  if ($datenows <= "2024-08-16") {
 
-      if ($fee == "1") {
-        $total = $amount * 4500;
+    if ($fee == "1") {
+      $total = $amount * 4500;
 
-      } else if ($fee == "2") {
-        $total = $amount * 5000;
+    } else if ($fee == "2") {
+      $total = $amount * 5000;
 
-      } else if ($fee == "3") {
-        $total = $amount * 3500;
+    } else if ($fee == "3") {
+      $total = $amount * 3500;
 
-      } else if ($fee == "4") {
-        $total = $amount * 3500;
+    } else if ($fee == "4") {
+      $total = $amount * 3500;
 
-      } else if ($fee == "5") {
-        $total = $amount * 1500;
-      }
-
-    } else if ($datenows <= "2024-10-17") {      
-
-      if ($fee == "1") {
-        $total = $amount * 5000;
-
-      } else if ($fee == "2") {
-        $total = $amount * 6000;
-
-      } else if ($fee == "3") {
-        $total = $amount * 4000;
-
-      } else if ($fee == "4") {
-        $total = $amount * 3500;
-
-      } else if ($fee == "5") {
-        $total = $amount * 1500;
-      }
-
-    } else if ($datenows <= "2024-11-02") {      
-
-      if ($fee == "1") {
-        $total = $amount * 5500;
-
-      } else if ($fee == "2") {
-        $total = $amount * 7000;
-
-      } else if ($fee == "3") {
-        $total = $amount * 4500;
-
-      } else if ($fee == "4") {
-        $total = $amount * 3500;
-
-      } else if ($fee == "5") {
-        $total = $amount * 1500;
-      }
-
+    } else if ($fee == "5") {
+      $total = $amount * 1500;
     }
+
+  } else if ($datenows <= "2024-10-17") {
+
+    if ($fee == "1") {
+      $total = $amount * 5000;
+
+    } else if ($fee == "2") {
+      $total = $amount * 6000;
+
+    } else if ($fee == "3") {
+      $total = $amount * 4000;
+
+    } else if ($fee == "4") {
+      $total = $amount * 3500;
+
+    } else if ($fee == "5") {
+      $total = $amount * 1500;
+    }
+
+  } else if ($datenows <= "2024-11-02") {
+
+    if ($fee == "1") {
+      $total = $amount * 5500;
+
+    } else if ($fee == "2") {
+      $total = $amount * 7000;
+
+    } else if ($fee == "3") {
+      $total = $amount * 4500;
+
+    } else if ($fee == "4") {
+      $total = $amount * 3500;
+
+    } else if ($fee == "5") {
+      $total = $amount * 1500;
+    }
+
+  }
   $sql = $conn->query("SELECT * FROM tb_user WHERE email='" . $email . "' ");
 
   if ($sql->num_rows > 0) {
@@ -110,15 +110,21 @@ if (isset($_POST['register'])) {
 
     if ($sql2) {
       $slip = $conn->query("INSERT INTO tb_confirm (slip_date, slip_name, email) VALUES ('$date', '$numrand', '$email')");
-      echo '<script language="javascript">';
-      echo 'alert("Successfully registrater, Please Log in to get KEY for Attach confirm 
-transfer file")';
-      echo '</script>';
-      header("refresh: 1; url=login.php");
+      if ($slip) {
+        echo '<script language="javascript">';
+        echo 'alert("Successfully registrater, Please Log in to get KEY for Attach confirm transfer file")';
+        echo '</script>';
+        header("refresh: 1; url=login.php");
+      } else {
+        echo '<script language="javascript">';
+        echo 'alert("Somthing Wrong about KEY")';
+        echo '</script>';
+        header("refresh: 1; url=register.php");
+      }
 
     } else {
       echo '<script language="javascript">';
-      echo 'alert("Somthing Wrong abouy KEY")';
+      echo 'alert("Somthing Wrong abouy information")';
       echo '</script>';
       header("refresh: 1; url=register.php");
     }
@@ -191,7 +197,7 @@ if (isset($_POST['updatedetail'])) {
     $abnumber = $_POST['ab-number'];
   } else {
     $abnumber = "";
-  } 
+  }
   $title = $_POST['title'];
   $fname = $_POST['name'];
   $lname = $_POST['lastname'];
@@ -201,7 +207,7 @@ if (isset($_POST['updatedetail'])) {
   $receipt_name = htmlspecialchars($_POST['receipt_name'], ENT_QUOTES);
   $receipt_address = htmlspecialchars($_POST['receipt_address'], ENT_QUOTES);
   $receipt_tax = htmlspecialchars($_POST['receipt_tax'], ENT_QUOTES);
-  
+
 
   $sqlupdate = "UPDATE tb_user SET title='$title', firstname='$fname', lastname='$lname', address='$address', telephone='$tel', fax='$fax', receipt_name='$receipt_name', receipt_address='$receipt_address', receipt_tax='$receipt_tax', abstract_number='$abnumber' WHERE email='" . $_SESSION['email'] . "' ";
 
