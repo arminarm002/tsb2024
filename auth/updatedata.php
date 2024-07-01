@@ -107,22 +107,6 @@ if ($_SESSION['role'] && $_SESSION['role'] == "user") {
                           style="border-color:#6da729;" value="<?php echo $row['abstract_number']; ?>" />
                       </div>
 
-                      <!-- Address Receipt input -->
-                      <div class="form-outline">
-                        <label class="form-label mt-4" for="namepaymane">Name for payment receipt
-                          (ชื่อสำหรับออกใบเสร็จ) :</label>
-                        <input type="text" id="namepaymane" name="receipt_name" class="form-control"
-                          value="<?php echo $row['receipt_name']; ?>" required style="border-color:#6da729;" />
-                        <label class="form-label mt-4">Address for payment receipt (ที่อยู่สำหรับออกใบเสร็จ)
-                          :</label>
-                        <textarea rows="3" cols="" name="receipt_address" class="form-control" required
-                          style="border-color:#6da729;"><?php echo $row['receipt_address']; ?></textarea>
-                        <label class="form-label mt-4" for="tax">Taxpayer Identification No.
-                          (เลขที่ผู้เสียภาษี) :</label>
-                        <input type="text" id="tax" name="receipt_tax" class="form-control"
-                          value="<?php echo $row['receipt_tax']; ?>" required style="border-color:#6da729;" />
-                      </div>
-
                       <!-- Submit button -->
                       <button type="submit" class="btn btn-l btn-block text-white mb-2 mt-3"
                         name="updatedetail">Submit</button>

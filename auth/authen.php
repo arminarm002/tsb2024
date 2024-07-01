@@ -204,12 +204,8 @@ if (isset($_POST['updatedetail'])) {
   $address = htmlspecialchars($_POST['address'], ENT_QUOTES);
   $tel = $_POST['tel'];
   $fax = $_POST['fax'];
-  $receipt_name = htmlspecialchars($_POST['receipt_name'], ENT_QUOTES);
-  $receipt_address = htmlspecialchars($_POST['receipt_address'], ENT_QUOTES);
-  $receipt_tax = htmlspecialchars($_POST['receipt_tax'], ENT_QUOTES);
 
-
-  $sqlupdate = "UPDATE tb_user SET title='$title', firstname='$fname', lastname='$lname', address='$address', telephone='$tel', fax='$fax', receipt_name='$receipt_name', receipt_address='$receipt_address', receipt_tax='$receipt_tax', abstract_number='$abnumber' WHERE email='" . $_SESSION['email'] . "' ";
+  $sqlupdate = "UPDATE tb_user SET title='$title', firstname='$fname', lastname='$lname', address='$address', telephone='$tel', fax='$fax', abstract_number='$abnumber' WHERE email='" . $_SESSION['email'] . "' ";
 
   $updatedata = $conn->query($sqlupdate);
 

@@ -303,7 +303,7 @@ if (isset($_SESSION['role'])) {
                 echo "หมดเวลาลงทะเบียน";
               } else { ?>
                 <div class="text-end">
-                  <button type="submit" class="btn btn-download mt-2 but-sub" name="register">Submit</button>
+                <button class="btn btn-download mt-2 but-sub" type="submit" name="register" onclick="return confirm('Please check your information before registering. The name, address, and taxpayer identification number used for issuing receipts cannot be edited. (กรุณาตรวจสอบข้อมูลก่อนลงทะเบียน. ชื่อ ที่อยู่และเลขผู้เสียภาษีสำหรับออกใบเสร็จไม่สามารถแก้ไขได้)')">Submit</button>
                 </div>
               <?php } ?>
             </form>
