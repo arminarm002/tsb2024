@@ -25,12 +25,10 @@ if (isset($_POST['register'])) {
   $typeu = $_POST['type'];
   $receipt_name = htmlspecialchars($_POST['receipt-name'], ENT_QUOTES);
   $receipt_address = htmlspecialchars($_POST['receipt-address'], ENT_QUOTES);
-  $receipt_tax = $_POST['receipt-tax'];
+  $receipt_tax = htmlspecialchars($_POST['receipt-tax'], ENT_QUOTES);
   $fee = $_POST['fee'];
   $amount = $_POST['amount'];
-  $fileupload = (isset($_POST['fileupload']) ? $_POST['fileupload'] : '');
   $role = "user";
-  $profile = "user3528.jpg";
   $password = password_hash($pass, PASSWORD_DEFAULT);
   //ฟังก์ชั่นวันที่
   date_default_timezone_set('Asia/Bangkok');
