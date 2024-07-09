@@ -46,7 +46,7 @@ $id = $_GET['userid'];
             
             
             if ($row['pay_id'] == 1 || $row['pay_id'] == 2 || $row['pay_id'] == 3) {
-              echo "ส่ง Abstract จำนวน " . $row['amount'] . " เรื่อง<br>รวมเป็นเงิน " . $row['total_price'] . " บาท<br>";
+              echo "ส่ง Abstract จำนวน " . $row['amount'] . " เรื่อง<br>Abstract Number : ".$row['abstract_number']."<br>รวมเป็นเงิน " . $row['total_price'] . " บาท<br>";
             } else {
               echo "ราคา " . $row['total_price'] . " บาท<br>";
             } ?>
