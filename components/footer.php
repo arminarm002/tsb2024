@@ -6,7 +6,7 @@
         <h4>Contact Us</h4>
         <h6>Department of Biology, School of Science, King Mongkut’s Institute of
           Technology Ladkrabang Chalongkrung Rd. <br>Ladkrabang District Bangkok 10520<br>
-          Telephone : 02-329-8400 ext. 8411<br>Email : tsb2024@kmitl.ac.th<br>Facebook :
+          Telephone : 02-329-8000 ext. 6225<br>Email : tsb2024@kmitl.ac.th<br>Facebook :
           <a href="" target="_blank">TSB2024</a>
           <br>
         </h6>

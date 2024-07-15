@@ -24,7 +24,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
   <h1 class="card-title centerer mb-3">Contact Us</h1>
     <div class="row imageback" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
       <div class="col-12" style="margin: 3% 0px;">
-        <p class="resfont">Telephone : 02-329-8400 ext. 8411<br>Email : tsb2024@kmitl.ac.th <br>Facebook :
+        <p class="resfont">Telephone : 02-329-8000 ext. 6225<br>Email : tsb2024@kmitl.ac.th <br>Facebook :
           <a href="https://www.facebook.com/profile.php?id=61557223666940" target="_blank">TSB 2024</a>
           <br>Department of Biology, School of Science, King Mongkut’s Institute of Technology Ladkrabang, Bangkok, 10520, Thailand
         </p>
