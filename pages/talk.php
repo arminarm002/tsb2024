@@ -39,6 +39,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
               <?php echo $sk['sk_description']; ?>
             </p>
 
+            <?php if (isset($_SESSION['role']) == "superadmin") { ?>
             <div style="display: -webkit-inline-box;">
               <form action="/auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 20px;">
                 <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk['id']; ?>">
@@ -57,6 +58,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
                 </button>
               </form>
             </div>
+            <?php } ?>
 
           </div>
 
@@ -83,6 +85,8 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
                 <span style="font-size: 0.8rem;"><?php echo $sk2['sk_position']; ?>
                 </span><br>Title : <?php echo $sk2['sk_title']; ?>
               </h6>
+
+              <?php if (isset($_SESSION['role']) == "superadmin") { ?>
               <div style="display: -webkit-inline-box;">
                 <form action="/auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 20px;">
                   <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk2['id']; ?>">
@@ -101,6 +105,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
                   </button>
                 </form>
               </div>
+              <?php } ?>
           </div>
 
         <?php }
@@ -133,6 +138,8 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
                     <span style="font-size: 0.8rem;"><?php echo $sk3['sk_position']; ?>
                     </span><br>Title : <?php echo $sk3['sk_title']; ?>
                   </h6>
+
+                  <?php if (isset($_SESSION['role']) == "superadmin") { ?>
                   <div style="display: -webkit-inline-box;">
                     <form action="/auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 10px;">
                       <input type="text" name="id" class="form-control" style="display:none;"
@@ -153,6 +160,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
                       </button>
                     </form>
                   </div>
+                  <?php } ?>
                 </div>
               <?php } ?>
             </div>
