@@ -21,10 +21,10 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
     <img src="/../img/messenger.png" class="img-fluid messenger">
   </a>
   <div class="container">
-    <h1 class="card-title centerer mt-3">Plenary Talks & Speakers</h1>
+    <h1 class="card-title centerer mt-3">Speakers</h1>
     <h4 class="card-title centerer mt-3" style="padding-bottom: 25px;">****************</h4>
     <!-- *** Plenary Talks *** -->
-    <h1 style="text-align: center;">Plenary Talks</h1>
+    <h2 style="text-align: center;">Plenary Speakers</h2>
     <div class="row">
       <?php $speaker = $conn->query("SELECT * FROM tb_speaker WHERE sk_type='Plenary Talks'");
       if ($speaker->num_rows > 0) {
@@ -69,8 +69,8 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
     </div>
 
     <hr>
-    <!-- *** Keynote Lectures *** -->
-    <h1 style="text-align: center;">Keynote Lectures</h1>
+    <!-- *** Keynote Speakers *** -->
+    <h2 style="text-align: center;">Keynote Speakers</h2>
     <div class="row">
 
       <?php $speaker2 = $conn->query("SELECT * FROM tb_speaker INNER JOIN tb_symposium ON tb_speaker.sk_symposium = tb_symposium.symposium_id WHERE sk_type='Keynote Lectures'");
@@ -117,7 +117,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
     <hr>
 
     <!-- *** Invited Speakers *** -->
-    <h1 style="text-align: center;">Invited Speakers</h1>
+    <h2 style="text-align: center;">Invited Speakers</h2>
     <?php $speaker3 = $conn->query("SELECT * FROM tb_speaker WHERE sk_type='Invited Speakers'");
     if ($speaker3->num_rows > 0) {
       $symposium = $conn->query("SELECT * FROM tb_symposium");
