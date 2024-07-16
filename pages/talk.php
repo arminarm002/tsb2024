@@ -31,7 +31,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
         foreach ($speaker as $sk) { ?>
 
           <div class="col-lg-12 col-md-6 col-sm-12" style="text-align: center;">
-            <img src="../file/upload/speaker/<?php echo $sk['sk_img']; ?>" class="w-25">
+            <img src="../file/upload/speaker/<?php echo $sk['sk_img']; ?>" class="w-25" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;border-radius: 25px;">
             <h2 style="color:#df6a00"><?php echo $sk['sk_name']; ?></h2>
             <h5 style="color:#df6a00"><?php echo $sk['sk_position']; ?></h5>
             <h5 style="color:#df6a00"><b>Title : </b> <?php echo $sk['sk_title']; ?></h5>

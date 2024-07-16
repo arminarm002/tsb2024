@@ -23,11 +23,15 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
   </a>
   <div class="container">
     <h1 class="card-title centerer mt-3">Abstract Submission</h1>
+    <h4 class="centerer mt-3">
+      <span style="padding-top: 7px;">Submit your abstract using Microsoft CMT for TSB2024 conference >>> </span>&nbsp;
+      <a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FTSB2024" class="btn btn-download"
+        target="_blank">Click</a>
+    </h4>
     <div class="row" style="margin: 15px auto;">
       <div class="col-12">
         <div class="card border-0" style="color: #494949;">
-          <h5>Abstract submission open : 15 May - 31 July 2024 >>> <a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FTSB2024"
-              class="btn btn-download" target="_blank">Click to Submit abstract</a>
+          <h5>Abstract submission open : 15 May - <span class="redmidline" style="color:#f78787">15 July 2024</span><span class="red"> 31 July 2024</span>
             <br>Abstract submission guideline and abstract template for TSB 2024
             <a href="https://drive.google.com/drive/folders/1zEyLq_Od_VRhBVpH18UmYWcYERRjaBpk?usp=sharing"
               class="btn btn-download" target="_blank">Download
