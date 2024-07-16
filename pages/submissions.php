@@ -17,7 +17,8 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
   <?php
   include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
-<a href="https://www.messenger.com/t/279532238569467/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0" target="_blank">
+  <a href="https://www.messenger.com/t/279532238569467/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0"
+    target="_blank">
     <img src="/../img/messenger.png" class="img-fluid messenger">
   </a>
   <div class="container">
@@ -25,13 +26,15 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
     <div class="row" style="margin: 15px auto;">
       <div class="col-12">
         <div class="card border-0" style="color: #494949;">
-          <h5>Abstract submission open : 15 May - 15 July 2024
+          <h5>Abstract submission open : 15 May - 31 July 2024 >>> <a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FTSB2024"
+              class="btn btn-download" target="_blank">Click to Submit abstract</a>
             <br>Abstract submission guideline and abstract template for TSB 2024
             <a href="https://drive.google.com/drive/folders/1zEyLq_Od_VRhBVpH18UmYWcYERRjaBpk?usp=sharing"
               class="btn btn-download" target="_blank">Download
-              File</a><br>Please do not modify the format.<br></h5>
-              <h5>Topics : </h5>
-          
+              File</a><br>Please do not modify the format.<br>
+          </h5>
+          <h5>Topics : </h5>
+
           <p>
             A) Molecular and Medical Biotechnology<br>
             B) Industrial and Environmental Biotechnology<br>
@@ -64,9 +67,14 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
             <h5>Please do not modify the format.</h5>
             <h5>Full Paper's Important Details</h5>
             <ul class="unlist">
-              <li>Each registered participant is not allowed to submit more than one manuscript for publication consideration.</li>
-              <li>Please choose only one type of publication for your manuscript. A manuscript submitted for publication in the electronic conference proceeding book is not allowed to be submitted to the journal of Current Applied Science and Technology or the Suan Sunandha Science and Technology Journal or the Thai Journal of Nanoscience and Nanotechnology and vice versa.</li>
-              <li>Manuscripts rejected from publications in the journals will not be re-considered for publication in the electronic conference proceeding book.
+              <li>Each registered participant is not allowed to submit more than one manuscript for publication
+                consideration.</li>
+              <li>Please choose only one type of publication for your manuscript. A manuscript submitted for publication
+                in the electronic conference proceeding book is not allowed to be submitted to the journal of Current
+                Applied Science and Technology or the Suan Sunandha Science and Technology Journal or the Thai Journal
+                of Nanoscience and Nanotechnology and vice versa.</li>
+              <li>Manuscripts rejected from publications in the journals will not be re-considered for publication in
+                the electronic conference proceeding book.
               </li>
             </ul>
             <h5>TSB2024 Publications</h5>
@@ -110,11 +118,12 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
         </div>
       </div>
     </div>
+  </div>
 
-    <?php
-    include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
-    include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
-    ?>
+  <?php
+  include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
+  ?>
 </body>
 
 </html>
