@@ -47,7 +47,7 @@ session_start();
         </p>
       </div>
     </div>
-    <h2>สามารถรับใบเสร็จงาน TSB2024 ได้ในวันที่ 14 ถึง 16 พฤศจิกายน 2567 (The TSB2024 receipt can be obtained from November 14 to 16, 2024)</h2>
+    <h4 class="red">&nbsp;&nbsp;&nbsp;&nbsp;*สามารถรับใบเสร็จงาน TSB2024 ได้ในวันที่ 14 ถึง 16 พฤศจิกายน 2567<br>&nbsp;&nbsp;&nbsp;&nbsp;*The TSB2024 receipt can be obtained from November 14 to 16, 2024</h4>
 
     <h1 class="centerer mt-3">Payment</h1>
     <div class="centerer mt-3">
