@@ -5,7 +5,7 @@
     if (blinkingText1.classList.contains('blinking')) {
       blinkingText1.classList.remove('blinking');
     } else {
-      blinkingText.classList.add('blinking');
+      blinkingText1.classList.add('blinking');
     }
 
     var blinkingText2 = document.getElementById('blinkingText2');

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
+include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +15,10 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 
 <body>
   <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
-  <a href="https://www.messenger.com/t/279532238569467/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0" target="_blank">
+  <a href="https://www.messenger.com/t/279532238569467/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0"
+    target="_blank">
     <img src="/../img/messenger.png" class="img-fluid messenger">
   </a>
   <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel"
@@ -106,7 +107,13 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
       masterpiece.<br><br>Krungsri River offers a sense that, even for a day, you are transported to an inspirational
       sanctuary of style and comfort.<br>
     </p>
-    
+    <div class="booksection">
+      <h2>Book a hotel here</h2>
+      <a href="https://drive.google.com/file/d/1GsLjvc9hx8-5tMTFCHgsxltjnFLowab3/view?usp=sharing"
+        class="btn btn-download" target="_blank">Booking (TH)</a>
+      <a href="https://drive.google.com/file/d/19NQpt5GJPzb_-FyIfMQpU9StRCOuzN5Q/view?usp=sharing"
+        class="btn btn-download" target="_blank">Booking (EN)</a>
+    </div>
     <h1 class="card-title centerer mt-3">Krungsri River Hotel</h1>
     <div class="ratio ratio-21x9 mt-3">
       <iframe class="rounded border border-warning border-2"
@@ -134,13 +141,13 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
         <p><i class="bi bi-7-square"></i> 7 Eleven 260 m</p>
       </div>
     </div>
-  
+
   </div>
 
   <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
-  
+  include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+  include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
+
   ?>
 
 </body>
