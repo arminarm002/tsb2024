@@ -378,8 +378,6 @@ ul.unlist {
     margin: 2rem 2rem;
     padding: 1rem;
     text-align: center;
-    border-style: solid;
-    border-color: #ff7301;
   }
 }
 @media (min-width: 769px) {
@@ -388,8 +386,6 @@ ul.unlist {
     margin: 2rem 5rem;
     padding: 1.5rem;
     text-align: center;
-    border-style: solid;
-    border-color: #ff7301;
   }
 }
 
@@ -529,7 +525,5 @@ canvas {
     margin: 2rem 20rem;
     padding: 1.5rem;
     text-align: center;
-    border-style: solid;
-    border-color: #ff7301;
   }
 }

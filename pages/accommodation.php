@@ -107,13 +107,16 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
       masterpiece.<br><br>Krungsri River offers a sense that, even for a day, you are transported to an inspirational
       sanctuary of style and comfort.<br>
     </p>
-    <div class="booksection">
-      <h2>Book a hotel here</h2>
+
+    <div class="booksection rainbow">
+      <h2 style="margin-top: 2.5rem;">Book a hotel here</h2>
+      <div id="blinkingBorder" style="background-color:red;"></div>
       <a href="https://drive.google.com/file/d/1GsLjvc9hx8-5tMTFCHgsxltjnFLowab3/view?usp=sharing"
         class="btn btn-download" target="_blank">Booking (TH)</a>
       <a href="https://drive.google.com/file/d/19NQpt5GJPzb_-FyIfMQpU9StRCOuzN5Q/view?usp=sharing"
         class="btn btn-download" target="_blank">Booking (EN)</a>
     </div>
+    
     <h1 class="card-title centerer mt-3">Krungsri River Hotel</h1>
     <div class="ratio ratio-21x9 mt-3">
       <iframe class="rounded border border-warning border-2"

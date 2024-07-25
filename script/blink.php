@@ -21,6 +21,13 @@
     } else {
       blinkingText3.classList.add('blinking');
     }
+
+    var blinkingBorder = document.getElementById('blinkingBorder');
+    if (blinkingBorder.classList.contains('blinking')) {
+      blinkingBorder.classList.remove('blinking');
+    } else {
+      blinkingBorder.classList.add('blinking');
+    }
   }
 
   // เรียกใช้ฟังก์ชัน toggleBlinking() เมื่อเว็บโหลดเสร็จ
