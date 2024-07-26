@@ -126,10 +126,10 @@ if (isset($_SESSION['role'])) {
                   <?php
                   $sqlm = $conn->query("SELECT * FROM tb_meal");
                   foreach ($sqlm as $rowm) {
-                    echo '<input class="form-check-input" type="checkbox" name="meal" value="' . htmlspecialchars($rowm['meal_name']) . '"> ' . $rowm['meal_name'] . '<br>';
+                    echo '<input class="form-check-input" type="checkbox" name="meal[]" value="' . htmlspecialchars($rowm['meal_name']) . '"> ' . $rowm['meal_name'] . '<br>';
                     ?>
                   <?php } ?>
-                  <input id="allergy" class="form-check-input" type="checkbox" name="meal" onclick="showdisplay()">Food allergy and intolerance
+                  <input id="allergy" class="form-check-input" type="checkbox" onclick="showdisplay()">Food allergy and intolerance
                   <input type="text" id="food" name="food" class="form-control" style="display:none;">
                 </div>
 

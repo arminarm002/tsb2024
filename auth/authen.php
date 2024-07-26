@@ -4,6 +4,7 @@ session_start();
 
 //Register
 if (isset($_POST['register'])) {
+
   if (isset($_POST['ab-number'])) {
     $abnumber = $_POST['ab-number'];
   } else {
@@ -20,7 +21,17 @@ if (isset($_POST['register'])) {
   $country = $_POST['country'];
   $tel = $_POST['tel'];
   $fax = $_POST['fax'];
-  $extrameal = $_POST['meal'];
+  $extrameal = "";
+  $i = 0;
+  $j = "";
+  foreach($_POST['meal'] as $meal){
+    if($i>0){
+      $j = ",";
+    }
+    $extrameal .= $j ." ". $meal ;
+    $i++;
+  } 
+  // echo $extrameal;
   $food = $_POST['food'];
   $typeu = $_POST['type'];
   $receipt_name = htmlspecialchars($_POST['receipt-name'], ENT_QUOTES);
@@ -104,7 +115,7 @@ if (isset($_POST['register'])) {
     echo '</script>';
     header("refresh: 1; url=register.php");
   } else {
-    $sql2 = $conn->query("INSERT INTO tb_user (email, password, title, firstname, lastname, company, career, address, country, telephone, fax, extrameal, food, type, receipt_name, receipt_address, receipt_tax, pay_id, amount, total_price, role, profile, approve, abstract_number) VALUES ('$email', '$password', '$title', '$fname', '$lname', '$company', '$career', '$address', '$country', '$tel', '$fax', '$extrameal', '$food', '$typeu', '$receipt_name','$receipt_address','$receipt_tax', '$fee', '$amount', '$total', '$role', '$profile', 'wait', '$abnumber')");
+    $sql2 = $conn->query("INSERT INTO tb_user (email, password, title, firstname, lastname, company, career, address, country, telephone, fax, extrameal, food, type, receipt_name, receipt_address, receipt_tax, pay_id, amount, total_price, role, approve, abstract_number) VALUES ('$email', '$password', '$title', '$fname', '$lname', '$company', '$career', '$address', '$country', '$tel', '$fax', '$extrameal', '$food', '$typeu', '$receipt_name','$receipt_address','$receipt_tax', '$fee', '$amount', '$total', '$role', 'wait', '$abnumber')");
 
     if ($sql2) {
       $slip = $conn->query("INSERT INTO tb_confirm (slip_date, slip_name, email) VALUES ('$date', '$numrand', '$email')");
