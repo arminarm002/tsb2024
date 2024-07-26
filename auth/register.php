@@ -126,18 +126,11 @@ if (isset($_SESSION['role'])) {
                   <?php
                   $sqlm = $conn->query("SELECT * FROM tb_meal");
                   foreach ($sqlm as $rowm) {
-                    echo '<input class="form-check-input" type="radio" name="meal" value="' . htmlspecialchars($rowm['meal_name']) . '" required> ' . $rowm['meal_name'] . '<br>';
+                    echo '<input class="form-check-input" type="checkbox" name="meal" value="' . htmlspecialchars($rowm['meal_name']) . '"> ' . $rowm['meal_name'] . '<br>';
                     ?>
                   <?php } ?>
-                </div>
-                <div class="row" style="margin-left:2.7rem;">
-                  <div class="col-4">
-
-                    <label>Food allergy and intolerance : </label>
-                  </div>
-                  <div class="col-8">
-                    <input type="text" id="food" name="food" class="form-control" />
-                  </div>
+                  <input id="allergy" class="form-check-input" type="checkbox" name="meal" onclick="showdisplay()">Food allergy and intolerance
+                  <input type="text" id="food" name="food" class="form-control" style="display:none;">
                 </div>
 
               </div>
@@ -173,7 +166,8 @@ if (isset($_SESSION['role'])) {
 
               <!-- Fee input -->
               <div class="form-outline mb-2 mt-5 table-responsive">
-                <table class="table table-active table-bordered border-danger" style="--bs-table-bg: #bfebb3;    font-size: 1vw;">
+                <table class="table table-active table-bordered border-danger"
+                  style="--bs-table-bg: #bfebb3;    font-size: 1vw;">
                   <thead style="text-align: center;">
                     <tr>
                       <td colspan="4" class="regis-th">
@@ -229,7 +223,7 @@ if (isset($_SESSION['role'])) {
                         <td class="regis-td">
                           <?php echo $row['pay_name']; ?>
                         </td>
-                        <td  class="regis-td">
+                        <td class="regis-td">
                           <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['id']; ?>"
                             onchange="openamount(this.value)" required <?php echo $data1; ?>>
                           <!-- <input type="text" id="b_pay" value="<?php echo $row['a_price']; ?>"> -->
@@ -237,14 +231,14 @@ if (isset($_SESSION['role'])) {
                             <?php echo $row['a_amount']; ?>
                           </label>
                         </td>
-                        <td  class="regis-td">
+                        <td class="regis-td">
                           <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['id']; ?>" <?php echo $data2; ?> onchange="openamount(this.value)">
                           <!-- <input type="text" id="a_pay" value="<?php echo $row['b_price']; ?>"> -->
                           <label class="form-check-label" for="fee">
                             <?php echo $row['b_amount']; ?>
                           </label>
                         </td>
-                        <td  class="regis-td">
+                        <td class="regis-td">
                           <input class="form-check-input" type="radio" name="fee" value="<?php echo $row['id']; ?>" <?php echo $data3; ?> onchange="openamount(this.value)">
                           <!-- <input type="text" id="a_pay" value="<?php echo $row['c_price']; ?>"> -->
                           <label class="form-check-label" for="fee">
@@ -258,7 +252,7 @@ if (isset($_SESSION['role'])) {
 
                     <tr></tr>
                     <tr id="myDiv" style="display:none;">
-                      <td  class="regis-td" colspan="4">
+                      <td class="regis-td" colspan="4">
                         <span class="centerer">
                           จำนวน Abstract ที่ต้องการส่ง
                           <input type="number" id="amount" name="amount" value="1"> เรื่อง
@@ -266,7 +260,7 @@ if (isset($_SESSION['role'])) {
                       </td>
                     </tr>
                     <tr>
-                      <td  class="regis-td" colspan="4">
+                      <td class="regis-td" colspan="4">
                         <span class="centerer">จำนวนเงิน รวมทั้งสิ้น <div id="result"></div> &nbsp;บาท</span>
                       </td>
                     </tr>
@@ -303,7 +297,8 @@ if (isset($_SESSION['role'])) {
                 echo "หมดเวลาลงทะเบียน";
               } else { ?>
                 <div class="text-end">
-                <button class="btn btn-download mt-2 but-sub" type="submit" name="register" onclick="return confirm('Please check your information before registering. The name, address, and taxpayer identification number used for issuing receipts cannot be edited. (กรุณาตรวจสอบข้อมูลก่อนลงทะเบียน. ชื่อ ที่อยู่และเลขผู้เสียภาษีสำหรับออกใบเสร็จไม่สามารถแก้ไขได้)')">Submit</button>
+                  <button class="btn btn-download mt-2 but-sub" type="submit" name="register"
+                    onclick="return confirm('Please check your information before registering. The name, address, and taxpayer identification number used for issuing receipts cannot be edited. (กรุณาตรวจสอบข้อมูลก่อนลงทะเบียน. ชื่อ ที่อยู่และเลขผู้เสียภาษีสำหรับออกใบเสร็จไม่สามารถแก้ไขได้)')">Submit</button>
                 </div>
               <?php } ?>
             </form>
@@ -311,6 +306,23 @@ if (isset($_SESSION['role'])) {
         </div>
       </div>
     </div>
+    <script>
+      function showdisplay() {
+        // Get the checkbox
+        var checkBox = document.getElementById("allergy");
+        // Get the output text
+        var text = document.getElementById("food");
+
+        // If the checkbox is checked, display the output text
+        if (checkBox.checked == true) {
+          text.style.display = "block";
+          document.getElementById('food').setAttribute('required', '');
+        } else {
+          text.style.display = "none";
+          document.getElementById('food').removeAttribute('required', '');
+        }
+      }
+    </script>
 
     <?php
     include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
