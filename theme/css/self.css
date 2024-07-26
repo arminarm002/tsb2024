@@ -376,16 +376,22 @@ ul.unlist {
 
   .booksection {
     margin: 2rem 2rem;
-    padding: 1rem;
+    padding: 1rem 0 2rem 0;
     text-align: center;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: red;
   }
 }
 @media (min-width: 769px) {
 
   .booksection {
     margin: 2rem 5rem;
-    padding: 1.5rem;
+    padding: 1.5rem 0 2.5rem 0;
     text-align: center;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: red;
   }
 }
 
@@ -523,7 +529,10 @@ canvas {
   }
   .booksection {
     margin: 2rem 20rem;
-    padding: 1.5rem;
+    padding: 1.5rem 0 2.5rem 0;
     text-align: center;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: red;
   }
 }

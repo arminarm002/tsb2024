@@ -22,11 +22,11 @@
       blinkingText3.classList.add('blinking');
     }
 
-    var blinkingBorder = document.getElementById('blinkingBorder');
-    if (blinkingBorder.classList.contains('blinking')) {
-      blinkingBorder.classList.remove('blinking');
+    var blinkingTextBook = document.getElementById('blinkingTextBook');
+    if (blinkingTextBook.classList.contains('blinking')) {
+      blinkingTextBook.classList.remove('blinking');
     } else {
-      blinkingBorder.classList.add('blinking');
+      blinkingTextBook.classList.add('blinking');
     }
   }
 
