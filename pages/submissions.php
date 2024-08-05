@@ -51,7 +51,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
           <ul class="unlist">
             <li>The length of the abstract must not exceed 200 words.</li>
             <li>One registration is allowed to submit only one abstract and one full paper of the same title.</li>
-            <li>Each accepted abstract must be accompanied by full registration payment by the August 31, 2024 for early
+            <li>Each accepted abstract must be accompanied by full registration payment by the August 30, 2024 for early
               bird registration or November 1, 2024 for late registration to ensure inclusion in the abstract book.</li>
           </ul>
           <p>Plagiarism and self-plagiarism are not allowed.</p>
