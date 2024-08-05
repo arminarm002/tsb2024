@@ -24,8 +24,8 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
   <div class="container">
     <h1 class="card-title centerer mt-3">Abstract Submission</h1>
     <h4 class="centerer mt-3">
-      <span style="padding-top: 7px;">Submit your abstract using Microsoft CMT for TSB2024 conference >>> </span>&nbsp;
-      <a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FTSB2024" class="btn btn-download"
+      <span style="padding-top: 7px;">Submit your abstract using TSB2024 abstract submission google form for TSB2024 conference >>> </span>&nbsp;
+      <a href="https://forms.gle/q1PcUUuRg8PyAmmj8" class="btn btn-download"
         target="_blank">Click</a>
     </h4>
     <div class="row" style="margin: 15px auto;">
@@ -52,7 +52,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
             <li>The length of the abstract must not exceed 200 words.</li>
             <li>One registration is allowed to submit only one abstract and one full paper of the same title.</li>
             <li>Each accepted abstract must be accompanied by full registration payment by the August 31, 2024 for early
-              bird registration or October 16, 2024 for late registration to ensure inclusion in the abstract book.</li>
+              bird registration or November 1, 2024 for late registration to ensure inclusion in the abstract book.</li>
           </ul>
           <p>Plagiarism and self-plagiarism are not allowed.</p>
 
