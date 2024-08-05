@@ -86,6 +86,10 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
       </div>
 
     </section>
+    <div class="videohome">
+        <video class="border border-warning rounded" width="100%" height="auto" muted controls loop autoplay
+          src="/img/tsb2024open.mp4"></video>
+      </div>
     <div class="row centerer">
       <?php
       $query = $conn->query("SELECT * FROM tb_poster");
