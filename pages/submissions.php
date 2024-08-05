@@ -31,7 +31,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
     <div class="row" style="margin: 15px auto;">
       <div class="col-12">
         <div class="card border-0" style="color: #494949;">
-          <h5>Abstract submission open : 15 May - <span class="redmidline" style="color:#f78787">15 July 2024</span><span class="red"> 31 July 2024</span>
+          <h5>Abstract submission open : 15 May - <span class="redmidline" style="color:#f78787">15 July 2024</span><span class="red"> 16 August 2024</span>
             <br>Abstract submission guideline and abstract template for TSB 2024
             <a href="https://drive.google.com/drive/folders/1zEyLq_Od_VRhBVpH18UmYWcYERRjaBpk?usp=sharing"
               class="btn btn-download" target="_blank">Download
@@ -51,7 +51,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
           <ul class="unlist">
             <li>The length of the abstract must not exceed 200 words.</li>
             <li>One registration is allowed to submit only one abstract and one full paper of the same title.</li>
-            <li>Each accepted abstract must be accompanied by full registration payment by the August 16, 2024 for early
+            <li>Each accepted abstract must be accompanied by full registration payment by the August 31, 2024 for early
               bird registration or October 16, 2024 for late registration to ensure inclusion in the abstract book.</li>
           </ul>
           <p>Plagiarism and self-plagiarism are not allowed.</p>
