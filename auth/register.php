@@ -164,6 +164,14 @@ if (isset($_SESSION['role'])) {
                 <input type="text" id="tax" name="receipt-tax" class="form-control" required />
               </div>
 
+              <!-- KMITL input -->
+              <div class="form-check mb-3 mt-5">
+                <input class="form-check-input" type="checkbox" name="kmitl" value=" (บุคลากร สจล.)">
+                <label class="form-check-label" for="check">
+                Select this option for KMITL personnel to receive registration fee exemptions for attending the TSB 2024  international academic conference . (เลือกช่องนี้สำหรับบุคลากรของ KMITL เพื่อรับการยกเว้นค่าลงทะเบียนในการเข้าร่วมงาน ประชุมวิชาการระดับนานาชาติ TSB2024)
+                </label>
+              </div>
+
               <!-- Fee input -->
               <div class="form-outline mb-2 mt-5 table-responsive">
                 <table class="table table-active table-bordered border-danger"
@@ -286,7 +294,7 @@ if (isset($_SESSION['role'])) {
 
               <!-- Check input -->
               <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" name="check" id="check" required>
+                <input class="form-check-input" type="checkbox" required>
                 <label class="form-check-label" for="check">
                   ACCEPT CONDITIONS AND CANCELLATION OF PAYMENT
                 </label>

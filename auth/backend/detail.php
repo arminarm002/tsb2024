@@ -26,7 +26,7 @@ $id = $_GET['userid'];
         foreach ($sql as $row) { ?>
           <h1>
             <?php
-            echo $row['title'] . $row['firstname'] . " " . $row['lastname'];
+            echo $row['title'] . $row['firstname'] . " " . $row['lastname'] . "" . $row['kmitl'];
             ?>
           </h1>
           <h3>

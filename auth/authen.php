@@ -10,6 +10,11 @@ if (isset($_POST['register'])) {
   } else {
     $abnumber = "";
   }
+  if (isset($_POST['kmitl'])) {
+    $kmitl = $_POST['kmitl'];
+  } else {
+    $kmitl = "";
+  }
   $email = $_POST['email'];
   $pass = $_POST['password'];
   $title = $_POST['title'];
@@ -115,7 +120,7 @@ if (isset($_POST['register'])) {
     echo '</script>';
     header("refresh: 1; url=register.php");
   } else {
-    $sql2 = $conn->query("INSERT INTO tb_user (email, password, title, firstname, lastname, company, career, address, country, telephone, fax, extrameal, food, type, receipt_name, receipt_address, receipt_tax, pay_id, amount, total_price, role, approve, abstract_number) VALUES ('$email', '$password', '$title', '$fname', '$lname', '$company', '$career', '$address', '$country', '$tel', '$fax', '$extrameal', '$food', '$typeu', '$receipt_name','$receipt_address','$receipt_tax', '$fee', '$amount', '$total', '$role', 'wait', '$abnumber')");
+    $sql2 = $conn->query("INSERT INTO tb_user (email, password, title, firstname, lastname, company, career, address, country, telephone, fax, extrameal, food, type, receipt_name, receipt_address, receipt_tax, pay_id, amount, total_price, role, kmitl, approve, abstract_number) VALUES ('$email', '$password', '$title', '$fname', '$lname', '$company', '$career', '$address', '$country', '$tel', '$fax', '$extrameal', '$food', '$typeu', '$receipt_name','$receipt_address','$receipt_tax', '$fee', '$amount', '$total', '$role', '$kmitl', 'wait', '$abnumber')");
 
     if ($sql2) {
       $slip = $conn->query("INSERT INTO tb_confirm (slip_date, slip_name, email) VALUES ('$date', '$numrand', '$email')");
