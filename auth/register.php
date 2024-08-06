@@ -181,13 +181,13 @@ if (isset($_SESSION['role'])) {
                         <p>Registration types</p>
                       </td>
                       <td class="regis-th">
-                        <p>Early bird Registration 15 May - 15 August 2024</p>
+                        <p>Early bird Registration 16 - 30 August 2024</p>
                       </td>
                       <td class="regis-th">
-                        <p>Regular Registration 16 August - 16 October 2024</p>
+                        <p>Regular Registration 31 August - 31 October 2024</p>
                       </td>
                       <td class="regis-th">
-                        <p>Late Registration 17 October - 1 November 2024</p>
+                        <p>Late Registration 1 November 2024</p>
                       </td>
                     </tr>
                     <?php
