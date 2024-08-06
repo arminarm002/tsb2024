@@ -24,14 +24,15 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
   <div class="container">
     <h1 class="card-title centerer mt-3">Abstract Submission</h1>
     <h4 class="centerer mt-3">
-      <span style="padding-top: 7px;">Submit your abstract using TSB2024 abstract submission google form for TSB2024 conference >>> </span>&nbsp;
-      <a href="https://forms.gle/q1PcUUuRg8PyAmmj8" class="btn btn-download"
-        target="_blank">Click</a>
+      <span style="padding-top: 7px;">Submit your abstract using TSB2024 abstract submission google form for TSB2024
+        conference >>> </span>&nbsp;
+      <a href="https://forms.gle/q1PcUUuRg8PyAmmj8" class="btn btn-download" target="_blank">Click</a>
     </h4>
     <div class="row" style="margin: 15px auto;">
       <div class="col-12">
         <div class="card border-0" style="color: #494949;">
-          <h5>Abstract submission open : 15 May - <span class="redmidline" style="color:#f78787">15 July 2024</span><span class="red"> 16 August 2024</span>
+          <h5>Abstract submission open : 15 May - <span class="redmidline" style="color:#f78787">15 July
+              2024</span><span class="red"> 16 August 2024</span>
             <br>Abstract submission guideline and abstract template for TSB 2024
             <a href="https://drive.google.com/drive/folders/1zEyLq_Od_VRhBVpH18UmYWcYERRjaBpk?usp=sharing"
               class="btn btn-download" target="_blank">Download
@@ -64,10 +65,16 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
       <div class="row" style="margin: 15px auto;">
         <div class="col-12">
           <div class="card border-0" style="color: #494949;">
-            <h5>Full paper submission open: May 15 – August 16 2024</h5>
+            <h5>Full paper submission open: May 15 –
+              <span class="redmidline" style="color:#f78787">August 16 2024</span>
+              <span class="red"> 30 August 2024</span>
+            </h5>
             <h5>Full paper submission guideline and full paper template for TSB 2024 >>> <a
                 href="https://drive.google.com/drive/folders/1zEyLq_Od_VRhBVpH18UmYWcYERRjaBpk?usp=sharing"
                 class="btn btn-download" style="margin: 5px 0px 2px 0px;" target="_blank">Download File</a></h5>
+            <h5>Submit your full paper using Microsoft CMT for TSB2024 conference Go to TSB2024 conference Microsoft CMT website by clicking the button >>> <a
+                href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FTSB2024"
+                class="btn btn-download" style="margin: 5px 0px 2px 0px;" target="_blank">Submit</a></h5>
             <h5>Please do not modify the format.</h5>
             <h5>Full Paper's Important Details</h5>
             <ul class="unlist">
