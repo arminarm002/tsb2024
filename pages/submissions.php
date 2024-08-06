@@ -74,7 +74,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
                 class="btn btn-download" style="margin: 5px 0px 2px 0px;" target="_blank">Download File</a></h5>
             <h5>Submit your full paper using Microsoft CMT for TSB2024 conference Go to TSB2024 conference Microsoft CMT website by clicking the button >>> <a
                 href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FTSB2024"
-                class="btn btn-download" style="margin: 5px 0px 2px 0px;" target="_blank">Submit</a></h5>
+                class="btn btn-download" style="margin: 5px 0px 2px 0px;" target="_blank">Submit full paper</a></h5>
             <h5>Please do not modify the format.</h5>
             <h5>Full Paper's Important Details</h5>
             <ul class="unlist">
