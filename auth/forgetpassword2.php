@@ -21,13 +21,13 @@ if (isset($_POST['forgot'])) {
         $mail->isSMTP();                                  //Send using SMTP
         $mail->Host = 'smtp.gmail.com';                   //Set the SMTP server to send through
         $mail->SMTPAuth = true;                           //Enable SMTP authentication
-        $mail->Username = 'suradech.ku@kmitl.ac.th';      //SMTP username
-        $mail->Password = 'phee mkwb szvm meco';          //SMTP password
+        $mail->Username = 'noreplytsb2024@gmail.com';      //SMTP username
+        $mail->Password = 'xxjt iuav ucza eicu';          //SMTP password
         $mail->SMTPSecure = "SSL";                        //Enable implicit TLS encryption
         $mail->Port = 587;                                //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom('suradech.ku@kmitl.ac.th', 'Admin TSB2024');
+        $mail->setFrom('noreplytsb2024@gmail.com', 'Admin TSB2024');
         $mail->addAddress($inputemail, 'User');     //Add a recipient
         $mail->addReplyTo('noryply@kmitl.ac.th', 'Information');
 
