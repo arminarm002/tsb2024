@@ -194,13 +194,13 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
   <h2 style="text-align: center;">Important Date</h2>
   <div class="flex-parent mt-5">
     <div class="input-flex-container">
-      <div class="input fs active">
+      <div class="input fs">
         <span data-year="May 15, 2024" data-info="Registration & Submissions opens"></span>
       </div>
       <div class="input fs">
         <span data-year="August 16, 2024" data-info="Abstract submission deadline"></span>
       </div>
-      <div class="input fs">
+      <div class="input fs active">
         <span data-year="August 1-15, 2024" data-info="Notification of Abstract acceptance"></span>
       </div>
       <div class="input fs">
@@ -210,10 +210,10 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
         <span data-year="October 1-16, 2024" data-info="Notification of Full paper acceptance"></span>
       </div>
       <div class="input fs">
-        <span data-year="August 16, 2024" data-info="Early bird registration deadline"></span>
+        <span data-year="August 30, 2024" data-info="Early bird registration deadline"></span>
       </div>
       <div class="input fs">
-        <span data-year="October 16, 2024" data-info="Late registration deadline"></span>
+        <span data-year="November 1, 2024" data-info="Late registration deadline"></span>
       </div>
       <div class="input fs">
         <span data-year="November 14-16, 2024" data-info="TSB2024 Conference"></span>
