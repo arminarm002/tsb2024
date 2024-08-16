@@ -41,7 +41,8 @@ $id = $_GET['userid'];
             // echo $row['address'] . " , " . $row['country'] . "<br>";
             // echo "Extrameal : <font class='gray'>" . $row['extrameal'] . "</font><br>";
             // echo "Food allergy and intolerance : <font class='gray'>" . $row['food'] . "</font><br>";
-            echo "ชื่อและที่อยู่ในใบเสร็จสำหรับเบิก : <font class='gray'>" . $row['receipt_name']. " " .$row['receipt_address']."</font><br>";
+            echo "ชื่อในใบเสร็จสำหรับเบิก : <font class='gray'>" . $row['receipt_name']. "</font><br>";
+            echo "ที่อยู่ในใบเสร็จสำหรับเบิก : <font class='gray'>" .$row['receipt_address']."</font><br>";
             echo "เลขประจำตัวผู้เสียภาษี : <font class='gray'>" . $row['receipt_tax'] . "</font><br><br><br>";
             
             

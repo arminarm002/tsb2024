@@ -120,8 +120,9 @@ if ($_SESSION['role'] && $_SESSION['role'] == "superadmin") {
                         </h4>
                         <h6>
                         <?php
-                        echo $row['career'] . " from " . $row['company'] . $row['country'] . "<br>fax : " . $row['fax'] . "<br>Tel. : " . $row['telephone'] . "<br>Name and address for payment receipt
-                      (ชื่อและที่อยู่ในใบเสร็จสำหรับเบิก) : " . $row['receipt_name'] . " " . $row['receipt_address'] . "<br>เลขที่ผู้เสียภาษี : " . $row['receipt_tax'];
+                        echo $row['career'] . " from " . $row['company'] . $row['country'] . "<br>fax : " . $row['fax'] . "<br>Tel. : " . $row['telephone'] . "<br>Name for payment receipt
+                      (ชื่อในใบเสร็จสำหรับเบิก) : " . $row['receipt_name'] . "<br>Address for payment receipt
+                      (ที่อยู่ในใบเสร็จสำหรับเบิก)" . $row['receipt_address'] . "<br>เลขที่ผู้เสียภาษี : " . $row['receipt_tax'];
                         ?>
                         </h6>
                       </div>
