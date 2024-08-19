@@ -33,7 +33,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
           <td>Abstract submission deadline</td>
           <td>
             <span class="redmidline" style="color:#f78787">July 15, 2024</span>
-            <span class="red"> 16 August 2024</span>
+            <span class="red"> August 16, 2024</span>
           </td>
         </tr>
         <tr>
@@ -48,9 +48,9 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
           </td>
           <td><br>
             <span class="redmidline" style="color:#f78787">August 16, 2024</span>
-            <span class="red">August 30 2024</span><br>
+            <span class="red">August 30, 2024</span><br>
             <span class="redmidline" style="color:#f78787">November 14, 2024</span>
-            <span class="red">December 16 July 2024</span>
+            <span class="red">December 16, 2024</span>
           </td>
         </tr>
         <tr>
@@ -61,14 +61,14 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
           <td><u>Early bird</u> registration deadline</td>
           <td>
             <span class="redmidline" style="color:#f78787">August 16, 2024</span>
-            <span class="red">August 30 2024</span>
+            <span class="red">August 30, 2024</span>
           </td>
         </tr>
         <tr>
           <td>Late registration deadline</td>
           <td>
             <span class="redmidline" style="color:#f78787">October 16, 2024</span>
-            <span class="red"> 1 November 2024</span>
+            <span class="red"> November 1, 2024</span>
           </td>
         </tr>
         <tr>

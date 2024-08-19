@@ -127,8 +127,8 @@ if (isset($_POST['addspeakers'])) {
     $symposium = '0';
   }
   $typesk = $_POST['type'];
-  $from = $_POST['affiliation'];
-  $title = $_POST['title'];
+  $from = htmlspecialchars($_POST['affiliation'], ENT_QUOTES);
+  $title = htmlspecialchars($_POST['title'], ENT_QUOTES);
   $optional = $_POST['option'];
   
   //ฟังก์ชั่นวันที่

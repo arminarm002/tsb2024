@@ -30,11 +30,11 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
       if ($speaker->num_rows > 0) {
         foreach ($speaker as $sk) { ?>
 
-          <div class="col-lg-12 col-md-6 col-sm-12" style="text-align: center;">
-            <img src="../file/upload/speaker/<?php echo $sk['sk_img']; ?>" class="w-25" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;border-radius: 25px;">
-            <h2 style="color:#df6a00"><?php echo $sk['sk_name']; ?></h2>
-            <h5 style="color:#df6a00"><?php echo $sk['sk_position']; ?></h5>
-            <h5 style="color:#df6a00"><b>Title : </b> <?php echo $sk['sk_title']; ?></h5>
+          <div class="col-lg-6 col-md-6 col-sm-12" style="text-align: center;">
+            <img src="../file/upload/speaker/<?php echo $sk['sk_img']; ?>" class="w-50 mb-3">
+            <h2 style="color:#0c4d01"><?php echo $sk['sk_name']; ?></h2>
+            <h5 style="color:#1c850a"><?php echo $sk['sk_position']; ?></h5>
+            <h5 style="color:#1c850a"><b>Title : </b> <?php echo $sk['sk_title']; ?></h5>
             <p class="color-black" style="text-align:justify;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
               <?php echo $sk['sk_description']; ?>
             </p>
@@ -79,7 +79,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 
           <div class="col-lg-4 col-md-6 col-sm-12" style="text-align: center;">
             <br>
-            <h5 style="color:#df6a00">Symposium : <?php echo $sk2['symposium_name']; ?></h4>
+            <h5 style="color:#1c850a">Symposium : <?php echo $sk2['symposium_name']; ?></h4>
               <img src="../file/upload/speaker/<?php echo $sk2['sk_img']; ?>" class="w-50">
               <h6><?php echo $sk2['sk_name']; ?><br>
                 <span style="font-size: 0.8rem;"><?php echo $sk2['sk_position']; ?>

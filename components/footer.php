@@ -7,7 +7,7 @@
         <h6>Department of Biology, School of Science, King Mongkut’s Institute of
           Technology Ladkrabang Chalongkrung Rd. <br>Ladkrabang District Bangkok 10520<br>
           Telephone : 02-329-8000 ext. 6225<br>Email : tsb2024@kmitl.ac.th<br>Facebook :
-          <a href="" target="_blank">TSB2024</a>
+          <a href="" target="_blank" class="foot-fontcolor2">TSB2024</a>
           <br>
         </h6>
       </div>
@@ -15,35 +15,19 @@
       <div class="col-md-4">
         <h4>Organizer</h4>
         <div class="row">
-          <!-- <div class="col-lg-4 col-sm-6 col-4" style="margin:auto;">
-            <a target="_blank" href="http://www.thaiphysoc.org/">
-              <img src="/img/co-host/physic.png" style="width:100%;">
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-4" style="margin:auto;">
+          <div class="col-lg-4 col-sm-6 col-4 logofooter" style="margin:auto;">
             <a target="_blank" href="https://www.science.kmitl.ac.th/new">
-              <img src="/img/co-host/logo-b.png" style="width:100%;">
+              <img src="/img/co-host/org01.png" style="width:100%;">
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6 col-4" style="margin:auto;">
+          <div class="col-lg-4 col-sm-6 col-4 logofooter" style="margin:auto;">
+            <a target="_blank" href="https://www.biotec.or.th/tsb/">
+              <img src="/img/co-host/org02.png" style="width:100%;">
+            </a>
+          </div>
+          <!-- <div class="col-lg-4 col-sm-6 col-4" style="margin:auto;">
             <a target="_blank" href="http://www.cmit.kmitl.ac.th/">
               <img src="/img/co-host/cmit.png" style="width:100%;">
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-sm-6 col-4" style="margin:auto;">
-            <a target="_blank" href="https://www.aru.ac.th/">
-              <img src="/img/co-host/pru.png" style="width:50%;">
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-4" style="margin:auto;">
-            <a target="_blank" href="https://www.princess-it.org/">
-              <img src="/img/co-host/hrh.png" style="width:50%;">
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-4" style="margin:auto;">
-            <a target="_blank" href="https://www.nst.or.th/">
-              <img src="/img/co-host/nst.png" style="width:50%;">
             </a>
           </div> -->
 
@@ -54,25 +38,24 @@
         <h4>About Science KMITL</h4>
         <div class="row">
           <div class="col-sm-6">
-            <p><i class="bi bi-facebook"></i> <a target="_blank" href="https://www.facebook.com/SciKmitl">Science
-                KMITL</a></p>
+            <p><i class="bi bi-facebook"></i> <a target="_blank" class="foot-fontcolor2" href="https://www.facebook.com/SciKmitl">Science KMITL</a></p>
           </div>
           <div class="col-sm-6">
-            <p><i class="bi bi-youtube"></i> <a target="_blank"
-                href="https://www.youtube.com/@schoolofsciencekmitloffici8071">Youtube</a></p>
+            <p><i class="bi bi-youtube"></i> <a target="_blank"  class="foot-fontcolor2"
+                href="https://www.youtube.com/@scikmitl">Youtube</a></p>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-6">
-            <p><i class="bi bi-browser-chrome"></i> <a target="_blank"
+            <p><i class="bi bi-browser-chrome"></i> <a target="_blank" class="foot-fontcolor2"
                 href="https://www.science.kmitl.ac.th/new">Website</a></p>
           </div>
           <div class="col-sm-6">
-            <p><i class="bi bi-instagram"></i> <a target="_blank"
+            <p><i class="bi bi-instagram"></i> <a target="_blank" class="foot-fontcolor2"
                 href="https://www.instagram.com/scikmitl/">Instagram</a></p>
           </div>
         </div>
-        <p><i class="bi bi-tiktok"></i> <a target="_blank" href="https://www.tiktok.com/@scikmitl">Tiktok</a></p>
+        <p><i class="bi bi-tiktok"></i> <a target="_blank" class="foot-fontcolor2" href="https://www.tiktok.com/@scikmitl">Tiktok</a></p>
       </div>
     </div>
   </div>
