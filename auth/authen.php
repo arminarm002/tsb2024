@@ -57,7 +57,7 @@ if (isset($_POST['register'])) {
   $date_end = $conn->query("SELECT * FROM tb_setdate");
   $datenows = date("Y-m-d");
 
-  if ($datenows <= "2024-08-16") {
+  if ($datenows <= "2024-08-30") {
 
     if ($fee == "1") {
       $total = $amount * 4500;

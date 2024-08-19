@@ -26,7 +26,7 @@ if ($_SESSION['role'] == "superadmin") {
           <div class="card" style="background-color: rgb(255 122 1 / 20%);box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
             <div class="card-header bg-l text-white text-center">
               <h5>
-                Add Speakers
+                Update Speakers
               </h5>
             </div>
             <form action="data/allupdate.php" method="POST" enctype="multipart/form-data">

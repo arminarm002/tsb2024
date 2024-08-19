@@ -79,11 +79,11 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 
           <div class="col-lg-4 col-md-6 col-sm-12" style="text-align: center;">
             <br>
-            <h5 style="color:#1c850a">Symposium : <?php echo $sk2['symposium_name']; ?></h4>
+            <h5 style="color:#1c850a">Conference Session : <?php echo $sk2['symposium_name']; ?></h4>
               <img src="../file/upload/speaker/<?php echo $sk2['sk_img']; ?>" class="w-50">
               <h6><?php echo $sk2['sk_name']; ?><br>
                 <span style="font-size: 0.8rem;"><?php echo $sk2['sk_position']; ?>
-                </span><br>Title : <?php echo $sk2['sk_title']; ?>
+                </span><br><?php echo $sk2['sk_title']; ?>
               </h6>
 
               <?php if (isset($_SESSION['role']) == "superadmin") { ?>
@@ -124,7 +124,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
       foreach ($symposium as $sym) { ?>
         <div class="row mt-3" style="background-color: #f6dab8;">
           <div class="col-lg-5 col-md-6 col-sm-6" style="margin: auto;">
-            <h5 style="color:#df6a00">Symposium : <?php echo $sym['symposium_name']; ?></h4>
+            <h5 style="color:#df6a00">Conference Session : <?php echo $sym['symposium_name']; ?></h4>
           </div>
           <div class="col-lg-7 col-md-6 col-sm-6">
             <div class="row mt-3" style="text-align: center;">
@@ -136,7 +136,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
                   <img src="../file/upload/speaker/<?php echo $sk3['sk_img']; ?>" class="w-50">
                   <h6><?php echo $sk3['sk_name']; ?><br>
                     <span style="font-size: 0.8rem;"><?php echo $sk3['sk_position']; ?>
-                    </span><br>Title : <?php echo $sk3['sk_title']; ?>
+                    </span><br><?php echo $sk3['sk_title']; ?>
                   </h6>
 
                   <?php if (isset($_SESSION['role']) == "superadmin") { ?>

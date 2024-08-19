@@ -201,8 +201,8 @@ if (isset($_SESSION['role'])) {
                     <?php
                     $datenows = date("Y-m-d");
                     $date1 = date('Y-m-d', strtotime("2024/05/15"));
-                    $date2 = date('Y-m-d', strtotime("2024/08/16"));
-                    $date3 = date('Y-m-d', strtotime("2024/10/17"));
+                    $date2 = date('Y-m-d', strtotime("2024/08/30"));
+                    $date3 = date('Y-m-d', strtotime("2024/10/31"));
                     $date4 = date('Y-m-d', strtotime("2024/11/02"));
 
                     if (($datenows >= $date1) && ($datenows < $date2)) {

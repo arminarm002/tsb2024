@@ -155,8 +155,8 @@ if (isset($_POST['updatespeakers'])) {
   $name = htmlspecialchars($_POST['name'], ENT_QUOTES);
   $symposium = $_POST['symposium'];
   $typesk = $_POST['type'];
-  $from = $_POST['affiliation'];
-  $title = $_POST['title'];
+  $from = htmlspecialchars($_POST['affiliation'], ENT_QUOTES);
+  $title = htmlspecialchars($_POST['title'], ENT_QUOTES);
   $optional = $_POST['option'];
 
   $updatespeaker = $conn->query("UPDATE tb_speaker SET sk_type='$typesk', 
