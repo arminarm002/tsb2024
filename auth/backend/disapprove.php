@@ -47,11 +47,11 @@ if ($_SESSION['role']) {
                   <table class="table table-striped strip">
                     <thead>
                       <tr style="text-align: center;">
+                        <th>Key</th>
                         <th>Name</th>
                         <th>Type</th>
                         <th>E-mail</th>
                         <th>Telephone</th>
-                        <th>fax</th>
                         <th>extrameal</th>
                         <th>Evidence</th>
                       </tr>
@@ -64,6 +64,12 @@ if ($_SESSION['role']) {
                         ?>
                         <tr style="text-align: center;">
                           <td>
+                            <?php $getkey = $conn->query("SELECT * FROM tb_confirm WHERE email = '" . $tr['email'] . "' ");
+                            foreach ($getkey as $showkey) {
+                              echo $showkey['slip_name'];
+                            } ?>
+                          </td>
+                          <td>
                             <?php echo $tr['title'] . $tr['firstname'] . " " . $tr['lastname'] ?>
                           </td>
                           <td>
@@ -74,9 +80,6 @@ if ($_SESSION['role']) {
                           </td>
                           <td>
                             <?php echo $tr['telephone'] ?>
-                          </td>
-                          <td>
-                            <?php echo $tr['fax'] ?>
                           </td>
                           <td>
                             <?php echo $tr['extrameal'] ?>
@@ -98,7 +101,7 @@ if ($_SESSION['role']) {
       <?php
       include($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
       include($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
-      
+
       ?>
 
     </body>

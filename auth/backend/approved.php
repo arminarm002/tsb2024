@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 if ($_SESSION['role']) {
   if ($_SESSION['role'] == "admin") {
     ?>
@@ -17,7 +17,7 @@ if ($_SESSION['role']) {
 
     <body>
       <?php
-      include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
+      include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
 
       $sql = $conn->query("SELECT * FROM tb_user WHERE approve = 'approve'");
       $i = 0;
@@ -28,7 +28,7 @@ if ($_SESSION['role']) {
       <div class="container-fluid">
         <div class="row mt-3">
           <div class="col-sm-12 col-md-4 col-lg-3">
-            <?php include ($_SERVER['DOCUMENT_ROOT'] . '/components/sidebar.php'); ?>
+            <?php include($_SERVER['DOCUMENT_ROOT'] . '/components/sidebar.php'); ?>
           </div>
           <div class="col-sm-12 col-md-8 col-lg-9">
             <div class="alert alert-success" role="alert">
@@ -47,7 +47,7 @@ if ($_SESSION['role']) {
                   <table class="table table-striped strip">
                     <thead>
                       <tr style="text-align: center;">
-                        <th>No.</th>
+                        <th>Key</th>
                         <th>Name</th>
                         <th>Type</th>
                         <th>E-mail</th>
@@ -65,7 +65,10 @@ if ($_SESSION['role']) {
                         ?>
                         <tr style="text-align: center;">
                           <td>
-                            <?php echo "$no"; ?>
+                            <?php $getkey = $conn->query("SELECT * FROM tb_confirm WHERE email = '" . $tr['email'] . "' ");
+                            foreach ($getkey as $showkey) {
+                              echo $showkey['slip_name'];
+                            } ?>
                           </td>
                           <td>
                             <?php echo $tr['title'] . $tr['firstname'] . " " . $tr['lastname'] ?>
@@ -97,8 +100,8 @@ if ($_SESSION['role']) {
       </div><!-- container -->
 
       <?php
-      include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
-      include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
+      include($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+      include($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
       ?>
 
     </body>
