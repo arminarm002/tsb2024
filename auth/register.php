@@ -201,8 +201,8 @@ if (isset($_SESSION['role'])) {
                     <?php
                     $datenows = date("Y-m-d");
                     $date1 = date('Y-m-d', strtotime("2024/05/15"));
-                    $date2 = date('Y-m-d', strtotime("2024/08/30"));
-                    $date3 = date('Y-m-d', strtotime("2024/10/31"));
+                    $date2 = date('Y-m-d', strtotime("2024/08/31"));
+                    $date3 = date('Y-m-d', strtotime("2024/11/1"));
                     $date4 = date('Y-m-d', strtotime("2024/11/02"));
 
                     if (($datenows >= $date1) && ($datenows < $date2)) {
@@ -297,6 +297,12 @@ if (isset($_SESSION['role'])) {
                 <input class="form-check-input" type="checkbox" required>
                 <label class="form-check-label" for="check">
                   ACCEPT CONDITIONS AND CANCELLATION OF PAYMENT
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" required>
+                <label class="form-check-label" for="check">
+                After registration, please login and keep your registered key for using in the Payment Confirmation for Thai Society for Biotechnology 2024 Registration process
                 </label>
               </div>
 

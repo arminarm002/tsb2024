@@ -25,6 +25,9 @@ session_start();
     <h4 class="centerer mt-3"><b>Register Form </b>&nbsp;>>>&nbsp;
       <a href="/auth/register.php" class="btn btn-warning">Click</a>
     </h4>
+    <h4 class="centerer mt-3"><b>Register Guide </b>&nbsp;>>>&nbsp;
+      <a href="https://drive.google.com/file/d/19BLzzgYqxOZwh3dnLHN2EOFwDnxEJZz6/view?usp=sharing" class="btn btn-warning" target="_blank">Click</a>
+    </h4>
     <h5 class="centerer">Members of AFOB-MC, BEST, BSN, SBJ can register at the TSB member rate. Please contact TSB
       Office at tsb@biotec.or.th</h5>
     <div class="row">

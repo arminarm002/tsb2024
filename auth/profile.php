@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 if ($_SESSION['role'] && $_SESSION['role'] == "superadmin") {
   header("refresh: 1; url= /auth/backend/superadmin.php");
 } else if ($_SESSION['role'] && $_SESSION['role'] == "superadmin") {
@@ -21,7 +21,7 @@ if ($_SESSION['role'] && $_SESSION['role'] == "superadmin") {
 
       <body class="font-mitr">
       <?php
-      include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
+      include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
 
       $sql = $conn->query("SELECT * FROM tb_user INNER JOIN tb_pay 
     ON tb_user.pay_id = tb_pay.pay_id WHERE email='" . $_SESSION['email'] . "'");
@@ -33,7 +33,7 @@ if ($_SESSION['role'] && $_SESSION['role'] == "superadmin") {
           <div class="container-fluid">
             <div class="row mt-3">
               <div class="col-sm-3 col-md-2">
-            <?php include ($_SERVER['DOCUMENT_ROOT'] . '/components/sidebar.php'); ?>
+            <?php include($_SERVER['DOCUMENT_ROOT'] . '/components/sidebar.php'); ?>
               </div>
               <div class="col">
             <?php if ($row['approve'] == "wait") { ?>
@@ -79,12 +79,13 @@ if ($_SESSION['role'] && $_SESSION['role'] == "superadmin") {
                     <div class="card mt-3">
                       <div class="cardbody" style="padding:2% 5%;">
                         <h5 class="card-title">ยื่นหลักฐานการโอนเงิน</h5>
-                        <h5 class="card-title">"KEY" for Attach file : </h5>
-                      <?php
-                      $slipconfirm = $conn->query("SELECT * FROM tb_confirm WHERE email='" . $_SESSION['email'] . "'");
-                      foreach ($slipconfirm as $split) {
-                        echo $split['slip_name'];
-                      } ?>
+                        <h5 class="card-title">"KEY" for Attach file :
+                        <?php
+                        $slipconfirm = $conn->query("SELECT * FROM tb_confirm WHERE email='" . $_SESSION['email'] . "'");
+                        foreach ($slipconfirm as $split) {
+                          echo $split['slip_name'];
+                        } ?>
+                        </h5>
                         <p>Go to Attach file >>> <a href="https://forms.gle/ewGzwCXbRcpvi4ZR8"
                             class="btn btn-warning submisspagebutton" target="_blank">Click</a></p>
                       </div>
@@ -157,8 +158,8 @@ if ($_SESSION['role'] && $_SESSION['role'] == "superadmin") {
     <?php } ?>
 
       <?php
-      include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
-      include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
+      include($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+      include($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
       ?>
 
       </body>
