@@ -200,10 +200,10 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
       <div class="input fs">
         <span data-year="August 16, 2024" data-info="Abstract submission deadline"></span>
       </div>
-      <div class="input fs active">
+      <div class="input fs">
         <span data-year="August 1-15, 2024" data-info="Notification of Abstract acceptance"></span>
       </div>
-      <div class="input fs">
+      <div class="input fs active">
         <span data-year="August 30, 2024" data-info="Full paper submission deadline"></span>
       </div>
       <div class="input fs">

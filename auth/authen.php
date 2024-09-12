@@ -1,146 +1,161 @@
 <?php
-include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 session_start();
 
 //Register
-if (isset($_POST['register'])) {
+$secret = "6Lcnkj8qAAAAABFLHgu7UUK9M-Au8KCmV5u59nkm";
+if (isset($_POST['g-recaptcha-response'])) {
+  $captcha = $_POST['g-recaptcha-response'];
+  $verifyResponse = file_get_contents('https://google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $captcha);
+  $reponseData = json_decode($verifyResponse);
 
-  if (isset($_POST['ab-number'])) {
-    $abnumber = $_POST['ab-number'];
-  } else {
-    $abnumber = "";
-  }
-  if (isset($_POST['kmitl'])) {
-    $kmitl = $_POST['kmitl'];
-  } else {
-    $kmitl = "";
-  }
-  $email = $_POST['email'];
-  $pass = $_POST['password'];
-  $title = $_POST['title'];
-  $fname = $_POST['name'];
-  $lname = $_POST['lastname'];
-  $company = htmlspecialchars($_POST['company'], ENT_QUOTES);
-  $career = htmlspecialchars($_POST['career'], ENT_QUOTES);
-  $address = htmlspecialchars($_POST['address'], ENT_QUOTES);
-  $country = $_POST['country'];
-  $tel = $_POST['tel'];
-  $fax = $_POST['fax'];
-  $extrameal = "";
-  $i = 0;
-  $j = "";
-  foreach($_POST['meal'] as $meal){
-    if($i>0){
-      $j = ",";
-    }
-    $extrameal .= $j ." ". $meal ;
-    $i++;
-  } 
-  // echo $extrameal;
-  $food = $_POST['food'];
-  $typeu = $_POST['type'];
-  $receipt_name = htmlspecialchars($_POST['receipt-name'], ENT_QUOTES);
-  $receipt_address = htmlspecialchars($_POST['receipt-address'], ENT_QUOTES);
-  $receipt_tax = htmlspecialchars($_POST['receipt-tax'], ENT_QUOTES);
-  $fee = $_POST['fee'];
-  $amount = $_POST['amount'];
-  $role = "user";
-  $password = password_hash($pass, PASSWORD_DEFAULT);
-  //ฟังก์ชั่นวันที่
-  date_default_timezone_set('Asia/Bangkok');
-  $date = date("Ymd");
-  $numrand = sprintf("%06d", rand(0, 999999));
-  if ($fee == "4" || $fee == "5") {
-    $amount = 1;
+  if (!$captcha) {
+    $_SESSION['error'] = "Please enter reCAPTCHA!";
+    echo "<script>
+    alert('Please enter reCAPTCHA!');
+    window.location.href = 'register.php';
+    </script>";
   }
 
-  $date_end = $conn->query("SELECT * FROM tb_setdate");
-  $datenows = date("Y-m-d");
+  if (isset($_POST['register']) && $reponseData->success) {
 
-  if ($datenows <= "2024-08-30") {
-
-    if ($fee == "1") {
-      $total = $amount * 4500;
-
-    } else if ($fee == "2") {
-      $total = $amount * 5000;
-
-    } else if ($fee == "3") {
-      $total = $amount * 3500;
-
-    } else if ($fee == "4") {
-      $total = $amount * 3500;
-
-    } else if ($fee == "5") {
-      $total = $amount * 1500;
+    if (isset($_POST['ab-number'])) {
+      $abnumber = $_POST['ab-number'];
+    } else {
+      $abnumber = "";
+    }
+    if (isset($_POST['kmitl'])) {
+      $kmitl = $_POST['kmitl'];
+    } else {
+      $kmitl = "";
+    }
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
+    $title = $_POST['title'];
+    $fname = $_POST['name'];
+    $lname = $_POST['lastname'];
+    $company = htmlspecialchars($_POST['company'], ENT_QUOTES);
+    $career = htmlspecialchars($_POST['career'], ENT_QUOTES);
+    $address = htmlspecialchars($_POST['address'], ENT_QUOTES);
+    $country = $_POST['country'];
+    $tel = $_POST['tel'];
+    $fax = $_POST['fax'];
+    $extrameal = "";
+    $i = 0;
+    $j = "";
+    foreach ($_POST['meal'] as $meal) {
+      if ($i > 0) {
+        $j = ",";
+      }
+      $extrameal .= $j . " " . $meal;
+      $i++;
+    }
+    // echo $extrameal;
+    $food = $_POST['food'];
+    $typeu = $_POST['type'];
+    $receipt_name = htmlspecialchars($_POST['receipt-name'], ENT_QUOTES);
+    $receipt_address = htmlspecialchars($_POST['receipt-address'], ENT_QUOTES);
+    $receipt_tax = htmlspecialchars($_POST['receipt-tax'], ENT_QUOTES);
+    $fee = $_POST['fee'];
+    $amount = $_POST['amount'];
+    $role = "user";
+    $password = password_hash($pass, PASSWORD_DEFAULT);
+    //ฟังก์ชั่นวันที่
+    date_default_timezone_set('Asia/Bangkok');
+    $date = date("Ymd");
+    $numrand = sprintf("%06d", rand(0, 999999));
+    if ($fee == "4" || $fee == "5") {
+      $amount = 1;
     }
 
-  } else if ($datenows <= "2024-10-17") {
+    $date_end = $conn->query("SELECT * FROM tb_setdate");
+    $datenows = date("Y-m-d");
 
-    if ($fee == "1") {
-      $total = $amount * 5000;
+    if ($datenows <= "2024-08-30") {
 
-    } else if ($fee == "2") {
-      $total = $amount * 6000;
+      if ($fee == "1") {
+        $total = $amount * 4500;
 
-    } else if ($fee == "3") {
-      $total = $amount * 4000;
+      } else if ($fee == "2") {
+        $total = $amount * 5000;
 
-    } else if ($fee == "4") {
-      $total = $amount * 3500;
+      } else if ($fee == "3") {
+        $total = $amount * 3500;
 
-    } else if ($fee == "5") {
-      $total = $amount * 1500;
+      } else if ($fee == "4") {
+        $total = $amount * 3500;
+
+      } else if ($fee == "5") {
+        $total = $amount * 1500;
+      }
+
+    } else if ($datenows <= "2024-10-17") {
+
+      if ($fee == "1") {
+        $total = $amount * 5000;
+
+      } else if ($fee == "2") {
+        $total = $amount * 6000;
+
+      } else if ($fee == "3") {
+        $total = $amount * 4000;
+
+      } else if ($fee == "4") {
+        $total = $amount * 3500;
+
+      } else if ($fee == "5") {
+        $total = $amount * 1500;
+      }
+
+    } else if ($datenows <= "2024-11-02") {
+
+      if ($fee == "1") {
+        $total = $amount * 5500;
+
+      } else if ($fee == "2") {
+        $total = $amount * 7000;
+
+      } else if ($fee == "3") {
+        $total = $amount * 4500;
+
+      } else if ($fee == "4") {
+        $total = $amount * 3500;
+
+      } else if ($fee == "5") {
+        $total = $amount * 1500;
+      }
+
     }
+    $sql = $conn->query("SELECT * FROM tb_user WHERE email='" . $email . "' ");
 
-  } else if ($datenows <= "2024-11-02") {
+    if ($sql->num_rows > 0) {
+      echo '<script language="javascript">';
+      echo 'alert("This email is already done, Can not register again.")';
+      echo '</script>';
+      header("refresh: 1; url=register.php");
+    } else {
+      $sql2 = $conn->query("INSERT INTO tb_user (email, password, title, firstname, lastname, company, career, address, country, telephone, fax, extrameal, food, type, receipt_name, receipt_address, receipt_tax, pay_id, amount, total_price, role, kmitl, approve, abstract_number) VALUES ('$email', '$password', '$title', '$fname', '$lname', '$company', '$career', '$address', '$country', '$tel', '$fax', '$extrameal', '$food', '$typeu', '$receipt_name','$receipt_address','$receipt_tax', '$fee', '$amount', '$total', '$role', '$kmitl', 'wait', '$abnumber')");
 
-    if ($fee == "1") {
-      $total = $amount * 5500;
+      if ($sql2) {
+        $slip = $conn->query("INSERT INTO tb_confirm (slip_date, slip_name, email) VALUES ('$date', '$numrand', '$email')");
+        if ($slip) {
+          echo '<script language="javascript">';
+          echo 'alert("Successfully registrater, Please Log in to get KEY for Attach confirm transfer file")';
+          echo '</script>';
+          header("refresh: 1; url=login.php");
+        } else {
+          echo '<script language="javascript">';
+          echo 'alert("Somthing Wrong about KEY")';
+          echo '</script>';
+          header("refresh: 1; url=register.php");
+        }
 
-    } else if ($fee == "2") {
-      $total = $amount * 7000;
-
-    } else if ($fee == "3") {
-      $total = $amount * 4500;
-
-    } else if ($fee == "4") {
-      $total = $amount * 3500;
-
-    } else if ($fee == "5") {
-      $total = $amount * 1500;
-    }
-
-  }
-  $sql = $conn->query("SELECT * FROM tb_user WHERE email='" . $email . "' ");
-
-  if ($sql->num_rows > 0) {
-    echo '<script language="javascript">';
-    echo 'alert("This email is already done, Can not register again.")';
-    echo '</script>';
-    header("refresh: 1; url=register.php");
-  } else {
-    $sql2 = $conn->query("INSERT INTO tb_user (email, password, title, firstname, lastname, company, career, address, country, telephone, fax, extrameal, food, type, receipt_name, receipt_address, receipt_tax, pay_id, amount, total_price, role, kmitl, approve, abstract_number) VALUES ('$email', '$password', '$title', '$fname', '$lname', '$company', '$career', '$address', '$country', '$tel', '$fax', '$extrameal', '$food', '$typeu', '$receipt_name','$receipt_address','$receipt_tax', '$fee', '$amount', '$total', '$role', '$kmitl', 'wait', '$abnumber')");
-
-    if ($sql2) {
-      $slip = $conn->query("INSERT INTO tb_confirm (slip_date, slip_name, email) VALUES ('$date', '$numrand', '$email')");
-      if ($slip) {
-        echo '<script language="javascript">';
-        echo 'alert("Successfully registrater, Please Log in to get KEY for Attach confirm transfer file")';
-        echo '</script>';
-        header("refresh: 1; url=login.php");
       } else {
         echo '<script language="javascript">';
-        echo 'alert("Somthing Wrong about KEY")';
+        echo 'alert("Somthing Wrong abouy information")';
         echo '</script>';
         header("refresh: 1; url=register.php");
       }
-
-    } else {
-      echo '<script language="javascript">';
-      echo 'alert("Somthing Wrong abouy information")';
-      echo '</script>';
-      header("refresh: 1; url=register.php");
     }
   }
 }

@@ -16,6 +16,7 @@ if (isset($_SESSION['role'])) {
     <link rel="stylesheet" href="/theme/css/self.css">
     <link rel="shortcut icon" href="#" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   </head>
 
@@ -36,7 +37,7 @@ if (isset($_SESSION['role'])) {
         </div>
         <div class="card-body text-white" style="margin: 0px 10%;">
           <div class="row">
-            <form action="authen.php" method="POST" enctype="multipart/form-data">
+            <form action="authen.php" method="POST">
               <!-- Email input -->
               <div class="form-outline mb-2">
                 <label class="form-label" for="email">Email Address :</label>
@@ -166,7 +167,7 @@ if (isset($_SESSION['role'])) {
 
               <!-- KMITL input -->
               <div class="form-check mb-3 mt-5">
-                <input class="form-check-input" type="checkbox" name="kmitl" value=" (บุคลากร สจล.)">
+                <input class="form-check-input" type="checkbox" name="kmitl" value="(บุคลากร สจล.)">
                 <label class="form-check-label" for="check">
                 Select this option for KMITL personnel to receive registration fee exemptions for attending the TSB 2024  international academic conference . (เลือกช่องนี้สำหรับบุคลากรของ KMITL เพื่อรับการยกเว้นค่าลงทะเบียนในการเข้าร่วมงาน ประชุมวิชาการระดับนานาชาติ TSB2024)
                 </label>
@@ -311,6 +312,9 @@ if (isset($_SESSION['role'])) {
                 echo "หมดเวลาลงทะเบียน";
               } else { ?>
                 <div class="text-end">
+                  <div>
+                    <div class="g-recaptcha" data-sitekey="6Lcnkj8qAAAAACNi8AQ1AV2SQcrVY7LR4wgzNENv"></div>
+                  </div>
                   <button class="btn btn-download mt-2 but-sub" type="submit" name="register"
                     onclick="return confirm('Please check your information before registering. The name, address, and taxpayer identification number used for issuing receipts cannot be edited. (กรุณาตรวจสอบข้อมูลก่อนลงทะเบียน. ชื่อ ที่อยู่และเลขผู้เสียภาษีสำหรับออกใบเสร็จไม่สามารถแก้ไขได้)')">Submit</button>
                 </div>
@@ -337,6 +341,7 @@ if (isset($_SESSION['role'])) {
         }
       }
     </script>
+    
 
     <?php
     include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');

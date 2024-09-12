@@ -126,7 +126,7 @@ if ($_SESSION['role'] && $_SESSION['role'] == "user") {
                     <h6>
                       <?php
                       echo $row['career'] . " from " . $row['company'] . $row['country'] . "<br>fax : " . $row['fax'] . "<br>Tel. : " . $row['telephone'] . "<br>Name and address for payment receipt
-                      (ชื่อและที่อยู่ในใบเสร็จสำหรับเบิก) : " . $row['receipt'];
+                      (ชื่อและที่อยู่ในใบเสร็จสำหรับเบิก) : " . $row['receipt_name'];
                       ?>
                     </h6>
                   </div>
