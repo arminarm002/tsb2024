@@ -89,7 +89,7 @@ if (isset($_POST['g-recaptcha-response'])) {
         $total = $amount * 1500;
       }
 
-    } else if ($datenows <= "2024-10-17") {
+    } else if ($datenows <= "2024-10-31") {
 
       if ($fee == "1") {
         $total = $amount * 5000;
@@ -107,7 +107,7 @@ if (isset($_POST['g-recaptcha-response'])) {
         $total = $amount * 1500;
       }
 
-    } else if ($datenows <= "2024-11-02") {
+    } else if ($datenows <= "2024-11-1") {
 
       if ($fee == "1") {
         $total = $amount * 5500;
