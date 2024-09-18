@@ -54,7 +54,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
               } ?>
             </a>
           </div>
-          <div class="col-lg-2 col-md-3 col-3">
+          <div class="col-lg-2 col-md-3 col-3" style="margin: auto 0px;">
             <a href="<?php echo $row['lg_link'] ?>" target="_blank" style="text-decoration: none;">
               <h6 class="abw resfont2" style="word-wrap: break-word;display: block;"><?php echo $row['lg_name']; ?></h6>
             </a>
