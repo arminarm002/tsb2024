@@ -524,6 +524,7 @@ canvas {
   border: 1px solid;
   border-radius: 15px;
   border-color: white;
+  margin:auto;
 }
 
 @media screen and (min-width: 1351px) {

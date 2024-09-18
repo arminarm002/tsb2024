@@ -15,14 +15,29 @@
       <div class="col-md-4">
         <h4>Organizer</h4>
         <div class="row">
-          <div class="col-lg-4 col-sm-6 col-4 logofooter" style="margin:auto;">
-            <a target="_blank" href="https://www.science.kmitl.ac.th/new">
-              <img src="/img/co-host/org01.png" style="width:100%;">
+          <div class="col-lg-4 col-sm-6 col-4 logofooter">
+            <a target="_blank" href="https://www.biotec.or.th/tsb/">
+              <img src="/img/co-host/org01.png" class="w-50">
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6 col-4 logofooter" style="margin:auto;">
-            <a target="_blank" href="https://www.biotec.or.th/tsb/">
-              <img src="/img/co-host/org02.png" style="width:100%;">
+          <div class="col-lg-4 col-sm-6 col-4 logofooter">
+            <a target="_blank" href="https://www.science.kmitl.ac.th/new">
+              <img src="/img/co-host/org02.png" class="w-50">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-4 logofooter">
+            <a target="_blank" href="https://www.aru.ac.th/">
+              <img src="/img/co-host/org03.png" class="w-50">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-4 logofooter">
+            <a target="_blank" href="https://sci.ssru.ac.th/">
+              <img src="/img/co-host/org04.png" class="w-50">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-4 logofooter">
+            <a target="_blank" href="https://www.aru.ac.th/">
+              <img src="/img/co-host/org05.png" class="w-50">
             </a>
           </div>
           <!-- <div class="col-lg-4 col-sm-6 col-4" style="margin:auto;">
