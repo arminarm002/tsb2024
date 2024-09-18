@@ -38,16 +38,16 @@ if ($_SESSION['role'] && $_SESSION['role'] == "superadmin") {
               <div class="col">
             <?php if ($row['approve'] == "wait") { ?>
                   <div class="alert alert-secondary" role="alert">
-                    กรุณารอการยืนยันจากเจ้าหน้าที่
+                    กรุณารอการยืนยันจากเจ้าหน้าที่ / Please wait for confirmation from officials.
                   </div>
             <?php } else if ($row['approve'] == "approve") { ?>
                     <div class="alert alert-success" role="alert">
-                      การลงทะเบียนของคุณ ได้รับการอนุมัติเรียบร้อย
+                      การลงทะเบียนของคุณ ได้รับการอนุมัติเรียบร้อย / Your registration Has been approved
                     </div>
             <?php } else if ($row['approve'] == "disapprove") { ?>
                       <div class="alert alert-danger" role="alert">
                         การลงทะเบียนของคุณ ไม่ผ่านการอนุมัติ เนื่องจาก "
-                <?php echo $row['message']; ?>" หากยืนยันว่าการลงทะเบียนของท่านถูกต้องครบถ้วน กรุณาติดต่อเจ้าหน้าที่
+                <?php echo $row['message']; ?>" หากยืนยันว่าการลงทะเบียนของท่านถูกต้องครบถ้วน กรุณาติดต่อเจ้าหน้าที่ / Your registration not approved , If you confirm that your registration is correct and complete. Please contact the staff.
                       </div>
             <?php } ?>
                 <div class="row">
