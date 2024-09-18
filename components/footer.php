@@ -36,7 +36,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6 col-4 logofooter">
-            <a target="_blank" href="https://www.aru.ac.th/">
+            <a target="_blank" href="https://www.afob.org/">
               <img src="/img/co-host/org05.png" class="w-50">
             </a>
           </div>
