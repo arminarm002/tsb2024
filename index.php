@@ -235,7 +235,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
   </script>
   <script>
     document.getElementById("alert").addEventListener("click", function () {
-      alert("Please Log in to find your 'KEY'");
+      alert("Please Log in to find your 'KEY'\nPlease note that the key is essential for the payment confirmation step. We kindly ask that you don’t overlook it.");
     });
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR16YY4QKZ"></script>
