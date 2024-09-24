@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,9 +37,12 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 
 <body>
   <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
 
+  <a href="https://forms.gle/ewGzwCXbRcpvi4ZR8" id="alert" target="_blank">
+    <img src="/../img/paymentslip.png" class="img-fluid paymentslip">
+  </a>
   <a href="https://www.messenger.com/t/279532238569467/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0"
     target="_blank">
     <img src="/../img/messenger.png" class="img-fluid messenger">
@@ -87,9 +90,9 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 
     </section>
     <div class="videohome">
-        <video class="border border-warning rounded" width="100%" height="auto" muted controls loop autoplay
-          src="/img/tsb2024open.mp4"></video>
-      </div>
+      <video class="border border-warning rounded" width="100%" height="auto" muted controls loop autoplay
+        src="/img/tsb2024open.mp4"></video>
+    </div>
     <div class="row centerer">
       <?php
       $query = $conn->query("SELECT * FROM tb_poster");
@@ -230,13 +233,18 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 
     gtag('config', 'G-CR16YY4QKZ');
   </script>
+  <script>
+    document.getElementById("alert").addEventListener("click", function () {
+      alert("Please Log in to find your 'KEY'");
+    });
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR16YY4QKZ"></script>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
-  include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
-  include ($_SERVER['DOCUMENT_ROOT'] . '/script/blink.php');
-  include ($_SERVER['DOCUMENT_ROOT'] . '/script/countdown.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/script/blink.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/script/countdown.php');
   ?>
 </body>
 
