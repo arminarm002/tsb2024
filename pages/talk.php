@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +15,10 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 
 <body>
   <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
-<a href="https://www.messenger.com/t/279532238569467/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0" target="_blank">
+  <a href="https://www.messenger.com/t/279532238569467/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0"
+    target="_blank">
     <img src="/../img/messenger.png" class="img-fluid messenger">
   </a>
   <div class="container">
@@ -39,26 +40,28 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
               <?php echo $sk['sk_description']; ?>
             </p>
 
-            <?php if (isset($_SESSION['role']) == "superadmin") { ?>
-            <div style="display: -webkit-inline-box;">
-              <form action="/auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 20px;">
-                <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk['id']; ?>">
+            <?php if (isset($_SESSION['role'])) {
+              if ($_SESSION['role'] == "superadmin") { ?>
+                <div style="display: -webkit-inline-box;">
+                  <form action="/auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 20px;">
+                    <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk['id']; ?>">
 
-                <button class="btn btn-update-logo" type="submit" name="update">
-                  <box-icon type='solid' name='pencil'></box-icon>
-                </button>
-              </form>
+                    <button class="btn btn-update-logo" type="submit" name="update">
+                      <box-icon type='solid' name='pencil'></box-icon>
+                    </button>
+                  </form>
 
-              <form action="/auth/backend/data/alldelete.php" method="POST" style="float:left;padding: 0px 20px;">
-                <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk['id']; ?>">
+                  <form action="/auth/backend/data/alldelete.php" method="POST" style="float:left;padding: 0px 20px;">
+                    <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk['id']; ?>">
 
-                <button class="btn btn-delete-logo" type="submit" name="deletespeaker"
-                  onclick="return confirm('ยืนยันที่จะลบ ?')">
-                  <box-icon type='solid' name='trash'></box-icon>
-                </button>
-              </form>
-            </div>
-            <?php } ?>
+                    <button class="btn btn-delete-logo" type="submit" name="deletespeaker"
+                      onclick="return confirm('ยืนยันที่จะลบ ?')">
+                      <box-icon type='solid' name='trash'></box-icon>
+                    </button>
+                  </form>
+                </div>
+              <?php }
+            } ?>
 
           </div>
 
@@ -86,26 +89,28 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
                 </span><br><?php echo $sk2['sk_title']; ?>
               </h6>
 
-              <?php if (isset($_SESSION['role']) == "superadmin") { ?>
-              <div style="display: -webkit-inline-box;">
-                <form action="/auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 20px;">
-                  <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk2['id']; ?>">
+              <?php if (isset($_SESSION['role'])) {
+                if ($_SESSION['role'] == "superadmin") { ?>
+                  <div style="display: -webkit-inline-box;">
+                    <form action="/auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 20px;">
+                      <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk2['id']; ?>">
 
-                  <button class="btn btn-update-logo" type="submit" name="update">
-                    <box-icon type='solid' name='pencil'></box-icon>
-                  </button>
-                </form>
+                      <button class="btn btn-update-logo" type="submit" name="update">
+                        <box-icon type='solid' name='pencil'></box-icon>
+                      </button>
+                    </form>
 
-                <form action="/auth/backend/data/alldelete.php" method="POST" style="float:left;padding: 0px 20px;">
-                  <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk2['id']; ?>">
+                    <form action="/auth/backend/data/alldelete.php" method="POST" style="float:left;padding: 0px 20px;">
+                      <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $sk2['id']; ?>">
 
-                  <button class="btn btn-delete-logo" type="submit" name="deletespeaker"
-                    onclick="return confirm('ยืนยันที่จะลบ ?')">
-                    <box-icon type='solid' name='trash'></box-icon>
-                  </button>
-                </form>
-              </div>
-              <?php } ?>
+                      <button class="btn btn-delete-logo" type="submit" name="deletespeaker"
+                        onclick="return confirm('ยืนยันที่จะลบ ?')">
+                        <box-icon type='solid' name='trash'></box-icon>
+                      </button>
+                    </form>
+                  </div>
+                <?php }
+              } ?>
           </div>
 
         <?php }
@@ -120,7 +125,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
     <h2 style="text-align: center;">Invited Speakers</h2>
     <?php $speaker3 = $conn->query("SELECT * FROM tb_speaker WHERE sk_type='Invited Speakers'");
     if ($speaker3->num_rows > 0) {
-      $symposium = $conn->query("SELECT * FROM tb_symposium");
+      $symposium = $conn->query("SELECT * FROM tb_symposium WHERE symposium_id>0 AND symposium_id<6");
       foreach ($symposium as $sym) { ?>
         <div class="row mt-3" style="background-color: #f6dab8;">
           <div class="col-lg-5 col-md-6 col-sm-6" style="margin: auto;">
@@ -139,28 +144,30 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
                     </span><br><?php echo $sk3['sk_title']; ?>
                   </h6>
 
-                  <?php if (isset($_SESSION['role']) == "superadmin") { ?>
-                  <div style="display: -webkit-inline-box;">
-                    <form action="/auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 10px;">
-                      <input type="text" name="id" class="form-control" style="display:none;"
-                        value="<?php echo $sk3['id']; ?>">
+                  <?php if (isset($_SESSION['role'])) {
+                    if ($_SESSION['role'] == "superadmin") { ?>
+                      <div style="display: -webkit-inline-box;">
+                        <form action="/auth/backend/personneltalk-update.php" method="POST" style="float:left;padding: 0px 10px;">
+                          <input type="text" name="id" class="form-control" style="display:none;"
+                            value="<?php echo $sk3['id']; ?>">
 
-                      <button class="btn btn-update-logo" type="submit" name="update">
-                        <box-icon type='solid' name='pencil'></box-icon>
-                      </button>
-                    </form>
+                          <button class="btn btn-update-logo" type="submit" name="update">
+                            <box-icon type='solid' name='pencil'></box-icon>
+                          </button>
+                        </form>
 
-                    <form action="/auth/backend/data/alldelete.php" method="POST" style="float:left;padding: 0px 10px;">
-                      <input type="text" name="id" class="form-control" style="display:none;"
-                        value="<?php echo $sk3['id']; ?>">
+                        <form action="/auth/backend/data/alldelete.php" method="POST" style="float:left;padding: 0px 10px;">
+                          <input type="text" name="id" class="form-control" style="display:none;"
+                            value="<?php echo $sk3['id']; ?>">
 
-                      <button class="btn btn-delete-logo" type="submit" name="deletespeaker"
-                        onclick="return confirm('ยืนยันที่จะลบ ?')">
-                        <box-icon type='solid' name='trash'></box-icon>
-                      </button>
-                    </form>
-                  </div>
-                  <?php } ?>
+                          <button class="btn btn-delete-logo" type="submit" name="deletespeaker"
+                            onclick="return confirm('ยืนยันที่จะลบ ?')">
+                            <box-icon type='solid' name='trash'></box-icon>
+                          </button>
+                        </form>
+                      </div>
+                    <?php }
+                  } ?>
                 </div>
               <?php } ?>
             </div>
@@ -174,8 +181,8 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
   </div>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
-  include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
 
   ?>
 </body>

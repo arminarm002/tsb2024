@@ -103,28 +103,30 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
               <img src="/file/upload/poster/<?php echo $row['pt_image']; ?>" class="d-block w-100"
                 style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
             </a>
-            <?php if (isset($_SESSION['role']) == "superadmin") { ?>
+            <?php if (isset($_SESSION['role'])) {
+              if ($_SESSION['role'] == "superadmin") { ?>
 
-              <form action="auth/backend/poster-update.php" method="POST">
-                <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
+                <form action="auth/backend/poster-update.php" method="POST">
+                  <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
 
-                <button class="btn btn-update" type="submit" name="update">
-                  <box-icon type='solid' name='pencil'></box-icon>
-                </button>
-              </form>
+                  <button class="btn btn-update" type="submit" name="update">
+                    <box-icon type='solid' name='pencil'></box-icon>
+                  </button>
+                </form>
 
-              <form action="auth/backend/data/alldelete.php" method="POST">
-                <input type="text" name="filename" class="form-control" style="display:none;"
-                  value="<?php echo $row['pt_image']; ?>">
-                <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
+                <form action="auth/backend/data/alldelete.php" method="POST">
+                  <input type="text" name="filename" class="form-control" style="display:none;"
+                    value="<?php echo $row['pt_image']; ?>">
+                  <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
 
-                <button class="btn btn-delete" type="submit" name="deleteposter"
-                  onclick="return confirm('ยืนยันที่จะลบ ?')">
-                  <box-icon type='solid' name='trash'></box-icon>
-                </button>
-              </form>
+                  <button class="btn btn-delete" type="submit" name="deleteposter"
+                    onclick="return confirm('ยืนยันที่จะลบ ?')">
+                    <box-icon type='solid' name='trash'></box-icon>
+                  </button>
+                </form>
 
-            <?php } ?>
+              <?php }
+            } ?>
           </div>
         </div>
       <?php } ?>
@@ -142,27 +144,29 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
               <div class="card border border-warning rounded">
                 <img class="border-bottom border-warning" src="/file/upload/news/<?php echo $row['an_image']; ?>"
                   style="width:100%; ">
-                <?php if (isset($_SESSION['role']) == "superadmin") { ?>
+                <?php if (isset($_SESSION['role'])) {
+                  if ($_SESSION['role'] == "superadmin") { ?>
 
-                  <form action="auth/backend/news-update.php" method="POST">
-                    <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
+                    <form action="auth/backend/news-update.php" method="POST">
+                      <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
 
-                    <button class="btn btn-update" type="submit" name="update">
-                      <box-icon type='solid' name='pencil'></box-icon>
-                    </button>
-                  </form>
+                      <button class="btn btn-update" type="submit" name="update">
+                        <box-icon type='solid' name='pencil'></box-icon>
+                      </button>
+                    </form>
 
-                  <form action="auth/backend/data/alldelete.php" method="POST">
-                    <input type="text" name="filename" class="form-control" style="display:none;"
-                      value="<?php echo $row['an_image']; ?>">
-                    <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
+                    <form action="auth/backend/data/alldelete.php" method="POST">
+                      <input type="text" name="filename" class="form-control" style="display:none;"
+                        value="<?php echo $row['an_image']; ?>">
+                      <input type="text" name="id" class="form-control" style="display:none;" value="<?php echo $row['id']; ?>">
 
-                    <button class="btn btn-delete" type="submit" name="delete" onclick="return confirm('ยืนยันที่จะลบ ?')">
-                      <box-icon type='solid' name='trash'></box-icon>
-                    </button>
-                  </form>
+                      <button class="btn btn-delete" type="submit" name="delete" onclick="return confirm('ยืนยันที่จะลบ ?')">
+                        <box-icon type='solid' name='trash'></box-icon>
+                      </button>
+                    </form>
 
-                <?php } ?>
+                  <?php }
+                } ?>
                 <div class="card-body">
                   <h5 class="card-title">
                     <?php if ($i <= 3) { ?>
