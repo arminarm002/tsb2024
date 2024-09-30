@@ -43,6 +43,7 @@ if ($_SESSION['role']) {
                   ?>
                 </h2>
                 <h2>รายชื่อผู้สมัคร ที่ได้รับการอนุมัติเรียบร้อยแล้ว</h2>
+                <a href="export-approved.php?act=export" class="btn btn-primary"> Export->Excel </a>
                 <div class="table-responsive">
                   <table class="table table-striped strip">
                     <thead>

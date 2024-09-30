@@ -49,6 +49,7 @@ if (isset($_SESSION['role'])) {
                   ?>
                 </h2>
                 <h2>รายชื่อผู้สมัคร รอการอนุมัติ</h2>
+                <a href="export-wait.php?act=export" class="btn btn-primary"> Export->Excel </a>
                 <div class="table-responsive">
                   <table class="table table-striped strip">
                     <thead>

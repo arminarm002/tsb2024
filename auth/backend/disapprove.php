@@ -43,6 +43,7 @@ if ($_SESSION['role']) {
                   ?>
                 </h2>
                 <h2>รายชื่อผู้สมัคร ที่ไม่ผ่านการอนุมัติ</h2>
+                <a href="export-disapproved.php?act=export" class="btn btn-primary"> Export->Excel </a>
                 <div class="stable-responsive">
                   <table class="table table-striped strip">
                     <thead>
