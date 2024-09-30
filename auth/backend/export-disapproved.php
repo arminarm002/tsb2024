@@ -26,7 +26,7 @@ if (isset($_SESSION['role'])) {
         <div class="row mt-3">
           <div class="card">
             <div class="cardbody" style="padding:2% 5%;">
-              <h2>รายชื่อผู้สมัคร รอการอนุมัติ</h2>
+              <h2>รายชื่อผู้สมัคร ไม่ผ่านการอนุมัติ</h2>
               <div class="table-responsive">
                 <table class="table table-striped strip">
                   <thead>
