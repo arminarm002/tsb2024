@@ -29,7 +29,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
         <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are grateful for your participation in
           this conference. This page is designed to prepare you for your poster and oral presentation at TSB2024. Please
           visit the page regularly for updates on technical requirements and related information.
-        </h5><hr style="border: none;height: 9px;background-color: #ff4a00;">
+        </h5><hr style="border: none;height: 9px;background-color: #000;">
 
         <h3 class="mt-3" style="color:black">Guidelines for poster presenters</h3>
         <h5>
@@ -46,7 +46,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
           5) Posters must be removed from the board before 15.00 on the last day of the conference (Saturday 16th
           November 2024). If the posters are left after 15.00, the organizer reserves the right to remove and discard
           them.
-        </h5><hr style="border: none;height: 9px;background-color: #ff4a00;">
+        </h5><hr style="border: none;height: 9px;background-color: #000;">
 
         <h3 class="mt-3" style="color:black">Guidelines for oral presenters</h3>
         <h5>
@@ -69,7 +69,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
           6) In general, each oral presenter will have 10-12 minutes for presentation and 3-5 minutes for Q&A.<br>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           7) There will be warning signals for the end of your presentation.
-        </h5><hr style="border: none;height: 9px;background-color: #ff4a00;">
+        </h5><hr style="border: none;height: 9px;background-color: #000;">
 
         <h3 class="mt-3" style="color:black">Oral presenters’ slide preparation</h3>
         <h5>
@@ -89,7 +89,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
           7)	If you include video clips with PowerPoint, the videos must be embedded as an MP4.<br>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           8)	A laser pointer will be provided in the meeting room.
-        </h5><hr style="border: none;height: 9px;background-color: #ff4a00;">
+        </h5><hr style="border: none;height: 9px;background-color: #000;">
 
       </div>
     </div>
