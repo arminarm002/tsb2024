@@ -23,6 +23,7 @@
     <a href="/auth/backend/admin.php" class="text-white list-group-item list-group-item-action">รอการอนุมัติ</a>
     <a href="/auth/backend/approved.php" class="text-white list-group-item list-group-item-action">อนุมัติแล้ว</a>
     <a href="/auth/backend/disapprove.php" class="text-white list-group-item list-group-item-action">ไม่ผ่านการอนุมัติ</a>
+    <a href="/auth/backend/kmitl-user.php" class="text-white list-group-item list-group-item-action">บุคลากร สจล.</a>
   <?php } ?>
   <?php if ($_SESSION['role'] == "superadmin") { ?>
     <a href="/auth/backend/manageuser.php" class="text-white list-group-item list-group-item-action">User</a>
