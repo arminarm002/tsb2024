@@ -282,4 +282,33 @@ if (isset($_POST['abstractnumber'])) {
     }
   }
 }
+
+//Super admin change user password
+if (isset($_POST['adminchang'])) {
+  $email = $_POST['email'];
+  $numrand = sprintf("%06d", rand(0, 999999));
+  $password = password_hash($numrand, PASSWORD_DEFAULT);
+
+  $result = $conn->query("SELECT * FROM tb_user WHERE email='" . $email . "'");
+
+  if ($result->num_rows > 0) {
+
+    $update = $conn->query("UPDATE tb_user SET password='$password' WHERE email='$email' ");
+      mysqli_close($conn);
+      if ($update) {
+        echo $numrand;
+      } else {
+        echo '<script language="javascript">';
+        echo 'alert("Somthing Wrong!!!")';
+        echo '</script>';
+        header("refresh: 1; url=changepass.php");
+      }
+    
+  } else {
+    echo '<script language="javascript">';
+    echo 'alert("not found this email")';
+    echo '</script>';
+    header("refresh: 1; url=backend/manageuser.php");
+  }
+}
 ?>

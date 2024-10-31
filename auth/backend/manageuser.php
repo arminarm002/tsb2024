@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 if ($_SESSION['role'] == "superadmin") {
   ?>
   <!DOCTYPE html>
@@ -16,7 +16,7 @@ if ($_SESSION['role'] == "superadmin") {
 
   <body>
     <?php
-    include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
 
     $sql = $conn->query("SELECT * FROM tb_user INNER JOIN tb_pay 
     ON tb_user.pay_id = tb_pay.pay_id WHERE email='" . $_SESSION['email'] . "'");
@@ -25,7 +25,7 @@ if ($_SESSION['role'] == "superadmin") {
       <div class="container-fluid">
         <div class="row mt-3">
           <div class="col-sm-12 col-md-4 col-lg-3">
-            <?php include ($_SERVER['DOCUMENT_ROOT'] . '/components/sidebar.php'); ?>
+            <?php include($_SERVER['DOCUMENT_ROOT'] . '/components/sidebar.php'); ?>
           </div>
           <div class="col-sm-12 col-md-8 col-lg-9">
             <div class="row">
@@ -36,6 +36,18 @@ if ($_SESSION['role'] == "superadmin") {
                     echo $_SESSION['title'] . $_SESSION['firstname'] . " " . $_SESSION['lastname'] . "<br>";
                     ?>
                   </h2>
+
+                  <form action="../authen.php" class="mb-3" method="POST">
+                    <div class="form-group mt-5">
+                      <label style="color: white;" for="email">Email :</label>
+                      <input type="email" name="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="text-end">
+                      <button type="submit" class="btn btn-download mt-2" name="adminchang">change password</button>
+                    </div>
+                  </form>
+
                   <h4>รายชื่อผู้สมัคร ทั้งหมด</h4>
                   <div class="table-responsive">
                     <table class="table table-striped strip" style="--bs-table-bg: #ff7a0145;">
@@ -71,7 +83,8 @@ if ($_SESSION['role'] == "superadmin") {
                                   <select class="btn btn-secondary dropdown-toggle titlebut" type="button"
                                     id="dropdownMenuButton1" data-bs-toggle="dropdown" name="role"
                                     style="border-color:white;color:black" required>
-                                    <option value="<?php echo $tr['role']; ?>" selected disabled><?php echo $tr['role']; ?></option>
+                                    <option value="<?php echo $tr['role']; ?>" selected disabled><?php echo $tr['role']; ?>
+                                    </option>
                                     <option value="user">User</option>
                                     <option value="admin">Admin</option>
                                     <option value="superadmin">Super Admin</option>
@@ -97,8 +110,8 @@ if ($_SESSION['role'] == "superadmin") {
     <?php } ?>
 
     <?php
-    include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
-    include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
     ?>
 
   </body>
