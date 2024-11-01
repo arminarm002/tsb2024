@@ -145,8 +145,8 @@ if ($_SESSION['role'] && $_SESSION['role'] == "superadmin") {
                     <div class="card mt-3 bgorange">
                       <div class="cardbody" style="padding:2% 5%;">
                         <h4>Contact Us</h4>
-                        <h6>Email : <i class="bi bi-envelope"></i>xxx@gmail.com</h6>
-                        <h6>Tel. : <i class="bi bi-telephone"></i>098-7654321</h6>
+                        <h6>Email : <i class="bi bi-envelope"></i>tsb2024@kmitl.ac.th</h6>
+                        <h6>Tel. : <i class="bi bi-telephone"></i>02-329-8000 ext. 6225</h6>
                       </div>
                     </div>
                   </div>
