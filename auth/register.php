@@ -196,7 +196,7 @@ if (isset($_SESSION['role'])) {
                         <p>Regular Registration 31 August - 31 October 2024</p>
                       </td>
                       <td class="regis-th">
-                        <p>Late Registration 1 November 2024</p>
+                        <p>Late Registration 15 November 2024</p>
                       </td>
                     </tr>
                     <?php
@@ -204,7 +204,7 @@ if (isset($_SESSION['role'])) {
                     $date1 = date('Y-m-d', strtotime("2024/05/15"));
                     $date2 = date('Y-m-d', strtotime("2024/08/31"));
                     $date3 = date('Y-m-d', strtotime("2024/11/1"));
-                    $date4 = date('Y-m-d', strtotime("2024/11/02"));
+                    $date4 = date('Y-m-d', strtotime("2024/11/16"));
 
                     if (($datenows >= $date1) && ($datenows < $date2)) {
                       $data1 = "";
