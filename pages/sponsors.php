@@ -68,7 +68,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
     <hr>
     <h1 class="card-title centerer mt-3">Sponsors</h1>
 
-    <h3 class="mt-3" style="text-align: center;">Platinum</h3>
+    <h3 class="mt-3" style="text-align:center;color:#346f00;"><b>Platinum</b></h3>
     <div class="row">
       <div class="col-lg-2 col-md-3 col-3"></div>
       <div class="col-lg-2 col-md-3 col-3" style="text-align: center;">
@@ -97,7 +97,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
     </div>
 
     <!-- Gold Plus -->
-    <h3 class="mt-3" style="text-align: center;">Gold Plus</h3>
+    <h3 class="mt-3" style="text-align:center;color:#346f00;"><b>Gold Plus</b></h3>
     <div class="row">
       <div class="col-lg-2 col-md-3 col-3"></div>
       <div class="col-lg-2 col-md-3 col-3"></div>
@@ -125,7 +125,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
       if ($query2->num_rows > 0) { ?>
 
         <div class="row">
-          <h3 class="mt-3" style="text-align: center;"><?php echo $rowclass['cl_name'] ?></h3>
+          <h3 class="mt-3" style="text-align:center;color:#346f00;"><b><?php echo $rowclass['cl_name'] ?></b></h3>
           <?php
           foreach ($query2 as $row2) { ?>
             <div class="col-lg-2 col-md-3 col-3" style="text-align: center;">
