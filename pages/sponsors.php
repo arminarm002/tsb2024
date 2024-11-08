@@ -70,50 +70,50 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 
     <h3 class="mt-3" style="text-align:center;color:#346f00;"><b>Platinum</b></h3>
     <div class="row">
-      <div class="col-lg-2 col-md-3 col-3"></div>
-      <div class="col-lg-2 col-md-3 col-3" style="text-align: center;">
+      <div class="col-2"></div>
+      <div class="col-2" style="text-align: center;">
         <a href="https://www.barascientific.com/product/" target="_blank">
           <img src="../img/sponsors/07.png" class="img-fluid w-75">
 
         </a>
       </div>
-      <div class="col-lg-2 col-md-3 col-3" style="margin: auto 0px;">
+      <div class="col-2" style="margin: auto 0px;">
         <a href="https://www.barascientific.com/product/" target="_blank" style="text-decoration: none;">
           <h6 class="abw resfont2" style="word-wrap: break-word;display: block;">Bara Scientific Co., Ltd.</h6>
         </a>
       </div>
-      <div class="col-lg-2 col-md-3 col-3" style="text-align: center;">
+      <div class="col-2" style="text-align: center;">
         <a href="https://www.buchi.com" target="_blank">
           <img src="../img/sponsors/10.png" class="img-fluid w-75">
 
         </a>
       </div>
-      <div class="col-lg-2 col-md-3 col-3" style="margin: auto 0px;">
+      <div class="col-2" style="margin: auto 0px;">
         <a href="https://www.buchi.com" target="_blank" style="text-decoration: none;">
           <h6 class="abw resfont2" style="word-wrap: break-word;display: block;">BUCHI (Thailand) Ltd.</h6>
         </a>
       </div>
-      <div class="col-lg-2 col-md-3 col-3"></div>
+      <div class="col-2"></div>
     </div>
 
     <!-- Gold Plus -->
     <h3 class="mt-3" style="text-align:center;color:#346f00;"><b>Gold Plus</b></h3>
     <div class="row">
-      <div class="col-lg-2 col-md-3 col-3"></div>
-      <div class="col-lg-2 col-md-3 col-3"></div>
-      <div class="col-lg-2 col-md-3 col-3" style="text-align: center;">
+      <div class="col-2"></div>
+      <div class="col-2"></div>
+      <div class="col-2" style="text-align: center;">
         <a href="https://www.official.co.th/" target="_blank">
           <img src="../img/sponsors/12.png" class="img-fluid w-75">
 
         </a>
       </div>
-      <div class="col-lg-2 col-md-3 col-3" style="margin: auto 0px;">
+      <div class="col-2" style="margin: auto 0px;">
         <a href="https://www.official.co.th/" target="_blank" style="text-decoration: none;">
           <h6 class="abw resfont2" style="word-wrap: break-word;display: block;">Office Equipment Manufacturing</h6>
         </a>
       </div>
-      <div class="col-lg-2 col-md-3 col-3"></div>
-      <div class="col-lg-2 col-md-3 col-3"></div>
+      <div class="col-2"></div>
+      <div class="col-2"></div>
     </div>
 
 

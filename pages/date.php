@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,14 +15,14 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 
 <body>
   <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/components/navbar.php');
   ?>
   <a href="https://www.messenger.com/t/279532238569467/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0"
     target="_blank">
     <img src="/../img/messenger.png" class="img-fluid messenger">
   </a>
   <div class="container">
-    <h1 class="card-title centerer mt-3">Important Dates & Overall Program</h1>
+    <h1 class="card-title centerer mt-3">Important Dates</h1>
     <table class="table tb-stip table-striped table-hover mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
       <tbody style="font-size: 1.6vw;">
         <tr>
@@ -77,67 +77,30 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
         </tr>
       </tbody>
     </table>
-    <table class="table tb-stip table-striped table-hover mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-      <thead style="text-align: center;font-size: 2.5vw;">
-        <tr>
-          <td colspan="2">
-            <p>Overall Program of TSB2024</p>
-          </td>
-        </tr>
-      </thead>
-      <tbody style="font-size: 2vw;">
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <h4 class="fs-35 centerer">Coming soon</h4>
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+
+    <h1 class="card-title centerer mt-3">Overall Program</h1>
+    <div class="row centerer mt-3">
+      <details class="centerer btn-program">
+        <summary>Pre-conference 1 : Biocatalysis for BCG Economy (November, 14-15 2024)</summary>
+        <a target="_blank" href="/img/program1.jpg">
+          <img src="/img/program1.jpg" class="w-50 mt-3">
+        </a>
+      </details>
+    </div>
+    <div class="row centerer mt-3">
+      <details class="centerer btn-program">
+        <summary>Pre-conference 2 : Biocatalysis for BCG Economy (November, 16 2024)</summary>
+        <a target="_blank" href="/img/program2.jpg">
+          <img src="/img/program2.jpg" class="w-50 mt-3">
+        </a>
+      </details>
+    </div>
+
   </div>
 
   <?php
-  include ($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
-  include ($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/components/footer.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/script/script.php');
 
   ?>
 </body>
