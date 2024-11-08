@@ -81,7 +81,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
     <h1 class="card-title centerer mt-3">Overall Program</h1>
     <div class="row centerer mt-3">
       <details class="centerer btn-program">
-        <summary>conference 1 : Biocatalysis for BCG Economy (November, 14-15 2024)</summary>
+        <summary>Conference: November 14-15, 2024</summary>
         <a target="_blank" href="/img/program1.jpg">
           <img src="/img/program1.jpg" class="w-50 mt-3">
         </a>
@@ -89,7 +89,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
     </div>
     <div class="row centerer mt-3">
       <details class="centerer btn-program">
-        <summary>conference 2 : Biocatalysis for BCG Economy (November, 16 2024)</summary>
+        <summary>Conference: November 16, 2024</summary>
         <a target="_blank" href="/img/program2.jpg">
           <img src="/img/program2.jpg" class="w-50 mt-3">
         </a>
