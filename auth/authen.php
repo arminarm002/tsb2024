@@ -107,7 +107,7 @@ if (isset($_POST['g-recaptcha-response'])) {
         $total = $amount * 1500;
       }
 
-    } else if ($datenows <= "2024-11-1") {
+    } else if ($datenows <= "2024-11-15") {
 
       if ($fee == "1") {
         $total = $amount * 5500;
