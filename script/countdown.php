@@ -8,7 +8,7 @@ setInterval(run, second);
 
 function run() {
     const now = new Date().getTime();
-    const newtime = new Date('November 15, 2024 09:30:00').getTime();
+    const newtime = new Date('November 15, 2024 09:00:00').getTime();
     let distance = newtime - now;
     if (distance < 1) {
         const dayElem = document.getElementById('days');
