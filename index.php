@@ -93,6 +93,29 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
       <video class="border border-warning rounded" width="100%" height="auto" muted controls loop autoplay
         src="/img/tsb2024open.mp4"></video>
     </div>
+
+    <div class="container mb-3 mt-5" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;padding-bottom: 15px;">
+      <h2 class="card-text mt-3" style="text-align:center;color: #346f00;padding-top:25px;"><b>Proceeding Book</b></h2>
+      <div class="row centerer">
+        <div class="col-lg-6 col-md-6 col-sm-12 mt-3">
+          <div class="card" style="border: none;">
+            <a href="https://drive.google.com/file/d/1WCZJdCFmauZc5rTiCZ13AMJw2imFQiyb/view?usp=sharing" target="_blank">
+              <img src="/img/book of abstracts.jpg" class="d-block w-100"
+                style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 mt-3">
+          <div class="card" style="border: none;">
+            <a href="https://drive.google.com/file/d/1cr3NCRIwSunAmqBD_Xyzgxg0tB-I5JRm/view?usp=sharing" target="_blank">
+              <img src="/img/book of proceeding.jpg" class="d-block w-100"
+                style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="row centerer">
       <?php
       $query = $conn->query("SELECT * FROM tb_poster");
