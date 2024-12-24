@@ -107,7 +107,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 mt-3">
           <div class="card" style="border: none;">
-            <a href="https://drive.google.com/file/d/1cr3NCRIwSunAmqBD_Xyzgxg0tB-I5JRm/view?usp=sharing" target="_blank">
+            <a href="https://drive.google.com/file/d/1cmDkLesYiTa8tNcoY4VqAQlFLc-VLH9E/view?usp=sharing" target="_blank">
               <img src="/img/book of proceeding.jpg" class="d-block w-100"
                 style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
             </a>
