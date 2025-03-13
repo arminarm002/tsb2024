@@ -26,21 +26,21 @@ if (isset($_POST['change'])) {
       $result = $conn->query("UPDATE tb_user SET password='$passwordok' WHERE email='" . $_SESSION['email'] . "' ");
       mysqli_close($conn);
       if ($result) {
+        header("refresh: 1; url=logout.php");
         echo '<script language="javascript">';
         echo 'alert("Successfully Change Password")';
         echo '</script>';
-        header("refresh: 1; url=logout.php");
       } else {
+        header("refresh: 1; url=changepass.php");
         echo '<script language="javascript">';
         echo 'alert("Somthing Wrong!!!")';
         echo '</script>';
-        header("refresh: 1; url=changepass.php");
       }
     } else {
+      header("refresh: 1; url=changepass.php");
       echo '<script language="javascript">';
-        echo 'alert("Old Password Incorrect")';
-        echo '</script>';
-        header("refresh: 1; url=changepass.php");
+      echo 'alert("Old Password Incorrect")';
+      echo '</script>';
     }
   }
 }

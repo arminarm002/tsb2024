@@ -48,7 +48,7 @@ if ($_SESSION['role']) {
                     </thead>
                     <tbody>
                       <?php $no = 0;
-                      $sql2 = $conn->query("SELECT * FROM tb_user WHERE kmitl != '' AND ");
+                      $sql2 = $conn->query("SELECT * FROM tb_user WHERE kmitl != '' ");
                       $all = $sql2->num_rows;
                       foreach ($sql2 as $tr) {
                         $no++;
