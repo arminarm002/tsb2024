@@ -6,7 +6,7 @@ $pass = $_POST['password'];
 $id = $_GET['userid'];
 
 if ($_SESSION['role'] == "admin") {
-    if (isset($_POST['approve'])) {
+  if (isset($_POST['approve'])) {
     $sql = $conn->query("SELECT * FROM tb_user WHERE email='" . $_SESSION['email'] . "'");
     foreach ($sql as $row) {
       $thupass = $row['password'];
@@ -17,15 +17,15 @@ if ($_SESSION['role'] == "admin") {
         $date = date("Ymd");
         $nameby = $_SESSION['title'] . $_SESSION['firstname'] . " " . $_SESSION['lastname'];
         $insert = $conn->query("INSERT INTO tb_approve (ap_date, ap_by, user_id) VALUES ('$date', '$nameby', '$id')");
+        header("refresh: 1; url=admin.php");
         echo '<script language="javascript">';
         echo 'alert("Successfull.")';
         echo '</script>';
-        header("refresh: 1; url=admin.php");
       } else {
+        header("refresh: 1; url=detail.php");
         echo '<script language="javascript">';
         echo 'alert("Password Invalid")';
         echo '</script>';
-        header("refresh: 1; url=detail.php");
       }
     }
   }
@@ -43,16 +43,16 @@ if ($_SESSION['role'] == "admin") {
         $date = date("Ymd");
         $nameby = $_SESSION['title'] . $_SESSION['firstname'] . " " . $_SESSION['lastname'];
         $delete = $conn->query("DELETE FROM tb_approve WHERE user_id = '" . $id . "'");
-        $insert2 = $conn->query("UPDATE tb_user SET message='".$message."' WHERE user_id = '" . $id . "'");
+        $insert2 = $conn->query("UPDATE tb_user SET message='" . $message . "' WHERE user_id = '" . $id . "'");
+        header("refresh: 1; url=admin.php");
         echo '<script language="javascript">';
         echo 'alert("Successfull.")';
         echo '</script>';
-        header("refresh: 1; url=admin.php");
       } else {
+        header("refresh: 1; url=detail.php");
         echo '<script language="javascript">';
         echo 'alert("Password Invalid")';
         echo '</script>';
-        header("refresh: 1; url=detail.php");
       }
     }
   }

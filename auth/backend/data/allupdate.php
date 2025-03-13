@@ -1,5 +1,5 @@
 <?php
-include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 
 //Update User
 if (isset($_POST['userupdate'])) {
@@ -9,16 +9,15 @@ if (isset($_POST['userupdate'])) {
   $updateuser = $conn->query("UPDATE tb_user SET role='$role' WHERE user_id=$id;");
 
   if ($updateuser) {
+    header("refresh: 1; url=/auth/backend/manageuser.php");
     echo '<script language="javascript">';
     echo 'alert("แก้ไข สำเร็จ")';
     echo '</script>';
-    header("refresh: 1; url=/auth/backend/manageuser.php");
-
   } else {
+    header("refresh: 1; url=/auth/backend/manageuser.php");
     echo '<script language="javascript">';
     echo 'alert("Somthing Wrong!")';
     echo '</script>';
-    header("refresh: 1; url=/auth/backend/manageuser.php");
   }
 }
 
@@ -49,16 +48,15 @@ if (isset($_POST['updateposter'])) {
 
   if ($updateposter) {
     unlink('../../../file/upload/poster/' . $oldname);
+    header("refresh: 1; url=/index.php");
     echo '<script language="javascript">';
     echo 'alert("แก้ไข สำเร็จ")';
     echo '</script>';
-    header("refresh: 1; url=/index.php");
-
   } else {
+    header("refresh: 1; url=/auth/backend/superadmin.php");
     echo '<script language="javascript">';
     echo 'alert("Somthing Wrong!")';
     echo '</script>';
-    header("refresh: 1; url=/auth/backend/superadmin.php");
   }
 }
 
@@ -93,16 +91,15 @@ if (isset($_POST['update'])) {
 
   if ($updateannouncement) {
     unlink('../../../file/upload/news/' . $filename);
+    header("refresh: 1; url=/index.php");
     echo '<script language="javascript">';
     echo 'alert("แก้ไข สำเร็จ")';
     echo '</script>';
-    header("refresh: 1; url=/index.php");
-
   } else {
+    header("refresh: 1; url=/auth/backend/superadmin.php");
     echo '<script language="javascript">';
     echo 'alert("Somthing Wrong!")';
     echo '</script>';
-    header("refresh: 1; url=/auth/backend/superadmin.php");
   }
 }
 
@@ -136,16 +133,15 @@ if (isset($_POST['updatelogo'])) {
 
   if ($updatelogo) {
     unlink('../../../file/upload/logo/' . $oldname);
+    header("refresh: 1; url=/pages/sponsors.php");
     echo '<script language="javascript">';
     echo 'alert("แก้ไข สำเร็จ")';
     echo '</script>';
-    header("refresh: 1; url=/pages/sponsors.php");
-
   } else {
+    header("refresh: 1; url=/auth/backend/superadmin.php");
     echo '<script language="javascript">';
     echo 'alert("Somthing Wrong!")';
     echo '</script>';
-    header("refresh: 1; url=/auth/backend/superadmin.php");
   }
 }
 
@@ -167,10 +163,11 @@ if (isset($_POST['updatespeakers'])) {
 
     if ($updatespeaker) {
       if (!file_exists($_FILES['file_upload']['tmp_name']) || !is_uploaded_file($_FILES['file_upload']['tmp_name'])) {
+        header("refresh: 1; url=/pages/talk.php");
         echo '<script language="javascript">';
         echo 'alert("แก้ไข สำเร็จ")';
         echo '</script>';
-        header("refresh: 1; url=/pages/talk.php");
+
       } else {
         date_default_timezone_set('Asia/Bangkok');
         $date = date("Ymd");
@@ -184,22 +181,22 @@ if (isset($_POST['updatespeakers'])) {
         $updatespeakerimage = $conn->query("UPDATE tb_speaker SET sk_img='$newname' WHERE id=$id;");
 
         if ($updatespeakerimage) {
+          header("refresh: 1; url=/pages/talk.php");
           echo '<script language="javascript">';
           echo 'alert("แก้ไข สำเร็จ")';
           echo '</script>';
-          header("refresh: 1; url=/pages/talk.php");
         } else {
+          header("refresh: 1; url=/auth/backend/personneltalk-update.php");
           echo '<script language="javascript">';
           echo 'alert("Somthing Wrong! abount image")';
           echo '</script>';
-          header("refresh: 1; url=/auth/backend/personneltalk-update.php");
         }
       }
     } else {
+      header("refresh: 1; url=/auth/backend/personneltalk-update.php");
       echo '<script language="javascript">';
       echo 'alert("Somthing Wrong!")';
       echo '</script>';
-      header("refresh: 1; url=/auth/backend/personneltalk-update.php");
     }
   }
 }

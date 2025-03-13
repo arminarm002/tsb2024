@@ -17,7 +17,7 @@ $mail->isSMTP();
 $mail->Host = "smtp.gmail.com";
 $mail->SMTPAuth = true;
 $mail->Username = "suradech.ku@kmitl.ac.th"; // enter your email address
-$mail->Password = "aC8yijfmsl"; // enter your password
+$mail->Password = "kjwi mzlw emis hktp"; // enter your password
 $mail->Port = 857;
 $mail->SMTPSecure = "ssl";
 

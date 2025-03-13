@@ -1,5 +1,5 @@
 <?php
-include ($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/db/connectdb.php');
 
 //Delete Poster
 if (isset($_POST['deleteposter'])) {
@@ -10,16 +10,15 @@ if (isset($_POST['deleteposter'])) {
 
   if ($deleteposter) {
     unlink('../../../file/upload/poster/' . $filename);
+    header("refresh: 1; url=/index.php");
     echo '<script language="javascript">';
     echo 'alert("ลบ สำเร็จ")';
     echo '</script>';
-    header("refresh: 1; url=/index.php");
-
   } else {
+    header("refresh: 1; url=/auth/backend/superadmin.php");
     echo '<script language="javascript">';
     echo 'alert("Somthing Wrong!")';
     echo '</script>';
-    header("refresh: 1; url=/auth/backend/superadmin.php");
   }
 
 }
@@ -33,16 +32,15 @@ if (isset($_POST['delete'])) {
 
   if ($deleteannouncement) {
     unlink('../../../file/upload/news/' . $filename);
+    header("refresh: 1; url=/index.php");
     echo '<script language="javascript">';
     echo 'alert("ลบ สำเร็จ")';
     echo '</script>';
-    header("refresh: 1; url=/index.php");
-
   } else {
+    header("refresh: 1; url=/auth/backend/superadmin.php");
     echo '<script language="javascript">';
     echo 'alert("Somthing Wrong!")';
     echo '</script>';
-    header("refresh: 1; url=/auth/backend/superadmin.php");
   }
 
 }
@@ -55,16 +53,15 @@ if (isset($_POST['deletelogo'])) {
 
   if ($deleteannouncement) {
     unlink('../../../file/upload/logo/' . $oldname);
+    header("refresh: 1; url=/pages/sponsors.php");
     echo '<script language="javascript">';
     echo 'alert("ลบ สำเร็จ")';
     echo '</script>';
-    header("refresh: 1; url=/pages/sponsors.php");
-
   } else {
+    header("refresh: 1; url=/auth/backend/superadmin.php");
     echo '<script language="javascript">';
     echo 'alert("Somthing Wrong!")';
     echo '</script>';
-    header("refresh: 1; url=/auth/backend/superadmin.php");
   }
 
 }
@@ -78,16 +75,15 @@ if (isset($_POST['deletespeaker'])) {
 
   if ($deletespeaker) {
     unlink('../../../file/upload/speaker/' . $sk['sk_img']);
+    header("refresh: 1; url=/pages/talk.php");
     echo '<script language="javascript">';
     echo 'alert("ลบ สำเร็จ")';
     echo '</script>';
-    header("refresh: 1; url=/pages/talk.php");
-
   } else {
+    header("refresh: 1; url=/auth/backend/personneltalk-update.php");
     echo '<script language="javascript">';
     echo 'alert("Somthing Wrong!")';
     echo '</script>';
-    header("refresh: 1; url=/auth/backend/personneltalk-update.php");
   }
 
 }

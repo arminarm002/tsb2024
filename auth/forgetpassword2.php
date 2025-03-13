@@ -40,15 +40,15 @@ if (isset($_POST['forgot'])) {
         $sql = $conn->query("UPDATE tb_user SET password='$password' WHERE email='" . $inputemail . "' ");
         if ($sql) {
             $mail->send();
+            header("refresh: 1; url=login.php");
             echo '<script language="javascript">';
             echo 'alert("Message has been sent")';
             echo '</script>';
-            header("refresh: 1; url=login.php");
         } else {
+            header("refresh: 1; url=forgetpassword.php");
             echo '<script language="javascript">';
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             echo '</script>';
-            header("refresh: 1; url=forgetpassword.php");
         }
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

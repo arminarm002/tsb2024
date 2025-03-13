@@ -2,7 +2,7 @@
 //สร้างตัวแปรเพื่อใช้เชื่อม db
 $servername = "localhost";
 $username = "suradechdb";
-$password = "#Science@suradech1234+";
+$password = "#Science@suradech";
 $dbname = "db_tsb2024";
 
 $conn = new mysqli($servername, $username, $password, $dbname);

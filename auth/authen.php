@@ -129,32 +129,32 @@ if (isset($_POST['g-recaptcha-response'])) {
     $sql = $conn->query("SELECT * FROM tb_user WHERE email='" . $email . "' ");
 
     if ($sql->num_rows > 0) {
+      header("refresh: 1; url=register.php");
       echo '<script language="javascript">';
       echo 'alert("This email is already done, Can not register again.")';
       echo '</script>';
-      header("refresh: 1; url=register.php");
     } else {
       $sql2 = $conn->query("INSERT INTO tb_user (email, password, title, firstname, lastname, company, career, address, country, telephone, fax, extrameal, food, type, receipt_name, receipt_address, receipt_tax, pay_id, amount, total_price, role, kmitl, approve, abstract_number) VALUES ('$email', '$password', '$title', '$fname', '$lname', '$company', '$career', '$address', '$country', '$tel', '$fax', '$extrameal', '$food', '$typeu', '$receipt_name','$receipt_address','$receipt_tax', '$fee', '$amount', '$total', '$role', '$kmitl', 'wait', '$abnumber')");
 
       if ($sql2) {
         $slip = $conn->query("INSERT INTO tb_confirm (slip_date, slip_name, email) VALUES ('$date', '$numrand', '$email')");
         if ($slip) {
+          header("refresh: 1; url=login.php");
           echo '<script language="javascript">';
           echo 'alert("Successfully registrater, Please Log in to get KEY for Attach confirm transfer file")';
           echo '</script>';
-          header("refresh: 1; url=login.php");
         } else {
+          header("refresh: 1; url=register.php");
           echo '<script language="javascript">';
           echo 'alert("Somthing Wrong about KEY")';
           echo '</script>';
-          header("refresh: 1; url=register.php");
         }
 
       } else {
+        header("refresh: 1; url=register.php");
         echo '<script language="javascript">';
         echo 'alert("Somthing Wrong abouy information")';
         echo '</script>';
-        header("refresh: 1; url=register.php");
       }
     }
   }
@@ -206,17 +206,17 @@ if (isset($_POST['login'])) {
           header("refresh: 1; url=/auth/backend/superadmin.php");
         }
       } else {
+        header("refresh: 1; url=login.php");
         echo '<script language="javascript">';
         echo 'alert("Password Invalid")';
         echo '</script>';
-        header("refresh: 1; url=login.php");
       }
     }
   } else {
+    header("refresh: 1; url=login.php");
     echo '<script language="javascript">';
     echo 'alert("Username Invalid")';
     echo '</script>';
-    header("refresh: 1; url=login.php");
   }
 }
 
@@ -239,15 +239,15 @@ if (isset($_POST['updatedetail'])) {
   $updatedata = $conn->query($sqlupdate);
 
   if ($updatedata) {
+    header("refresh: 1; url=profile.php");
     echo '<script language="javascript">';
     echo 'alert("Successfully Update")';
     echo '</script>';
-    header("refresh: 1; url=profile.php");
   } else {
+    header("refresh: 1; url=updatedetail.php");
     echo '<script language="javascript">';
     echo 'alert("Somthing Wrong!")';
     echo '</script>';
-    header("refresh: 1; url=updatedetail.php");
   }
 }
 
@@ -269,16 +269,16 @@ if (isset($_POST['abstractnumber'])) {
 
     if ($updateabnum) {
       $_SESSION['abstract_number'] = $abnumber;
+      header("refresh: 1; url=/auth/profile.php");
       echo '<script language="javascript">';
       echo 'alert("Successfully")';
       echo '</script>';
-      header("refresh: 1; url=/auth/profile.php");
 
     } else {
+      header("refresh: 1; url=/auth/fillabnum.php");
       echo '<script language="javascript">';
       echo 'alert("Somthing Wrong!")';
       echo '</script>';
-      header("refresh: 1; url=/auth/fillabnum.php");
     }
   }
 }
@@ -294,21 +294,21 @@ if (isset($_POST['adminchang'])) {
   if ($result->num_rows > 0) {
 
     $update = $conn->query("UPDATE tb_user SET password='$password' WHERE email='$email' ");
-      mysqli_close($conn);
-      if ($update) {
-        echo $numrand;
-      } else {
-        echo '<script language="javascript">';
-        echo 'alert("Somthing Wrong!!!")';
-        echo '</script>';
-        header("refresh: 1; url=changepass.php");
-      }
-    
+    mysqli_close($conn);
+    if ($update) {
+      echo $numrand;
+    } else {
+      header("refresh: 1; url=changepass.php");
+      echo '<script language="javascript">';
+      echo 'alert("Somthing Wrong!!!")';
+      echo '</script>';
+    }
+
   } else {
+    header("refresh: 1; url=backend/manageuser.php");
     echo '<script language="javascript">';
     echo 'alert("not found this email")';
     echo '</script>';
-    header("refresh: 1; url=backend/manageuser.php");
   }
 }
 ?>
